@@ -15,4 +15,13 @@ class course_user extends Model
         'id_course',
         'id_user',
     ];
+
+    public function users()
+    {
+        return $this->belongsTo(User::class, 'id_user', 'id');
+    }
+    public function course()
+    {
+        return $this->belongsTo(course::class, 'id_course', 'id');
+    }
 }
