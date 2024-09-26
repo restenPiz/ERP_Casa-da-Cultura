@@ -57,7 +57,14 @@
                             <div class="row g-0 h-100">
                                 <div class="col-md-12 d-flex flex-center">
                                     <div class="p-4 p-md-5 flex-grow-1">
-                                        <h3>Registre-se</h3>
+                                        <div class="row flex-between-center">
+                                            <div class="col-auto">
+                                                <h3>Registre-se</h3>
+                                            </div>
+                                            <div class="col-auto fs-10 text-600"><span class="mb-0 undefined">ou</span>
+                                                <span><a href="{{ route('login') }}">Tens uma conta</a></span>
+                                            </div>
+                                        </div>
                                         <form>
                                             <div class="mb-3"><label class="form-label"
                                                     for="card-name">Nome</label><input class="form-control"
@@ -80,7 +87,7 @@
                                                     </a>and <a class="white-space-nowrap" href="#!">privacy
                                                         policy</a></label></div> --}}
                                             <div class="mb-3"><button class="btn btn-primary d-block w-100 mt-3"
-                                                    type="submit" name="submit">Register</button></div>
+                                                    type="submit" name="submit">Registre-se</button></div>
                                         </form>
                                     </div>
                                 </div>
