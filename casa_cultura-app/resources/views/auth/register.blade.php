@@ -91,11 +91,6 @@
                                                     <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
                                                 </div>
                                             </div>
-                                            {{-- <div class="form-check"><input class="form-check-input" type="checkbox"
-                                                    id="card-register-checkbox" /><label class="form-label"
-                                                    for="card-register-checkbox">I accept the <a href="#!">terms
-                                                    </a>and <a class="white-space-nowrap" href="#!">privacy
-                                                        policy</a></label></div> --}}
                                             <div class="mb-3"><button class="btn btn-primary d-block w-100 mt-3"
                                                     type="submit" name="submit">Registre-se</button></div>
                                         </form>
