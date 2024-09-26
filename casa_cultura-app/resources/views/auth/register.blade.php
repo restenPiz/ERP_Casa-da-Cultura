@@ -88,7 +88,7 @@
                                                         for="card-confirm-password">Confirme o Password</label><input
                                                         class="form-control" type="password" autocomplete="on"
                                                         id="card-confirm-password" name="password_confirmation" />
-                                                    <x-input-error :messages="$errors->get('name')" class="mt-2" />
+                                                    <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
                                                 </div>
                                             </div>
                                             {{-- <div class="form-check"><input class="form-check-input" type="checkbox"
