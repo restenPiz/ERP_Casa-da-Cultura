@@ -63,28 +63,31 @@
                                                 <h3>Conta de Login</h3>
                                             </div>
                                             <div class="col-auto fs-10 text-600"><span class="mb-0 undefined">ou</span>
-                                                <span><a href="register.html">Crie uma conta</a></span>
+                                                <span><a href="{{ route('register') }}">Crie uma conta</a></span>
                                             </div>
                                         </div>
-                                        <form action="" method="post">
+                                        <form method="POST" action="{{ route('login') }}">
                                             @csrf
                                             <div class="mb-3"><label class="form-label" for="card-email">Endereço
-                                                    Email</label><input class="form-control" id="card-email"
-                                                    type="email" /></div>
+                                                    Email</label><input class="form-control" name="email"
+                                                    id="card-email" type="email" /></div>
+                                            <x-input-error :messages="$errors->get('email')" class="mt-2" />
                                             <div class="mb-3">
                                                 <div class="d-flex justify-content-between"><label class="form-label"
-                                                        for="card-password">Password</label></div><input
+                                                        for="card-password">Password</label></div><input name="password"
                                                     class="form-control" id="card-password" type="password" />
+                                                <x-input-error :messages="$errors->get('password')" class="mt-2" />
                                             </div>
                                             <div class="row flex-between-center">
                                                 <div class="col-auto">
                                                     <div class="form-check mb-0"><input class="form-check-input"
-                                                            type="checkbox" id="card-checkbox"
+                                                            type="checkbox" id="card-checkbox" name="remember"
                                                             checked="checked" /><label class="form-check-label mb-0"
                                                             for="card-checkbox">Lembre-me</label></div>
                                                 </div>
                                                 <div class="col-auto"><a class="fs-10"
-                                                        href="forgot-password.html">Esqueceu o Password?</a></div>
+                                                        href="{{ route('password.request') }}">Esqueceu o Password?</a>
+                                                </div>
                                             </div>
                                             <div class="mb-3"><button class="btn btn-primary d-block w-100 mt-3"
                                                     style="border-radius: 0" type="submit" name="submit">Log
@@ -122,8 +125,8 @@
         <!-- Email Address -->
         <div>
             <x-input-label for="email" :value="__('Email')" />
-            <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required
-                autofocus autocomplete="username" />
+            <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')"
+                required autofocus autocomplete="username" />
             <x-input-error :messages="$errors->get('email')" class="mt-2" />
         </div>
 
