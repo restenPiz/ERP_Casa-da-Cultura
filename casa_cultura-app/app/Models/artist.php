@@ -17,4 +17,9 @@ class artist extends Model
         'Cell_number',
         'Activity'
     ];
+
+    public function events()
+    {
+        return $this->hasMany(event::class, 'Id_artist', 'id');
+    }
 }

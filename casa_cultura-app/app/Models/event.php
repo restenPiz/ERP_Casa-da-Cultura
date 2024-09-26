@@ -20,4 +20,9 @@ class event extends Model
         'Event_picture',
         'Id_artist',
     ];
+
+    public function artists()
+    {
+        return $this->belongsTo(artist::class, 'Id_artist', 'id');
+    }
 }
