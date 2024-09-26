@@ -8,21 +8,21 @@ return [
     'roles_structure' => [
         'admin' => [
             'users' => 'c,r,u,d',
-            'payments' => 'c,r,u,d',
-            'profile' => 'r,u',
-        ],
-        'artist' => [
-            'users' => 'c,r,u,d',
-            'profile' => 'r,u',
+            'courses' => 'c,r,u,d',
+            'employees' => 'c,r,u,d',
+            'artist' => 'c,r,u,d',
+            'trainer' => 'c,r,u,d',
         ],
         'employee' => [
-            'profile' => 'r,u',
+            'users' => 'c,r,u,d',
+            'artist' => 'c,r,u,d',
         ],
         'trainer' => [
-            'module_1_name' => 'c,r,u,d',
+            'users' => 'c,r,u,d',
+            'courses' => 'c,r,u,d',
         ],
         'users' => [
-            'profile' => 'r,u',
+            'courses' => 'r',
         ],
     ],
 
