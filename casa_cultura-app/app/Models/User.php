@@ -16,6 +16,15 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'surname',
+        'age',
+        'date_of_birth',
+        'bi',
+        'place',
+        'contact',
+        'user_type',
+        'upload_file',
+        'function'
     ];
 
     protected $hidden = [
