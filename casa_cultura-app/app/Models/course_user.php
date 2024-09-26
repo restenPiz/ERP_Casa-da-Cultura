@@ -16,6 +16,7 @@ class course_user extends Model
         'id_user',
     ];
 
+    //*Inicio dos metodos de relacionamento
     public function users()
     {
         return $this->belongsTo(User::class, 'id_user', 'id');

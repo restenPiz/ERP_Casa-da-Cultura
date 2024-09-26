@@ -17,4 +17,9 @@ class course extends Model
         'Upload_file',
         'Upload_video'
     ];
+
+    public function course_course()
+    {
+        return $this->hasMany(course_user::class, 'id_course', 'id');
+    }
 }
