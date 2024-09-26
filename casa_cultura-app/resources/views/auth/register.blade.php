@@ -62,24 +62,34 @@
                                                 <h3>Registre-se</h3>
                                             </div>
                                             <div class="col-auto fs-10 text-600"><span class="mb-0 undefined">ou</span>
-                                                <span><a href="{{ route('login') }}">Tens uma conta</a></span>
+                                                <span><a href="{{ route('login') }}">Tens uma conta ?</a></span>
                                             </div>
                                         </div>
-                                        <form>
+                                        <form method="POST" action="{{ route('register') }}">
+                                            @csrf
                                             <div class="mb-3"><label class="form-label"
                                                     for="card-name">Nome</label><input class="form-control"
-                                                    type="text" autocomplete="on" id="card-name" /></div>
+                                                    type="text" autocomplete="on" id="card-name" name="name" />
+                                                <x-input-error :messages="$errors->get('name')" class="mt-2" />
+                                            </div>
                                             <div class="mb-3"><label class="form-label" for="card-email">Endereço
                                                     Email</label><input class="form-control" type="email"
-                                                    autocomplete="on" id="card-email" /></div>
+                                                    autocomplete="on" id="card-email" name="email" />
+                                                <x-input-error :messages="$errors->get('email')" class="mt-2" />
+                                            </div>
                                             <div class="row gx-2">
                                                 <div class="mb-3 col-sm-6"><label class="form-label"
                                                         for="card-password">Password</label><input class="form-control"
-                                                        type="password" autocomplete="on" id="card-password" /></div>
+                                                        type="password" autocomplete="on" id="card-password"
+                                                        name="password" />
+                                                    <x-input-error :messages="$errors->get('password')" class="mt-2" />
+                                                </div>
                                                 <div class="mb-3 col-sm-6"><label class="form-label"
                                                         for="card-confirm-password">Confirme o Password</label><input
                                                         class="form-control" type="password" autocomplete="on"
-                                                        id="card-confirm-password" /></div>
+                                                        id="card-confirm-password" name="password_confirmation" />
+                                                    <x-input-error :messages="$errors->get('name')" class="mt-2" />
+                                                </div>
                                             </div>
                                             {{-- <div class="form-check"><input class="form-check-input" type="checkbox"
                                                     id="card-register-checkbox" /><label class="form-label"
