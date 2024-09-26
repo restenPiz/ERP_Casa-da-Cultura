@@ -13,7 +13,6 @@ return new class extends Migration {
             $table->string('Address');
             $table->integer('Cell_number');
             $table->string('Activity');
-            $table->timestamps();
         });
     }
 
