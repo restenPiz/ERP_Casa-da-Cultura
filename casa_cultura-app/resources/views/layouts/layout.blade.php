@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html data-bs-theme="light" lang="en-US" dir="ltr">
-<meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
-
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
 <head>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
@@ -19,7 +18,8 @@
     <meta name="theme-color" content="#ffffff">
     <script src="../assets/js/config.js"></script>
     <script src="../vendors/simplebar/simplebar.min.js"></script>
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  
     <link rel="preconnect" href="https://fonts.gstatic.com/">
     <link
         href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700%7cPoppins:300,400,500,600,700,800,900&amp;display=swap"
@@ -2009,43 +2009,57 @@
             </ul>
           </nav>
           <script>
-            var navbarPosition = localStorage.getItem('navbarPosition');
-            var navbarVertical = document.querySelector('.navbar-vertical');
-            var navbarTopVertical = document.querySelector('.content .navbar-top');
-            var navbarTop = document.querySelector('[data-layout] .navbar-top:not([data-double-top-nav');
-            var navbarDoubleTop = document.querySelector('[data-double-top-nav]');
-            var navbarTopCombo = document.querySelector('.content [data-navbar-top="combo"]');
+  var navbarPosition = localStorage.getItem('navbarPosition');
+  var navbarVertical = document.querySelector('.navbar-vertical');
+  var navbarTopVertical = document.querySelector('.content .navbar-top');
+  var navbarTop = document.querySelector('[data-layout] .navbar-top:not([data-double-top-nav])'); // Correção aqui
+  var navbarDoubleTop = document.querySelector('[data-double-top-nav]');
+  var navbarTopCombo = document.querySelector('.content [data-navbar-top="combo"]');
 
-            if (localStorage.getItem('navbarPosition') === 'double-top') {
-              document.documentElement.classList.toggle('double-top-nav-layout');
-            }
+  if (localStorage.getItem('navbarPosition') === 'double-top') {
+    document.documentElement.classList.toggle('double-top-nav-layout');
+  }
 
-            if (navbarPosition === 'top') {
-              navbarTop.removeAttribute('style');
-              navbarTopVertical.remove(navbarTopVertical);
-              navbarVertical.remove(navbarVertical);
-              navbarTopCombo.remove(navbarTopCombo);
-              navbarDoubleTop.remove(navbarDoubleTop);
-            } else if (navbarPosition === 'combo') {
-              navbarVertical.removeAttribute('style');
-              navbarTopCombo.removeAttribute('style');
-              navbarTop.remove(navbarTop);
-              navbarTopVertical.remove(navbarTopVertical);
-              navbarDoubleTop.remove(navbarDoubleTop);
-            } else if (navbarPosition === 'double-top') {
-              navbarDoubleTop.removeAttribute('style');
-              navbarTopVertical.remove(navbarTopVertical);
-              navbarVertical.remove(navbarVertical);
-              navbarTop.remove(navbarTop);
-              navbarTopCombo.remove(navbarTopCombo);
-            } else {
-              navbarVertical.removeAttribute('style');
-              navbarTopVertical.removeAttribute('style');
-              navbarTop.remove(navbarTop);
-              navbarDoubleTop.remove(navbarDoubleTop);
-              navbarTopCombo.remove(navbarTopCombo);
-            }
-          </script>
+  // Função para remover elementos de forma segura
+  function safeRemove(element) {
+    if (element) {
+      element.remove();
+    }
+  }
+
+  // Função para remover atributos de forma segura
+  function safeRemoveAttribute(element, attribute) {
+    if (element) {
+      element.removeAttribute(attribute);
+    }
+  }
+
+  if (navbarPosition === 'top') {
+    safeRemoveAttribute(navbarTop, 'style');
+    safeRemove(navbarTopVertical);
+    safeRemove(navbarVertical);
+    safeRemove(navbarTopCombo);
+    safeRemove(navbarDoubleTop);
+  } else if (navbarPosition === 'combo') {
+    safeRemoveAttribute(navbarVertical, 'style');
+    safeRemoveAttribute(navbarTopCombo, 'style');
+    safeRemove(navbarTop);
+    safeRemove(navbarTopVertical);
+    safeRemove(navbarDoubleTop);
+  } else if (navbarPosition === 'double-top') {
+    safeRemoveAttribute(navbarDoubleTop, 'style');
+    safeRemove(navbarTopVertical);
+    safeRemove(navbarVertical);
+    safeRemove(navbarTop);
+    safeRemove(navbarTopCombo);
+  } else {
+    safeRemoveAttribute(navbarVertical, 'style');
+    safeRemoveAttribute(navbarTopVertical, 'style');
+    safeRemove(navbarTop);
+    safeRemove(navbarDoubleTop);
+    safeRemove(navbarTopCombo);
+  }
+</script>
             @yield('content')
         </div>
       </div>
@@ -2065,6 +2079,10 @@
     <script src="../vendors/lodash/lodash.min.js"></script>
     <script src="../vendors/list.js/list.min.js"></script>
     <script src="../assets/js/theme.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
+
 </body>
 
 </html>
