@@ -32,7 +32,7 @@
         <div class="col-xxl-4">
             <div class="card h-100">
                 <div class="card-header bg-body-tertiary d-flex flex-between-center py-2">
-                    <h6 class="mb-0">Trending Keywords</h6>
+                    <h6 class="mb-0">Cursos mais visitados</h6>
                     <div class="dropdown font-sans-serif btn-reveal-trigger"><button
                             class="btn btn-link text-600 btn-sm dropdown-toggle dropdown-caret-none btn-reveal"
                             type="button" id="dropdown-trending-keywords" data-bs-toggle="dropdown"
@@ -59,9 +59,9 @@
                 <div class="card-footer bg-body-tertiary py-2">
                     <div class="row justify-content-between">
                         <div class="col-auto"><select class="form-select form-select-sm">
-                                <option value="week" selected="selected">Last 7 days</option>
-                                <option value="month">Last month</option>
-                                <option value="year">Last year</option>
+                                <option value="week" selected="selected">Ultimos 7 dias</option>
+                                <option value="month">Ultimo mes</option>
+                                <option value="year">Ultimo ano</option>
                             </select></div>
                         <div class="col-auto"><a class="btn btn-sm btn-falcon-default" href="#!">View All</a></div>
                     </div>
@@ -73,27 +73,12 @@
                 <div class="col-md-6">
                     <div class="card font-sans-serif h-100">
                         <div class="card-header pb-0">
-                            <h6 class="mb-0"> Monthly Revenue Target</h6>
+                            <h6 class="mb-0"> Percentagem de Cursos Registrados</h6>
                         </div>
                         <div class="card-body pt-0">
                             <div class="row align-items-end h-100 mb-n1">
                                 <div class="col-6 col-sm-5 pe-md-0 pe-lg-3">
-                                    <div class="row g-0">
-                                        <div class="col-7">
-                                            <h6 class="text-600">Target:</h6>
-                                        </div>
-                                        <div class="col-5">
-                                            <h6 class="text-800">$1.2M</h6>
-                                        </div>
-                                    </div>
-                                    <div class="row g-0">
-                                        <div class="col-7">
-                                            <h6 class="mb-0 text-600">Reached:</h6>
-                                        </div>
-                                        <div class="col-5">
-                                            <h6 class="mb-0 text-800">$823K</h6>
-                                        </div>
-                                    </div>
+                                    
                                 </div>
                                 <div class="col-6 col-sm-7">
                                     <div class="lms-half-doughnut ms-auto mt-n4">
@@ -111,27 +96,12 @@
                 <div class="col-md-6">
                     <div class="card font-sans-serif h-100">
                         <div class="card-header pb-0">
-                            <h6 class="mb-0">Monthly Visitor Target</h6>
+                            <h6 class="mb-0">Percentagem de Estudantes Registrados</h6>
                         </div>
                         <div class="card-body pt-0">
                             <div class="row align-items-end h-100 mb-n1">
                                 <div class="col-6 col-sm-5 pe-md-0 pe-lg-3">
-                                    <div class="row g-0">
-                                        <div class="col-7">
-                                            <h6 class="text-600">Target:</h6>
-                                        </div>
-                                        <div class="col-5">
-                                            <h6 class="text-800">$7.5M</h6>
-                                        </div>
-                                    </div>
-                                    <div class="row g-0">
-                                        <div class="col-7">
-                                            <h6 class="mb-0 text-600">Reached:</h6>
-                                        </div>
-                                        <div class="col-5">
-                                            <h6 class="mb-0 text-800">$4.8M</h6>
-                                        </div>
-                                    </div>
+                                    
                                 </div>
                                 <div class="col-6 col-sm-7">
                                     <div class="lms-half-doughnut ms-auto mt-n4">
@@ -151,16 +121,16 @@
                         <div class="card-header py-2">
                             <div class="row flex-between-center g-0">
                                 <div class="col-auto">
-                                    <h6 class="mb-0">Avarage Enrollment Rate</h6>
+                                    <h6 class="mb-0">Grafico de Amostra</h6>
                                 </div>
                                 <div class="col-12 col-md-auto order-3 order-md-2">
                                     <div class="d-flex flex-wrap gap-md-2"><button
                                             class="btn btn-link text-decoration-none text-600 fs-11 px-0 me-2"
                                             id="onSaleCourse"><span class="fas fa-circle text-primary me-1"
-                                                data-fa-transform="shrink-3"></span>On Sale Course</button><button
+                                                data-fa-transform="shrink-3"></span>Cursos Presenciais</button><button
                                             class="btn btn-link text-decoration-none text-600 fs-11 px-0"
                                             id="regularPaidCourse"><span class="fas fa-circle text-warning me-1"
-                                                data-fa-transform="shrink-3"></span>Regular Paid Course</button></div>
+                                                data-fa-transform="shrink-3"></span>Estudantes Inscritos</button></div>
                                 </div>
                                 <div class="col-auto order-2 order-md-3">
                                     <div class="dropdown font-sans-serif btn-reveal-trigger"><button
