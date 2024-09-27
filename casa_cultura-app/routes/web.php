@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\courseController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\trainerController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -23,6 +24,7 @@ Route::middleware('auth')->group(function () {
     //*Inicio das rotas da parte de funcionarios
 
     //*Inicio das rotas da parte de formadores
+    Route::get('/trainerMain', [trainerController::class, 'index'])->name('trainer.index');
 
     //*Inicio das rotas da parte de artista
 });
