@@ -82,7 +82,7 @@
                     <div class="d-flex align-items-center"><span class="nav-link-icon"><span class="fas fa-wrench"></span></span><span class="nav-link-text ps-1">Gerir Cursos</span></div>
                   </a>
                   <ul class="nav collapse" id="customization">
-                    <li class="nav-item"><a class="nav-link" href="../documentation/customization/configuration.html">
+                    <li class="nav-item"><a class="nav-link" href="{{route('course.index')}}">
                         <div class="d-flex align-items-center"><span class="nav-link-text ps-1">Gerir Cursos</span></div>
                       </a><!-- more inner pages--></li>
                     <li class="nav-item"><a class="nav-link" href="../documentation/customization/dark-mode.html">
