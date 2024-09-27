@@ -326,6 +326,8 @@
                 <script src="../vendors/lodash/lodash.min.js"></script>
                 <script src="../vendors/list.js/list.min.js"></script>
                 <script src="../assets/js/theme.js"></script>
+
+                @include('sweetalert::alert')
 </body>
 
 </html>

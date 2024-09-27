@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\course;
 use Illuminate\Http\Request;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class courseController extends Controller
 {
@@ -21,5 +22,7 @@ class courseController extends Controller
         $courses->Goals = Request::input('Goals');
 
         $courses->save();
+
+        Alert::success('Adicionado!', 'O curso foi adicionado com sucesso!');
     }
 }
