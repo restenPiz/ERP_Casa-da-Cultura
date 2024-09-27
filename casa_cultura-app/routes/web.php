@@ -27,6 +27,9 @@ Route::middleware('auth')->group(function () {
     Route::get('/trainerMain', [trainerController::class, 'index'])->name('trainer.index');
 
     //*Inicio das rotas da parte de artista
+
+    //*Inicio das rotas da parte do aluno
+
 });
 
 require __DIR__ . '/auth.php';
