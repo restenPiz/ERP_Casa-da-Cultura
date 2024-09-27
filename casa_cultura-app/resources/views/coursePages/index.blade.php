@@ -5,39 +5,23 @@
         <div class="col-lg-8">
             <div class="card mb-3">
                 <div class="card-header">
-                    <h5 class="mb-0">Informacao do Curso</h5>
+                    <h5 class="mb-0">Informação do Curso</h5>
                 </div>
                 <div class="card-body bg-body-tertiary">
                     <form class="row gx-2">
-                        <div class="col-12 mb-3"><label class="form-label" for="course-name">Nome do Curso<span
+                        <div class="col-sm-6 mb-3"><label class="form-label" for="course-name">Nome do Curso<span
                                     class="text-danger">*</span></label><input class="form-control" id="course-name"
                                 type="text" placeholder="Nome do Curso" required="required" /></div>
-                        <div class="col-sm-6 mb-3"><label class="form-label" for="course-category">Category<span
+                        <div class="col-sm-6 mb-3"><label class="form-label" for="course-category">Nome do Formador<span
                                     class="text-danger">*</span></label><select class="form-select" id="course-category"
                                 name="course-category">
-                                <option>Select a category</option>
+                                <option>Selecione o Formador</option>
                                 <option>Academia</option>
                                 <option>Arts & Crafts</option>
                             </select></div>
-                        <div class="col-sm-6 mb-3"><label class="form-label" for="course-subcategory">Sub-category<span
-                                    class="text-danger">*</span></label><select class="form-select" id="course-subcategory"
-                                name="course-sub-category">
-                                <option>Select a sub-category</option>
-                                <option>3D & Animation</option>
-                                <option>Architectural Design</option>
-                            </select></div>
-                        <div class="col-12 mb-3"><label class="form-label" for="course-tags">Tags<span
-                                    class="text-danger">*</span></label><input class="form-control js-choice"
-                                id="course-tags" type="text" name="tags" required="required" size="1"
-                                data-placeholder="Select upto 4 tags"
-                                data-options='{"removeItemButton":true,"placeholder":true}' /></div>
-                        <div class="col-12"><label class="form-label" for="course-description">Course Description<span
-                                    class="text-danger">*</span></label>
-                            <div class="create-course-description-textarea">
-                                <textarea class="tinymce d-none" data-tinymce="data-tinymce" name="course-description" id="course-description"
-                                    required="required"></textarea>
-                            </div>
-                        </div>
+                        <div class="col-12 mb-3"><label class="form-label" for="course-tags">Descrição do Curso<span
+                                    class="text-danger">*</span></label><textarea class="form-control" data-tinymce="data-tinymce" name="course-description" id="course-description"
+                                    required="required"></textarea></div>
                     </form>
                 </div>
             </div>
