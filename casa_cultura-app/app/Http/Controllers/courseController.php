@@ -21,6 +21,14 @@ class courseController extends Controller
         $courses->Price = Request::input('Price');
         $courses->Goals = Request::input('Goals');
 
+        if (Request::hasFile('Upload_file')) {
+            $validatedData['Upload_file'] = Request::file('Upload_file')->store('files');
+        }
+
+        if (Request::hasFile('Upload_video')) {
+            $validatedData['Upload_video'] = Request::file('Upload_video')->store('videos');
+        }
+
         $courses->save();
 
         Alert::success('Adicionado!', 'O curso foi adicionado com sucesso!');
