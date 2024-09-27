@@ -21,7 +21,7 @@
                         <a class="navbar-brand me-1 me-sm-3" href="../index.html">
                             <div class="d-flex align-items-center"><img class="me-2"
                                     src="../assets/img/icons/spot-illustrations/falcon.png" alt=""
-                                    width="40" /><span class="font-sans-serif text-primary">falcon</span></div>
+                                    width="40" /><span class="font-sans-serif text-primary">casa da cultura</span></div>
                         </a>
                         <ul class="navbar-nav align-items-center d-none d-lg-block">
                             <li class="nav-item">
