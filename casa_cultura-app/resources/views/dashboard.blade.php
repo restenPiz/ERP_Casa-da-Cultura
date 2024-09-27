@@ -1,32 +1,37 @@
 @extends('layouts.layout')
 @section('content')
-    <div class="card-body px-xxl-0 pt-4">
-        <div class="row g-0">
-            <div
-                class="col-xxl-4 col-md-6 px-3 text-center border-end-md border-bottom border-bottom-xxl-0 pb-3 p-xxl-0 ps-md-0">
-                <div class="icon-circle icon-circle-primary"><span class="fs-7 fas fa-user-graduate text-primary"></span>
+    <div class="card mb-3">
+        <div class="card-body px-xxl-0 pt-4">
+            <div class="row g-0">
+                <div
+                    class="col-xxl-4 col-md-6 px-3 text-center border-end-md border-bottom border-bottom-xxl-0 pb-3 p-xxl-0 ps-md-0">
+                    <div class="icon-circle icon-circle-primary"><span class="fs-7 fas fa-user-graduate text-primary"></span>
+                    </div>
+                    <h4 class="mb-1 font-sans-serif"><span class="text-700 mx-2"
+                            data-countup='{"endValue":"4968"}'>0</span><span class="fw-normal text-600">Novos
+                            Estudantes</span></h4>
+                    <p class="fs-10 fw-semi-bold mb-0">4203 <span class="text-600 fw-normal">Ultimo Mes</span></p>
                 </div>
-                <h4 class="mb-1 font-sans-serif"><span class="text-700 mx-2" data-countup='{"endValue":"4968"}'>0</span><span
-                        class="fw-normal text-600">Novos Estudantes</span></h4>
-                <p class="fs-10 fw-semi-bold mb-0">4203 <span class="text-600 fw-normal">Ultimo Mes</span></p>
-            </div>
-            <div
-                class="col-xxl-4 col-md-6 px-3 text-center border-end-xxl border-bottom border-bottom-xxl-0 pb-3 pt-4 pt-md-0 pe-md-0 p-xxl-0">
-                <div class="icon-circle icon-circle-info"><span class="fs-7 fas fa-chalkboard-teacher text-info"></span>
+                <div
+                    class="col-xxl-4 col-md-6 px-3 text-center border-end-xxl border-bottom border-bottom-xxl-0 pb-3 pt-4 pt-md-0 pe-md-0 p-xxl-0">
+                    <div class="icon-circle icon-circle-info"><span class="fs-7 fas fa-chalkboard-teacher text-info"></span>
+                    </div>
+                    <h4 class="mb-1 font-sans-serif"><span class="text-700 mx-2"
+                            data-countup='{"endValue":"324"}'>0</span><span class="fw-normal text-600">Novos
+                            Formadores</span></h4>
+                    <p class="fs-10 fw-semi-bold mb-0">301 <span class="text-600 fw-normal">Ultimo Mes</span></p>
                 </div>
-                <h4 class="mb-1 font-sans-serif"><span class="text-700 mx-2" data-countup='{"endValue":"324"}'>0</span><span
-                        class="fw-normal text-600">Novos Formadores</span></h4>
-                <p class="fs-10 fw-semi-bold mb-0">301 <span class="text-600 fw-normal">Ultimo Mes</span></p>
-            </div>
-            <div
-                class="col-xxl-4 col-md-6 px-3 text-center border-end-md border-bottom border-bottom-md-0 pb-3 pt-4 p-xxl-0 pb-md-0 ps-md-0">
-                <div class="icon-circle icon-circle-success"><span class="fs-7 fas fa-book-open text-success"></span></div>
-                <h4 class="mb-1 font-sans-serif"><span class="text-700 mx-2"
-                        data-countup='{"endValue":"3712"}'>0</span><span class="fw-normal text-600">Novos Cursos</span></h4>
-                <p class="fs-10 fw-semi-bold mb-0">2779 <span class="text-600 fw-normal">Ultimo Mes</span></p>
+                <div
+                    class="col-xxl-4 col-md-6 px-3 text-center border-end-md border-bottom border-bottom-md-0 pb-3 pt-4 p-xxl-0 pb-md-0 ps-md-0">
+                    <div class="icon-circle icon-circle-success"><span class="fs-7 fas fa-book-open text-success"></span>
+                    </div>
+                    <h4 class="mb-1 font-sans-serif"><span class="text-700 mx-2"
+                            data-countup='{"endValue":"3712"}'>0</span><span class="fw-normal text-600">Novos Cursos</span>
+                    </h4>
+                    <p class="fs-10 fw-semi-bold mb-0">2779 <span class="text-600 fw-normal">Ultimo Mes</span></p>
+                </div>
             </div>
         </div>
-    </div>
     </div>
     <div class="row g-3 mb-3">
         <div class="col-xxl-4">
@@ -47,7 +52,7 @@
                     </div>
                 </div>
                 <div class="card-body p-2 d-flex flex-center">
-                     <div class="d3-trending-keywords position-relative w-100"><svg
+                    <div class="d3-trending-keywords position-relative w-100"><svg
                             class="d3-trending-keywords-svg h-100 w-100"></svg>
                         <div class="d3-trending-keywords-tooltip pe-none position-fixed py-1 px-2 rounded">
                             <div class="d-flex align-items-center fs-10"><span class="dot d3-tooltip-dot"></span><span
@@ -78,7 +83,7 @@
                         <div class="card-body pt-0">
                             <div class="row align-items-end h-100 mb-n1">
                                 <div class="col-6 col-sm-5 pe-md-0 pe-lg-3">
-                                    
+
                                 </div>
                                 <div class="col-6 col-sm-7">
                                     <div class="lms-half-doughnut ms-auto mt-n4">
@@ -101,7 +106,7 @@
                         <div class="card-body pt-0">
                             <div class="row align-items-end h-100 mb-n1">
                                 <div class="col-6 col-sm-5 pe-md-0 pe-lg-3">
-                                    
+
                                 </div>
                                 <div class="col-6 col-sm-7">
                                     <div class="lms-half-doughnut ms-auto mt-n4">
