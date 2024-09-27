@@ -42,7 +42,7 @@
         userLinkRTL.setAttribute('disabled', true);
       }
     </script>
-    {{-- @vite(['resources/css/app.css', 'resources/js/app.js']) --}}
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
   </head>
 
   <body>
