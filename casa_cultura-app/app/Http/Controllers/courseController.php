@@ -22,14 +22,17 @@ class courseController extends Controller
         $courses->Goals = Request::input('Goals');
 
         if (Request::hasFile('Upload_file')) {
-            $validatedData['Upload_file'] = Request::file('Upload_file')->store('files');
+            $courses['Upload_file'] = Request::file('Upload_file')->store('files');
         }
 
         if (Request::hasFile('Upload_video')) {
-            $validatedData['Upload_video'] = Request::file('Upload_video')->store('videos');
+            $courses['Upload_video'] = Request::file('Upload_video')->store('videos');
         }
 
         $courses->save();
+
+        //* Associar os formadores ao curso
+        $courses->users()->attach($courses['formador_ids']);
 
         Alert::success('Adicionado!', 'O curso foi adicionado com sucesso!');
     }
