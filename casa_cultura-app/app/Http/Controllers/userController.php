@@ -43,6 +43,8 @@ class userController extends Controller
             'place' => Request::input('place'),
             'contact' => Request::input('contact'),
             'upload_file' => Request::input('upload_file'),
+
+            
             'function' => Request::input('function'),
         ]);
 
