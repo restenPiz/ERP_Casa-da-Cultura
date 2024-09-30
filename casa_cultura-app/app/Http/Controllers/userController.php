@@ -28,12 +28,12 @@ class userController extends Controller
             'bi' => 'nullable|string|max:50',
             'place' => 'nullable|string|max:255',
             'contact' => 'nullable|string|max:20',
-            'upload_file' => 'nullable|file|mimes:pdf,doc,docx,jpg,png|max:10240', // 10MB
+            'upload_file' => 'nullable|file|mimes:pdf,doc,docx,jpg,png|max:10240',
             'function' => 'nullable|string|max:255',
             'user_type' => [
                 'required',
                 'string',
-                Rule::in(['Employee', 'Trainer', 'User']), // Nomes consistentes
+                Rule::in(['Employee', 'Trainer', 'User']),
             ],
         ]);
 

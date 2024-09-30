@@ -71,35 +71,6 @@
                     </div>
                 </div>
             </div>
-            {{-- <div class="col-lg-4 ps-lg-2">
-              <div class="sticky-sidebar">
-                <div class="card mb-3 overflow-hidden">
-                  <div class="card-header">
-                    <h5 class="mb-0">Account Settings</h5>
-                  </div>
-                  <div class="card-body bg-body-tertiary">
-                    <h6 class="fw-bold">Who can see your profile ?<span class="fs-11 ms-1 text-primary" data-bs-toggle="tooltip" data-bs-placement="top" title="Only The group of selected people can see your profile"><span class="fas fa-question-circle"></span></span></h6>
-                    <div class="ps-2">
-                      <div class="form-check mb-0 lh-1"><input class="form-check-input" type="radio" value="" id="everyone" name="view-settings" /><label class="form-check-label mb-0" for="everyone">Everyone</label></div>
-                      <div class="form-check mb-0 lh-1"><input class="form-check-input" type="radio" value="" id="my-followers" checked="checked" name="view-settings" /><label class="form-check-label mb-0" for="my-followers">My followers</label></div>
-                      <div class="form-check mb-0 lh-1"><input class="form-check-input" type="radio" value="" id="only-me" name="view-settings" /><label class="form-check-label mb-0" for="only-me">Only me</label></div>
-                    </div>
-                    <h6 class="mt-2 fw-bold">Who can tag you ?<span class="fs-11 ms-1 text-primary" data-bs-toggle="tooltip" data-bs-placement="top" title="Only The group of selected people can tag you"><span class="fas fa-question-circle"></span></span></h6>
-                    <div class="ps-2">
-                      <div class="form-check mb-0 lh-1"><input class="form-check-input" type="radio" value="" id="tag-everyone" name="tag-settings" /><label class="form-check-label mb-0" for="tag-everyone">Everyone</label></div>
-                      <div class="form-check mb-0 lh-1"><input class="form-check-input" type="radio" value="" id="group-members" checked="checked" name="tag-settings" /><label class="form-check-label mb-0" for="group-members">Group Members</label></div>
-                    </div>
-                    <div class="border-dashed-bottom my-3"></div>
-                    <div class="form-check mb-0 lh-1"><input class="form-check-input" type="checkbox" id="userSettings1" checked="checked" /><label class="form-check-label mb-0" for="userSettings1">Allow users to show your followers</label></div>
-                    <div class="form-check mb-0 lh-1"><input class="form-check-input" type="checkbox" id="userSettings2" checked="checked" /><label class="form-check-label mb-0" for="userSettings2">Allow users to show your email</label></div>
-                    <div class="form-check mb-0 lh-1"><input class="form-check-input" type="checkbox" id="userSettings3" /><label class="form-check-label mb-0" for="userSettings3">Allow users to show your experiences</label></div>
-                    <div class="border-bottom border-dashed my-3"></div>
-                    <div class="form-check form-switch mb-0 lh-1"><input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" checked="checked" /><label class="form-check-label mb-0" for="flexSwitchCheckDefault">Make your phone number visible</label></div>
-                    <div class="form-check form-switch mb-0 lh-1"><input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" /><label class="form-check-label mb-0" for="flexSwitchCheckChecked">Allow user to follow you</label></div>
-                  </div>
-                </div>
-              </div>
-            </div> --}}
         </div>
     </form>
     {{-- Fim do conteudo do app --}}

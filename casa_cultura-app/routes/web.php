@@ -20,7 +20,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
     //?Inicio das rotas de adicao de usuario
-    Route::post('/storeUser', [userController::class, 'index'])->name('storeUser');
+    Route::post('/storeUser', [userController::class, 'storeUser'])->name('storeUser');
 
     //*Inicio das rotas da parte de formadores
     Route::get('/trainerMain', [trainerController::class, 'index'])->name('trainer.index');
