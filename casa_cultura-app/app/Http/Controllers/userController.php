@@ -11,9 +11,9 @@ use RealRashid\SweetAlert\Facades\Alert;
 
 class userController extends Controller
 {
-    public function storeUser()
+    public function storeUser(Request $request)
     {
-        $validatedData = Request::validate([
+        $validatedData = $request->validate([
             'name' => 'required|string|max:255',
             'surname' => 'nullable|string|max:255',
             'email' => [
@@ -39,10 +39,6 @@ class userController extends Controller
 
         if (Request::hasFile('upload_file')) {
             $validatedData['upload_file'] = Request::file('upload_file')->store('uploads/files', 'public');
-        }
-
-        if (Request::hasFile('upload_video')) {
-            $validatedData['upload_video'] = Request::file('upload_video')->store('uploads/videos', 'public');
         }
 
         $user = User::create([
