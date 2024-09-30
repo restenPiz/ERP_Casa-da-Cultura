@@ -10,13 +10,8 @@ return new class extends Migration {
     {
         Schema::create('course_users', function (Blueprint $table) {
             $table->id();
-
-            //*Inicio das chaves estrangeiras
-            $table->unsignedBigInteger('id_course');
-            $table->foreign('id_course')->references('id')->on('courses');
-
-            $table->unsignedBigInteger('id_user');
-            $table->foreign('id_user')->references('id')->on('users');
+            $table->foreignId('id_course')->constrained('courses')->onDelete('cascade');
+            $table->foreignId('id_user')->constrained('users')->onDelete('cascade');
         });
     }
 
