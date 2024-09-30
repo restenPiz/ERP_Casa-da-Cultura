@@ -12,21 +12,20 @@ class userController extends Controller
     {
         $validatedData = Request::validate([
             'name' => 'required|string|max:255',
-            'Surname' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:8|confirmed',
         ]);
 
         //?Inicio da condicao
-        if (Request::input('user_type') === 'Attendant') {
-            $role = 'attendant';
-            $successMessage = 'O usuário atendente foi adicionado com sucesso!';
-        } elseif (Request::input('user_type') === 'Stock_manager') {
-            $role = 'stock_manager';
-            $successMessage = 'O usuário gestor de estoque foi adicionado com sucesso!';
-        } elseif (Request::input('user_type') === 'Accountant') {
-            $role = 'accountant';
-            $successMessage = 'O usuário contabilista foi adicionado com sucesso!';
+        if (Request::input('user_type') === 'Employee') {
+            $role = 'employee';
+            $successMessage = 'O usuário funcionario foi adicionado com sucesso!';
+        } elseif (Request::input('user_type') === 'Trainer') {
+            $role = 'trainer';
+            $successMessage = 'O usuário formador foi adicionado com sucesso!';
+        } elseif (Request::input('user_type') === 'users') {
+            $role = 'users';
+            $successMessage = 'O aluno foi adicionado com sucesso!';
         } else {
             $role = null;
         }
