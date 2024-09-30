@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use Hash;
 use Illuminate\Http\Request;
 use RealRashid\SweetAlert\Facades\Alert;
 
@@ -34,9 +35,15 @@ class userController extends Controller
         $user = User::create([
             'name' => Request::input('name'),
             'email' => Request::input('email'),
-            'Surname' => Request::input('Surname'),
+            'surname' => Request::input('surname'),
             'user_type' => Request::input('user_type'),
             'password' => Hash::make(Request::input('password')),
+            'Date_of_birth' => Request::input('Date_of_birth'),
+            'bi' => Request::input('bi'),
+            'place' => Request::input('place'),
+            'contact' => Request::input('contact'),
+            'upload_file' => Request::input('upload_file'),
+            'function' => Request::input('function'),
         ]);
 
         $user->addRole($role);
