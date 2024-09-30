@@ -1,7 +1,7 @@
 @extends('layouts.layout')
 @section('content')
     {{-- Inicio do conteudo do meu app --}}
-    <form action="{{route('register')}}" method="post">
+    <form action="{{route('storeUser')}}" method="post">
         @csrf
         <div class="row">
             <div class="col-12">
@@ -36,7 +36,7 @@
                         <div class="row g-3">
                             <div class="col-lg-6"> <label class="form-label" for="first-name">Primeiro Nome</label><input
                                     name="name" class="form-control" id="first-name" type="text"
-                                    placeholder="Digite o Seu Nome" /></div>
+                                    placeholder="Digite o Seu Nome" /></div>    
                             <div class="col-lg-6"> <label class="form-label" for="last-name">Apelido</label><input
                                     name="surname" class="form-control" id="last-name" type="text"
                                     placeholder="Digite o seu apelido" /></div>
@@ -50,9 +50,12 @@
                                     placeholder="Digite a Sua Senha" class="form-control" id="email3" type="password" />
                             </div>
 
-                            <div class="col-lg-12"> <label class="form-label" for="email2">Numero de BI</label><input
+                            <div class="col-lg-6"> <label class="form-label" for="email2">Numero de BI</label><input
                                     class="form-control" id="email2" type="text" name="bi"
                                     placeholder="0290290927329BS" /></div>
+                             <div class="col-lg-6"> <label class="form-label" for="email2">Data de Nascimento</label><input
+                                    class="form-control" id="email2" type="date" 
+                                    name="Date_of_birth" /></div>
                             <div class="col-lg-6"> <label class="form-label" for="email2">Residencia</label><input
                                     class="form-control" id="email2" type="text" placeholder="Local de Residencia"
                                     name="place" /></div>

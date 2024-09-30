@@ -19,9 +19,12 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
+    //?Inicio das rotas de adicao de usuario
+    Route::post('/storeUser', [userController::class, 'index'])->name('storeUser');
+
     //*Inicio das rotas da parte de formadores
     Route::get('/trainerMain', [trainerController::class, 'index'])->name('trainer.index');
-    Route::post('/storeUser', [userController::class, 'index'])->name('trainer.store');
+    
 
     //*Inicio das rotas da parte de cursos
     Route::get('/courseMain', [courseController::class, 'index'])->name('course.index');
