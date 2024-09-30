@@ -3,6 +3,7 @@
 use App\Http\Controllers\courseController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\trainerController;
+use App\Http\Controllers\userController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -18,13 +19,14 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
+    //*Inicio das rotas da parte de formadores
+    Route::get('/trainerMain', [trainerController::class, 'index'])->name('trainer.index');
+    Route::post('/storeUser', [userController::class, 'index'])->name('trainer.store');
+
     //*Inicio das rotas da parte de cursos
     Route::get('/courseMain', [courseController::class, 'index'])->name('course.index');
 
     //*Inicio das rotas da parte de funcionarios
-
-    //*Inicio das rotas da parte de formadores
-    Route::get('/trainerMain', [trainerController::class, 'index'])->name('trainer.index');
 
     //*Inicio das rotas da parte de artista
 
