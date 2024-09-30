@@ -108,7 +108,7 @@
                                     <div class="d-flex align-items-center"><span class="nav-link-icon"><span
                                                 class="fab fa-gulp"></span></span><span
                                             class="nav-link-text ps-1">Gerir Funcionarios</span></div>
-                                </a><!-- parent pages--><a class="nav-link" href="../documentation/design-file.html"
+                                </a><!-- parent pages--><a class="nav-link" href="{{route('trainer.index')}}"
                                     role="button">
                                     <div class="d-flex align-items-center"><span class="nav-link-icon"><span
                                                 class="fas fa-palette"></span></span><span
