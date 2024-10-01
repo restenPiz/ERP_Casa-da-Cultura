@@ -23,8 +23,8 @@ Route::middleware('auth')->group(function () {
     Route::post('/storeUser', [userController::class, 'storeUser'])->name('storeUser');
 
     //*Inicio das rotas da parte de formadores
-    Route::get('/trainerMain', [trainerController::class, 'index'])->name('trainer.index');
-    
+    Route::get('/trainerAdd', [trainerController::class, 'index'])->name('trainer.index');
+    Route::get('/trainerMain', [trainerController::class, 'all'])->name('trainer.all');
 
     //*Inicio das rotas da parte de cursos
     Route::get('/courseMain', [courseController::class, 'index'])->name('course.index');

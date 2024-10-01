@@ -10,4 +10,8 @@ class trainerController extends Controller
     {
         return view('trainerPages.index');
     }
+    public function all()
+    {
+        return view('trainerPages.all');
+    }
 }
