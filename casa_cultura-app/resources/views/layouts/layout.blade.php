@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html data-bs-theme="light" lang="en-US" dir="ltr">
-<meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
 
 <head>
     <meta charset="utf-8">
@@ -42,9 +42,10 @@
             userLinkRTL.setAttribute('disabled', true);
         }
     </script>
-    {{--Inicio do link do vite--}}
+    {{-- Inicio do link do vite --}}
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
+
 <body>
     <main class="main" id="top">
         <div class="container" data-layout="container">
@@ -122,8 +123,7 @@
                                             <div class="d-flex align-items-center"><span
                                                     class="nav-link-text ps-1">Adicionar Formador</span></div>
                                         </a><!-- more inner pages--></li>
-                                    <li class="nav-item"><a class="nav-link"
-                                            href="{{route('trainer.all')}}">
+                                    <li class="nav-item"><a class="nav-link" href="{{ route('trainer.all') }}">
                                             <div class="d-flex align-items-center"><span
                                                     class="nav-link-text ps-1">Detalhes dos Formadores</span></div>
                                         </a><!-- more inner pages--></li>
