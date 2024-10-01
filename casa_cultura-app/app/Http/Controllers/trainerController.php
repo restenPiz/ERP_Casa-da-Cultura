@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use DB;
 use Illuminate\Http\Request;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class trainerController extends Controller
 {
@@ -19,5 +20,15 @@ class trainerController extends Controller
             ->get();
 
         return view('trainerPages.all', compact('trainers'));
+    }
+    public function delete($id)
+    {
+        $trainer = User::findOrFail($id);
+
+        $trainer->delete();
+
+        Alert::success('Eliminado!', 'O formador foi eliminado com sucesso!');
+
+        return back();
     }
 }
