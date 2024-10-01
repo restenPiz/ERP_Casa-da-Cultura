@@ -123,7 +123,7 @@
                                                     class="nav-link-text ps-1">Adicionar Formador</span></div>
                                         </a><!-- more inner pages--></li>
                                     <li class="nav-item"><a class="nav-link"
-                                            href="../documentation/customization/dark-mode.html">
+                                            href="{{route('trainer.all')}}">
                                             <div class="d-flex align-items-center"><span
                                                     class="nav-link-text ps-1">Detalhes dos Formadores</span></div>
                                         </a><!-- more inner pages--></li>
