@@ -15,7 +15,7 @@ class userController extends Controller
     {
         $validatedData = $request->validate([
             'name' => 'required|string|max:255',
-            'Surname' => 'nullable|string|max:255',
+            'Surname' => 'required|string|max:255',
             'email' => [
                 'required',
                 'string',
@@ -43,7 +43,7 @@ class userController extends Controller
 
         $user = User::create([
             'name' => $validatedData['name'],
-            'Surname' => $validatedData['surname'] ?? null,
+            'Surname' => $validatedData['surname'],
             'email' => $validatedData['email'],
             'user_type' => $validatedData['user_type'],
             'password' => Hash::make($validatedData['password']),
