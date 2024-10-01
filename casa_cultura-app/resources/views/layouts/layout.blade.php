@@ -110,14 +110,14 @@
                                             class="nav-link-text ps-1">Gerir Funcionarios</span></div>
 
                                     {{-- Inicio do dropdown --}}
-                                </a><!-- parent pages--><a class="nav-link dropdown-indicator" href="#customization"
+                                </a><!-- parent pages--><a class="nav-link dropdown-indicator" href="#customizatio"
                                     role="button" data-bs-toggle="collapse" aria-expanded="false"
                                     aria-controls="customization">
                                     <div class="d-flex align-items-center"><span class="nav-link-icon"><span
                                                 class="fas fa-palette"></span></span><span
                                             class="nav-link-text ps-1">Gerir Formadores</span></div>
                                 </a>
-                                <ul class="nav collapse" id="customization">
+                                <ul class="nav collapse" id="customizatio">
                                     <li class="nav-item"><a class="nav-link" href="{{ route('trainer.index') }}">
                                             <div class="d-flex align-items-center"><span
                                                     class="nav-link-text ps-1">Adicionar Formador</span></div>
