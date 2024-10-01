@@ -38,7 +38,7 @@ class userController extends Controller
         ]);
 
         if ($request->hasFile('upload_file')) {
-            $validatedData['upload_file'] = Request::file('upload_file')->store('uploads/files', 'public');
+            $validatedData['upload_file'] = $request->file('upload_file')->store('uploads/files', 'public');
         }
 
         $user = User::create([
@@ -74,7 +74,7 @@ class userController extends Controller
                 break;
         }
 
-        $user->assignRole($role);
+        $user->addRole($role);
 
         Alert::success('Adicionado', $successMessage);
 
