@@ -44,7 +44,7 @@
                                     name="email" placeholder="mauropeniel@gmail.com" class="form-control" id="email1"
                                     type="text" /></div>
                             <div class="col-lg-6"> <label class="form-label" for="email2">Contacto</label><input
-                                    class="form-control" id="email2" type="text" value="+258 " name="contact" />
+                                    class="form-control" id="email2" type="text" value="258 " name="contact" />
                             </div>
                             <div class="col-lg-6"><label class="form-label" for="email3">Password</label><input
                             name="password" placeholder="Digite a Sua Senha" class="form-control" id="email3" type="password" />
