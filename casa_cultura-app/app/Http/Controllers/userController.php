@@ -15,7 +15,7 @@ class userController extends Controller
     {
         $validatedData = $request->validate([
             'name' => 'required|string|max:255',
-            'surname' => 'nullable|string|max:255',
+            'Surname' => 'nullable|string|max:255',
             'email' => [
                 'required',
                 'string',
@@ -37,13 +37,13 @@ class userController extends Controller
             ],
         ]);
 
-        if (Request::hasFile('upload_file')) {
+        if ($request->hasFile('upload_file')) {
             $validatedData['upload_file'] = Request::file('upload_file')->store('uploads/files', 'public');
         }
 
         $user = User::create([
             'name' => $validatedData['name'],
-            'surname' => $validatedData['surname'] ?? null,
+            'Surname' => $validatedData['surname'] ?? null,
             'email' => $validatedData['email'],
             'user_type' => $validatedData['user_type'],
             'password' => Hash::make($validatedData['password']),
@@ -74,9 +74,7 @@ class userController extends Controller
                 break;
         }
 
-        if ($role) {
-            $user->assignRole($role);
-        }
+        $user->assignRole($role);
 
         Alert::success('Adicionado', $successMessage);
 
