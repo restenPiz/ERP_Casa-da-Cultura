@@ -108,11 +108,26 @@
                                     <div class="d-flex align-items-center"><span class="nav-link-icon"><span
                                                 class="fab fa-gulp"></span></span><span
                                             class="nav-link-text ps-1">Gerir Funcionarios</span></div>
-                                </a><!-- parent pages--><a class="nav-link" href="{{route('trainer.index')}}"
-                                    role="button">
+
+                                    {{-- Inicio do dropdown --}}
+                                </a><!-- parent pages--><a class="nav-link dropdown-indicator" href="#customization"
+                                    role="button" data-bs-toggle="collapse" aria-expanded="false"
+                                    aria-controls="customization">
                                     <div class="d-flex align-items-center"><span class="nav-link-icon"><span
                                                 class="fas fa-palette"></span></span><span
                                             class="nav-link-text ps-1">Gerir Formadores</span></div>
+                                </a>
+                                <ul class="nav collapse" id="customization">
+                                    <li class="nav-item"><a class="nav-link" href="{{ route('trainer.index') }}">
+                                            <div class="d-flex align-items-center"><span
+                                                    class="nav-link-text ps-1">Adicionar Formador</span></div>
+                                        </a><!-- more inner pages--></li>
+                                    <li class="nav-item"><a class="nav-link"
+                                            href="../documentation/customization/dark-mode.html">
+                                            <div class="d-flex align-items-center"><span
+                                                    class="nav-link-text ps-1">Detalhes dos Formadores</span></div>
+                                        </a><!-- more inner pages--></li>
+                                </ul>
                                 </a><!-- parent pages--><a class="nav-link" href="../changelog.html" role="button">
                                     <div class="d-flex align-items-center"><span class="nav-link-icon"><span
                                                 class="fas fa-code-branch"></span></span><span
@@ -309,9 +324,9 @@
                     }
                 </script>
 
-                {{--Inicio do conteudo das pages--}}
+                {{-- Inicio do conteudo das pages --}}
                 @yield('content')
-                {{--Fim do conteudo das pages--}}
+                {{-- Fim do conteudo das pages --}}
 
                 <script src="../vendors/popper/popper.min.js"></script>
                 <script src="../vendors/bootstrap/bootstrap.min.js"></script>
