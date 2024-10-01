@@ -98,8 +98,8 @@
                                 <div class="position-absolute top-0 end-0 mt-3 me-3 z-1"><button class="btn-close btn btn-sm btn-circle d-flex flex-center transition-base" data-bs-dismiss="modal" aria-label="Close"></button></div>
                                 <div class="modal-body p-0">
                                     <div class="rounded-top-3 bg-body-tertiary py-3 ps-4 pe-6">
-                                    <h4 class="mb-1" id="staticBackdropLabel">Add a new illustration to the landing page</h4>
-                                    <p class="fs-11 mb-0">Added by <a class="link-600 fw-semi-bold" href="#!">Antony</a></p>
+                                    <h4 class="mb-1" id="staticBackdropLabel">Editar os dados do formador</h4>
+                                    <p class="fs-11 mb-0">Adicionado por <a class="link-600 fw-semi-bold" href="#!">{{Auth::user()->name}}</a></p>
                                     </div>
                                     <div class="p-4">
                                     <div class="row">
