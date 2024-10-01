@@ -78,6 +78,6 @@ class userController extends Controller
 
         Alert::success('Adicionado', $successMessage);
 
-        return redirect()->back();
+        return redirect()->route('trainer.all');
     }
 }
