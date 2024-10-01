@@ -85,7 +85,7 @@
                                         <div class="dropdown-menu dropdown-menu-end border py-0"
                                             aria-labelledby="customer-dropdown-1">
                                             <div class="py-2"><a class="dropdown-item" href="#!">Edit</a><a
-                                                    class="dropdown-item text-danger" href="#!">Delete</a></div>
+                                                    class="dropdown-item text-danger" href="{{route('trainer.delete',['id'=>$trainer->id])}}">Delete</a></div>
                                         </div>
                                     </div>
                                 </td>

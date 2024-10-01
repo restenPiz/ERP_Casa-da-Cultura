@@ -25,7 +25,7 @@ Route::middleware('auth')->group(function () {
     //*Inicio das rotas da parte de formadores
     Route::get('/trainerAdd', [trainerController::class, 'index'])->name('trainer.index');
     Route::get('/trainerMain', [trainerController::class, 'all'])->name('trainer.all');
-    Route::delete('/trainerDelete', [trainerController::class, 'delete'])->name('trainer.delete');
+    Route::get('/trainerDelete/{id}', [trainerController::class, 'delete'])->name('trainer.delete');
 
     //*Inicio das rotas da parte de cursos
     Route::get('/courseMain', [courseController::class, 'index'])->name('course.index');
