@@ -42,9 +42,9 @@
             userLinkRTL.setAttribute('disabled', true);
         }
     </script>
+    {{--Inicio do link do vite--}}
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
-
 <body>
     <main class="main" id="top">
         <div class="container" data-layout="container">
