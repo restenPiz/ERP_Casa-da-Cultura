@@ -84,12 +84,66 @@
                                                 class="fas fa-ellipsis-h fs-10"></span></button>
                                         <div class="dropdown-menu dropdown-menu-end border py-0"
                                             aria-labelledby="customer-dropdown-1">
-                                            <div class="py-2"><a class="dropdown-item" href="#!">Edit</a><a
+                                            <div class="py-2"><a class="dropdown-item" href="#staticBackdrop" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Edit</a><a
                                                     class="dropdown-item text-danger" href="{{route('trainer.delete',['id'=>$trainer->id])}}">Delete</a></div>
                                         </div>
                                     </div>
                                 </td>
                             </tr>
+
+                            {{--inicio do modal da parte de editar--}}
+                            <div class="modal fade" id="staticBackdrop" data-bs-keyboard="false" data-bs-backdrop="static" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-lg mt-6" role="document">
+                                <div class="modal-content border-0">
+                                <div class="position-absolute top-0 end-0 mt-3 me-3 z-1"><button class="btn-close btn btn-sm btn-circle d-flex flex-center transition-base" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                                <div class="modal-body p-0">
+                                    <div class="rounded-top-3 bg-body-tertiary py-3 ps-4 pe-6">
+                                    <h4 class="mb-1" id="staticBackdropLabel">Add a new illustration to the landing page</h4>
+                                    <p class="fs-11 mb-0">Added by <a class="link-600 fw-semi-bold" href="#!">Antony</a></p>
+                                    </div>
+                                    <div class="p-4">
+                                    <div class="row">
+                                        <div class="col-lg-9">
+                                        <div class="d-flex"><span class="fa-stack ms-n1 me-3"><i class="fas fa-circle fa-stack-2x text-200"></i><i class="fa-inverse fa-stack-1x text-primary fas fa-tag" data-fa-transform="shrink-2"></i></span>
+                                            <div class="flex-1">
+                                            <h5 class="mb-2 fs-9">Labels</h5>
+                                            <div class="d-flex"><span class="badge me-1 py-2 badge-subtle-success">New</span><span class="badge me-1 py-2 badge-subtle-primary">Goal</span><span class="badge me-1 py-2 badge-subtle-info">Enhancement</span>
+                                                <div class="dropdown dropend"><button class="btn btn-sm btn-secondary px-2 fsp-75 bg-400 border-400 dropdown-toggle dropdown-caret-none" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="fas fa-plus"></span></button>
+                                                <div class="dropdown-menu">
+                                                    <h6 class="dropdown-header py-0 px-3 mb-0">Select Label</h6>
+                                                    <div class="dropdown-divider"></div>
+                                                    <div class="px-3"><button class="badge-subtle-danger dropdown-item rounded-1 mb-2" type="button">New</button><button class="badge-subtle-primary dropdown-item rounded-1 mb-2" type="button">Goal</button><button class="badge-subtle-info dropdown-item rounded-1 mb-2" type="button">Enhancement</button></div>
+                                                    <div class="dropdown-divider"></div>
+                                                    <div class="px-3"><button class="btn btn-sm d-block w-100 btn-outline-secondary border-400">Create Label</button></div>
+                                                </div>
+                                                </div>
+                                            </div>
+                                            <hr class="my-4" />
+                                            </div>
+                                        </div>
+                                        <div class="d-flex"><span class="fa-stack ms-n1 me-3"><i class="fas fa-circle fa-stack-2x text-200"></i><i class="fa-inverse fa-stack-1x text-primary fas fa-align-left" data-fa-transform="shrink-2"></i></span>
+                                            <div class="flex-1">
+                                            <h5 class="mb-2 fs-9">Description</h5>
+                                            <p class="text-break fs-10">The illustration must match to the contrast of the theme. The illustraion must described the concept of the design. To know more about the theme visit the page. </p>
+                                            </div>
+                                        </div>
+                                        </div>
+                                        <div class="col-lg-3">
+                                        <h6 class="mt-5 mt-lg-0">Add To Card</h6>
+                                        <ul class="nav flex-lg-column fs-10">
+                                            <li class="nav-item me-2 me-lg-0"><a class="nav-link nav-link-card-details" href="#!"><span class="fas fa-user me-2"></span>Members</a></li>
+                                            <li class="nav-item me-2 me-lg-0"><a class="nav-link nav-link-card-details" href="#!"><span class="fas fa-tag me-2"></span>Label</a></li>
+                                            <li class="nav-item me-2 me-lg-0"><a class="nav-link nav-link-card-details" href="#!"><span class="fas fa-paperclip me-2"></span>Attachments</a></li>
+                                            <li class="nav-item me-2 me-lg-0"><a class="nav-link nav-link-card-details" href="#!"><span class="fa fa-align-left me-2"></span>Description </a></li>
+                                        </ul>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                            </div>
+                            {{--Fim do modal de editar--}}
                         @endforeach
                     </tbody>
                 </table>
