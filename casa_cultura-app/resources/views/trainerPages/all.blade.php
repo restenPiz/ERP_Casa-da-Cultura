@@ -33,7 +33,7 @@
                       <th class="text-900 sort pe-1 align-middle white-space-nowrap" data-sort="email">Email</th>
                       <th class="text-900 sort pe-1 align-middle white-space-nowrap" data-sort="phone">Phone</th>
                       <th class="text-900 sort pe-1 align-middle white-space-nowrap ps-5" data-sort="address" style="min-width: 200px;">Billing Address</th>
-                      <th class="text-900 sort pe-1 align-middle white-space-nowrap" data-sort="joined">Joined</th>
+                      <th class="text-900 sort pe-1 align-middle white-space-nowrap" data-sort="joined">Actividade</th>
                       <th class="align-middle no-sort"></th>
                     </tr>
                   </thead>
@@ -56,7 +56,7 @@
                             <td class="email align-middle py-2"><a href="mailto:emma@example.com">{{$trainer->email}}</a></td>
                             <td class="phone align-middle white-space-nowrap py-2"><a href="tel:2122288403">{{$trainer->contact}}</a></td>
                             <td class="address align-middle white-space-nowrap ps-5 py-2">{{$trainer->place}}</td>
-                            <td class="joined align-middle py-2">{{$trainer->Date_of_birth}}</td>
+                            <td class="joined align-middle py-2">{{$trainer->function}}</td>
                             <td class="align-middle white-space-nowrap py-2 text-end">
                                 <div class="dropdown font-sans-serif position-static"><button class="btn btn-link text-600 btn-sm dropdown-toggle btn-reveal" type="button" id="customer-dropdown-1" data-bs-toggle="dropdown" data-boundary="window" aria-haspopup="true" aria-expanded="false"><span class="fas fa-ellipsis-h fs-10"></span></button>
                                 <div class="dropdown-menu dropdown-menu-end border py-0" aria-labelledby="customer-dropdown-1">
