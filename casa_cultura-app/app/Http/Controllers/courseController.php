@@ -41,6 +41,10 @@ class courseController extends Controller
 
         Alert::success('Adicionado!', 'O curso foi adicionado com sucesso!');
     }
+    public function update()
+    {
+        //*Inicio do metodo responsavel por fazer o update dos dados
+    }
     public function delete($id)
     {
         $courses = course::findOrFail($id);
