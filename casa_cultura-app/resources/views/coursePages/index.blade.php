@@ -150,19 +150,6 @@
                 </div>
             </div>
         </div>
-        <div class="card rounded-0 bottom-bar d-lg-none"
-            data-bottom-bar='{"target":"course-publish-btn","breakPoint":"lg"}'>
-            <div class="card-body py-2 px-0">
-                <div class="container">
-                    <div class="row flex-between-center g-0">
-                        <div class="col-auto"><a class="btn btn-link btn-sm text-secondary fw-medium px-0"
-                                href="#!">Save as Draft</a></div>
-                        <div class="col-auto"><button class="btn btn-primary btn-md px-5 fw-medium"
-                                type="submit">Publish</button></div>
-                    </div>
-                </div>
-            </div>
-        </div>
     </form>
 
     {{-- Fim da minha pagina --}}
