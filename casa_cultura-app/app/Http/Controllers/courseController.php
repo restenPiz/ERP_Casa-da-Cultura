@@ -17,7 +17,7 @@ class courseController extends Controller
 
         return view('coursePages.index', compact('trainers'));
     }
-    public function storeCourse()
+    public function store()
     {
         $courses = new course();
 
