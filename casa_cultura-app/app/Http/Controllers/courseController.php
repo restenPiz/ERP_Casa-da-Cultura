@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\course;
+use DB;
 use Illuminate\Http\Request;
 use RealRashid\SweetAlert\Facades\Alert;
 
@@ -10,7 +11,11 @@ class courseController extends Controller
 {
     public function index()
     {
-        return view('coursePages.index');
+        $trainers = DB::table('users')
+            ->where('user_type', '=', 'Trainer')
+            ->get();
+
+        return view('coursePages.index', compact('trainers'));
     }
     public function storeCourse()
     {

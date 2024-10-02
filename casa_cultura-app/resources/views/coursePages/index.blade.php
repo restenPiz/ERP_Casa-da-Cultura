@@ -16,8 +16,10 @@
                                     class="text-danger">*</span></label><select class="form-select" id="course-category"
                                 name="course-category">
                                 <option>Selecione o Formador</option>
-                                <option>Academia</option>
-                                <option>Arts & Crafts</option>
+                                
+                                @foreach ($trainers as $trainer)
+                                <option value="{{$trainer->name}} {{$trainer->Surname}}">{{$trainer->name}} {{$trainer->Surname}}</option>    
+                                @endforeach
                             </select></div>
                         <div class="col-12 mb-3"><label class="form-label" for="course-tags">Descrição do Curso<span
                                     class="text-danger">*</span></label><textarea class="form-control" data-tinymce="data-tinymce" name="course-description" id="course-description"
