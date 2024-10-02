@@ -142,18 +142,18 @@
                                                         <div class="col-lg-6"> <label class="form-label"
                                                                 for="first-name">Primeiro Nome</label><input
                                                                 name="name" class="form-control" id="first-name"
-                                                                type="text" placeholder="Digite o Seu Nome" /></div>
+                                                                type="text" value="{{$trainer->name}}" /></div>
                                                         <div class="col-lg-6"> <label class="form-label"
                                                                 for="last-name">Apelido</label><input name="Surname"
                                                                 class="form-control" id="last-name" type="text"
-                                                                placeholder="Digite o seu apelido" /></div>
+                                                                value="{{$trainer->Surname}}" /></div>
                                                         <div class="col-lg-6"> <label class="form-label"
                                                                 for="email1">Email</label><input name="email"
-                                                                placeholder="mauropeniel@gmail.com" class="form-control"
+                                                                value="{{$trainer->email}}" class="form-control"
                                                                 id="email1" type="text" /></div>
                                                         <div class="col-lg-6"> <label class="form-label"
                                                                 for="email2">Contacto</label><input class="form-control"
-                                                                id="email2" type="text" value="258 "
+                                                                id="email2" type="text" value="{{$trainer->contact}}"
                                                                 name="contact" />
                                                         </div>
                                                         <div class="col-lg-6"><label class="form-label"
@@ -171,20 +171,20 @@
                                                         <div class="col-lg-6"> <label class="form-label"
                                                                 for="email2">Numero de BI</label><input
                                                                 class="form-control" id="email2" type="text"
-                                                                name="bi" placeholder="0290290927329BS" /></div>
+                                                                name="bi" value="{{$trainer->bi}}" /></div>
                                                         <div class="col-lg-6"> <label class="form-label"
                                                                 for="email2">Data
                                                                 de Nascimento</label><input class="form-control"
-                                                                id="email2" type="date" name="Date_of_birth" />
+                                                                id="email2" type="date" value="{{$trainer->Date_of_birth}}" name="Date_of_birth" />
                                                         </div>
                                                         <div class="col-lg-6"> <label class="form-label"
                                                                 for="email2">Residencia</label><input
                                                                 class="form-control" id="email2" type="text"
-                                                                placeholder="Local de Residencia" name="place" /></div>
+                                                                value="{{$trainer->place}}" name="place" /></div>
                                                         <div class="col-lg-6"> <label class="form-label"
                                                                 for="email2">Cargo</label><input class="form-control"
                                                                 id="email2" type="text"
-                                                                placeholder="Digite o seu cargo" name="function" /></div>
+                                                                value="{{$trainer->function}}" name="function" /></div>
                                                         <div class="col-lg-6"> <label class="form-label"
                                                                 for="email2"></label><input class="form-control"
                                                                 value="Trainer" id="email2" type="hidden"
