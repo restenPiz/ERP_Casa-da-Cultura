@@ -123,7 +123,8 @@ class userController extends Controller
         $user->contact = Request::input('contact');
         $user->upload_file = Request::input('upload_file');
         $user->function = Request::input('function');
-
+        $user->save();
+        
         switch ($validatedData['user_type']) {
             case 'Employee':
                 $role = 'employee';
@@ -144,8 +145,6 @@ class userController extends Controller
         }
 
         $user->addRole($role);
-
-        $user->save();
 
         Alert::success('Actualizado', $successMessage);
 
