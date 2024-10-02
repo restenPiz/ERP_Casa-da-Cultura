@@ -32,7 +32,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/courseMain', [courseController::class, 'index'])->name('course.index');
     Route::get('/courseDelete/{id}', [trainerController::class, 'delete'])->name('course.delete');
     Route::post('/courseUpdate/{id}', [trainerController::class, 'update'])->name('course.update');
-    Route::post('/courseStore/{id}', [trainerController::class, 'store'])->name('course.store');
+    Route::post('/courseStore', [trainerController::class, 'store'])->name('course.store');
 
     //*Inicio das rotas da parte de funcionarios
 
