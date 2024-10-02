@@ -44,7 +44,7 @@ class userController extends Controller
 
         $user = User::create([
             'name' => $validatedData['name'],
-            'Surname' => $validatedData['surname'],
+            'Surname' => $validatedData['Surname'],
             'email' => $validatedData['email'],
             'user_type' => $validatedData['user_type'],
             'password' => Hash::make($validatedData['password']),

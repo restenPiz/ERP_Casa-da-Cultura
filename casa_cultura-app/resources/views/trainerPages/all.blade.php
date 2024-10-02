@@ -65,7 +65,7 @@
                                                     src="{{ asset('storage/' . $trainer->upload_file) }}" alt="" />
                                             </div>
                                             <div class="flex-1">
-                                                <h5 class="mb-0 fs-10">{{ $trainer->name }}</h5>
+                                                <h5 class="mb-0 fs-10">{{ $trainer->name }} {{$trainer->Surname}}</h5>
                                             </div>
                                         </div>
                                     </a>
