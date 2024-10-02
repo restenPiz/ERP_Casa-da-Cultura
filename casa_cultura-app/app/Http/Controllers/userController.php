@@ -82,7 +82,7 @@ class userController extends Controller
 
         return redirect()->route('trainer.all');
     }
-    public function updateUser(Request $request, $id)
+    public function update(Request $request, $id)
     {
         $user = User::findOrFail($id);
 
