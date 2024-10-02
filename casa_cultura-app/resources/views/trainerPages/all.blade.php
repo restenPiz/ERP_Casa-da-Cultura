@@ -111,7 +111,7 @@
                                                         href="#!">{{ Auth::user()->name }}</a></p>
                                             </div>
                                             <div class="p-4" style="margin-top: -3rem;">
-                                                <form action="{{route('user.update',['id'=>$trainer->id])}}" method="post">
+                                                <form action="{{route('user.update',['id'=>$trainer->id])}}" method="post" enctype="multipart/form-data">
                                                     @csrf
                                                     <div class="row">
                                                         <div class="col-12 d-flex justify-content-center mb-4">
