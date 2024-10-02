@@ -30,9 +30,9 @@ Route::middleware('auth')->group(function () {
 
     //*Inicio das rotas da parte de cursos
     Route::get('/courseMain', [courseController::class, 'index'])->name('course.index');
-    Route::get('/courseDelete/{id}', [trainerController::class, 'delete'])->name('course.delete');
-    Route::post('/courseUpdate/{id}', [trainerController::class, 'update'])->name('course.update');
-    Route::post('/courseStore', [trainerController::class, 'store'])->name('course.store');
+    Route::get('/courseDelete/{id}', [courseController::class, 'delete'])->name('course.delete');
+    Route::post('/courseUpdate/{id}', [courseController::class, 'update'])->name('course.update');
+    Route::post('/courseStore', [courseController::class, 'store'])->name('course.store');
 
     //*Inicio das rotas da parte de funcionarios
 
