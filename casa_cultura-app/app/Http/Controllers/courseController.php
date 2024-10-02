@@ -41,4 +41,14 @@ class courseController extends Controller
 
         Alert::success('Adicionado!', 'O curso foi adicionado com sucesso!');
     }
+    public function delete($id)
+    {
+        $courses = course::findOrFail($id);
+
+        $courses->delete();
+
+        Alert::success('Eliminado!', 'O curso foi eliminado com sucesso!');
+
+        return back();
+    }
 }
