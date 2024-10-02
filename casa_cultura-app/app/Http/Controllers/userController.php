@@ -103,7 +103,6 @@ class userController extends Controller
             'user_type' => [
                 'required',
                 'string',
-                Rule::in(['Employee', 'Trainer', 'User']),
             ],
         ]);
 
@@ -111,10 +110,10 @@ class userController extends Controller
         if (File::exists($request->hasFile('upload_file'))) {
             File::delete($request->file('upload_file'));
         }
-        
+
         //*Caso nao exista ele adiciona o ficheiro novo
         if ($request->hasFile('upload_file')) {
-            $validatedData['upload_file'] = $request->file('upload_file')->store('uploads/files', 'public');
+            $validatedData['upload_file'] = $request->file(key: 'upload_file')->store('uploads/files', 'public');
         }
 
         $user = User::findOrFail($id);
