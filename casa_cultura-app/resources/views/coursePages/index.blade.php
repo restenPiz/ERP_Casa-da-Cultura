@@ -92,7 +92,7 @@
                         <div class="card-body bg-body-tertiary">
                             <form class="dropzone dropzone-single p-0" data-dropzone="data-dropzone"
                                 data-options='{"maxFiles":1,"acceptedFiles":"image/*"}'>
-                                <div class="fallback"><input type="file" name="file" /></div>
+                                <div class="fallback"><input type="file" name="upload_file" /></div>
                                 <div class="dz-preview dz-preview-single">
                                     <div class="dz-preview-cover dz-complete"><img class="dz-preview-img"
                                             src="../../../assets/img/generic/image-file-2.png" alt=""
@@ -124,7 +124,7 @@
                         <div class="card-body bg-body-tertiary">
                             <form class="dropzone dropzone-single p-0" data-dropzone="data-dropzone"
                                 data-options='{"maxFiles":1,"acceptedFiles":".mp4,.mkv,.avi"}'>
-                                <div class="fallback"><input type="file" accept="video/*" /></div>
+                                <div class="fallback"><input type="file" name="upload_video" /></div>
                                 <div class="dz-preview dz-preview-single">
                                     <div class="dz-preview-cover dz-complete"><video class="dz-preview-img"
                                             controls="controls" data-dz-thumbnail=""></video><a
@@ -140,7 +140,7 @@
                                     </div>
                                 </div>
                                 <div class="dz-message fs-10" data-dz-message="data-dz-message"><img class="me-2"
-                                        src="../../../assets/img/icons/cloud-upload.svg" width="20"
+                                        src="../assets/img/icons/cloud-upload.svg" width="20"
                                         alt="" /><span class="d-none d-lg-inline">Arraste o seu .mp4 ou .mkv
                                         ficheiro
                                         aqui<br />ou, </span><span class="btn btn-link p-0 fs-10">Pesquise</span></div>
