@@ -21,7 +21,7 @@ Route::middleware('auth')->group(function () {
 
     //?Inicio das rotas de adicao de usuario
     Route::post('/storeUser', [userController::class, 'storeUser'])->name('storeUser');
-    Route::post('/userUpdate/{id}', [trainerController::class, 'update'])->name('user.update');
+    Route::post('/userUpdate/{id}', [userController::class, 'update'])->name('user.update');
 
     //*Inicio das rotas da parte de formadores
     Route::get('/trainerAdd', [trainerController::class, 'index'])->name('trainer.index');

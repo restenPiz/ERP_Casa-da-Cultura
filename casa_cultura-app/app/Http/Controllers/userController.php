@@ -112,19 +112,17 @@ class userController extends Controller
 
         $user = User::findOrFail($id);
 
-        $user = User::create([
-            'name' => $validatedData['name'],
-            'Surname' => $validatedData['surname'],
-            'email' => $validatedData['email'],
-            'user_type' => $validatedData['user_type'],
-            'password' => Hash::make($validatedData['password']),
-            'Date_of_birth' => $validatedData['Date_of_birth'] ?? null,
-            'bi' => $validatedData['bi'] ?? null,
-            'place' => $validatedData['place'] ?? null,
-            'contact' => $validatedData['contact'] ?? null,
-            'upload_file' => $validatedData['upload_file'] ?? null,
-            'function' => $validatedData['function'] ?? null,
-        ]);
+        $user->name = Request::input('name');
+        $user->Surname = Request::input('Surname');
+        $user->email = Request::input('email');
+        $user->user_type = Request::input('user_type');
+        $user->password = bcrypt($request->input('password'));
+        $user->Date_of_birth = Request::input('Date_of_birth');
+        $user->bi = Request::input('bi');
+        $user->place = Request::input('place');
+        $user->contact = Request::input('contact');
+        $user->upload_file = Request::input('upload_file');
+        $user->function = Request::input('function');
 
         switch ($validatedData['user_type']) {
             case 'Employee':
@@ -146,6 +144,8 @@ class userController extends Controller
         }
 
         $user->addRole($role);
+
+        $user->save();
 
         Alert::success('Actualizado', $successMessage);
 
