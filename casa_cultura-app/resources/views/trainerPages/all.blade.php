@@ -19,11 +19,8 @@
                     </div>
                     <div id="table-customers-replace-element"><a href="{{route('trainer.index')}}" class="btn btn-falcon-default btn-sm"
                             type="button"><span class="fas fa-plus" data-fa-transform="shrink-3 down-2"></span><span
-                                class="d-none d-sm-inline-block ms-1">New</span></a><button
-                            class="btn btn-falcon-default btn-sm mx-2" type="button"><span class="fas fa-filter"
-                                data-fa-transform="shrink-3 down-2"></span><span
-                                class="d-none d-sm-inline-block ms-1">Filter</span></button><button
-                            class="btn btn-falcon-default btn-sm" type="button"><span class="fas fa-external-link-alt"
+                                class="d-none d-sm-inline-block ms-1">New</span></a>
+                            <button class="btn btn-falcon-default btn-sm" type="button"><span class="fas fa-external-link-alt"
                                 data-fa-transform="shrink-3 down-2"></span><span
                                 class="d-none d-sm-inline-block ms-1">Export</span></button></div>
                 </div>
