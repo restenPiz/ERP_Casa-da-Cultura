@@ -112,19 +112,19 @@ class userController extends Controller
 
         $user = User::findOrFail($id);
 
-        $user->name = Request::input('name');
-        $user->Surname = Request::input('Surname');
-        $user->email = Request::input('email');
-        $user->user_type = Request::input('user_type');
+        $user->name = $request->input('name');
+        $user->Surname = $request->input('Surname');
+        $user->email = $request->input('email');
+        $user->user_type = $request->input('user_type');
         $user->password = bcrypt($request->input('password'));
-        $user->Date_of_birth = Request::input('Date_of_birth');
-        $user->bi = Request::input('bi');
-        $user->place = Request::input('place');
-        $user->contact = Request::input('contact');
-        $user->upload_file = Request::input('upload_file');
-        $user->function = Request::input('function');
+        $user->Date_of_birth = $request->input('Date_of_birth');
+        $user->bi = $request->input('bi');
+        $user->place = $request->input('place');
+        $user->contact = $request->input('contact');
+        $user->upload_file = $request->input('upload_file');
+        $user->function = $request->input('function');
         $user->save();
-        
+
         switch ($validatedData['user_type']) {
             case 'Employee':
                 $role = 'employee';
@@ -144,7 +144,8 @@ class userController extends Controller
                 break;
         }
 
-        $user->addRole($role);
+        //*Quando se esta a editar um dado, nao precisa adicionar mais a role
+        // $user->addRole($role);
 
         Alert::success('Actualizado', $successMessage);
 
