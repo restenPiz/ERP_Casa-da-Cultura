@@ -110,7 +110,7 @@
                                                 <p class="fs-11 mb-0">Adicionado por <a class="link-600 fw-semi-bold"
                                                         href="#!">{{ Auth::user()->name }}</a></p>
                                             </div>
-                                            <div class="p-4">
+                                            <div class="p-4" style="margin-top: -3rem;">
                                                 <form action="{{route('trainer.update',['id'=>$trainer->id])}}" method="post">
                                                     @csrf
                                                     <div class="row">
