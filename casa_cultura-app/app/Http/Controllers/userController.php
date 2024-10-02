@@ -108,10 +108,10 @@ class userController extends Controller
         ]);
 
         //*Inicio do metodo para verificar a existencia do ficheiro
-        if (File::exists($request->file('upload_file'))) {
+        if (File::exists($request->hasFile('upload_file'))) {
             File::delete($request->file('upload_file'));
         }
-
+        
         //*Caso nao exista ele adiciona o ficheiro novo
         if ($request->hasFile('upload_file')) {
             $validatedData['upload_file'] = $request->file('upload_file')->store('uploads/files', 'public');
