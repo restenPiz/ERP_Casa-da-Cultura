@@ -185,11 +185,20 @@
                                                                 for="email2">Cargo</label><input class="form-control"
                                                                 id="email2" type="text"
                                                                 value="{{$trainer->function}}" name="function" /></div>
+
+                                                        {{--Inicio dos inputs type hidden--}}
                                                         <div class="col-lg-6"> <label class="form-label"
                                                                 for="email2"></label><input class="form-control"
                                                                 value="Trainer" id="email2" type="hidden"
                                                                 name="user_type" />
                                                         </div>
+                                                        <div class="col-lg-6"> <label class="form-label"
+                                                                for="email2"></label><input class="form-control"
+                                                                value="{{$trainer->id}}" id="email2" type="hidden"
+                                                                name="id" />
+                                                        </div>
+                                                        {{--Fim dos inputs type hidden--}}
+
                                                         <div class="col-12 d-flex justify-content-end"><button
                                                                 class="btn btn-primary" type="submit">Adicionar Formador
                                                             </button></div>
