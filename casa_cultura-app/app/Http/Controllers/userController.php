@@ -151,11 +151,7 @@ class userController extends Controller
                 $successMessage = 'Usuário atualizado com sucesso!';
                 break;
         }
-
-        if ($role) {
-            $user->syncRoles([$role]);
-        }
-
+    
         Alert::success('Atualizado', $successMessage);
 
         return redirect()->route('trainer.all');
