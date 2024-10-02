@@ -27,11 +27,11 @@ class courseController extends Controller
         $courses->Goals = Request::input('Goals');
 
         if (Request::hasFile('upload_file')) {
-            $validatedData['upload_file'] = Request::file('upload_file')->store('uploads/courses', 'public');
+            $courses['upload_file'] = Request::file('upload_file')->store('uploads/courses', 'public');
         }
 
         if (Request::hasFile('upload_video')) {
-            $validatedData['upload_video'] = Request::file('upload_video')->store('uploads/courses', 'public');
+            $courses['upload_video'] = Request::file('upload_video')->store('uploads/courses', 'public');
         }
 
         $courses->save();
