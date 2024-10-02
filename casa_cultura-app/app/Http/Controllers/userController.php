@@ -119,6 +119,7 @@ class userController extends Controller
             $validatedData['upload_file'] = $request->file('upload_file')->store('uploads/files', 'public');
         }
 
+        //*Inicio do metodo de actualizacao
         $user->update([
             'name' => $validatedData['name'],
             'Surname' => $validatedData['Surname'],
