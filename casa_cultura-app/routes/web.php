@@ -19,7 +19,7 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
-    //?Inicio das rotas de adicao de usuario
+    //*Inicio das rotas de adicao de usuario
     Route::post('/storeUser', [userController::class, 'storeUser'])->name('storeUser');
     Route::post('/userUpdate/{id}', [userController::class, 'update'])->name('user.update');
 
