@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\course;
 use App\Models\User;
+use File;
 use Hash;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
@@ -106,6 +107,12 @@ class userController extends Controller
             ],
         ]);
 
+        //*Inicio do metodo para verificar a existencia do ficheiro
+        if (File::exists($request->file('upload_file'))) {
+            File::delete($request->file('upload_file'));
+        }
+
+        //*Caso nao exista ele adiciona o ficheiro novo
         if ($request->hasFile('upload_file')) {
             $validatedData['upload_file'] = $request->file('upload_file')->store('uploads/files', 'public');
         }

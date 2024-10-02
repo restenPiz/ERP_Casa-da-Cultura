@@ -85,7 +85,7 @@
                                         <div class="dropdown-menu dropdown-menu-end border py-0"
                                             aria-labelledby="customer-dropdown-1">
                                             <div class="py-2"><a class="dropdown-item" href="#staticBackdrop"
-                                                    data-bs-toggle="modal" data-bs-target="#staticBackdrop">Edit</a><a
+                                                    data-bs-toggle="modal" data-bs-target="#staticBackdrop{{$trainer->id}}">Edit</a><a
                                                     class="dropdown-item text-danger"
                                                     href="{{ route('trainer.delete', ['id' => $trainer->id]) }}">Delete</a>
                                             </div>
@@ -95,7 +95,7 @@
                             </tr>
 
                             {{-- inicio do modal da parte de editar --}}
-                            <div class="modal fade" id="staticBackdrop" data-bs-keyboard="false"
+                            <div class="modal fade" id="staticBackdrop{{$trainer->id}}" data-bs-keyboard="false"
                                 data-bs-backdrop="static" tabindex="-1" aria-labelledby="staticBackdropLabel"
                                 aria-hidden="true">
                                 <div class="modal-dialog modal-lg mt-6" role="document">
@@ -200,7 +200,7 @@
                                                         {{--Fim dos inputs type hidden--}}
 
                                                         <div class="col-12 d-flex justify-content-end"><button
-                                                                class="btn btn-primary" type="submit">Adicionar Formador
+                                                                class="btn btn-primary" type="submit">Actualizar Formador
                                                             </button></div>
                                                     </div>
                                             </div>
