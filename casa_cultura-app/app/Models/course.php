@@ -18,7 +18,7 @@ class course extends Model
         'Goals',
         'Upload_file',
         'Upload_video',
-        'Id_user'
+        'id_user'
     ];
 
     public function course_course()

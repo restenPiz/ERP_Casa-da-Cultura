@@ -17,7 +17,7 @@ class courseController extends Controller
 
         return view('coursePages.index', compact('trainers'));
     }
-    public function store()
+    public function store(Request $request)
     {
         $courses = new course();
 
@@ -28,11 +28,11 @@ class courseController extends Controller
         $courses->id_user = Request::input('id_user');
 
         if (Request::hasFile('upload_file')) {
-            $courses['upload_file'] = Request::file('upload_file')->store('uploads/courses', 'public');
+            $courses['Upload_file'] = Request::file('Upload_file')->store('uploads/courses', 'public');
         }
 
         if (Request::hasFile('upload_video')) {
-            $courses['upload_video'] = Request::file('upload_video')->store('uploads/courses', 'public');
+            $courses['Upload_video'] = Request::file('Upload_video')->store('uploads/courses', 'public');
         }
 
         $courses->save();
