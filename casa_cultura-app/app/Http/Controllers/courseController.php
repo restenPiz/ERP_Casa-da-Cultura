@@ -25,7 +25,6 @@ class courseController extends Controller
         $courses->Description = $request->input('Description');
         $courses->Price = $request->input('Price');
         $courses->Goals = $request->input('Goals');
-        $courses->id_user = $request->input('id_user');
 
         if ($request->hasFile('upload_file')) {
             $courses['Upload_file'] = $request->file('Upload_file')->store('uploads/courses', 'public');
