@@ -13,10 +13,10 @@
                         <div class="row gx-2">
                             <div class="col-sm-6 mb-3"><label class="form-label" for="course-name">Nome do Curso<span
                                         class="text-danger">*</span></label><input class="form-control" id="course-name"
-                                    type="text" placeholder="Nome do Curso" required="required" /></div>
+                                   name="Course_name" type="text" placeholder="Nome do Curso" required="required" /></div>
                             <div class="col-sm-6 mb-3"><label class="form-label" for="course-category">Nome do Formador<span
                                         class="text-danger">*</span></label><select class="form-select" id="course-category"
-                                    name="course-category">
+                                    name="id_user">
                                     <option>Selecione o Formador</option>
 
                                     @foreach ($trainers as $trainer)
@@ -26,7 +26,7 @@
                                 </select></div>
                             <div class="col-12 mb-3"><label class="form-label" for="course-tags">Descrição do Curso<span
                                         class="text-danger">*</span></label>
-                                <textarea class="form-control" data-tinymce="data-tinymce" name="course-description" id="course-description"
+                                <textarea name="Description" class="form-control" data-tinymce="data-tinymce" name="course-description" id="course-description"
                                     required="required"></textarea>
                             </div>
                         </div>
@@ -39,7 +39,7 @@
                     <div class="card-body"> <label class="mb-3 form-label lh-1" for="course-goal">Objectivo do Curso <span
                                 class="text-danger">*</span></label>
                         <div class="position-relative mb-4 focus-actions-trigger">
-                            <textarea class="form-control" data-tinymce="data-tinymce" name="course-description" id="course-description"
+                            <textarea name="Goals" class="form-control" data-tinymce="data-tinymce" name="course-description" id="course-description"
                                 required="required"></textarea>
                             <div class="position-absolute end-0 top-50 translate-middle focus-actions"><button
                                     class="btn btn-link btn-sm p-0 text-700 me-2"><span
@@ -57,12 +57,7 @@
                             <div class="col-12 mb-3"><label class="form-label" for="base-price">Preço Fixo <span
                                         data-bs-toggle="tooltip" data-bs-placement="top" title="Course regular price"><span
                                             class="fas fa-question-circle text-primary fs-10 ms-1"></span></span></label><input
-                                    class="form-control" id="base-price" type="text" placeholder="" /></div>
-                            <div class="col-12"><label class="form-label" for="discounted-price">Desconto <span
-                                        data-bs-toggle="tooltip" data-bs-placement="top"
-                                        title="Course discounted price"><span
-                                            class="fas fa-question-circle text-primary fs-10 ms-1"></span></span></label><input
-                                    class="form-control" id="discounted-price" type="text" placeholder="" /></div>
+                                    class="form-control" name="Price" id="base-price" type="text" placeholder="" /></div>
                         </div>
                     </div>
                 </div>
@@ -78,7 +73,7 @@
                                 <div class="col-auto"><a class="btn btn-link btn-sm text-secondary fw-medium px-0"
                                         href="#!">Tela Inicial</a></div>
                                 <div class="col-auto"><button style="border-radius: 0"
-                                        class="btn btn-primary btn-md px-xxl-5 px-4 fw-medium" type="submit">Adicionar
+                                        class="btn btn-primary btn-md px-xxl-5 px-4 fw-medium" name="submit" type="submit">Adicionar
                                         Curso</button></div>
                             </div>
                         </div>
@@ -90,7 +85,7 @@
                                         class="fas fa-info-circle text-primary fs-9 ms-2"></span></span></h5>
                         </div>
                         <div class="card-body bg-body-tertiary">
-                            <form class="dropzone dropzone-single p-0" data-dropzone="data-dropzone"
+                            <div class="dropzone dropzone-single p-0" data-dropzone="data-dropzone"
                                 data-options='{"maxFiles":1,"acceptedFiles":"image/*"}'>
                                 <div class="fallback"><input class="form-control" type="file" name="upload_file" /></div>
                                 <div class="dz-preview dz-preview-single">
@@ -112,7 +107,7 @@
                                         alt="" /><span class="d-none d-lg-inline">Arraste a sua imagem
                                         aqui<br />ou,
                                     </span><span class="btn btn-link p-0 fs-10">Pesquise</span></div>
-                            </form>
+                                </div>
                         </div>
                     </div>
                     <div class="card mb-3">
