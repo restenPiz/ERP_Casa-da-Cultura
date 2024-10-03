@@ -328,6 +328,7 @@
                 @yield('content')
                 {{-- Fim do conteudo das pages --}}
 
+                {{--Inicio dos links do javascript--}}
                 <script src="../vendors/popper/popper.min.js"></script>
                 <script src="../vendors/bootstrap/bootstrap.min.js"></script>
                 <script src="../vendors/anchorjs/anchor.min.js"></script>
@@ -341,8 +342,9 @@
                 <script src="../vendors/lodash/lodash.min.js"></script>
                 <script src="../vendors/list.js/list.min.js"></script>
                 <script src="../assets/js/theme.js"></script>
-
+                {{--Inicio do link do sweetalert--}}
                 @include('sweetalert::alert')
+                {{--Fim dos links do javascript--}}
 </body>
 
 </html>

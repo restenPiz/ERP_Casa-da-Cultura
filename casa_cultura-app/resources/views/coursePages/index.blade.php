@@ -92,7 +92,7 @@
                         <div class="card-body bg-body-tertiary">
                             <form class="dropzone dropzone-single p-0" data-dropzone="data-dropzone"
                                 data-options='{"maxFiles":1,"acceptedFiles":"image/*"}'>
-                                <div class="fallback"><input type="file" name="upload_file" /></div>
+                                <div class="fallback"><input class="form-control" type="file" name="upload_file" /></div>
                                 <div class="dz-preview dz-preview-single">
                                     <div class="dz-preview-cover dz-complete"><img class="dz-preview-img"
                                             src="../../../assets/img/generic/image-file-2.png" alt=""
@@ -124,28 +124,29 @@
                         <div class="card-body bg-body-tertiary">
                             <form class="dropzone dropzone-single p-0" data-dropzone="data-dropzone"
                                 data-options='{"maxFiles":1,"acceptedFiles":"image/*"}'>
-                                <div class="fallback"><input class="form-control" type="file" name="upload_video" /></div>
+                                <div class="fallback"><input class="form-control" type="file" name="upload_file" /></div>
                                 <div class="dz-preview dz-preview-single">
-                                    <div class="dz-preview-cover dz-complete"><video class="dz-preview-img"
-                                            controls="controls" data-dz-thumbnail=""></video><a
-                                            class="dz-remove text-danger" href="#!"
+                                    <div class="dz-preview-cover dz-complete"><img class="dz-preview-img"
+                                            src="../../../assets/img/generic/image-file-2.png" alt=""
+                                            data-dz-thumbnail="" /><a class="dz-remove text-danger" href="#!"
                                             data-dz-remove="data-dz-remove"><span class="fas fa-times"></span></a>
                                         <div class="dz-progress"><span class="dz-upload"
                                                 data-dz-uploadprogress=""></span>
                                         </div>
-                                        <div class="dz-errormessage m-1 text-center"><span
+                                        <div class="dz-errormessage m-1"><span
                                                 data-dz-errormessage="data-dz-errormessage"></span></div>
                                     </div>
                                     <div class="dz-progress"><span class="dz-upload" data-dz-uploadprogress=""></span>
                                     </div>
                                 </div>
                                 <div class="dz-message fs-10" data-dz-message="data-dz-message"><img class="me-2"
-                                        src="../assets/img/icons/cloud-upload.svg" width="20"
-                                        alt="" /><span class="d-none d-lg-inline">Arraste o seu .mp4 ou .mkv
-                                        ficheiro
-                                        aqui<br />ou, </span><span class="btn btn-link p-0 fs-10">Pesquise</span></div>
+                                        src="../../../assets/img/icons/cloud-upload.svg" width="20"
+                                        alt="" /><span class="d-none d-lg-inline">Arraste a sua imagem
+                                        aqui<br />ou,
+                                    </span><span class="btn btn-link p-0 fs-10">Pesquise</span></div>
                             </form>
                         </div>
+                    </div>
                     </div>
                 </div>
             </div>
