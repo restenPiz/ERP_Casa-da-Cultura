@@ -19,6 +19,15 @@ class courseController extends Controller
     }
     public function store(Request $request)
     {
+        $validatedData = $request->validate([
+            'Course_name' => 'required|string|max:255',
+            'Description' => 'required|string|max:1000',
+            'Price' => 'required|string|max:255',
+            'Goals' => 'required|string|max:1000',
+            'Upload_file' => 'required|string|max:255',
+            'Upload_video' => 'required|string|max:255',
+        ]);
+
         if ($request->hasFile('upload_file')) {
             $courses['Upload_file'] = $request->file('Upload_file')->store('uploads/courses', 'public');
         }
@@ -29,12 +38,12 @@ class courseController extends Controller
 
         //*Inicio do metodo que vai inserir os dados
         $courses = course::create([
-            'Course_name' => $courses['Course_name'],
-            'Description' => $courses['Description'],
-            'Price' => $courses['Price'],
-            'Goals' => $courses['Goals'],
-            'Upload_file' => $courses['Upload_file'],
-            'Upload_video' => $courses['Upload_video'],
+            'Course_name' => $validatedData['Course_name'],
+            'Description' => $validatedData['Description'],
+            'Price' => $validatedData['Price'],
+            'Goals' => $validatedData['Goals'],
+            'Upload_file' => $validatedData['Upload_file'],
+            'Upload_video' => $validatedData['Upload_video'],
         ]);
 
         //*Conectando o user com o curso
