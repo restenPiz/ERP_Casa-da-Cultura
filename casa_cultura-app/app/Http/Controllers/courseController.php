@@ -36,7 +36,14 @@ class courseController extends Controller
         $courses->Upload_file = $request->input('Upload_file');
         $courses->Upload_video = $request->input('Upload_video');
 
-        $courses->save();
+        $courses->create([
+            'Course_name' => $courses['Course_name'],
+            'Description' => $courses['Description'],
+            'Price' => $courses['Price'],
+            'Goals' => $courses['Goals'],
+            'Upload_file' => $courses['Upload_file'],
+            'Upload_video' => $courses['Upload_video'],
+        ]);
 
         //*Conectando o user com o curso
         $courses->users()->attach($courses['id_user']);
