@@ -125,38 +125,6 @@
                             <input class="form-control" type="file" name="upload_file" />
                         </div>
                     </div>
-                    {{-- <div class="card mb-3">
-                        <div class="card-header">
-                            <h5 class="mb-0">Faça o Upload do Video<span data-bs-toggle="tooltip" data-bs-placement="top"
-                                    title="Add cover photo"><span
-                                        class="fas fa-info-circle text-primary fs-9 ms-2"></span></span></h5>
-                        </div>
-                        <div class="card-body bg-body-tertiary">
-                            <form class="dropzone dropzone-single p-0" data-dropzone="data-dropzone"
-                                data-options='{"maxFiles":1,"acceptedFiles":"image/*"}'>
-                                <div class="fallback"><input class="form-control" type="file" name="upload_file" /></div>
-                                <div class="dz-preview dz-preview-single">
-                                    <div class="dz-preview-cover dz-complete"><img class="dz-preview-img"
-                                            src="../../../assets/img/generic/image-file-2.png" alt=""
-                                            data-dz-thumbnail="" /><a class="dz-remove text-danger" href="#!"
-                                            data-dz-remove="data-dz-remove"><span class="fas fa-times"></span></a>
-                                        <div class="dz-progress"><span class="dz-upload"
-                                                data-dz-uploadprogress=""></span>
-                                        </div>
-                                        <div class="dz-errormessage m-1"><span
-                                                data-dz-errormessage="data-dz-errormessage"></span></div>
-                                    </div>
-                                    <div class="dz-progress"><span class="dz-upload" data-dz-uploadprogress=""></span>
-                                    </div>
-                                </div>
-                                <div class="dz-message fs-10" data-dz-message="data-dz-message"><img class="me-2"
-                                        src="../../../assets/img/icons/cloud-upload.svg" width="20"
-                                        alt="" /><span class="d-none d-lg-inline">Arraste a sua imagem
-                                        aqui<br />ou,
-                                    </span><span class="btn btn-link p-0 fs-10">Pesquise</span></div>
-                            </form>
-                        </div>
-                    </div> --}}
                 </div>
             </div>
         </div>
