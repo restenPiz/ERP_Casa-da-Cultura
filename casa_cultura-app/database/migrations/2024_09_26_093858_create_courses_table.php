@@ -12,8 +12,8 @@ return new class extends Migration {
             $table->id();
             $table->string('Course_name');
             $table->string('Description', 1000);
-            $table->string('Upload_file');
-            $table->string('Upload_video');
+            $table->string('Upload_file')->nullable();
+            $table->string('Upload_video')->nullable();
             $table->integer('Price');
             $table->string('Goals', 1000);
             $table->timestamps();
