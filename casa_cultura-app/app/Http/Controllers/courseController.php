@@ -46,7 +46,7 @@ class courseController extends Controller
     }
     public function update()
     {
-        
+        //*Inicio do metodo de actualizacao
     }
     public function delete($id)
     {
