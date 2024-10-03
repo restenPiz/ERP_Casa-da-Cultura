@@ -29,11 +29,11 @@ class courseController extends Controller
             'Upload_video' => 'required|string|max:255',
         ]);
 
-        if ($request->hasFile('upload_file')) {
+        if ($request->hasFile('Upload_file')) {
             $courses['Upload_file'] = $request->file('Upload_file')->store('uploads/courses', 'public');
         }
 
-        if ($request->hasFile('upload_video')) {
+        if ($request->hasFile('Upload_video')) {
             $courses['Upload_video'] = $request->file('Upload_video')->store('uploads/courses', 'public');
         }
 
