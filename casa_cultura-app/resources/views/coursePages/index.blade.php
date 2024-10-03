@@ -19,7 +19,7 @@
                                     name="id_user">
                                     <option>Selecione o Formador</option>
                                     @foreach ($trainers as $trainer)
-                                        <option value="{{ $trainer->id }} {{ $trainer->Surname }}">{{ $trainer->name }}
+                                        <option value="{{ $trainer->id }}">{{ $trainer->name }}
                                             {{ $trainer->Surname }}</option>
                                     @endforeach
                                 </select></div>
