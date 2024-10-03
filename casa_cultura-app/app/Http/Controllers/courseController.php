@@ -30,11 +30,11 @@ class courseController extends Controller
         ]);
 
         if ($request->hasFile('Upload_file')) {
-            $courses['Upload_file'] = $request->file('Upload_file')->store('uploads/courses', 'public');
+            $validatedData['Upload_file'] = $request->file('Upload_file')->store('uploads/courses', 'public');
         }
 
         if ($request->hasFile('Upload_video')) {
-            $courses['Upload_video'] = $request->file('Upload_video')->store('uploads/courses', 'public');
+            $validatedData['Upload_video'] = $request->file('Upload_video')->store('uploads/courses', 'public');
         }
 
         //*Inicio do metodo que vai inserir os dados
@@ -48,7 +48,7 @@ class courseController extends Controller
         ]);
 
         // //*Conectando o user com o curso
-        // $courses->users()->attach($validatedData['id_user']);
+        $courses->users()->attach($validatedData['id_user']);
 
         Alert::success('Adicionado!', 'O curso foi adicionado com sucesso!');
 

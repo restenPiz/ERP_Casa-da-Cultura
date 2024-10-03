@@ -14,7 +14,7 @@ return new class extends Migration {
             $table->string('Description', 1000);
             $table->string('Upload_file');
             $table->string('Upload_video');
-            $table->string('Price');
+            $table->integer('Price');
             $table->string('Goals', 1000);
             $table->timestamps();
         });
