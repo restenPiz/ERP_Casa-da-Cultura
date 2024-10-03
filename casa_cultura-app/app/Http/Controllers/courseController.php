@@ -19,6 +19,7 @@ class courseController extends Controller
     }
     public function store(Request $request)
     {
+        //?Inicio do metodo de validacao
         $validatedData = $request->validate([
             'Course_name' => 'required|string|max:255',
             'Description' => 'required|string|max:1000',
