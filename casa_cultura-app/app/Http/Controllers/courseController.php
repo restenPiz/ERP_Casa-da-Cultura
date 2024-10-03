@@ -36,6 +36,7 @@ class courseController extends Controller
         $courses->Upload_file = $request->input('Upload_file');
         $courses->Upload_video = $request->input('Upload_video');
 
+        //*Inicio do metodo que vai inserir os dados
         $courses->create([
             'Course_name' => $courses['Course_name'],
             'Description' => $courses['Description'],
