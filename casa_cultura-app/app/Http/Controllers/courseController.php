@@ -19,8 +19,6 @@ class courseController extends Controller
     }
     public function store(Request $request)
     {
-        $courses = new course();
-
         if ($request->hasFile('upload_file')) {
             $courses['Upload_file'] = $request->file('Upload_file')->store('uploads/courses', 'public');
         }
@@ -30,7 +28,7 @@ class courseController extends Controller
         }
 
         //*Inicio do metodo que vai inserir os dados
-        $courses->create([
+        $courses = course::create([
             'Course_name' => $courses['Course_name'],
             'Description' => $courses['Description'],
             'Price' => $courses['Price'],
