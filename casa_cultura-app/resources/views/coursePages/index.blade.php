@@ -117,8 +117,8 @@
                     </div>
                     <div class="card mb-3">
                         <div class="card-header">
-                            <h5 class="mb-0">Faça o Upload do Video<span data-bs-toggle="tooltip"
-                                    data-bs-placement="top" title="Upload preview video"><span
+                            <h5 class="mb-0">Faça o Upload do Video<span data-bs-toggle="tooltip" data-bs-placement="top"
+                                    title="Add cover photo"><span
                                         class="fas fa-info-circle text-primary fs-9 ms-2"></span></span></h5>
                         </div>
                         <div class="card-body bg-body-tertiary">
@@ -146,7 +146,6 @@
                                     </span><span class="btn btn-link p-0 fs-10">Pesquise</span></div>
                             </form>
                         </div>
-                    </div>
                     </div>
                 </div>
             </div>
