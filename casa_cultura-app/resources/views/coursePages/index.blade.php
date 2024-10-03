@@ -64,26 +64,13 @@
             </div>
             <div class="col-lg-4">
                 <div class="sticky-sidebar top-navbar-height d-flex flex-column">
-                    <div class="card mb-lg-3 order-lg-0 order-1">
-                        <div class="card-header py-2 d-flex flex-between-center">
-                            <h5 class="mb-0">Adicione o seu Curso aqui!</h5>
-                        </div>
-                        <div class="card-footer py-2" id="course-publish-btn">
-                            <div class="row flex-between-center g-0">
-                                <div class="col-auto"><a class="btn btn-link btn-sm text-secondary fw-medium px-0"
-                                        href="#!">Tela Inicial</a></div>
-                                <div class="col-auto"><button style="border-radius: 0"
-                                        class="btn btn-primary btn-md px-xxl-5 px-4 fw-medium" name="submit" type="submit">Adicionar
-                                        Curso</button></div>
-                            </div>
-                        </div>
-                    </div>
                     <div class="card mb-3">
                         <div class="card-header">
                             <h5 class="mb-0">Faça o Upload da Imagem<span data-bs-toggle="tooltip" data-bs-placement="top"
                                     title="Add cover photo"><span
                                         class="fas fa-info-circle text-primary fs-9 ms-2"></span></span></h5>
                         </div>
+
                         <div class="card-body bg-body-tertiary">
                             <input class="form-control" type="file" name="Upload_file" />
                         </div>
@@ -96,6 +83,20 @@
                         </div>
                         <div class="card-body bg-body-tertiary">
                             <input class="form-control" type="file" name="Upload_video" />
+                        </div>
+                    </div>
+                    <div class="card mb-lg-3 order-lg-0 order-1">
+                        <div class="card-header py-2 d-flex flex-between-center">
+                            <h5 class="mb-0">Adicione o seu Curso aqui!</h5>
+                        </div>
+                        <div class="card-footer py-2" id="course-publish-btn">
+                            <div class="row flex-between-center g-0">
+                                <div class="col-auto"><a class="btn btn-link btn-sm text-secondary fw-medium px-0"
+                                        href="#!">Tela Inicial</a></div>
+                                <div class="col-auto"><button style="border-radius: 0"
+                                        class="btn btn-primary btn-md px-xxl-5 px-4 fw-medium" name="submit" type="submit">Adicionar
+                                        Curso</button></div>
+                            </div>
                         </div>
                     </div>
                 </div>
