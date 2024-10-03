@@ -37,6 +37,7 @@ class courseController extends Controller
 
         $courses->save();
 
+        //*Conectando o user com o curso
         $courses->users()->attach($courses['id_user']);
 
         Alert::success('Adicionado!', 'O curso foi adicionado com sucesso!');
