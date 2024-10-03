@@ -21,18 +21,18 @@ class courseController extends Controller
     {
         $courses = new course();
 
-        $courses->Course_name = Request::input('Course_name');
-        $courses->Description = Request::input('Description');
-        $courses->Price = Request::input('Price');
-        $courses->Goals = Request::input('Goals');
-        $courses->id_user = Request::input('id_user');
+        $courses->Course_name = $request->input('Course_name');
+        $courses->Description = $request->input('Description');
+        $courses->Price = $request->input('Price');
+        $courses->Goals = $request->input('Goals');
+        $courses->id_user = $request->input('id_user');
 
-        if (Request::hasFile('upload_file')) {
-            $courses['Upload_file'] = Request::file('Upload_file')->store('uploads/courses', 'public');
+        if ($request->hasFile('upload_file')) {
+            $courses['Upload_file'] = $request->file('Upload_file')->store('uploads/courses', 'public');
         }
 
-        if (Request::hasFile('upload_video')) {
-            $courses['Upload_video'] = Request::file('Upload_video')->store('uploads/courses', 'public');
+        if ($request->hasFile('upload_video')) {
+            $courses['Upload_video'] = $request->file('Upload_video')->store('uploads/courses', 'public');
         }
 
         $courses->save();
