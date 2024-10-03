@@ -37,10 +37,7 @@ class courseController extends Controller
 
         $courses->save();
 
-        $courses->users()->attach(['id_user']);
-
-        //* Associar os formadores ao curso
-        $courses->users()->attach($courses['formador_ids']);
+        $courses->users()->attach($courses['id_user']);
 
         Alert::success('Adicionado!', 'O curso foi adicionado com sucesso!');
 
