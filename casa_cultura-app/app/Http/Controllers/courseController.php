@@ -29,13 +29,6 @@ class courseController extends Controller
             $courses['Upload_video'] = $request->file('Upload_video')->store('uploads/courses', 'public');
         }
 
-        $courses->Course_name = $request->input('Course_name');
-        $courses->Description = $request->input('Description');
-        $courses->Price = $request->input('Price');
-        $courses->Goals = $request->input('Goals');
-        $courses->Upload_file = $request->input('Upload_file');
-        $courses->Upload_video = $request->input('Upload_video');
-
         //*Inicio do metodo que vai inserir os dados
         $courses->create([
             'Course_name' => $courses['Course_name'],
