@@ -40,6 +40,8 @@ class courseController extends Controller
         $courses->users()->attach($courses['formador_ids']);
 
         Alert::success('Adicionado!', 'O curso foi adicionado com sucesso!');
+
+        return back();
     }
     public function update()
     {
