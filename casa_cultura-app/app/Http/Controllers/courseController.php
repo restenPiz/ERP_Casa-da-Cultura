@@ -19,41 +19,41 @@ class courseController extends Controller
     }
     public function store(Request $request)
     {
-        // dd($request->all());
+        dd($request->all());
         //?Inicio do metodo de validacao
-        $validatedData = $request->validate([
-            'Course_name' => 'required|string|max:255',
-            'Description' => 'required|string|max:1000',
-            'Price' => 'required|string|max:255',
-            'Goals' => 'required|string|max:1000',
-            'Upload_file' => 'nullable|file|mimes:pdf,doc,docx,jpg,png|max:10240',
-            'Upload_video' => 'nullable|file|mimes:pdf,doc,docx,jpg,png|max:10240',
-        ]);
+        // $validatedData = $request->validate([
+        //     'Course_name' => 'required|string|max:255',
+        //     'Description' => 'required|string|max:1000',
+        //     'Price' => 'required|string|max:255',
+        //     'Goals' => 'required|string|max:1000',
+        //     'Upload_file' => 'nullable|file|mimes:pdf,doc,docx,jpg,png|max:10240',
+        //     'Upload_video' => 'nullable|file|mimes:pdf,doc,docx,jpg,png|max:10240',
+        // ]);
 
-        if ($request->hasFile('Upload_file')) {
-            $validatedData['Upload_file'] = $request->file('Upload_file')->store('uploads/courses', 'public');
-        }
+        // if ($request->hasFile('Upload_file')) {
+        //     $validatedData['Upload_file'] = $request->file('Upload_file')->store('uploads/courses', 'public');
+        // }
 
-        if ($request->hasFile('Upload_video')) {
-            $validatedData['Upload_video'] = $request->file('Upload_video')->store('uploads/courses', 'public');
-        }
+        // if ($request->hasFile('Upload_video')) {
+        //     $validatedData['Upload_video'] = $request->file('Upload_video')->store('uploads/courses', 'public');
+        // }
 
-        //*Inicio do metodo que vai inserir os dados
-        $courses = course::create([
-            'Course_name' => $validatedData['Course_name'],
-            'Description' => $validatedData['Description'],
-            'Price' => $validatedData['Price'],
-            'Goals' => $validatedData['Goals'],
-            'Upload_file' => $validatedData['Upload_file'],
-            'Upload_video' => $validatedData['Upload_video'],
-        ]);
+        // //*Inicio do metodo que vai inserir os dados
+        // $courses = course::create([
+        //     'Course_name' => $validatedData['Course_name'],
+        //     'Description' => $validatedData['Description'],
+        //     'Price' => $validatedData['Price'],
+        //     'Goals' => $validatedData['Goals'],
+        //     'Upload_file' => $validatedData['Upload_file'],
+        //     'Upload_video' => $validatedData['Upload_video'],
+        // ]);
 
-        // //*Conectando o user com o curso
-        $courses->users()->attach($validatedData['id_user']);
+        // // //*Conectando o user com o curso
+        // $courses->course_course()->attach($validatedData['id_user']);
 
-        Alert::success('Adicionado!', 'O curso foi adicionado com sucesso!');
+        // Alert::success('Adicionado!', 'O curso foi adicionado com sucesso!');
 
-        return back();
+        // return back();
     }
     public function update()
     {

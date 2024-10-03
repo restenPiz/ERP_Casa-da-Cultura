@@ -86,7 +86,7 @@ class userController extends Controller
     {
         //*Finding an user
         $user = User::findOrFail($id);
-        
+
         $validatedData = $request->validate([
             'name' => 'required|string|max:255',
             'Surname' => 'required|string|max:255',
