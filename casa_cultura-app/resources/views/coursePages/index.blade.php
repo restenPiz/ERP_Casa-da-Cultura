@@ -71,7 +71,7 @@
                         </div>
 
                         <div class="card-body bg-body-tertiary">
-                            <input class="form-control" type="file" name="Upload_file" />
+                            <input class="form-control" type="file" name="Upload_file" accept=".jpg,.jpeg,.png,.gif,.docx,.pdf,.txt" />
                         </div>
                     </div>
                     <div class="card mb-3">
@@ -81,7 +81,7 @@
                                         class="fas fa-info-circle text-primary fs-9 ms-2"></span></span></h5>
                         </div>
                         <div class="card-body bg-body-tertiary">
-                            <input class="form-control" type="file" name="Upload_video" />
+                            <input class="form-control" type="file" name="Upload_video" accept=".jpg,.jpeg,.png,.gif,.docx,.pdf,.txt"/>
                         </div>
                     </div>
                     <div class="card mb-lg-3 order-lg-0 order-1">

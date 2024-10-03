@@ -20,14 +20,14 @@ class courseController extends Controller
     public function store(Request $request)
     {
         // dd($request->all());
-        // //?Inicio do metodo de validacao
+        //?Inicio do metodo de validacao
         $validatedData = $request->validate([
             'Course_name' => 'required|string|max:255',
             'Description' => 'required|string|max:1000',
             'Price' => 'required|string|max:255',
             'Goals' => 'required|string|max:1000',
-            'Upload_file' => 'required|string|max:255',
-            'Upload_video' => 'required|string|max:255',
+            'Upload_file' => 'nullable|file|mimes:pdf,doc,docx,jpg,png|max:10240',
+            'Upload_video' => 'nullable|file|mimes:pdf,doc,docx,jpg,png|max:10240',
         ]);
 
         if ($request->hasFile('Upload_file')) {
