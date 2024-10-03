@@ -123,8 +123,8 @@
                         </div>
                         <div class="card-body bg-body-tertiary">
                             <form class="dropzone dropzone-single p-0" data-dropzone="data-dropzone"
-                                data-options='{"maxFiles":1,"acceptedFiles":".mp4,.mkv,.avi"}'>
-                                <div class="fallback"><input type="file" name="upload_video" /></div>
+                                data-options='{"maxFiles":1,"acceptedFiles":"image/*"}'>
+                                <div class="fallback"><input class="form-control" type="file" name="upload_video" /></div>
                                 <div class="dz-preview dz-preview-single">
                                     <div class="dz-preview-cover dz-complete"><video class="dz-preview-img"
                                             controls="controls" data-dz-thumbnail=""></video><a
