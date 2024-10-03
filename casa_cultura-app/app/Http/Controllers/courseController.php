@@ -25,6 +25,7 @@ class courseController extends Controller
         $courses->Description = Request::input('Description');
         $courses->Price = Request::input('Price');
         $courses->Goals = Request::input('Goals');
+        $courses->id_user = Request::input('id_user');
 
         if (Request::hasFile('upload_file')) {
             $courses['upload_file'] = Request::file('upload_file')->store('uploads/courses', 'public');
@@ -35,6 +36,8 @@ class courseController extends Controller
         }
 
         $courses->save();
+
+        $courses->users()->attach(['id_user']);
 
         //* Associar os formadores ao curso
         $courses->users()->attach($courses['formador_ids']);
