@@ -11,11 +11,11 @@ return new class extends Migration {
         Schema::create('courses', function (Blueprint $table) {
             $table->id();
             $table->string('Course_name');
-            $table->string('Description', 1000);
+            $table->string('Description', 1000)->nullable();
             $table->string('Upload_file')->nullable();
             $table->string('Upload_video')->nullable();
             $table->integer('Price');
-            $table->string('Goals', 1000);
+            $table->string('Goals', 1000)->nullable();
             $table->timestamps();
         });
     }
