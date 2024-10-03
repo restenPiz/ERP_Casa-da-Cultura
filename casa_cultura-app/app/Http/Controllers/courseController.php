@@ -21,11 +21,6 @@ class courseController extends Controller
     {
         $courses = new course();
 
-        $courses->Course_name = $request->input('Course_name');
-        $courses->Description = $request->input('Description');
-        $courses->Price = $request->input('Price');
-        $courses->Goals = $request->input('Goals');
-
         if ($request->hasFile('upload_file')) {
             $courses['Upload_file'] = $request->file('Upload_file')->store('uploads/courses', 'public');
         }
@@ -33,6 +28,13 @@ class courseController extends Controller
         if ($request->hasFile('upload_video')) {
             $courses['Upload_video'] = $request->file('Upload_video')->store('uploads/courses', 'public');
         }
+
+        $courses->Course_name = $request->input('Course_name');
+        $courses->Description = $request->input('Description');
+        $courses->Price = $request->input('Price');
+        $courses->Goals = $request->input('Goals');
+        $courses->Upload_file = $request->input('Upload_file');
+        $courses->Upload_video = $request->input('Upload_video');
 
         $courses->save();
 

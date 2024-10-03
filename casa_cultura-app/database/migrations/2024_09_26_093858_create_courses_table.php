@@ -11,11 +11,11 @@ return new class extends Migration {
         Schema::create('courses', function (Blueprint $table) {
             $table->id();
             $table->string('Course_name');
-            $table->string('Description');
+            $table->string('Description', 1000);
             $table->string('Upload_file');
             $table->string('Upload_video');
             $table->string('Price');
-            $table->string('Goals');
+            $table->string('Goals', 1000);
             $table->timestamps();
         });
     }
