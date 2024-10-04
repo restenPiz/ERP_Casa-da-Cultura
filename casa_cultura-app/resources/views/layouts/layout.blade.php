@@ -83,35 +83,15 @@
                                     <div class="col ps-0">
                                         <hr class="mb-0 navbar-vertical-divider" />
                                     </div>
-                                </div><!-- parent pages--><a class="nav-link" href="/dashboard" role="button">
+                                </div>
+                                {{--Inicio do primeiro link--}}
+                                <a class="nav-link" href="/dashboard" role="button">
                                     <div class="d-flex align-items-center"><span class="nav-link-icon"><span
                                                 class="fas fa-rocket"></span></span><span
                                             class="nav-link-text ps-1">Tela Inicial</span></div>
-                                </a><!-- parent pages--><a class="nav-link dropdown-indicator" href="#customization"
-                                    role="button" data-bs-toggle="collapse" aria-expanded="false"
-                                    aria-controls="customization">
-                                    <div class="d-flex align-items-center"><span class="nav-link-icon"><span
-                                                class="fas fa-wrench"></span></span><span
-                                            class="nav-link-text ps-1">Gerir Cursos</span></div>
                                 </a>
-                                <ul class="nav collapse" id="customization">
-                                    <li class="nav-item"><a class="nav-link" href="{{ route('course.index') }}">
-                                            <div class="d-flex align-items-center"><span
-                                                    class="nav-link-text ps-1">Gerir Cursos</span></div>
-                                        </a><!-- more inner pages--></li>
-                                    <li class="nav-item"><a class="nav-link"
-                                            href="../documentation/customization/dark-mode.html">
-                                            <div class="d-flex align-items-center"><span
-                                                    class="nav-link-text ps-1">Gerir Alunos</span></div>
-                                        </a><!-- more inner pages--></li>
-                                </ul><!-- parent pages--><a class="nav-link" href="../documentation/faq.html"
-                                    role="button">
-                                    <div class="d-flex align-items-center"><span class="nav-link-icon"><span
-                                                class="fab fa-gulp"></span></span><span
-                                            class="nav-link-text ps-1">Gerir Funcionarios</span></div>
-
-                                    {{-- Inicio do dropdown --}}
-                                </a><!-- parent pages--><a class="nav-link dropdown-indicator" href="#customizatio"
+                                {{--Inicio do segundo link--}}
+                                <a class="nav-link dropdown-indicator" href="#customizatio"
                                     role="button" data-bs-toggle="collapse" aria-expanded="false"
                                     aria-controls="customization">
                                     <div class="d-flex align-items-center"><span class="nav-link-icon"><span
@@ -128,10 +108,45 @@
                                                     class="nav-link-text ps-1">Detalhes dos Formadores</span></div>
                                         </a><!-- more inner pages--></li>
                                 </ul>
-                                </a><!-- parent pages--><a class="nav-link" href="../changelog.html" role="button">
+                                {{--Inicio do terceiro link--}}
+                                <a class="nav-link dropdown-indicator" href="#customization"
+                                    role="button" data-bs-toggle="collapse" aria-expanded="false"
+                                    aria-controls="customization">
+                                    <div class="d-flex align-items-center"><span class="nav-link-icon"><span
+                                                class="fas fa-wrench"></span></span><span
+                                            class="nav-link-text ps-1">Gerir Cursos</span></div>
+                                </a>
+                                <ul class="nav collapse" id="customization">
+                                    <li class="nav-item"><a class="nav-link" href="{{ route('course.index') }}">
+                                            <div class="d-flex align-items-center"><span
+                                                    class="nav-link-text ps-1">Adicionar Cursos</span></div>
+                                        </a><!-- more inner pages--></li>
+                                    <li class="nav-item"><a class="nav-link"
+                                            href="../documentation/customization/dark-mode.html">
+                                            <div class="d-flex align-items-center"><span
+                                                    class="nav-link-text ps-1">Detalhes do Curso</span></div>
+                                        </a><!-- more inner pages--></li>
+                                </ul>
+                                {{--inicio do quarto link--}}
+                                <a class="nav-link" href="../documentation/faq.html"
+                                    role="button">
+                                    <div class="d-flex align-items-center"><span class="nav-link-icon"><span
+                                                class="fab fa-gulp"></span></span><span
+                                            class="nav-link-text ps-1">Gerir Funcionarios</span></div>
+
+                                    {{-- Inicio do dropdown --}}
+                                </a>
+                                {{--Inicio do quinto link--}}
+                                <a class="nav-link" href="../changelog.html" role="button">
                                     <div class="d-flex align-items-center"><span class="nav-link-icon"><span
                                                 class="fas fa-code-branch"></span></span><span
                                             class="nav-link-text ps-1">Gerir Artistas</span></div>
+                                </a>
+                                {{--Inicio do Sexto link--}}
+                                <a class="nav-link" href="../changelog.html" role="button">
+                                    <div class="d-flex align-items-center"><span class="nav-link-icon"><span
+                                                class="fas fa-code-branch"></span></span><span
+                                            class="nav-link-text ps-1">Pre-inscricao Alunos</span></div>
                                 </a>
                             </li>
                         </ul>
