@@ -54,9 +54,9 @@ class courseController extends Controller
             'Upload_video' => $validatedData['Upload_video'],
         ]);
 
-        // //*Conectando o user com o curso
+        //*Conectando o user com o curso
         if (isset($validatedData['id_user'])) {
-            $courses->users()->attach($validatedData['id_user']);  // Isso agora deve funcionar
+            $courses->users()->attach($validatedData['id_user']);
         }
         Alert::success('Adicionado!', 'O curso foi adicionado com sucesso!');
 
