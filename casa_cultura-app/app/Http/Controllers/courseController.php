@@ -40,7 +40,7 @@ class courseController extends Controller
         }
 
         //*Inicio do metodo que vai inserir os dados
-        $courses = cour`se::create([
+        $courses = course::create([
             'Course_name' => $validatedData['Course_name'],
             'Description' => $validatedData['Description'],
             'Price' => $validatedData['Price'],
