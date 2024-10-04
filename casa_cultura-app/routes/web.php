@@ -35,6 +35,7 @@ Route::middleware('auth')->group(function () {
     Route::post('/courseUpdate/{id}', [courseController::class, 'update'])->name('course.update');
     Route::post('/courseStore', [courseController::class, 'store'])->name('course.store');
     Route::get('/courseAll', [courseController::class, 'all'])->name('course.all');
+    Route::get('/courseDetail/{id}', [courseController::class, 'detail'])->name('course.detail');
 
     //*Inicio das rotas da parte de funcionarios
 

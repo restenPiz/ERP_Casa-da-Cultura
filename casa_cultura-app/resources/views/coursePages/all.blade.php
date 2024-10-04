@@ -1,6 +1,6 @@
 @extends('layouts.layout')
 @section('content')
-    {{-- Inicio da seccao do meu sistema --}}
+    {{-- * Inicio da seccao do meu sistema --}}
     <div class="row g-3">
         <div class="col-xxl-12 col-xl-9">
             <div class="card mb-3">
@@ -20,32 +20,39 @@
                                     <div class="hoverbox text-center"><a class="text-decoration-none"
                                             href="../../../assets/video/beach.mp4" data-gallery="attachment-bg"><img
                                                 class="w-100 h-100 object-fit-cover"
-                                                src="{{ asset('storage/' . $course->Upload_file) }}"
-                                                alt="" /></a>
+                                                src="{{ asset('storage/' . $course->Upload_file) }}" alt="" /></a>
                                         <div class="hoverbox-content flex-center pe-none bg-holder overlay overlay-2"><img
-                                                class="z-1" src="{{ asset('storage/' . $course->Upload_video) }}" width="60"
-                                                alt="" /></div>
+                                                class="z-1" src="{{ asset('storage/' . $course->Upload_video) }}"
+                                                width="60" alt="" /></div>
                                     </div>
                                     <div class="p-3">
-                                        <h5 class="fs-9 mb-2"><a class="text-1100" href="course-details.html">
-                                            {{$course->Course_name}}</a></h5>
+                                        <h5 class="fs-9 mb-2"><a class="text-1100" href="{{route('course.detail',['id'=>$course->id])}}">
+                                                {{ $course->Course_name }}</a></h5>
                                         <h5 class="fs-9"><a href="../trainer-profile.html">Bill Finger</a></h5>
                                     </div>
                                 </div>
                                 <div class="row g-0 mb-3 align-items-end">
                                     <div class="col ps-3">
-                                        <h4 class="fs-8 text-warning d-flex align-items-center"> <span>{{$course->Price}} MT</span>
+                                        <h4 class="fs-8 text-warning d-flex align-items-center"> <span>{{ $course->Price }}
+                                                MT</span>
                                             {{-- <del class="ms-2 fs-10 text-700">$139.90</del> --}}
-                                            </h4>
+                                        </h4>
                                         {{-- <p class="mb-0 fs-10 text-800">92,632 Learners Enrolled</p> --}}
                                     </div>
-                                    <div class="col-auto pe-3"><a class="btn btn-sm btn-falcon-default me-2 hover-danger"
-                                            href="#!" data-bs-toggle="tooltip" data-bs-placement="top"
-                                            title="Add to Wishlist"><span class="far fa-heart"
-                                                data-fa-transform="down-2"></span></a><a
-                                            class="btn btn-sm btn-falcon-default hover-primary" href="#!"
-                                            data-bs-toggle="tooltip" data-bs-placement="top" title="Add to Cart"><span
-                                                class="fas fa-cart-plus" data-fa-transform="down-2"></span></a></div>
+                                    <div class="col-auto pe-3">
+                                        <!-- Botão de Editar -->
+                                        <a class="btn btn-sm btn-falcon-default me-2 hover-primary" href="#!"
+                                            data-bs-toggle="tooltip" data-bs-placement="top" title="Editar">
+                                            <span class="fas fa-edit" data-fa-transform="down-2"></span>
+                                        </a>
+
+                                        <!-- Botão de Eliminar -->
+                                        <a class="btn btn-sm btn-falcon-default hover-danger" href="{{route('course.delete',['id'=>$course->id])}}"
+                                            data-bs-toggle="tooltip" data-bs-placement="top" title="Eliminar">
+                                            <span class="fas fa-trash-alt" data-fa-transform="down-2"></span>
+                                        </a>
+                                    </div>
+
                                 </div>
                             </div>
                         </div>
@@ -55,5 +62,5 @@
         </div>
     </div>
 
-    {{-- Fim da seccao do meu sistema --}}
+    {{-- * Fim da seccao do meu sistema --}}
 @endsection
