@@ -30,6 +30,7 @@ class courseController extends Controller
             'Upload_video' => 'nullable|file|mimes:pdf,doc,docx,jpg,png|max:10240',
         ]);
 
+        //8Inicio dos metodos responsaveis pela insercao de dados
         if ($request->hasFile('Upload_file')) {
             $validatedData['Upload_file'] = $request->file('Upload_file')->store('uploads/courses', 'public');
         }
@@ -39,7 +40,7 @@ class courseController extends Controller
         }
 
         //*Inicio do metodo que vai inserir os dados
-        $courses = course::create([
+        $courses = cour`se::create([
             'Course_name' => $validatedData['Course_name'],
             'Description' => $validatedData['Description'],
             'Price' => $validatedData['Price'],
