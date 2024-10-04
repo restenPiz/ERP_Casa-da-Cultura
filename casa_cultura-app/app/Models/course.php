@@ -20,8 +20,8 @@ class course extends Model
         'Upload_video',
     ];
 
-    public function course_course()
+    public function users()
     {
-        return $this->belongsToMany(User::class, 'course_user', 'id_user', 'id');
+        return $this->belongsToMany(User::class, 'course_user', 'id_course', 'id_user');
     }
 }
