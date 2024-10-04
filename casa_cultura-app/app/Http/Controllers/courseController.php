@@ -60,7 +60,7 @@ class courseController extends Controller
         }
         Alert::success('Adicionado!', 'O curso foi adicionado com sucesso!');
 
-        return back();
+        return route('course.all');
     }
     public function update()
     {
