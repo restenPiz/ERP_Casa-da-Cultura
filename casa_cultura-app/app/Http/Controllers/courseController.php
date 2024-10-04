@@ -50,7 +50,7 @@ class courseController extends Controller
 
         // //*Conectando o user com o curso
         if (isset($validatedData['id_user'])) {
-            $courses->course_course()->attach($validatedData['id_user']);  // Isso agora deve funcionar
+            $courses->users()->attach($validatedData['id_user']);  // Isso agora deve funcionar
         }
         Alert::success('Adicionado!', 'O curso foi adicionado com sucesso!');
 
