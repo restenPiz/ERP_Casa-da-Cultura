@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\artistController;
 use App\Http\Controllers\courseController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\trainerController;
@@ -37,6 +38,7 @@ Route::middleware('auth')->group(function () {
     //*Inicio das rotas da parte de funcionarios
 
     //*Inicio das rotas da parte de artista
+    Route::get('/artistMain', [artistController::class, 'index'])->name('artist.index');
 
     //*Inicio das rotas da parte do aluno
 
