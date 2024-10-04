@@ -9,6 +9,12 @@ use RealRashid\SweetAlert\Facades\Alert;
 
 class courseController extends Controller
 {
+    public function all()
+    {
+        $courses = course::all();
+
+        return view('coursePages.all', compact('courses'));
+    }
     public function index()
     {
         $trainers = DB::table('users')

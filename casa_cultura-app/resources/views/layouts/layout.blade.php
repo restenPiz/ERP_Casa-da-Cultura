@@ -122,9 +122,9 @@
                                                     class="nav-link-text ps-1">Adicionar Cursos</span></div>
                                         </a><!-- more inner pages--></li>
                                     <li class="nav-item"><a class="nav-link"
-                                            href="../documentation/customization/dark-mode.html">
+                                            href="{{route('course.all')}}">
                                             <div class="d-flex align-items-center"><span
-                                                    class="nav-link-text ps-1">Detalhes do Curso</span></div>
+                                                    class="nav-link-text ps-1">Detalhes de Curso</span></div>
                                         </a><!-- more inner pages--></li>
                                 </ul>
                                 {{--inicio do quarto link--}}
