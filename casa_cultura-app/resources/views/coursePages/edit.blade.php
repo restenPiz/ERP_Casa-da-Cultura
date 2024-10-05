@@ -1,7 +1,7 @@
 @extends('layouts.layout')
 @section('content')
     {{-- Inicio da minha pagina --}}
-    <form class="row gx-2" action="{{ route('course.store') }}" method="post" enctype="multipart/form-data">
+    <form class="row gx-2" action="{{ route('course.update',['id'=>$course->id]) }}" method="post" enctype="multipart/form-data">
         @csrf
         <div class="row g-lg-3 font-sans-serif">
             <div class="col-lg-8">
@@ -84,16 +84,17 @@
                             <input class="form-control" type="file" name="Upload_video" accept=".jpg,.jpeg,.png,.gif,.docx,.pdf,.txt"/>
                         </div>
                     </div>
+                    <input type="hidden" name="id" value="{{$course->id}}">
                     <div class="card mb-lg-3 order-lg-0 order-1">
                         <div class="card-header py-2 d-flex flex-between-center">
-                            <h5 class="mb-0">Adicione o seu Curso aqui!</h5>
+                            <h5 class="mb-0">Actualize o seu Curso aqui!</h5>
                         </div>
                         <div class="card-footer py-2" id="course-publish-btn">
                             <div class="row flex-between-center g-0">
                                 <div class="col-auto"><a class="btn btn-link btn-sm text-secondary fw-medium px-0"
-                                        href="#!">Tela Inicial</a></div>
+                                        href="{{route('course.all')}}">Voltar</a></div>
                                 <div class="col-auto"><button style="border-radius: 0"
-                                        class="btn btn-primary btn-md px-xxl-5 px-4 fw-medium" name="submit" type="submit">Adicionar
+                                        class="btn btn-primary btn-md px-xxl-5 px-4 fw-medium" name="submit" type="submit">Actualizar 
                                         Curso</button></div>
                             </div>
                         </div>

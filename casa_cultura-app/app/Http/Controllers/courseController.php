@@ -76,9 +76,44 @@ class courseController extends Controller
 
         return route('course.all');
     }
-    public function update()
+    public function update(Request $request, $id)
     {
         //*Inicio do metodo de actualizacao
+        $validatedData = $request->validate([
+            'Course_name' => 'required|string|max:255',
+            'Description' => 'required|string|max:1000',
+            'Price' => 'required|string|max:255',
+            'Goals' => 'required|string|max:1000',
+            'Upload_file' => 'nullable|file|mimes:pdf,doc,docx,jpg,png|max:10240',
+            'Upload_video' => 'nullable|file|mimes:pdf,doc,docx,jpg,png|max:10240',
+        ]);
+
+        if ($request->hasFile('Upload_file')) {
+            $validatedData['Upload_file'] = $request->file('Upload_file')->store('uploads/courses', 'public');
+        }
+
+        if ($request->hasFile('Upload_video')) {
+            $validatedData['Upload_video'] = $request->file('Upload_video')->store('uploads/courses', 'public');
+        }
+
+        $courses = course::findOrFail($id);
+
+        $courses->Course_name = $request->input('Course_name');
+        $courses->Description = $request->input('Description');
+        $courses->Price = $request->input('Price');
+        $courses->Goals = $request->input('Goals');
+        $courses->Upload_file = $request->input('Upload_file');
+        $courses->Upload_video = $request->input('Upload_video');
+
+        $courses->save();
+
+        //*Conectando o user com o curso
+        if (isset($validatedData['id_user'])) {
+            $courses->users()->attach($validatedData['id_user']);
+        }
+        Alert::success('Actualizado!', 'O curso foi actualizado com sucesso!');
+
+        return route('course.all');
     }
     public function delete($id)
     {
