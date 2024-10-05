@@ -41,7 +41,7 @@
                                     </div>
                                     <div class="col-auto pe-3">
                                         <!-- Botão de Editar -->
-                                        <a class="btn btn-sm btn-falcon-default me-2 hover-primary" href="#!"
+                                        <a class="btn btn-sm btn-falcon-default me-2 hover-primary" href="{{route('course.edit',['id'=>$course->id])}}"
                                             data-bs-toggle="tooltip" data-bs-placement="top" title="Editar">
                                             <span class="fas fa-edit" data-fa-transform="down-2"></span>
                                         </a>

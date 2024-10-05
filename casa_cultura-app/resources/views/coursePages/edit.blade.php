@@ -1,9 +1,5 @@
 @extends('layouts.layout')
 @section('content')
-
-    {{--Inicio do conteudo da page--}}
-@extends('layouts.layout')
-@section('content')
     {{-- Inicio da minha pagina --}}
     <form class="row gx-2" action="{{ route('course.store') }}" method="post" enctype="multipart/form-data">
         @csrf
@@ -17,7 +13,7 @@
                         <div class="row gx-2">
                             <div class="col-sm-6 mb-3"><label class="form-label" for="course-name">Nome do Curso<span
                                         class="text-danger">*</span></label><input class="form-control" id="course-name"
-                                   name="Course_name" type="text" placeholder="Nome do Curso" required="required" /></div>
+                                   name="Course_name" type="text" value="{{$course->Course_name}}" required="required" /></div>
                             <div class="col-sm-6 mb-3"><label class="form-label" for="course-category">Nome do Formador<span
                                         class="text-danger">*</span></label><select class="form-select" id="course-category"
                                     name="id_user">
@@ -30,7 +26,7 @@
                             <div class="col-12 mb-3"><label class="form-label" for="course-tags">Descrição do Curso<span
                                         class="text-danger">*</span></label>
                                 <textarea name="Description" class="form-control" data-tinymce="data-tinymce" name="course-description" id="course-description"
-                                    required="required"></textarea>
+                                    required="required">{{$course->Description}}</textarea>
                             </div>
                         </div>
                     </div>
@@ -43,7 +39,7 @@
                                 class="text-danger">*</span></label>
                         <div class="position-relative mb-4 focus-actions-trigger">
                             <textarea name="Goals" class="form-control" data-tinymce="data-tinymce" name="course-description" id="course-description"
-                                required="required"></textarea>
+                                required="required">{{$course->Goals}}</textarea>
                             <div class="position-absolute end-0 top-50 translate-middle focus-actions"><button
                                     class="btn btn-link btn-sm p-0 text-700 me-2"><span
                                         class="fas fa-arrow-right"></span></button></div>
@@ -60,7 +56,7 @@
                             <div class="col-12 mb-3"><label class="form-label" for="base-price">Preço Fixo <span
                                         data-bs-toggle="tooltip" data-bs-placement="top" title="Course regular price"><span
                                             class="fas fa-question-circle text-primary fs-10 ms-1"></span></span></label><input
-                                    class="form-control" name="Price" id="base-price" type="text" placeholder="" /></div>
+                                    class="form-control" name="Price" id="base-price" type="text" value="{{$course->Price}}"/></div>
                         </div>
                     </div>
                 </div>
@@ -107,8 +103,4 @@
         </div>
     </form>
     {{-- Fim da minha pagina --}}
-@endsection
-
-    {{--Fim do conteudo da page--}}
-
 @endsection
