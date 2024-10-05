@@ -152,7 +152,7 @@
                                 <a class="nav-link" href="../changelog.html" role="button">
                                     <div class="d-flex align-items-center"><span class="nav-link-icon"><span
                                                 class="fas fa-code-branch"></span></span><span
-                                            class="nav-link-text ps-1">Pre-inscricao Alunos</span></div>
+                                            class="nav-link-text ps-1">Inscricao de Alunos</span></div>
                                 </a>
                             </li>
                         </ul>
