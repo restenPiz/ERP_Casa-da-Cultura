@@ -42,6 +42,9 @@ Route::middleware('auth')->group(function () {
 
     //*Inicio das rotas da parte de artista
     Route::get('/artistMain', [artistController::class, 'index'])->name('artist.index');
+    Route::post('/artistStore', [artistController::class, 'store'])->name('artist.store');
+    Route::post('/artistUpdate/{id}', [artistController::class, 'update'])->name('artist.update');
+    Route::get('/artistDelete/{id}', [artistController::class, 'delete'])->name('artist.delete');
 
     //*Inicio das rotas da parte do aluno
 
