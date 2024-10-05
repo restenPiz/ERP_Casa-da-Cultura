@@ -78,6 +78,7 @@ class courseController extends Controller
     }
     public function update(Request $request, $id)
     {
+        //*Encontrando o curso */
         $course = course::findOrFail($id);
 
         $validatedData = $request->validate([
