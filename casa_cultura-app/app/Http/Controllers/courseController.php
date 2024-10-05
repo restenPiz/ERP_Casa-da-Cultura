@@ -9,6 +9,12 @@ use RealRashid\SweetAlert\Facades\Alert;
 
 class courseController extends Controller
 {
+    public function detail($id)
+    {
+        $course = course::findOrFail($id);
+
+        return view('coursePages.detail', compact('course'));
+    }
     public function all()
     {
         $courses = course::all();
