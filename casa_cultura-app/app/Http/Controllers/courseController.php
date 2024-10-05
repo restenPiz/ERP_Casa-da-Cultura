@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\course;
+use App\Models\User;
 use DB;
 use Illuminate\Http\Request;
 use RealRashid\SweetAlert\Facades\Alert;
@@ -11,9 +12,10 @@ class courseController extends Controller
 {
     public function edit($id)
     {
+        $trainers = User::all();
         $course = course::findOrFail($id);
 
-        return view('coursePages.edit', compact('course'));
+        return view('coursePages.edit', compact('course', 'trainers'));
     }
     public function detail($id)
     {
