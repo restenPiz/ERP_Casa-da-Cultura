@@ -12,7 +12,7 @@
                         <div class="col-lg-5">
                             <div class="position-relative">
                                 <div class="bg-holder rounded-1 overlay"
-                                    style="background-image:url(../../../assets/img/elearning/courses/course-details.png);">
+                                    style="background-image: url('{{ asset('storage/' . $course->Upload_file) }}');">
                                 </div><!--/.bg-holder-->
                                 <a class="text-decoration-none position-relative d-block py-7 text-center"
                                     href="../../../assets/video/beach.mp4" data-gallery="attachment-bg"><img
@@ -24,16 +24,6 @@
                             <h6 class="fw-semi-bold text-400">O formador do curso e <a class="text-info"
                                     href="../trainer-profile.html">Bill Finger</a></h6>
                             <h2 class="fw-bold text-white">{{$course->Course_name}} </h2>
-                            {{-- <p class="text-white fw-semi-bold fs-10"><span class="me-1">4.8</span><span
-                                    class="fa fa-star text-warning"></span><span
-                                    class="fa fa-star text-warning"></span><span
-                                    class="fa fa-star text-warning"></span><span
-                                    class="fa fa-star text-warning"></span><span
-                                    class="fa fa-star-half-alt text-warning star-icon"></span><span
-                                    class="text-info ms-2">(6,899 reviews)</span></p> --}}
-                            {{-- <p class="mb-0 fw-medium text-400"> Exploring Photoshop, Illustrator, Krita, Procreate, and
-                                Canva; trace the evolution of graphic design from ancient...<a class="text-info"
-                                    href="#!"> See more</a></p> --}}
                         </div>
                     </div>
                     <hr class="text-secondary text-opacity-50" />
@@ -66,6 +56,36 @@
                     </ul>
                 </div>
             </div>
+            <div class="card mb-3">
+                <div class="card-header bg-body-tertiary">
+                    <h5 class="mb-0">Objectivos do Curso</h5>
+                </div>
+                <div class="card-body position-relative">
+                    <div class="bg-holder bg-card d-none d-md-block"
+                        style="background-image:url(../../../assets/img/icons/spot-illustrations/corner-7.png);"></div>
+                    <!--/.bg-holder-->
+                    <ul class="list-unstyled position-relative fs-10 p-0 m-0">
+                        <li class="mb-2">
+                            <div class="d-flex"><span class="fas fa-circle me-2 mt-1"
+                                    data-fa-transform="shrink-8"></span><span style="text-align: justify">{{$course->Goals}}</span></div>
+                        </li>
+                        {{-- <li class="mb-2">
+                            <div class="d-flex"><span class="fas fa-circle me-2 mt-1"
+                                    data-fa-transform="shrink-8"></span><span>Learners with following skills might be more
+                                    benefited, but little extra work is all that’ll take to catch up to experts’
+                                    level</span></div>
+                            <ol class="bullet-inside mt-2">
+                                <li class="mb-2">Comfortable with Computer</li>
+                                <li class="mb-2">Access to Internet and Computer</li>
+                                <li class="mb-2">Background in Fine Arts or Any Creative Field</li>
+                                <li class="mb-2">Digital Drawing Experience</li>
+                            </ol>
+                        </li> --}}
+                    </ul>
+                </div>
+            </div>
+
+            {{--Inicio da div de aulas--}}
             <div class="card mb-3">
                 <div class="card-header bg-body-tertiary">
                     <h5 class="mb-0">Plano de Aulas</h5>
@@ -177,35 +197,8 @@
                 <div class="card-footer text-end py-1 bg-body-tertiary"><a class="btn btn-link btn-sm py-2 px-0"
                         href="#!">Full Lesson Plan<span class="fas fa-chevron-down ms-1 fs-11"></span></a></div>
             </div>
-            <div class="card mb-3">
-                <div class="card-header bg-body-tertiary">
-                    <h5 class="mb-0">Requirements</h5>
-                </div>
-                <div class="card-body position-relative">
-                    <div class="bg-holder bg-card d-none d-md-block"
-                        style="background-image:url(../../../assets/img/icons/spot-illustrations/corner-7.png);"></div>
-                    <!--/.bg-holder-->
-                    <ul class="list-unstyled position-relative fs-10 p-0 m-0">
-                        <li class="mb-2">
-                            <div class="d-flex"><span class="fas fa-circle me-2 mt-1"
-                                    data-fa-transform="shrink-8"></span><span>This course requires profieciency in English
-                                    language as the Lessons are prepared in English.</span></div>
-                        </li>
-                        <li class="mb-2">
-                            <div class="d-flex"><span class="fas fa-circle me-2 mt-1"
-                                    data-fa-transform="shrink-8"></span><span>Learners with following skills might be more
-                                    benefited, but little extra work is all that’ll take to catch up to experts’
-                                    level</span></div>
-                            <ol class="bullet-inside mt-2">
-                                <li class="mb-2">Comfortable with Computer</li>
-                                <li class="mb-2">Access to Internet and Computer</li>
-                                <li class="mb-2">Background in Fine Arts or Any Creative Field</li>
-                                <li class="mb-2">Digital Drawing Experience</li>
-                            </ol>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+            {{--Fim da div de aulas--}}
+
             <div class="card mb-3">
                 <div class="card-header d-flex flex-between-center">
                     <h5 class="mb-0">Formador</h5>
