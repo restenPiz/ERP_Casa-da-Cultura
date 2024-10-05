@@ -78,7 +78,10 @@ class courseController extends Controller
     }
     public function update(Request $request, $id)
     {
-        //*Inicio do metodo de actualizacao
+        // Encontrar o curso pelo ID
+        $course = course::findOrFail($id);
+
+        // Validar os dados da requisição
         $validatedData = $request->validate([
             'Course_name' => 'required|string|max:255',
             'Description' => 'required|string|max:1000',
@@ -88,32 +91,39 @@ class courseController extends Controller
             'Upload_video' => 'nullable|file|mimes:pdf,doc,docx,jpg,png|max:10240',
         ]);
 
+        // Atualizar os arquivos, se novos arquivos forem enviados
         if ($request->hasFile('Upload_file')) {
             $validatedData['Upload_file'] = $request->file('Upload_file')->store('uploads/courses', 'public');
+        } else {
+            // Manter o arquivo atual se não houver novo upload
+            $validatedData['Upload_file'] = $course->Upload_file;
         }
 
         if ($request->hasFile('Upload_video')) {
             $validatedData['Upload_video'] = $request->file('Upload_video')->store('uploads/courses', 'public');
+        } else {
+            // Manter o arquivo atual se não houver novo upload
+            $validatedData['Upload_video'] = $course->Upload_video;
         }
 
-        $courses = course::findOrFail($id);
+        // Atualizar os dados do curso
+        $course->update([
+            'Course_name' => $validatedData['Course_name'],
+            'Description' => $validatedData['Description'],
+            'Price' => $validatedData['Price'],
+            'Goals' => $validatedData['Goals'],
+            'Upload_file' => $validatedData['Upload_file'],
+            'Upload_video' => $validatedData['Upload_video'],
+        ]);
 
-        $courses->Course_name = $request->input('Course_name');
-        $courses->Description = $request->input('Description');
-        $courses->Price = $request->input('Price');
-        $courses->Goals = $request->input('Goals');
-        $courses->Upload_file = $request->input('Upload_file');
-        $courses->Upload_video = $request->input('Upload_video');
-
-        $courses->save();
-
-        //*Conectando o user com o curso
+        // Conectar o usuário com o curso, se necessário
         if (isset($validatedData['id_user'])) {
-            $courses->users()->attach($validatedData['id_user']);
+            $course->users()->sync($validatedData['id_user']);  // Usar 'sync' para atualizar as relações existentes
         }
-        Alert::success('Actualizado!', 'O curso foi actualizado com sucesso!');
 
-        return route('course.all');
+        Alert::success('Atualizado!', 'O curso foi atualizado com sucesso!');
+
+        return redirect()->route('course.all');
     }
     public function delete($id)
     {
