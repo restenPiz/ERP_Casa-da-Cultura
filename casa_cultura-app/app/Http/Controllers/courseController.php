@@ -78,10 +78,8 @@ class courseController extends Controller
     }
     public function update(Request $request, $id)
     {
-        // Encontrar o curso pelo ID
         $course = course::findOrFail($id);
 
-        // Validar os dados da requisição
         $validatedData = $request->validate([
             'Course_name' => 'required|string|max:255',
             'Description' => 'required|string|max:1000',
@@ -91,22 +89,18 @@ class courseController extends Controller
             'Upload_video' => 'nullable|file|mimes:pdf,doc,docx,jpg,png|max:10240',
         ]);
 
-        // Atualizar os arquivos, se novos arquivos forem enviados
         if ($request->hasFile('Upload_file')) {
             $validatedData['Upload_file'] = $request->file('Upload_file')->store('uploads/courses', 'public');
         } else {
-            // Manter o arquivo atual se não houver novo upload
             $validatedData['Upload_file'] = $course->Upload_file;
         }
 
         if ($request->hasFile('Upload_video')) {
             $validatedData['Upload_video'] = $request->file('Upload_video')->store('uploads/courses', 'public');
         } else {
-            // Manter o arquivo atual se não houver novo upload
             $validatedData['Upload_video'] = $course->Upload_video;
         }
 
-        // Atualizar os dados do curso
         $course->update([
             'Course_name' => $validatedData['Course_name'],
             'Description' => $validatedData['Description'],
@@ -116,9 +110,8 @@ class courseController extends Controller
             'Upload_video' => $validatedData['Upload_video'],
         ]);
 
-        // Conectar o usuário com o curso, se necessário
         if (isset($validatedData['id_user'])) {
-            $course->users()->sync($validatedData['id_user']);  // Usar 'sync' para atualizar as relações existentes
+            $course->users()->sync($validatedData['id_user']);
         }
 
         Alert::success('Atualizado!', 'O curso foi atualizado com sucesso!');
