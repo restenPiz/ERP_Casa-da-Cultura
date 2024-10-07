@@ -28,7 +28,7 @@
                                     <div class="p-3">
                                         <h5 class="fs-9 mb-2"><a class="text-1100" href="{{route('course.detail',['id'=>$course->id])}}">
                                                 {{ $course->Course_name }}</a></h5>
-                                        <h5 class="fs-9"><a href="../trainer-profile.html">Bill Finger</a></h5>
+                                        <h5 class="fs-9"><a href="../trainer-profile.html">{{$courses->users->id_user}}</a></h5>
                                     </div>
                                 </div>
                                 <div class="row g-0 mb-3 align-items-end">

@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Course;
+use App\Models\course;
 use App\Models\User;
 use DB;
 use Illuminate\Http\Request;
@@ -13,19 +13,19 @@ class courseController extends Controller
     public function edit($id)
     {
         $trainers = User::all();
-        $course = Course::findOrFail($id);
+        $course = course::findOrFail($id);
 
         return view('coursePages.edit', compact('course', 'trainers'));
     }
     public function detail($id)
     {
-        $course = Course::findOrFail($id);
+        $course = course::findOrFail($id);
 
         return view('coursePages.detail', compact('course'));
     }
     public function all()
     {
-        $courses = Course::all();
+        $courses = course::all();
 
         return view('coursePages.all', compact('courses'));
     }
@@ -61,7 +61,7 @@ class courseController extends Controller
         }
 
         //*Inicio do metodo que vai inserir os dados
-        $courses = Course::create([
+        $courses = course::create([
             'Course_name' => $validatedData['Course_name'],
             'Description' => $validatedData['Description'],
             'Price' => $validatedData['Price'],
@@ -81,7 +81,7 @@ class courseController extends Controller
     public function update(Request $request, $id)
     {
         //*Encontrando o curso */
-        $course = Course::findOrFail($id);
+        $course = course::findOrFail($id);
 
         $validatedData = $request->validate([
             'Course_name' => 'required|string|max:255',
