@@ -16,7 +16,7 @@
                                    name="Course_name" type="text" placeholder="Nome do Curso" required="required" /></div>
                             <div class="col-sm-6 mb-3"><label class="form-label" for="course-category">Nome do Formador<span
                                         class="text-danger">*</span></label><select class="form-select" id="course-category"
-                                    name="id_user">
+                                    name="id_user[]">
                                     <option>Selecione o Formador</option>
                                     @foreach ($trainers as $trainer)
                                         <option value="{{ $trainer->id }}">{{ $trainer->name }}
