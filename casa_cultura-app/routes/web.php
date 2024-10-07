@@ -8,11 +8,8 @@ use App\Http\Controllers\userController;
 use Illuminate\Routing\RedirectController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('auth.login');
-});
-
-Route::get('/dashboard', [RedirectController::class, 'edit'])->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/', [RedirectController::class, 'main']);
+Route::get('/dashboard', [RedirectController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

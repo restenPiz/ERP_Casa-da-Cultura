@@ -10,4 +10,8 @@ class redirectController extends Controller
     {
         return view('dashboard');
     }
+    public function main()
+    {
+        return view('auth.login');
+    }
 }
