@@ -74,7 +74,7 @@ class courseController extends Controller
         }
         Alert::success('Adicionado!', 'O curso foi adicionado com sucesso!');
 
-        return route('course.all');
+        return redirect()->route('course.all');
     }
     public function update(Request $request, $id)
     {
