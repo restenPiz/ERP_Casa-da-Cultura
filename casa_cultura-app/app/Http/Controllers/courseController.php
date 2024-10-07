@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\course;
+use App\Models\Course;
 use App\Models\User;
 use DB;
 use Illuminate\Http\Request;
@@ -13,19 +13,19 @@ class courseController extends Controller
     public function edit($id)
     {
         $trainers = User::all();
-        $course = course::findOrFail($id);
+        $course = Course::findOrFail($id);
 
         return view('coursePages.edit', compact('course', 'trainers'));
     }
     public function detail($id)
     {
-        $course = course::findOrFail($id);
+        $course = Course::findOrFail($id);
 
         return view('coursePages.detail', compact('course'));
     }
     public function all()
     {
-        $courses = course::all();
+        $courses = Course::all();
 
         return view('coursePages.all', compact('courses'));
     }
@@ -46,6 +46,8 @@ class courseController extends Controller
             'Description' => 'required|string|max:1000',
             'Price' => 'required|string|max:255',
             'Goals' => 'required|string|max:1000',
+            'id_user' => 'required|array',
+            'id_user.*' => 'exists:users,id',
             'Upload_file' => 'nullable|file|mimes:pdf,doc,docx,jpg,png|max:10240',
             'Upload_video' => 'nullable|file|mimes:pdf,doc,docx,jpg,png|max:10240',
         ]);
@@ -59,7 +61,7 @@ class courseController extends Controller
         }
 
         //*Inicio do metodo que vai inserir os dados
-        $courses = course::create([
+        $courses = Course::create([
             'Course_name' => $validatedData['Course_name'],
             'Description' => $validatedData['Description'],
             'Price' => $validatedData['Price'],
@@ -79,7 +81,7 @@ class courseController extends Controller
     public function update(Request $request, $id)
     {
         //*Encontrando o curso */
-        $course = course::findOrFail($id);
+        $course = Course::findOrFail($id);
 
         $validatedData = $request->validate([
             'Course_name' => 'required|string|max:255',
