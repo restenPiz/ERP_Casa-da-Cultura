@@ -1,6 +1,6 @@
 @extends('layouts.layout')
 @section('content')
-    {{-- * Inicio da seccao do meu sistema --}}
+    {{-- ? Inicio da seccao do meu sistema --}}
     <div class="row g-3">
         <div class="col-xxl-12 col-xl-9">
             <div class="card mb-3">
