@@ -23,9 +23,9 @@ class courseController extends Controller
 
         return view('coursePages.detail', compact('course'));
     }
-    public function all()
+    public function all($id)
     {
-        $courses = course::all();
+        $courses = course::with('users')->findOrFail($id);
 
         return view('coursePages.all', compact('courses'));
     }
