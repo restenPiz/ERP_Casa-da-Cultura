@@ -3,13 +3,13 @@
 use App\Http\Controllers\artistController;
 use App\Http\Controllers\courseController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\redirectController;
 use App\Http\Controllers\trainerController;
 use App\Http\Controllers\userController;
-use Illuminate\Routing\RedirectController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', [RedirectController::class, 'main']);
-Route::get('/dashboard', [RedirectController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/', [redirectController::class, 'main']);
+Route::get('/dashboard', [redirectController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
