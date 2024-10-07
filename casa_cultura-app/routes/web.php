@@ -5,15 +5,14 @@ use App\Http\Controllers\courseController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\trainerController;
 use App\Http\Controllers\userController;
+use Illuminate\Routing\RedirectController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('auth.login');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/dashboard', [RedirectController::class, 'edit'])->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
