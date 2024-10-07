@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\course;
+use App\Models\Course_user;
 use App\Models\User;
 use DB;
 use Illuminate\Http\Request;
@@ -23,19 +24,22 @@ class courseController extends Controller
 
         return view('coursePages.detail', compact('course'));
     }
-    public function all($id)
+    public function all()
     {
-        $courses = course::with('users')->findOrFail($id);
+        $courses = course::all();
+        $courseUsers = Course_user::with('user')->where('id_course', 5)->get();
 
-        return view('coursePages.all', compact('courses'));
+        return view('coursePages.all', compact('courses', 'courseUsers'));
     }
     public function index()
     {
+        $course = course::all();
+
         $trainers = DB::table('users')
             ->where('user_type', '=', 'Trainer')
             ->get();
 
-        return view('coursePages.index', compact('trainers'));
+        return view('coursePages.index', compact('trainers', 'course'));
     }
     public function store(Request $request)
     {

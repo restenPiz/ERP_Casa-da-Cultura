@@ -2,13 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\course;
 use Illuminate\Http\Request;
 
 class redirectController extends Controller
 {
     public function index()
     {
-        return view('dashboard');
+        $course = course::all();
+
+        return view('dashboard', compact('course'));
     }
     public function main()
     {
