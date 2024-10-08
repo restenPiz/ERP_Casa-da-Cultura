@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\artistController;
 use App\Http\Controllers\courseController;
+use App\Http\Controllers\employeeController;
 use App\Http\Controllers\eventController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\redirectController;
@@ -43,6 +44,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/eventDelete/{id}', [eventController::class, 'delete'])->name('event.delete');
 
     //*Inicio das rotas da parte de funcionarios
+    Route::get('/employeeIndex', [employeeController::class, 'index'])->name('employee.index');
 
     //*Inicio das rotas da parte de artista
     Route::get('/artistMain', [artistController::class, 'index'])->name('artist.index');
