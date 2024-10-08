@@ -66,7 +66,7 @@
                                     class="form-control" id="email2" type="text" placeholder="Digite o seu cargo"
                                     name="function" /></div>
                             <div class="col-lg-6"> <label class="form-label" for="email2"></label><input
-                                    class="form-control" value="Trainer" id="email2" type="hidden" name="user_type" />
+                                    class="form-control" value="Employee" id="email2" type="hidden" name="user_type" />
                             </div>
                             <div class="col-12 d-flex justify-content-end"><button class="btn btn-primary"
                                     type="submit">Adicionar Formador </button></div>
