@@ -77,7 +77,7 @@
                             </div>
                             {{--?Inicio da seccao do butao--}}
                             <div class="mb-3">
-                                <button style="border-radius:0" class="btn btn-falcon-default btn-sm me-2" name="submit" type="submit">Adicionar</button>
+                                <button style="border-radius:0" class="btn bg-primary btn-falcon-def btn-sm me-2" name="submit" type="submit">Adicionar</button>
                             </div>
                             {{--*Fim do formulario--}}
                         </form>

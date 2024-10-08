@@ -17,15 +17,19 @@
                     </div>
                 </div>
                 <div class="col-md-auto mt-4 mt-md-0">
+                    <a href="{{route('event.index')}}"
+                        class="btn btn-falcon-secondary btn-sm px-4 px-sm-5" type="button">Todos Eventos</a>
                     <a href=""
                         class="btn btn-falcon-primary btn-sm me-2" type="button"><span
                             class="fas fa-pen-alt me-1"></span>Editar</a><a href="{{route('event.delete',['id'=>$event->id])}}"
                         class="btn btn-falcon-danger btn-sm px-4 px-sm-5" type="button"><span
-                            class="fas fa-trash-alt me-1"></span>Eliminar</a></div>
+                            class="fas fa-trash-alt me-1"></span>Eliminar</a>
+                        </div>
 
                 {{--* Inicio do modal de Editar--}}
 
                 {{--* Fim do modal de editar--}}
+
             </div>
         </div>
     </div>
@@ -35,13 +39,11 @@
                 <div class="card-body">
                     <h5 class="fs-9 mb-3">Descricao do Evento</h5>
                     <p style="text-align: justify">{{$event->Description}}</p>
-                    <ul>
+                    {{-- <ul>
                         <li>Localizacao: {{$event->Location}}</li>
                         <li>Horario: {{ \Carbon\Carbon::parse($event->Hour)->format('H:i') }}</li>
                         <li>Artista: {{$event->id_artist}}</li>
-                    </ul>
-                    
-                    
+                    </ul> --}}
                 </div>
             </div>
         </div>
