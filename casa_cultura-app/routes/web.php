@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\artistController;
 use App\Http\Controllers\courseController;
+use App\Http\Controllers\eventController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\redirectController;
 use App\Http\Controllers\trainerController;
@@ -33,6 +34,9 @@ Route::middleware('auth')->group(function () {
     Route::get('/courseAll', [courseController::class, 'all'])->name('course.all');
     Route::get('/courseDetail/{id}', [courseController::class, 'detail'])->name('course.detail');
     Route::get('/courseEdit/{id}', [courseController::class, 'edit'])->name('course.edit');
+
+    //*Inicio das rotas da parte de eventos
+    Route::get('/eventIndex', [eventController::class, 'index'])->name('event.index');
 
     //*Inicio das rotas da parte de funcionarios
 
