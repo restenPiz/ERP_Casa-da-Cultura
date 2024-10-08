@@ -21,7 +21,7 @@ class Course_user extends Model
         return $this->belongsTo(course::class, 'id_course', 'id');
     }
 
-    public function user()
+    public function users()
     {
         return $this->belongsTo(User::class, 'id_user', 'id');
     }

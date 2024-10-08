@@ -27,7 +27,7 @@ class courseController extends Controller
     public function all()
     {
         $courses = course::all();
-        $courseUsers = Course_user::with('user')->where('id_course', 5)->first();
+        $courseUsers = Course_user::with('user');
 
         return view('coursePages.all', compact('courses', 'courseUsers'));
     }
