@@ -92,7 +92,7 @@
                                                     Evento</label>
                                                 <textarea name="Description" class="form-control" id="event-description" rows="6">{{$event->Description}}</textarea>
                                             </div>
-
+                                            <input type="hidden" name="id" value="{{$event->id}}">
                                             {{-- * Fim dos inputs type hidden --}}
                                             <div style="margin-top: 1rem" class="col-12 d-flex"><button
                                                     style="border-radius: 0" class="btn btn-primary"

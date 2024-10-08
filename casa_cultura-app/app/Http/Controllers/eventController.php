@@ -62,6 +62,8 @@ class eventController extends Controller
         if ($request->hasFile('Event_picture')) {
             $filePath = $request->file('Event_picture')->store('uploads/events', 'public');
             $event->Event_picture = $filePath;
+        } else {
+            $event->Event_picture;
         }
 
         $event->save();
