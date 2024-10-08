@@ -153,6 +153,6 @@ class userController extends Controller
     
         Alert::success('Atualizado', $successMessage);
 
-        return redirect()->route('trainer.all');
+        return back();
     }
 }
