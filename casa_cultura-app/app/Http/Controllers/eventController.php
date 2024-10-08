@@ -45,21 +45,27 @@ class eventController extends Controller
 
         return back();
     }
-    public function update($id)
+    public function update(Request $request, $id)
     {
         $event = event::findOrFail($id);
 
-        $event->Date = Request::input('Date');
-        $event->Location = Request::input('Location');
-        $event->Number_of_speaker = Request::input('Number_of_speaker');
-        $event->Hour = Request::input('Hour');
-        $event->Description = Request::input('Description');
-        $event->Event_picture = Request::input('Event_picture');
-        $event->id_artist = Request::input('id_artist');
+        $event->Name = $request->input('Name');
+        $event->Date = $request->input('Date');
+        $event->Location = $request->input('Location');
+        $event->Number_of_speaker = $request->input('Number_of_speaker');
+        $event->Hour = $request->input('Hour');
+        $event->Price = $request->input('Price');
+        $event->Description = $request->input('Description');
+        $event->id_artist = $request->input('id_artist');
+
+        if ($request->hasFile('Event_picture')) {
+            $filePath = $request->file('Event_picture')->store('uploads/events', 'public');
+            $event->Event_picture = $filePath;
+        }
 
         $event->save();
 
-        Alert::success('Actualizado!', 'O Evento foi actualizado com sucesso!');
+        Alert::success('Actualizado!', 'O Evento foi actulizado com sucesso!');
 
         return back();
     }
