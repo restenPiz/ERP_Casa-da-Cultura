@@ -41,7 +41,7 @@
                         <h5 class="mb-0">Formulario de Insercao</h5>
                     </div>
                     <div class="card-body bg-body-tertiary">
-                        <div class="mb-3"><label class="form-label" for="event-topic">Nome do Artista</label><select
+                        <div class="mb-3"><label class="form-label" for="event-topic">Artista</label><select
                                 class="form-select" id="event-topic" name="id_artist">
                                 <option value="" selected="selected">Selecione o Artista</option>
                                 @foreach ($artists as $artist)
@@ -61,7 +61,7 @@
                         {{--?Inicio da segunda seccao--}}
                         <div class="border-bottom border-dashed my-3"></div>
                         {{--?Inicio da terceira seccao--}}
-                        <div class="mb-3"><label class="form-label" for="event-description">Upload da Imagem</label>
+                        <div class="mb-3"><label class="form-label" for="event-description">Imagem do Evento</label>
                         <input class="form-control" name="file" type="file" multiple="multiple" />
                         </div>
                         {{--?Inicio da quarta seccao--}}
