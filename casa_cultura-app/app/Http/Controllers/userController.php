@@ -23,7 +23,6 @@ class userController extends Controller
                 'string',
                 'email',
                 'max:255',
-                Rule::unique('users', 'email'),
             ],
             'password' => 'required|string|min:8|confirmed',
             'Date_of_birth' => 'nullable|date',
@@ -35,7 +34,6 @@ class userController extends Controller
             'user_type' => [
                 'required',
                 'string',
-                Rule::in(['Employee', 'Trainer', 'User']),
             ],
         ]);
 
@@ -49,12 +47,12 @@ class userController extends Controller
             'email' => $validatedData['email'],
             'user_type' => $validatedData['user_type'],
             'password' => Hash::make($validatedData['password']),
-            'Date_of_birth' => $validatedData['Date_of_birth'] ?? null,
-            'bi' => $validatedData['bi'] ?? null,
-            'place' => $validatedData['place'] ?? null,
-            'contact' => $validatedData['contact'] ?? null,
-            'upload_file' => $validatedData['upload_file'] ?? null,
-            'function' => $validatedData['function'] ?? null,
+            'Date_of_birth' => $validatedData['Date_of_birth'],
+            'bi' => $validatedData['bi'],
+            'place' => $validatedData['place'],
+            'contact' => $validatedData['contact'],
+            'upload_file' => $validatedData['upload_file'],
+            'function' => $validatedData['function'],
         ]);
 
         switch ($validatedData['user_type']) {
