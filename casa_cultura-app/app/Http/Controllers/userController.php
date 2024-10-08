@@ -78,7 +78,7 @@ class userController extends Controller
 
         Alert::success('Adicionado', $successMessage);
 
-        return redirect()->route('trainer.all');
+        return back();
     }
     public function update(Request $request, $id)
     {
