@@ -17,4 +17,9 @@ class Chapter extends Model
         'Chapter_file',
         'id_course'
     ];
+
+    public function courses()
+    {
+        return $this->belongsTo(course::class, 'id_course', 'id');
+    }
 }

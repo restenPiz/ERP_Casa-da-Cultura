@@ -22,7 +22,7 @@
                                         <p class="mb-1">Organizado pela <a href="#!" class="text-700">Casa de Cultura</a></p>
                                         <p class="text-1000 mb-0">Horario: {{ \Carbon\Carbon::parse($event->Hour)->format('H:i') }}</p>
                                         <p class="text-1000 mb-0">Localizacao: {{$event->Location}}</p>
-                                        <p class="text-1000 mb-0">Artistas: {{$event->id_artist}}</p>
+                                        <p class="text-1000 mb-0">Preco de Bilhete: {{$event->Price}} MT</p>
                                         <div class="border-bottom border-dashed my-3"></div>
                                     </div>
                                 </div>
@@ -44,6 +44,8 @@
                         <form action="{{route('event.store')}}" method="post">
                             @csrf
                             {{--*Inicio do formulario--}}
+                            <div class="mb-3"><label class="form-label" for="event-type">Nome do Evento</label>
+                            <input class="form-control form-control-sm" type="text" placeholder="Nome do Evento" name="Name" /></div>
                             <div class="mb-3"><label class="form-label" for="event-topic">Artista</label><select
                                 class="form-select" id="event-topic" name="id_artist">
                                 <option value="" selected="selected">Selecione o Artista</option>
@@ -69,6 +71,8 @@
                             </div>
                             {{--?Inicio da quarta seccao--}}
                             <div class="border-bottom border-dashed my-3"></div>
+                            <div class="mb-3"><label class="form-label" for="event-type">Preco do Evento</label>
+                            <input class="form-control form-control-sm" type="text" placeholder="Preco dos bilhetes" name="Price" /></div>
                             <div class="mb-3"><label class="form-label" for="event-description">Descricao do Evento</label><textarea name="Description" class="form-control" id="event-description" rows="6"></textarea>
                             </div>
                             {{--?Inicio da seccao do butao--}}
