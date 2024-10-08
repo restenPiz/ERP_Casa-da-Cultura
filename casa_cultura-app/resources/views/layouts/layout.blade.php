@@ -140,7 +140,7 @@
                                             <div class="d-flex align-items-center"><span
                                                     class="nav-link-text ps-1">Adicionar Funcionario</span></div>
                                         </a><!-- more inner pages--></li>
-                                    <li class="nav-item"><a class="nav-link" href="{{ route('trainer.all') }}">
+                                    <li class="nav-item"><a class="nav-link" href="{{ route('employee.all') }}">
                                             <div class="d-flex align-items-center"><span
                                                     class="nav-link-text ps-1">Detalhes dos Funcionarios</span></div>
                                         </a><!-- more inner pages--></li>
