@@ -20,6 +20,6 @@ class artist extends Model
 
     public function events()
     {
-        return $this->hasMany(event::class, 'Id_artist', 'id');
+        return $this->hasMany(event::class, 'id_artist', 'id');
     }
 }

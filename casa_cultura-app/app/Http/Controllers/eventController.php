@@ -17,7 +17,7 @@ class eventController extends Controller
     }
     public function detail($id)
     {
-        $event = event::findOrFail($id);
+        $event = event::with('artists')->findOrFail($id);
         $artists = artist::all();
 
         return view('eventPages.details', compact('event', 'artists'));

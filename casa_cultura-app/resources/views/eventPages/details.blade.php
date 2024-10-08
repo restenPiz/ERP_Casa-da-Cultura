@@ -131,6 +131,8 @@
                         <div class="mb-1">{{ $event->Location }}<br /></div>
                         <h6 class="mt-4">Numero de Palestrentas</h6>
                         <p class="fs-10 mb-0">{{ $event->Number_of_speaker }}</p>
+                        <h6 class="mt-4">Artista Principal</h6>
+                        <p class="fs-10 mb-0">{{ $event->artists->Name }}</p>
                     </div>
                 </div>
             </div>

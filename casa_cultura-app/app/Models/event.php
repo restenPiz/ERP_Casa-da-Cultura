@@ -24,6 +24,6 @@ class event extends Model
 
     public function artists()
     {
-        return $this->belongsTo(artist::class, 'Id_artist', 'id');
+        return $this->belongsTo(artist::class, 'id_artist', 'id');
     }
 }
