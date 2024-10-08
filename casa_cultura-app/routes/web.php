@@ -47,6 +47,7 @@ Route::middleware('auth')->group(function () {
     //*Inicio das rotas da parte de funcionarios
     Route::get('/employeeIndex', [employeeController::class, 'index'])->name('employee.index');
     Route::get('/employeeAll', [employeeController::class, 'all'])->name('employee.all');
+    Route::get('/employeeDelete/{id}', [employeeController::class, 'delete'])->name('employee.delete');
 
     //*Inicio das rotas da parte de artista
     Route::get('/artistMain', [artistController::class, 'index'])->name('artist.index');

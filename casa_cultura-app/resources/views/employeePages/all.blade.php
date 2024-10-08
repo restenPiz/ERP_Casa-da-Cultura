@@ -84,7 +84,7 @@
                                             <div class="py-2"><a class="dropdown-item" href="#staticBackdrop"
                                                     data-bs-toggle="modal" data-bs-target="#staticBackdrop{{$trainer->id}}">Edit</a><a
                                                     class="dropdown-item text-danger"
-                                                    href="{{ route('trainer.delete', ['id' => $trainer->id]) }}">Delete</a>
+                                                    href="{{ route('employee.delete', ['id' => $trainer->id]) }}">Delete</a>
                                             </div>
                                         </div>
                                     </div>
@@ -186,7 +186,7 @@
                                                         {{--Inicio dos inputs type hidden--}}
                                                         <div class="col-lg-6"> <label class="form-label"
                                                                 for="email2"></label><input class="form-control"
-                                                                value="Trainer" id="email2" type="hidden"
+                                                                value="Employee" id="email2" type="hidden"
                                                                 name="user_type" />
                                                         </div>
                                                         <div class="col-lg-6"> <label class="form-label"
