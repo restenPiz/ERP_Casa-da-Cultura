@@ -43,9 +43,7 @@
                         <div class="rounded-top-3 bg-body-tertiary py-3 ps-4 pe-6">
                             <h4 class="mb-1" id="staticBackdropLabel">Adicionar Artista
                             </h4>
-                            {{-- <p class="fs-11 mb-0">Adicionado por <a class="link-600 fw-semi-bold"
-                                    href="#!">{{ Auth::user()->name }}</a></p> --}}
-                        </div>
+                        </div><br>
                         <div class="p-4" style="margin-top: -3rem;">
                             <form action="/artistStore" method="post">
                                 @csrf
@@ -137,9 +135,7 @@
                                             <div class="rounded-top-3 bg-body-tertiary py-3 ps-4 pe-6">
                                                 <h4 class="mb-1" id="staticBackdropLabel">Adicionar Artista
                                                 </h4>
-                                                {{-- <p class="fs-11 mb-0">Adicionado por <a class="link-600 fw-semi-bold"
-                                    href="#!">{{ Auth::user()->name }}</a></p> --}}
-                                            </div>
+                                            </div><br>
                                             <div class="p-4" style="margin-top: -3rem;">
                                                 <form action="{{route('artist.update',['id'=>$artist->id])}}" method="post">
                                                     @csrf
