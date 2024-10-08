@@ -18,7 +18,7 @@
                                     <div class="calendar"><span class="calendar-month">{{ \Carbon\Carbon::parse($event->Date)->format('M') }}</span><span
                                             class="calendar-day">{{ \Carbon\Carbon::parse($event->Date)->format('d') }}</span></div>
                                     <div class="flex-1 position-relative ps-3">
-                                        <h6 class="fs-9 mb-0"><a href="event-detail.html">{{$event->Name}} </a></h6>
+                                        <h6 class="fs-9 mb-0"><a href="{{route('event.detail',['id'=>$event->id])}}">{{$event->Name}} </a></h6>
                                         <p class="mb-1">Organizado pela <a href="#!" class="text-700">Casa de Cultura</a></p>
                                         <p class="text-1000 mb-0">Horario: {{ \Carbon\Carbon::parse($event->Hour)->format('H:i') }}</p>
                                         <p class="text-1000 mb-0">Localizacao: {{$event->Location}}</p>

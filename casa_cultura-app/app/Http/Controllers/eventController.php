@@ -19,7 +19,7 @@ class eventController extends Controller
     {
         $events = event::findOrFail($id);
 
-        return view('eventPages.detail', compact('events'));
+        return view('eventPages.details', compact('events'));
     }
     public function store()
     {
