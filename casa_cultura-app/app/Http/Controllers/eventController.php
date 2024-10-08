@@ -18,8 +18,9 @@ class eventController extends Controller
     public function detail($id)
     {
         $event = event::findOrFail($id);
+        $artists = artist::all();
 
-        return view('eventPages.details', compact('event'));
+        return view('eventPages.details', compact('event', 'artists'));
     }
     public function store(Request $request)
     {
