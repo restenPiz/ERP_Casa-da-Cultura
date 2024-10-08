@@ -39,11 +39,6 @@
                 <div class="card-body">
                     <h5 class="fs-9 mb-3">Descricao do Evento</h5>
                     <p style="text-align: justify">{{$event->Description}}</p>
-                    {{-- <ul>
-                        <li>Localizacao: {{$event->Location}}</li>
-                        <li>Horario: {{ \Carbon\Carbon::parse($event->Hour)->format('H:i') }}</li>
-                        <li>Artista: {{$event->id_artist}}</li>
-                    </ul> --}}
                 </div>
             </div>
         </div>
