@@ -132,7 +132,7 @@
                         </div>
                         {{--?Inicio da seccao do butao--}}
                         <div class="mb-3">
-                            <button class="btn btn-falcon-default btn-sm me-2" role="button">Adicionar</button>
+                            <button style="border-radius:0" class="btn btn-falcon-default btn-sm me-2" role="button">Adicionar</button>
                         </div>
                     </div>
                 </div>

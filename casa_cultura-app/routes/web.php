@@ -37,6 +37,10 @@ Route::middleware('auth')->group(function () {
 
     //*Inicio das rotas da parte de eventos
     Route::get('/eventIndex', [eventController::class, 'index'])->name('event.index');
+    Route::get('/eventDetails/{id}', [eventController::class, 'detail'])->name('event.detail');
+    Route::post('/eventStore', [eventController::class, 'store'])->name('event.store');
+    Route::post('/eventUpdate/{id}', [eventController::class, 'update'])->name('event.update');
+    Route::get('/eventDelete/{id}', [eventController::class, 'delete'])->name('event.delete');
 
     //*Inicio das rotas da parte de funcionarios
 
