@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\artist;
 use App\Models\event;
-use Illuminate\Http\Request;
+use Request;
 use RealRashid\SweetAlert\Facades\Alert;
 
 class eventController extends Controller
@@ -34,7 +34,7 @@ class eventController extends Controller
         $event->id_artist = Request::input('id_artist');
 
         if (Request::hasFile('Event_picture')) {
-            $validatedData['Event_picture'] = Request::file('Event_picture')->store('uploads/events', 'public');
+            Request::file('Event_picture')->store('uploads/events', 'public');
         }
 
         $event->save();

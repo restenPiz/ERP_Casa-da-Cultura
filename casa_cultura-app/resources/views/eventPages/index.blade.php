@@ -20,7 +20,7 @@
                                     <div class="flex-1 position-relative ps-3">
                                         <h6 class="fs-9 mb-0"><a href="event-detail.html">{{$event->Name}} </a></h6>
                                         <p class="mb-1">Organizado pela <a href="#!" class="text-700">Casa de Cultura</a></p>
-                                        <p class="text-1000 mb-0">Horario: {{$event->Hour}}</p>
+                                        <p class="text-1000 mb-0">Horario: {{ \Carbon\Carbon::parse($event->Hour)->format('H:i') }}</p>
                                         <p class="text-1000 mb-0">Localizacao: {{$event->Location}}</p>
                                         <p class="text-1000 mb-0">Artistas: {{$event->id_artist}}</p>
                                         <div class="border-bottom border-dashed my-3"></div>
@@ -65,7 +65,7 @@
                             <div class="border-bottom border-dashed my-3"></div>
                             {{--?Inicio da terceira seccao--}}
                             <div class="mb-3"><label class="form-label" for="event-description">Imagem do Evento</label>
-                            <input class="form-control" name="file" type="file" multiple="multiple" />
+                            <input class="form-control" name="Event_picture" type="file" />
                             </div>
                             {{--?Inicio da quarta seccao--}}
                             <div class="border-bottom border-dashed my-3"></div>
