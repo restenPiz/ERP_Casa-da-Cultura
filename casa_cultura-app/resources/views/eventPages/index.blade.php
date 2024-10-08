@@ -41,37 +41,42 @@
                         <h5 class="mb-0">Formulario de Insercao</h5>
                     </div>
                     <div class="card-body bg-body-tertiary">
-                        <div class="mb-3"><label class="form-label" for="event-topic">Artista</label><select
+                        <form action="{{route('event.store')}}" method="post">
+                            @csrf
+                            {{--*Inicio do formulario--}}
+                            <div class="mb-3"><label class="form-label" for="event-topic">Artista</label><select
                                 class="form-select" id="event-topic" name="id_artist">
                                 <option value="" selected="selected">Selecione o Artista</option>
                                 @foreach ($artists as $artist)
                                     <option value="{{$artist->id}}">{{$artist->Name}}</option>
                                 @endforeach
                             </select></div>
-                        <div class="mb-3"><label class="form-label" for="event-type">Localizacao</label>
-                        <input class="form-control form-control-sm" type="text" placeholder="Localizacao" name="Location" /></div>
-                        <div class="mb-3"><label class="form-label" for="event-type">Numero de Palestrantes</label>
-                        <input class="form-control form-control-sm" type="text" placeholder="Numero de Palestrantes" name="Number_of_speaker" /></div>
-                        {{--?Inicio da primeira seccao--}}
-                        <div class="border-bottom border-dashed my-3"></div>
-                        <div class="mb-3"><label class="form-label" for="event-type">Data do Evento</label>
-                        <input class="form-control form-control-sm" type="date" name="Date" /></div>
-                        <div class="mb-3"><label class="form-label" for="event-type">Horario do Evento</label>
-                        <input class="form-control form-control-sm" type="time" name="Hour" /></div>
-                        {{--?Inicio da segunda seccao--}}
-                        <div class="border-bottom border-dashed my-3"></div>
-                        {{--?Inicio da terceira seccao--}}
-                        <div class="mb-3"><label class="form-label" for="event-description">Imagem do Evento</label>
-                        <input class="form-control" name="file" type="file" multiple="multiple" />
-                        </div>
-                        {{--?Inicio da quarta seccao--}}
-                        <div class="border-bottom border-dashed my-3"></div>
-                        <div class="mb-3"><label class="form-label" for="event-description">Descricao do Evento</label><textarea class="form-control" id="event-description" rows="6"></textarea>
-                        </div>
-                        {{--?Inicio da seccao do butao--}}
-                        <div class="mb-3">
-                            <button style="border-radius:0" class="btn btn-falcon-default btn-sm me-2" role="button">Adicionar</button>
-                        </div>
+                            <div class="mb-3"><label class="form-label" for="event-type">Localizacao</label>
+                            <input class="form-control form-control-sm" type="text" placeholder="Localizacao" name="Location" /></div>
+                            <div class="mb-3"><label class="form-label" for="event-type">Numero de Palestrantes</label>
+                            <input class="form-control form-control-sm" type="text" placeholder="Numero de Palestrantes" name="Number_of_speaker" /></div>
+                            {{--?Inicio da primeira seccao--}}
+                            <div class="border-bottom border-dashed my-3"></div>
+                            <div class="mb-3"><label class="form-label" for="event-type">Data do Evento</label>
+                            <input class="form-control form-control-sm" type="date" name="Date" /></div>
+                            <div class="mb-3"><label class="form-label" for="event-type">Horario do Evento</label>
+                            <input class="form-control form-control-sm" type="time" name="Hour" /></div>
+                            {{--?Inicio da segunda seccao--}}
+                            <div class="border-bottom border-dashed my-3"></div>
+                            {{--?Inicio da terceira seccao--}}
+                            <div class="mb-3"><label class="form-label" for="event-description">Imagem do Evento</label>
+                            <input class="form-control" name="file" type="file" multiple="multiple" />
+                            </div>
+                            {{--?Inicio da quarta seccao--}}
+                            <div class="border-bottom border-dashed my-3"></div>
+                            <div class="mb-3"><label class="form-label" for="event-description">Descricao do Evento</label><textarea name="Description" class="form-control" id="event-description" rows="6"></textarea>
+                            </div>
+                            {{--?Inicio da seccao do butao--}}
+                            <div class="mb-3">
+                                <button style="border-radius:0" class="btn btn-falcon-default btn-sm me-2" name="submit" type="submit">Adicionar</button>
+                            </div>
+                            {{--*Fim do formulario--}}
+                        </form>
                     </div>
                 </div>
             </div>

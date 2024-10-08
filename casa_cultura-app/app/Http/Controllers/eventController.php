@@ -33,6 +33,10 @@ class eventController extends Controller
         $event->Event_picture = Request::input('Event_picture');
         $event->id_artist = Request::input('id_artist');
 
+        if (Request::hasFile('Event_picture')) {
+            $validatedData['Event_picture'] = Request::file('Event_picture')->store('uploads/events', 'public');
+        }
+
         $event->save();
 
         Alert::success('Adicionado!', 'O Evento foi adicionado com sucesso!');
