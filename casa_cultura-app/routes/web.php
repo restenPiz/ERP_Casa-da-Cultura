@@ -10,6 +10,7 @@ use App\Http\Controllers\trainerController;
 use App\Http\Controllers\userController;
 use Illuminate\Support\Facades\Route;
 
+//?Inicio das rotas principais
 Route::get('/', [redirectController::class, 'main']);
 Route::get('/dashboard', [redirectController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard');
 
