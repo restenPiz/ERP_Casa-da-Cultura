@@ -128,7 +128,7 @@
                                         </a><!-- more inner pages--></li>
                                 </ul>
                                 {{--inicio do quarto link--}}
-                                <a class="nav-link" href="../documentation/faq.html"
+                                <a class="nav-link" href="{{route('employee.index')}}"
                                     role="button">
                                     <div class="d-flex align-items-center"><span class="nav-link-icon"><span
                                                 class="fab fa-gulp"></span></span><span
