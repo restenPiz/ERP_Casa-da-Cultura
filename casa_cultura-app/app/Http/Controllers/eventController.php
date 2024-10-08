@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\artist;
 use App\Models\event;
-use Request;
+use Illuminate\Http\Request;
 use RealRashid\SweetAlert\Facades\Alert;
 
 class eventController extends Controller
@@ -17,26 +17,26 @@ class eventController extends Controller
     }
     public function detail($id)
     {
-        $events = event::findOrFail($id);
+        $event = event::findOrFail($id);
 
-        return view('eventPages.details', compact('events'));
+        return view('eventPages.details', compact('event'));
     }
-    public function store()
+    public function store(Request $request)
     {
         $event = new event();
 
-        $event->Name = Request::input('Name');
-        $event->Date = Request::input('Date');
-        $event->Location = Request::input('Location');
-        $event->Number_of_speaker = Request::input('Number_of_speaker');
-        $event->Hour = Request::input('Hour');
-        $event->Price = Request::input('Price');
-        $event->Description = Request::input('Description');
-        $event->Event_picture = Request::input('Event_picture');
-        $event->id_artist = Request::input('id_artist');
+        $event->Name = $request->input('Name');
+        $event->Date = $request->input('Date');
+        $event->Location = $request->input('Location');
+        $event->Number_of_speaker = $request->input('Number_of_speaker');
+        $event->Hour = $request->input('Hour');
+        $event->Price = $request->input('Price');
+        $event->Description = $request->input('Description');
+        $event->id_artist = $request->input('id_artist');
 
-        if (Request::hasFile('Event_picture')) {
-            Request::file('Event_picture')->store('uploads/events', 'public');
+        if ($request->hasFile('Event_picture')) {
+            $filePath = $request->file('Event_picture')->store('uploads/events', 'public');
+            $event->Event_picture = $filePath;
         }
 
         $event->save();
@@ -71,6 +71,6 @@ class eventController extends Controller
 
         Alert::success('Eliminado!', 'O Evento foi eliminado com sucesso!');
 
-        return back();
+        return redirect()->route('event.index');
     }
 }

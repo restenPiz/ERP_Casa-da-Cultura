@@ -41,7 +41,7 @@
                         <h5 class="mb-0">Formulario de Insercao</h5>
                     </div>
                     <div class="card-body bg-body-tertiary">
-                        <form action="{{route('event.store')}}" method="post">
+                        <form action="{{route('event.store')}}" method="post" enctype="multipart/form-data">
                             @csrf
                             {{--*Inicio do formulario--}}
                             <div class="mb-3"><label class="form-label" for="event-type">Nome do Evento</label>
