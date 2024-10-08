@@ -12,7 +12,8 @@ class eventController extends Controller
     public function index()
     {
         $artists = artist::all();
-        return view('eventPages.index', compact('artists'));
+        $events = event::all();
+        return view('eventPages.index', compact('artists', 'events'));
     }
     public function detail($id)
     {
