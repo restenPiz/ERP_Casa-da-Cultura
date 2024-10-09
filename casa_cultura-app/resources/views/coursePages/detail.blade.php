@@ -194,22 +194,83 @@
                             {{-- <span class="fas fa-lock fs-10 text-secondary"></span> --}}
                             <div class="btn-group">
                                 <!-- Botão de Editar -->
-                                <a href="" class="btn btn-sm btn-primary me-1">
-                                    <i class="fas fa-edit"></i> 
+                                <a href="#staticBackdro{{$chapter->id}}" data-bs-toggle="modal" data-bs-target="#staticBackdro{{$chapter->id}}" class="btn btn-sm btn-primary me-1">
+                                    <i class="fas fa-edit"></i>
                                 </a>
 
                                 <!-- Botão de Eliminar -->
-                                <a href="{{route('chapter.delete',['id'=>$chapter->id])}}" type="submit" class="btn btn-sm btn-danger">
-                                    <i class="fas fa-trash"></i> 
+                                <a href="{{ route('chapter.delete', ['id' => $chapter->id]) }}" type="submit"
+                                    class="btn btn-sm btn-danger">
+                                    <i class="fas fa-trash"></i>
                                 </a>
                             </div>
                         </div>
                     </div>
 
-                    {{--? Inicio do modal de Edicao de Capitulos--}}
-
-                    {{--? Fim do modal de Edicao de Capitulos--}}
-
+                    {{-- ? Inicio do modal de Edicao de Capitulos --}}
+                    <div class="modal fade" id="staticBackdro{{$chapter->id}}" data-bs-keyboard="false" data-bs-backdrop="static"
+                        tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg mt-6" role="document">
+                            <div class="modal-content border-0">
+                                <div class="position-absolute top-0 end-0 mt-3 me-3 z-1"><button
+                                        class="btn-close btn btn-sm btn-circle d-flex flex-center transition-base"
+                                        data-bs-dismiss="modal" aria-label="Close"></button></div>
+                                <div class="modal-body p-0">
+                                    <div class="rounded-top-3 bg-body-tertiary py-3 ps-4 pe-6">
+                                        <h4 class="mb-1" id="staticBackdropLabel">Actualizar Capitulo
+                                        </h4>
+                                    </div>
+                                    <div class="p-4" style="margin-top:-3rem">
+                                        <form action="{{ route('chapter.update',['id'=>$chapter->id]) }}" method="post"
+                                            enctype="multipart/form-data">
+                                            @csrf
+                                            <div class="row">
+                                                {{-- ? Inicio da coluna contendo a Imagem --}}
+                                                <div class="col-12 d-flex justify-content-center mb-4">
+                                                    <div
+                                                        class="avatar avatar-5xl avatar-profile shadow-sm img-thumbnail rounded-circle">
+                                                        <div
+                                                            class="h-100 w-100 rounded-circle overflow-hidden position-relative">
+                                                            <!-- Imagem Atual -->
+                                                            <img src="{{ asset('storage/' . $chapter->Chapter_file) }}"
+                                                                width="200" alt="Foto do Formador" />
+                                                            <!-- Input de Arquivo (Oculto) -->
+                                                            <input name="Chapter_file" class="d-none" id="profile-image"
+                                                                type="file" accept="image/*" value="{{$chapter->Chapter_file}}" />
+                                                            <!-- Label que Atua como Botão para Selecionar a Imagem -->
+                                                            <label class="mb-0 overlay-icon d-flex flex-center"
+                                                                for="profile-image">
+                                                                <span class="bg-holder overlay overlay-0"></span>
+                                                                <span
+                                                                    class="z-1 text-white dark__text-white text-center fs-10">
+                                                                    <span class="fas fa-camera"></span>
+                                                                    <span class="d-block">Actualizar Foto</span>
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                {{-- ? Fim da coluna contendo a Imagem --}}
+                                                <div class="col-lg-6"> <label class="form-label" for="first-name">
+                                                        Titulo do Capitulo</label><input name="Title" value="{{$chapter->Title}}"
+                                                        class="form-control" id="first-name" type="text" /></div>
+                                                <div class="col-lg-6"> <label class="form-label"
+                                                        for="last-name">Subtitulo</label><input name="Description" 
+                                                        class="form-control" id="last-name" type="text" value="{{$chapter->Description}}" /></div>
+                                                <input type="hidden" name="id_course" value="{{ $course->id }}">
+                                                {{-- Fim dos inputs type hidden --}}
+                                                <div style="margin-top: 1rem" class="col-12 d-flex"><button
+                                                        style="border-radius: 0" class="btn btn-primary"
+                                                        type="submit">Actualizar Capitulo
+                                                    </button></div>
+                                            </div>
+                                    </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {{-- ? Fim do modal de Edicao de Capitulos --}}
                 @endforeach
 
             </div>
