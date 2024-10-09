@@ -205,6 +205,11 @@
                             </div>
                         </div>
                     </div>
+
+                    {{--? Inicio do modal de Edicao de Capitulos--}}
+
+                    {{--? Fim do modal de Edicao de Capitulos--}}
+
                 @endforeach
 
             </div>
