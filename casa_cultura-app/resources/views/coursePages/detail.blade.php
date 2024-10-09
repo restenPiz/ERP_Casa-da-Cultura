@@ -21,8 +21,10 @@
                             </div>
                         </div>
                         <div class="col-lg-7">
-                            <h6 class="fw-semi-bold text-400">O formador do curso e <a class="text-info"
-                                    href="../trainer-profile.html">Bill Finger</a></h6>
+                            @foreach ($course->users as $user)
+                                <h6 class="fw-semi-bold text-400">O formador do curso e <a class="text-info"
+                                    href="../trainer-profile.html">{{$user->name}} {{$user->Surname}}</a></h6>
+                            @endforeach
                             <h2 class="fw-bold text-white">{{$course->Course_name}} </h2>
                         </div>
                     </div>
