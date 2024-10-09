@@ -306,9 +306,9 @@
                                     <a class="dropdown-item fw-bold text-warning"><span
                                             class="fas fa-crown me-1"></span><span>{{ Auth::user()->name }}</span></a>
                                     <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="../pages/user/profile.html">Profile &amp;
+                                    {{-- <a class="dropdown-item" href="../pages/user/profile.html">Profile &amp;
                                         account</a>
-                                    <a class="dropdown-item" href="../pages/user/settings.html">Settings</a>
+                                    <a class="dropdown-item" href="../pages/user/settings.html">Settings</a> --}}
                                     <a class="dropdown-item" href="{{ route('logout') }}">Logout</a>
                                 </div>
                             </div>
