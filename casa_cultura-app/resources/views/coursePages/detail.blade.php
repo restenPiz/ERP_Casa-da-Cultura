@@ -94,9 +94,9 @@
                         <div class="col">
                             <h5 class="mb-0">Plano de Aulas</h5>
                         </div>
-                        <div class="col">
+                        <div class="col" style="text-align: right">
                             <a class="btn btn-link btn-sm py-2 px-0"
-                        href="#!">Full Lesson Plan<span class="fas fa-chevron-down ms-1 fs-11"></span></a>
+                        href="#!">Adicionar Capitulo<span class="fas fa-chevron-down ms-1 fs-11"></span></a>
                         </div>
                     </div>
                 </div>
