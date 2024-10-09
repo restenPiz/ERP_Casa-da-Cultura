@@ -67,7 +67,6 @@ Route::middleware('auth')->group(function () {
     Route::post('/chapterUpdate/{id}', [chapterController::class, 'update'])->name('chapter.update');
     Route::get('/chapterDelete/{id}', [chapterController::class, 'delete'])->name('chapter.delete');
 
-
 });
 
 require __DIR__ . '/auth.php';
