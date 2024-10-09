@@ -119,7 +119,7 @@
                                     </h4>
                                 </div>
                                 <div class="p-4" style="margin-top:-3rem">
-                                    <form action="{{route('chapter.store')}}" method="post">
+                                    <form action="{{route('chapter.store')}}" method="post" enctype="multipart/form-data">
                                         @csrf
                                         <div class="row">
                                             {{-- ? Inicio da coluna contendo a Imagem --}}
@@ -152,7 +152,7 @@
                                                     Titulo do Capitulo</label><input name="Title" class="form-control"
                                                     id="first-name" type="text" /></div>
                                             <div class="col-lg-6"> <label class="form-label"
-                                                    for="last-name">Subtitulo</label><input name="Subtitle"
+                                                    for="last-name">Subtitulo</label><input name="Description"
                                                     class="form-control" id="last-name" type="text" /></div>
                                             <input type="hidden" name="id_course" value="{{ $course->id }}">
                                             {{-- Fim dos inputs type hidden --}}

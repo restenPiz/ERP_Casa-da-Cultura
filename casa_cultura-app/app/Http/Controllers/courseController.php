@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Chapter;
 use App\Models\course;
 use App\Models\Course_user;
 use App\Models\User;
@@ -21,8 +22,9 @@ class courseController extends Controller
     public function detail($id)
     {
         $course = course::with('users')->findOrFail($id);
+        $chapters = Chapter::where('id_course', $id);
 
-        return view('coursePages.detail', compact('course'));
+        return view('coursePages.detail', compact('course', 'chapters'));
     }
     public function all()
     {
