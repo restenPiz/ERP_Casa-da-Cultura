@@ -90,31 +90,17 @@
             {{--Inicio da div de aulas--}}
             <div class="card mb-3">
                 <div class="card-header bg-body-tertiary">
-                    <h5 class="mb-0">Plano de Aulas</h5>
+                    <div class="row">
+                        <div class="col">
+                            <h5 class="mb-0">Plano de Aulas</h5>
+                        </div>
+                        <div class="col">
+                            <a class="btn btn-link btn-sm py-2 px-0"
+                        href="#!">Full Lesson Plan<span class="fas fa-chevron-down ms-1 fs-11"></span></a>
+                        </div>
+                    </div>
                 </div>
                 <div class="card-body p-0">
-                    <div class="d-flex align-items-center px-x1 py-2 border-bottom border-200">
-                        <div class="hoverbox me-3 my-1"><a class="text-decoration-none"
-                                href="../../../assets/video/beach.mp4" data-gallery="attachment-bg">
-                                <div class="bg-attachment bg-attachment-square">
-                                    <div class="bg-holder"
-                                        style="background-image:url(../../../assets/img/elearning/lessons/intro.png);">
-                                    </div><!--/.bg-holder-->
-                                </div>
-                            </a>
-                            <div class="hoverbox-content flex-center pe-none bg-holder overlay overlay-1 rounded">
-                                <div class="position-relative fs-7 text-white" data-bs-theme="light"><span
-                                        class="fas fa-play-circle"></span></div>
-                            </div>
-                        </div>
-                        <div class="flex-1">
-                            <h5 class="fs-9"><a class="text-decoration-none" href="../../../assets/video/beach.mp4"
-                                    data-gallery="attachment-title">Intro</a></h5>
-                            <p class="fs-10 mb-0">Introduction and Course Objectives</p>
-                        </div><button class="btn btn-falcon-default btn-sm" type="button"><span
-                                class="d-none d-sm-inline-block me-1">Take a Peek</span><span
-                                class="fas fa-chevron-down fs-11"></span></button>
-                    </div>
                     <div class="d-flex align-items-center px-x1 py-2 border-bottom border-200">
                         <div class="hoverbox me-3 my-1"><a class="text-decoration-none"
                                 href="../../../assets/video/beach.mp4" data-gallery="attachment-bg">
@@ -135,69 +121,9 @@
                             <p class="fs-10 mb-0">Tools, nothing more, nothing less</p>
                         </div><span class="fas fa-lock fs-10 text-secondary"></span>
                     </div>
-                    <div class="d-flex align-items-center px-x1 py-2 border-bottom border-200">
-                        <div class="hoverbox me-3 my-1"><a class="text-decoration-none"
-                                href="../../../assets/video/beach.mp4" data-gallery="attachment-bg">
-                                <div class="bg-attachment bg-attachment-square">
-                                    <div class="bg-holder"
-                                        style="background-image:url(../../../assets/img/elearning/lessons/chapter2.png);">
-                                    </div><!--/.bg-holder-->
-                                </div>
-                            </a>
-                            <div class="hoverbox-content flex-center pe-none bg-holder overlay overlay-1 rounded">
-                                <div class="position-relative fs-7 text-white" data-bs-theme="light"><span
-                                        class="fas fa-play-circle"></span></div>
-                            </div>
-                        </div>
-                        <div class="flex-1">
-                            <h5 class="fs-9"><a class="text-decoration-none" href="../../../assets/video/beach.mp4"
-                                    data-gallery="attachment-title">Chapter 2</a></h5>
-                            <p class="fs-10 mb-0">Choosing the Right Tool</p>
-                        </div><span class="fas fa-lock fs-10 text-secondary"></span>
-                    </div>
-                    <div class="d-flex align-items-center px-x1 py-2 border-bottom border-200">
-                        <div class="hoverbox me-3 my-1"><a class="text-decoration-none"
-                                href="../../../assets/video/beach.mp4" data-gallery="attachment-bg">
-                                <div class="bg-attachment bg-attachment-square">
-                                    <div class="bg-holder"
-                                        style="background-image:url(../../../assets/img/elearning/lessons/chapter3.png);">
-                                    </div><!--/.bg-holder-->
-                                </div>
-                            </a>
-                            <div class="hoverbox-content flex-center pe-none bg-holder overlay overlay-1 rounded">
-                                <div class="position-relative fs-7 text-white" data-bs-theme="light"><span
-                                        class="fas fa-play-circle"></span></div>
-                            </div>
-                        </div>
-                        <div class="flex-1">
-                            <h5 class="fs-9"><a class="text-decoration-none" href="../../../assets/video/beach.mp4"
-                                    data-gallery="attachment-title">Chapter 3</a></h5>
-                            <p class="fs-10 mb-0">Getting Comfortable</p>
-                        </div><span class="fas fa-lock fs-10 text-secondary"></span>
-                    </div>
-                    <div class="d-flex align-items-center px-x1 py-2">
-                        <div class="hoverbox me-3 my-1"><a class="text-decoration-none"
-                                href="../../../assets/video/beach.mp4" data-gallery="attachment-bg">
-                                <div class="bg-attachment bg-attachment-square">
-                                    <div class="bg-holder"
-                                        style="background-image:url(../../../assets/img/elearning/lessons/chapter4.png);">
-                                    </div><!--/.bg-holder-->
-                                </div>
-                            </a>
-                            <div class="hoverbox-content flex-center pe-none bg-holder overlay overlay-1 rounded">
-                                <div class="position-relative fs-7 text-white" data-bs-theme="light"><span
-                                        class="fas fa-play-circle"></span></div>
-                            </div>
-                        </div>
-                        <div class="flex-1">
-                            <h5 class="fs-9"><a class="text-decoration-none" href="../../../assets/video/beach.mp4"
-                                    data-gallery="attachment-title">Chapter 4</a></h5>
-                            <p class="fs-10 mb-0">Exploring Beyond Comfort</p>
-                        </div><span class="fas fa-lock fs-10 text-secondary"></span>
-                    </div>
                 </div>
-                <div class="card-footer text-end py-1 bg-body-tertiary"><a class="btn btn-link btn-sm py-2 px-0"
-                        href="#!">Full Lesson Plan<span class="fas fa-chevron-down ms-1 fs-11"></span></a></div>
+                {{-- <div class="card-footer text-end py-1 bg-body-tertiary"><a class="btn btn-link btn-sm py-2 px-0"
+                        href="#!">Full Lesson Plan<span class="fas fa-chevron-down ms-1 fs-11"></span></a></div> --}}
             </div>
             {{--Fim da div de aulas--}}
 
