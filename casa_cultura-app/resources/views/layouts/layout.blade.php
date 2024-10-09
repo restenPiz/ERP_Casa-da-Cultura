@@ -113,7 +113,7 @@
                                     role="button" data-bs-toggle="collapse" aria-expanded="false"
                                     aria-controls="customization">
                                     <div class="d-flex align-items-center"><span class="nav-link-icon"><span
-                                                class="fas fa-layer-group"></span></span><span
+                                                class="fab fa-trello"></span></span><span
                                             class="nav-link-text ps-1">Gerir Funcionarios</span></div>
                                 </a>
                                 <ul class="nav collapse" id="customizati">
