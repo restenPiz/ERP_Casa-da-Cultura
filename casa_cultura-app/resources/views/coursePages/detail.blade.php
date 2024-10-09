@@ -23,14 +23,15 @@
                         <div class="col-lg-7">
                             @foreach ($course->users as $user)
                                 <h6 class="fw-semi-bold text-400">O formador do curso e <a class="text-info"
-                                    href="../trainer-profile.html">{{$user->name}} {{$user->Surname}}</a></h6>
+                                        href="../trainer-profile.html">{{ $user->name }} {{ $user->Surname }}</a></h6>
                             @endforeach
-                            <h2 class="fw-bold text-white">{{$course->Course_name}} </h2>
+                            <h2 class="fw-bold text-white">{{ $course->Course_name }} </h2>
                         </div>
                     </div>
                     <hr class="text-secondary text-opacity-50" />
                     <ul class="list-unstyled d-flex flex-wrap gap-3 fs-10 fw-semi-bold text-300 mt-3 mb-0">
-                        <li><span class="fas fa-graduation-cap text-white me-1"> </span>7,302 Numero de Estudantes Inscritos </li>
+                        <li><span class="fas fa-graduation-cap text-white me-1"> </span>7,302 Numero de Estudantes Inscritos
+                        </li>
                         <li><span class="fas fa-user-graduate text-white me-1"> </span>91% Completion</li>
                         <li><span class="fas fa-headphones text-white me-1"> </span>Portugues</li>
                         {{-- <li><span class="fas fa-closed-captioning text-white me-1"> </span>English</li> --}}
@@ -41,7 +42,7 @@
     </div>
     <div class="row g-lg-3">
         <div class="col-lg-8 order-1 order-lg-0">
-            
+
             <div class="card mb-3">
                 <div class="card-header bg-body-tertiary">
                     <div class="d-flex flex-between-center">
@@ -54,7 +55,8 @@
                     <!--/.bg-holder-->
                     <ul class="list-unstyled position-relative row g-2 fs-10 mb-0 p-0">
                         <li class="col-md-12 d-flex gap-2"><span class="fas fa-circle mt-1"
-                                data-fa-transform="shrink-8"></span><span style="text-align:justify">{{$course->Description}}</span></li>
+                                data-fa-transform="shrink-8"></span><span
+                                style="text-align:justify">{{ $course->Description }}</span></li>
                     </ul>
                 </div>
             </div>
@@ -69,7 +71,8 @@
                     <ul class="list-unstyled position-relative fs-10 p-0 m-0">
                         <li class="mb-2">
                             <div class="d-flex"><span class="fas fa-circle me-2 mt-1"
-                                    data-fa-transform="shrink-8"></span><span style="text-align: justify">{{$course->Goals}}</span></div>
+                                    data-fa-transform="shrink-8"></span><span
+                                    style="text-align: justify">{{ $course->Goals }}</span></div>
                         </li>
                         {{-- <li class="mb-2">
                             <div class="d-flex"><span class="fas fa-circle me-2 mt-1"
@@ -87,7 +90,7 @@
                 </div>
             </div>
 
-            {{--Inicio da div de aulas--}}
+            {{-- Inicio da div de aulas --}}
             <div class="card mb-3">
                 <div class="card-header bg-body-tertiary">
                     <div class="row">
@@ -95,15 +98,58 @@
                             <h5 class="mb-0">Plano de Aulas</h5>
                         </div>
                         <div class="col" style="text-align: right">
-                            <button class="btn btn-link btn-sm py-2 px-0"
-                        href="#!">Adicionar Capitulo<span class="fas fa-plus ms-1 fs-11"></span></button>
+                            <a href="#staticBackdrop" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
+                                class="btn btn-link btn-sm py-2 px-0" href="#!">Adicionar Capitulo<span
+                                    class="fas fa-plus ms-1 fs-11"></span></a>
                         </div>
                     </div>
                 </div>
 
-                {{--* Inicio do modal de adicao de Capitulos--}}
-
-                {{--* Fim do modal de adicao de Capitulos--}}
+                {{-- * Inicio do modal de adicao de Capitulos --}}
+                <div class="modal fade" id="staticBackdrop" data-bs-keyboard="false" data-bs-backdrop="static"
+                    tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg mt-6" role="document">
+                        <div class="modal-content border-0">
+                            <div class="position-absolute top-0 end-0 mt-3 me-3 z-1"><button
+                                    class="btn-close btn btn-sm btn-circle d-flex flex-center transition-base"
+                                    data-bs-dismiss="modal" aria-label="Close"></button></div>
+                            <div class="modal-body p-0">
+                                <div class="rounded-top-3 bg-body-tertiary py-3 ps-4 pe-6">
+                                    <h4 class="mb-1" id="staticBackdropLabel">Adicionar Capitulo
+                                    </h4>
+                                </div><br>
+                                <div class="p-4" style="margin-top: -3rem;">
+                                    <form action="" method="post">
+                                        @csrf
+                                        <div class="row">
+                                            <div class="col-lg-6"> <label class="form-label" for="first-name">
+                                                    Nome Completo</label><input name="Name" class="form-control"
+                                                    id="first-name" type="text"  /></div>
+                                            <div class="col-lg-6"> <label class="form-label"
+                                                    for="last-name">Morada</label><input name="Address"
+                                                     class="form-control" id="last-name"
+                                                    type="text" /></div>
+                                            <div class="col-lg-6"> <label class="form-label"
+                                                    for="email2">Contacto</label><input class="form-control"
+                                                    id="email2" type="text" name="Cell_number" />
+                                            </div>
+                                            <div class="col-lg-6"> <label class="form-label"
+                                                    for="email2">Actividade</label><input class="form-control"
+                                                    id="email2" type="text" name="Activity" />
+                                            </div>
+                                            {{-- Fim dos inputs type hidden --}}
+                                            <div style="margin-top: 1rem" class="col-12 d-flex"><button
+                                                    style="border-radius: 0" class="btn btn-primary"
+                                                    type="submit">Adicionar Capitulo
+                                                </button></div>
+                                        </div>
+                                </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {{-- * Fim do modal de adicao de Capitulos --}}
 
                 <div class="card-body p-0">
                     <div class="d-flex align-items-center px-x1 py-2 border-bottom border-200">
@@ -130,7 +176,7 @@
                 {{-- <div class="card-footer text-end py-1 bg-body-tertiary"><a class="btn btn-link btn-sm py-2 px-0"
                         href="#!">Full Lesson Plan<span class="fas fa-chevron-down ms-1 fs-11"></span></a></div> --}}
             </div>
-            {{--Fim da div de aulas--}}
+            {{-- Fim da div de aulas --}}
 
             <div class="card mb-3">
                 <div class="card-header d-flex flex-between-center">
@@ -140,16 +186,17 @@
                     <div class="row g-4 text-center text-md-start">
                         @foreach ($course->users as $user)
                             <div class="col-md-auto"><a href="../trainer-profile.html">
-                                <div class="avatar avatar-4xl">
-                                    <img class="rounded-circle" src="{{ asset('storage/' . $user->upload_file) }}"
-                                        alt="" />
-                                </div>
-                            </a></div>
+                                    <div class="avatar avatar-4xl">
+                                        <img class="rounded-circle" src="{{ asset('storage/' . $user->upload_file) }}"
+                                            alt="" />
+                                    </div>
+                                </a></div>
                             <div class="col">
-                                
-                                    <h5 class="mb-2"> <a href="../trainer-profile.html">{{$user->name}} {{$user->Surname}}</a></h5>
-                                    <h6 class="fs-10 text-800 fw-normal mb-3">{{$user->function}}</h6>
-                                
+
+                                <h5 class="mb-2"> <a href="../trainer-profile.html">{{ $user->name }}
+                                        {{ $user->Surname }}</a></h5>
+                                <h6 class="fs-10 text-800 fw-normal mb-3">{{ $user->function }}</h6>
+
                             </div>
                         @endforeach
                     </div>
@@ -165,9 +212,9 @@
                     <div class="card-body">
                         <div class="row">
                             <div class="col-md-7 col-lg-12 order-md-1 order-lg-0">
-                                <h2 class="fw-medium d-flex align-items-center">{{$course->Price}} MZN</h2>
-                                <button class="btn btn-primary btn-lg w-100 fs-9 mt-1"
-                                    id="course-purchase-btn">Efectuar Pagamento</button>
+                                <h2 class="fw-medium d-flex align-items-center">{{ $course->Price }} MZN</h2>
+                                <button class="btn btn-primary btn-lg w-100 fs-9 mt-1" id="course-purchase-btn">Efectuar
+                                    Pagamento</button>
                             </div>
                             {{-- <div class="col-md-5 col-lg-12">
                                 <hr class="border-top border-dashed d-md-none d-lg-block" />
@@ -186,10 +233,10 @@
                                     <li class="mb-1"><span class="fs-11 fas fa-infinity me-2"></span>Lifetime permission
                                         to access</li>
                                 </ul> --}}
-                            </div> 
                         </div>
-                        {{-- <hr class="border-top border-dashed" /> --}}
-                        {{-- <h6 class="fw-bold">Share with friends</h6>
+                    </div>
+                    {{-- <hr class="border-top border-dashed" /> --}}
+                    {{-- <h6 class="fw-bold">Share with friends</h6>
                         <div class="d-flex gap-2"><button
                                 class="btn btn-falcon-default icon-item fs-11 icon-item-lg"><span
                                     class="fs-9 fab fa-facebook-f mr-1 text-primary"></span></button><button
