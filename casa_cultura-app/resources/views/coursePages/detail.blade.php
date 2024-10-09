@@ -188,9 +188,21 @@
                             </div>
                             <div class="flex-1">
                                 <h5 class="fs-9"><a class="text-decoration-none" href="../../../assets/video/beach.mp4"
-                                        data-gallery="attachment-title">{{$chapter->Title}}</a></h5>
-                                <p class="fs-10 mb-0">{{$chapter->Description}}</p>
-                            </div><span class="fas fa-lock fs-10 text-secondary"></span>
+                                        data-gallery="attachment-title">{{ $chapter->Title }}</a></h5>
+                                <p class="fs-10 mb-0">{{ $chapter->Description }}</p>
+                            </div>
+                            {{-- <span class="fas fa-lock fs-10 text-secondary"></span> --}}
+                            <div class="btn-group">
+                                <!-- Botão de Editar -->
+                                <a href="" class="btn btn-sm btn-primary me-1">
+                                    <i class="fas fa-edit"></i> 
+                                </a>
+
+                                <!-- Botão de Eliminar -->
+                                <a href="{{route('chapter.delete',['id'=>$chapter->id])}}" type="submit" class="btn btn-sm btn-danger">
+                                    <i class="fas fa-trash"></i> 
+                                </a>
+                            </div>
                         </div>
                     </div>
                 @endforeach
