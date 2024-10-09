@@ -6,6 +6,7 @@ use App\Http\Controllers\employeeController;
 use App\Http\Controllers\eventController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\redirectController;
+use App\Http\Controllers\studentController;
 use App\Http\Controllers\trainerController;
 use App\Http\Controllers\userController;
 use Illuminate\Support\Facades\Route;
@@ -56,6 +57,9 @@ Route::middleware('auth')->group(function () {
     Route::get('/artistDelete/{id}', [artistController::class, 'delete'])->name('artist.delete');
 
     //*Inicio das rotas da parte do aluno
+    Route::get('/studentIndex', [studentController::class, 'index'])->name('student.index');
+    Route::get('/studentAll', [studentController::class, 'all'])->name('student.all');
+    Route::get('/studentDelete/{id}', [studentController::class, 'delete'])->name('student.delete');
 
 });
 
