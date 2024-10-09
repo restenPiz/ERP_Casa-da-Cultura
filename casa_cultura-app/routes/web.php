@@ -61,6 +61,9 @@ Route::middleware('auth')->group(function () {
     Route::get('/studentAll', [studentController::class, 'all'])->name('student.all');
     Route::get('/studentDelete/{id}', [studentController::class, 'delete'])->name('student.delete');
 
+    //*Inicio das rotas de capitulo
+
+
 });
 
 require __DIR__ . '/auth.php';
