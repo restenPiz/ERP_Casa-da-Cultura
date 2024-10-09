@@ -108,6 +108,24 @@
                                                     class="nav-link-text ps-1">Detalhes dos Formadores</span></div>
                                         </a><!-- more inner pages--></li>
                                 </ul>
+                                {{--inicio do quarto link--}}
+                                <a class="nav-link dropdown-indicator" href="#customizati"
+                                    role="button" data-bs-toggle="collapse" aria-expanded="false"
+                                    aria-controls="customization">
+                                    <div class="d-flex align-items-center"><span class="nav-link-icon"><span
+                                                class="fab fa-gulp"></span></span><span
+                                            class="nav-link-text ps-1">Gerir Funcionarios</span></div>
+                                </a>
+                                <ul class="nav collapse" id="customizati">
+                                    <li class="nav-item"><a class="nav-link" href="{{ route('employee.index') }}">
+                                            <div class="d-flex align-items-center"><span
+                                                    class="nav-link-text ps-1">Adicionar Funcionario</span></div>
+                                        </a><!-- more inner pages--></li>
+                                    <li class="nav-item"><a class="nav-link" href="{{ route('employee.all') }}">
+                                            <div class="d-flex align-items-center"><span
+                                                    class="nav-link-text ps-1">Detalhes dos Funcionarios</span></div>
+                                        </a><!-- more inner pages--></li>
+                                </ul>
                                 {{--Inicio do terceiro link--}}
                                 <a class="nav-link dropdown-indicator" href="#customization"
                                     role="button" data-bs-toggle="collapse" aria-expanded="false"
@@ -125,24 +143,6 @@
                                             href="{{route('course.all')}}">
                                             <div class="d-flex align-items-center"><span
                                                     class="nav-link-text ps-1">Detalhes de Curso</span></div>
-                                        </a><!-- more inner pages--></li>
-                                </ul>
-                                {{--inicio do quarto link--}}
-                                <a class="nav-link dropdown-indicator" href="#customizati"
-                                    role="button" data-bs-toggle="collapse" aria-expanded="false"
-                                    aria-controls="customization">
-                                    <div class="d-flex align-items-center"><span class="nav-link-icon"><span
-                                                class="fab fa-gulp"></span></span><span
-                                            class="nav-link-text ps-1">Gerir Funcionarios</span></div>
-                                </a>
-                                <ul class="nav collapse" id="customizati">
-                                    <li class="nav-item"><a class="nav-link" href="{{ route('employee.index') }}">
-                                            <div class="d-flex align-items-center"><span
-                                                    class="nav-link-text ps-1">Adicionar Funcionario</span></div>
-                                        </a><!-- more inner pages--></li>
-                                    <li class="nav-item"><a class="nav-link" href="{{ route('employee.all') }}">
-                                            <div class="d-flex align-items-center"><span
-                                                    class="nav-link-text ps-1">Detalhes dos Funcionarios</span></div>
                                         </a><!-- more inner pages--></li>
                                 </ul>
                                 {{--Inicio do quinto link--}}
