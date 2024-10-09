@@ -22,7 +22,7 @@ class courseController extends Controller
     public function detail($id)
     {
         $course = course::with('users')->findOrFail($id);
-        $chapters = Chapter::where('id_course', $id);
+        $chapters = Chapter::where('id_course', $id)->get();
 
         return view('coursePages.detail', compact('course', 'chapters'));
     }

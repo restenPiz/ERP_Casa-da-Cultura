@@ -119,7 +119,8 @@
                                     </h4>
                                 </div>
                                 <div class="p-4" style="margin-top:-3rem">
-                                    <form action="{{route('chapter.store')}}" method="post" enctype="multipart/form-data">
+                                    <form action="{{ route('chapter.store') }}" method="post"
+                                        enctype="multipart/form-data">
                                         @csrf
                                         <div class="row">
                                             {{-- ? Inicio da coluna contendo a Imagem --}}
@@ -169,30 +170,31 @@
                 </div>
                 {{-- * Fim do modal de adicao de Capitulos --}}
 
-                <div class="card-body p-0">
-                    <div class="d-flex align-items-center px-x1 py-2 border-bottom border-200">
-                        <div class="hoverbox me-3 my-1"><a class="text-decoration-none"
-                                href="../../../assets/video/beach.mp4" data-gallery="attachment-bg">
-                                <div class="bg-attachment bg-attachment-square">
-                                    <div class="bg-holder"
-                                        style="background-image:url(../../../assets/img/elearning/lessons/chapter1.png);">
-                                    </div><!--/.bg-holder-->
+                @foreach ($chapters as $chapter)
+                    <div class="card-body p-0">
+                        <div class="d-flex align-items-center px-x1 py-2 border-bottom border-200">
+                            <div class="hoverbox me-3 my-1"><a class="text-decoration-none"
+                                    href="../../../assets/video/beach.mp4" data-gallery="attachment-bg">
+                                    <div class="bg-attachment bg-attachment-square">
+                                        <div class="bg-holder"
+                                            style="background-image:url(../../../assets/img/elearning/lessons/chapter1.png);">
+                                        </div><!--/.bg-holder-->
+                                    </div>
+                                </a>
+                                <div class="hoverbox-content flex-center pe-none bg-holder overlay overlay-1 rounded">
+                                    <div class="position-relative fs-7 text-white" data-bs-theme="light"><span
+                                            class="fas fa-play-circle"></span></div>
                                 </div>
-                            </a>
-                            <div class="hoverbox-content flex-center pe-none bg-holder overlay overlay-1 rounded">
-                                <div class="position-relative fs-7 text-white" data-bs-theme="light"><span
-                                        class="fas fa-play-circle"></span></div>
                             </div>
+                            <div class="flex-1">
+                                <h5 class="fs-9"><a class="text-decoration-none" href="../../../assets/video/beach.mp4"
+                                        data-gallery="attachment-title">{{$chapter->Title}}</a></h5>
+                                <p class="fs-10 mb-0">{{$chapter->Description}}</p>
+                            </div><span class="fas fa-lock fs-10 text-secondary"></span>
                         </div>
-                        <div class="flex-1">
-                            <h5 class="fs-9"><a class="text-decoration-none" href="../../../assets/video/beach.mp4"
-                                    data-gallery="attachment-title">Chapter 1</a></h5>
-                            <p class="fs-10 mb-0">Tools, nothing more, nothing less</p>
-                        </div><span class="fas fa-lock fs-10 text-secondary"></span>
                     </div>
-                </div>
-                {{-- <div class="card-footer text-end py-1 bg-body-tertiary"><a class="btn btn-link btn-sm py-2 px-0"
-                        href="#!">Full Lesson Plan<span class="fas fa-chevron-down ms-1 fs-11"></span></a></div> --}}
+                @endforeach
+
             </div>
             {{-- Fim da div de aulas --}}
 
