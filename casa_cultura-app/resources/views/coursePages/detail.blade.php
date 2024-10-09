@@ -117,8 +117,8 @@
                                 <div class="rounded-top-3 bg-body-tertiary py-3 ps-4 pe-6">
                                     <h4 class="mb-1" id="staticBackdropLabel">Adicionar Capitulo
                                     </h4>
-                                </div><br>
-                                <div class="p-4" style="margin-top: -3rem;">
+                                </div>
+                                <div class="p-4" style="margin-top:-3rem">
                                     <form action="" method="post">
                                         @csrf
                                         <div class="row">

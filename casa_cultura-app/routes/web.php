@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\artistController;
+use App\Http\Controllers\chapterController;
 use App\Http\Controllers\courseController;
 use App\Http\Controllers\employeeController;
 use App\Http\Controllers\eventController;
@@ -62,6 +63,9 @@ Route::middleware('auth')->group(function () {
     Route::get('/studentDelete/{id}', [studentController::class, 'delete'])->name('student.delete');
 
     //*Inicio das rotas de capitulo
+    Route::post('/chapterStore', [chapterController::class, 'store'])->name('chapter.store');
+    Route::post('/chapterUpdate/{id}', [chapterController::class, 'update'])->name('chapter.update');
+    Route::get('/chapterDelete/{id}', [chapterController::class, 'delete'])->name('chapter.delete');
 
 
 });
