@@ -214,8 +214,8 @@
                         <div class="col">
                             @foreach ($course->users as $user)
                                 <h5 class="mb-2"> <a href="../trainer-profile.html">{{$user->name}} {{$user->surname}}</a></h5>
+                                <h6 class="fs-10 text-800 fw-normal mb-3">{{$user->function}}</h6>
                             @endforeach
-                            <h6 class="fs-10 text-800 fw-normal mb-3">Artist | Professional Comic Writer</h6>
                         </div>
                     </div>
                 </div>
