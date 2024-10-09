@@ -205,18 +205,20 @@
                 </div>
                 <div class="card-body bg-body-tertiary">
                     <div class="row g-4 text-center text-md-start">
-                        <div class="col-md-auto"><a href="../trainer-profile.html">
+                        @foreach ($course->users as $user)
+                            <div class="col-md-auto"><a href="../trainer-profile.html">
                                 <div class="avatar avatar-4xl">
-                                    <img class="rounded-circle" src="../../../assets/img/team/5-thumb.png"
+                                    <img class="rounded-circle" src="{{ asset('storage/' . $user->upload_file) }}"
                                         alt="" />
                                 </div>
                             </a></div>
-                        <div class="col">
-                            @foreach ($course->users as $user)
-                                <h5 class="mb-2"> <a href="../trainer-profile.html">{{$user->name}} {{$user->surname}}</a></h5>
-                                <h6 class="fs-10 text-800 fw-normal mb-3">{{$user->function}}</h6>
-                            @endforeach
-                        </div>
+                            <div class="col">
+                                
+                                    <h5 class="mb-2"> <a href="../trainer-profile.html">{{$user->name}} {{$user->Surname}}</a></h5>
+                                    <h6 class="fs-10 text-800 fw-normal mb-3">{{$user->function}}</h6>
+                                
+                            </div>
+                        @endforeach
                     </div>
                 </div>
             </div>
