@@ -119,7 +119,7 @@
                                     </h4>
                                 </div>
                                 <div class="p-4" style="margin-top:-3rem">
-                                    <form action="" method="post">
+                                    <form action="{{route('chapter.store')}}" method="post">
                                         @csrf
                                         <div class="row">
                                             {{-- ? Inicio da coluna contendo a Imagem --}}
