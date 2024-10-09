@@ -122,21 +122,39 @@
                                     <form action="" method="post">
                                         @csrf
                                         <div class="row">
+                                            {{-- ? Inicio da coluna contendo a Imagem --}}
+                                            <div class="col-12 d-flex justify-content-center mb-4">
+                                                <div
+                                                    class="avatar avatar-5xl avatar-profile shadow-sm img-thumbnail rounded-circle">
+                                                    <div
+                                                        class="h-100 w-100 rounded-circle overflow-hidden position-relative">
+                                                        <!-- Imagem Atual -->
+                                                        <img src="../../../assets/img/elearning/lessons/chapter1.png"
+                                                            width="200" alt="Foto do Formador" />
+                                                        <!-- Input de Arquivo (Oculto) -->
+                                                        <input name="Chapter_file" class="d-none" id="profile-image"
+                                                            type="file" accept="image/*" />
+                                                        <!-- Label que Atua como Botão para Selecionar a Imagem -->
+                                                        <label class="mb-0 overlay-icon d-flex flex-center"
+                                                            for="profile-image">
+                                                            <span class="bg-holder overlay overlay-0"></span>
+                                                            <span
+                                                                class="z-1 text-white dark__text-white text-center fs-10">
+                                                                <span class="fas fa-camera"></span>
+                                                                <span class="d-block">Adicionar Foto</span>
+                                                            </span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            {{-- ? Fim da coluna contendo a Imagem --}}
                                             <div class="col-lg-6"> <label class="form-label" for="first-name">
-                                                    Nome Completo</label><input name="Name" class="form-control"
-                                                    id="first-name" type="text"  /></div>
+                                                    Titulo do Capitulo</label><input name="Title" class="form-control"
+                                                    id="first-name" type="text" /></div>
                                             <div class="col-lg-6"> <label class="form-label"
-                                                    for="last-name">Morada</label><input name="Address"
-                                                     class="form-control" id="last-name"
-                                                    type="text" /></div>
-                                            <div class="col-lg-6"> <label class="form-label"
-                                                    for="email2">Contacto</label><input class="form-control"
-                                                    id="email2" type="text" name="Cell_number" />
-                                            </div>
-                                            <div class="col-lg-6"> <label class="form-label"
-                                                    for="email2">Actividade</label><input class="form-control"
-                                                    id="email2" type="text" name="Activity" />
-                                            </div>
+                                                    for="last-name">Subtitulo</label><input name="Subtitle"
+                                                    class="form-control" id="last-name" type="text" /></div>
+                                            <input type="hidden" name="id_course" value="{{ $course->id }}">
                                             {{-- Fim dos inputs type hidden --}}
                                             <div style="margin-top: 1rem" class="col-12 d-flex"><button
                                                     style="border-radius: 0" class="btn btn-primary"
