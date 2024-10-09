@@ -87,7 +87,7 @@
                                 {{--Inicio do primeiro link--}}
                                 <a class="nav-link" href="/dashboard" role="button">
                                     <div class="d-flex align-items-center"><span class="nav-link-icon"><span
-                                                class="fas fa-rocket"></span></span><span
+                                                class="fas fa-chart-pie"></span></span><span
                                             class="nav-link-text ps-1">Tela Inicial</span></div>
                                 </a>
                                 {{--Inicio do segundo link--}}
@@ -95,7 +95,7 @@
                                     role="button" data-bs-toggle="collapse" aria-expanded="false"
                                     aria-controls="customization">
                                     <div class="d-flex align-items-center"><span class="nav-link-icon"><span
-                                                class="fas fa-palette"></span></span><span
+                                                class="fas fa-layer-group"></span></span><span
                                             class="nav-link-text ps-1">Gerir Formadores</span></div>
                                 </a>
                                 <ul class="nav collapse" id="customizatio">
@@ -113,7 +113,7 @@
                                     role="button" data-bs-toggle="collapse" aria-expanded="false"
                                     aria-controls="customization">
                                     <div class="d-flex align-items-center"><span class="nav-link-icon"><span
-                                                class="fab fa-gulp"></span></span><span
+                                                class="fas fa-layer-group"></span></span><span
                                             class="nav-link-text ps-1">Gerir Funcionarios</span></div>
                                 </a>
                                 <ul class="nav collapse" id="customizati">
@@ -131,7 +131,7 @@
                                     role="button" data-bs-toggle="collapse" aria-expanded="false"
                                     aria-controls="customization">
                                     <div class="d-flex align-items-center"><span class="nav-link-icon"><span
-                                                class="fas fa-wrench"></span></span><span
+                                                class="fas fa-graduation-cap"></span></span><span
                                             class="nav-link-text ps-1">Gerir Cursos</span></div>
                                 </a>
                                 <ul class="nav collapse" id="customization">
@@ -148,19 +148,19 @@
                                 {{--Inicio do quinto link--}}
                                 <a class="nav-link" href="{{route('artist.index')}}" role="button">
                                     <div class="d-flex align-items-center"><span class="nav-link-icon"><span
-                                                class="fas fa-code-branch"></span></span><span
+                                                class="fas fa-thumbtack"></span></span><span
                                             class="nav-link-text ps-1">Gerir Artistas</span></div>
                                 </a>
                                 {{--Inicio do Sexto link--}}
                                 <a class="nav-link" href="{{route('event.index')}}" role="button">
                                     <div class="d-flex align-items-center"><span class="nav-link-icon"><span
-                                                class="fas fa-code-branch"></span></span><span
+                                                class="fas fa-calendar-day"></span></span><span
                                             class="nav-link-text ps-1">Gerir Eventos</span></div>
                                 </a>
                                 {{--Inicio do Setimo Link--}}
                                 <a class="nav-link" href="{{route('student.index')}}" role="button">
                                     <div class="d-flex align-items-center"><span class="nav-link-icon"><span
-                                                class="fas fa-code-branch"></span></span><span
+                                                class="fas fa-user"></span></span><span
                                             class="nav-link-text ps-1">Inscricao de Alunos</span></div>
                                 </a>
                             </li>
