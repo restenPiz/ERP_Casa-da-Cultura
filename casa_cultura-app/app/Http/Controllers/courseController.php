@@ -20,7 +20,7 @@ class courseController extends Controller
     }
     public function detail($id)
     {
-        $course = course::findOrFail($id);
+        $course = course::with('users')->findOrFail($id);
 
         return view('coursePages.detail', compact('course'));
     }

@@ -212,7 +212,9 @@
                                 </div>
                             </a></div>
                         <div class="col">
-                            <h5 class="mb-2"> <a href="../trainer-profile.html">Bill Finger</a></h5>
+                            @foreach ($course->users as $user)
+                                <h5 class="mb-2"> <a href="../trainer-profile.html">{{$user->name}} {{$user->surname}}</a></h5>
+                            @endforeach
                             <h6 class="fs-10 text-800 fw-normal mb-3">Artist | Professional Comic Writer</h6>
                         </div>
                     </div>
