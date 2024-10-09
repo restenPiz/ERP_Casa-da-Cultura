@@ -100,6 +100,11 @@
                         </div>
                     </div>
                 </div>
+
+                {{--* Inicio do modal de adicao de Capitulos--}}
+
+                {{--* Fim do modal de adicao de Capitulos--}}
+
                 <div class="card-body p-0">
                     <div class="d-flex align-items-center px-x1 py-2 border-bottom border-200">
                         <div class="hoverbox me-3 my-1"><a class="text-decoration-none"
