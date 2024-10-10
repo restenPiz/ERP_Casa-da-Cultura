@@ -16,29 +16,6 @@ class userController extends Controller
     public function storeUser(Request $request)
     {
         // dd($request->all());
-        $validatedData = $request->validate([
-            'name' => 'required|string|max:255',
-            'Surname' => 'required|string|max:255',
-            'email' => [
-                'required',
-                'string',
-                'email',
-                'max:255',
-            ],
-            'id_course' => 'required|array',
-            'id_course.*' => 'exists:courses,id',
-            'password' => 'required|string|min:8|confirmed',
-            'Date_of_birth' => 'nullable|date',
-            'bi' => 'nullable|string|max:50',
-            'place' => 'nullable|string|max:255',
-            'contact' => 'nullable|string|max:20',
-            'upload_file' => 'nullable|file|mimes:pdf,doc,docx,jpg,png|max:10240',
-            'function' => 'nullable|string|max:255',
-            'user_type' => [
-                'required',
-                'string',
-            ],
-        ]);
         // $validatedData = $request->validate([
         //     'name' => 'required|string|max:255',
         //     'Surname' => 'required|string|max:255',
@@ -47,8 +24,9 @@ class userController extends Controller
         //         'string',
         //         'email',
         //         'max:255',
-        //         'unique:users,email', // Evita duplicatas de email
         //     ],
+        //     'id_course' => 'required|array',
+        //     'id_course.*' => 'exists:courses,id',
         //     'password' => 'required|string|min:8|confirmed',
         //     'Date_of_birth' => 'nullable|date',
         //     'bi' => 'nullable|string|max:50',
@@ -59,10 +37,30 @@ class userController extends Controller
         //     'user_type' => [
         //         'required',
         //         'string',
-        //         'in:Employee,Trainer,User', // Valida os tipos de usuário permitidos
         //     ],
-        //     'id_course' => 'required_if:user_type,User|exists:courses,id', // Validação condicional
         // ]);
+        $validatedData = $request->validate([
+            'name' => 'required|string|max:255',
+            'Surname' => 'required|string|max:255',
+            'email' => [
+                'required',
+                'string',
+                'email',
+                'max:255',
+                'unique:users,email', // Evita duplicatas de email
+            ],
+            'password' => 'required|string|min:8|confirmed',
+            'Date_of_birth' => 'nullable|date',
+            'bi' => 'nullable|string|max:50',
+            'contact' => 'nullable|string|max:20',
+            'upload_file' => 'nullable|file|mimes:pdf,doc,docx,jpg,png|max:10240',
+            'user_type' => [
+                'required',
+                'string',
+                'in:Employee,Trainer,User', // Valida os tipos de usuário permitidos
+            ],
+            'id_course' => 'required_if:user_type,User|exists:courses,id', // Validação condicional
+        ]);
 
         if ($request->hasFile('upload_file')) {
             $validatedData['upload_file'] = $request->file('upload_file')->store('uploads/files', 'public');
@@ -76,10 +74,8 @@ class userController extends Controller
             'password' => Hash::make($validatedData['password']),
             'Date_of_birth' => $validatedData['Date_of_birth'],
             'bi' => $validatedData['bi'],
-            'place' => $validatedData['place'],
             'contact' => $validatedData['contact'],
             'upload_file' => $validatedData['upload_file'],
-            'function' => $validatedData['function'],
         ]);
 
         switch ($validatedData['user_type']) {
@@ -94,7 +90,7 @@ class userController extends Controller
             case 'User':
                 $role = 'user';
                 $successMessage = 'O aluno foi adicionado com sucesso!';
-                $user->courses()->attach($validatedData['id_course']);
+                $user->users()->attach($validatedData['id_course']);
                 break;
             default:
                 $role = null;
