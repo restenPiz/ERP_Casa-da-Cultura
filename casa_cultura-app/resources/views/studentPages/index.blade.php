@@ -28,7 +28,7 @@
                                     class="d-none d-md-block mt-1 fs-10">Confirmacao</span></a></li>
                     </ul>
                 </div>
-                <form action="{{ route('storeUser') }}" method="post" enctype="multipart/form-data">
+                <form action="{{ route('student.store') }}" method="post" enctype="multipart/form-data">
                     @csrf
                     <div class="card-body py-4">
                         <div class="tab-content">

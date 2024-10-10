@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\course;
 use App\Models\User;
 use DB;
+use Hash;
 use Illuminate\Http\Request;
 use RealRashid\SweetAlert\Facades\Alert;
 
@@ -18,30 +19,6 @@ class studentController extends Controller
     }
     public function storeUser(Request $request)
     {
-        // dd($request->all());
-        // $validatedData = $request->validate([
-        //     'name' => 'required|string|max:255',
-        //     'Surname' => 'required|string|max:255',
-        //     'email' => [
-        //         'required',
-        //         'string',
-        //         'email',
-        //         'max:255',
-        //     ],
-        //     'id_course' => 'required|array',
-        //     'id_course.*' => 'exists:courses,id',
-        //     'password' => 'required|string|min:8|confirmed',
-        //     'Date_of_birth' => 'nullable|date',
-        //     'bi' => 'nullable|string|max:50',
-        //     'place' => 'nullable|string|max:255',
-        //     'contact' => 'nullable|string|max:20',
-        //     'upload_file' => 'nullable|file|mimes:pdf,doc,docx,jpg,png|max:10240',
-        //     'function' => 'nullable|string|max:255',
-        //     'user_type' => [
-        //         'required',
-        //         'string',
-        //     ],
-        // ]);
         $validatedData = $request->validate([
             'name' => 'required|string|max:255',
             'Surname' => 'required|string|max:255',
