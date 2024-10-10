@@ -6,10 +6,10 @@
             <div class="d-flex mb-4"><span class="fa-stack me-2 ms-n1"><i class="fas fa-circle fa-stack-2x text-300"></i><i
                         class="fa-inverse fa-stack-1x text-primary fas fa-spinner"></i></span>
                 <div class="col">
-                    <h5 class="mb-0 text-primary position-relative"><span class="bg-200 dark__bg-1100 pe-3">Progress
-                            tab</span><span
+                    <h5 class="mb-0 text-primary position-relative"><span class="bg-200 dark__bg-1100 pe-3">Inscricao de
+                            Alunos</span><span
                             class="border position-absolute top-50 translate-middle-y w-100 start-0 z-n1"></span></h5>
-                    <p class="mb-0">You can easily show your stats content by using these cards.</p>
+                    {{-- <p class="mb-0">You can easily show your stats content by using these cards.</p> --}}
                 </div>
             </div>
             <div class="card theme-wizard mb-5">
@@ -18,7 +18,7 @@
                         <li class="nav-item"><a class="nav-link active fw-semi-bold" href="#bootstrap-wizard-tab1"
                                 data-bs-toggle="tab" data-wizard-step="1"><span class="nav-item-circle-parent"><span
                                         class="nav-item-circle"><span class="fas fa-lock"></span></span></span><span
-                                    class="d-none d-md-block mt-1 fs-10">Dados de Acesso</span></a></li>
+                                    class="d-none d-md-block mt-1 fs-10">Acesso</span></a></li>
                         <li class="nav-item"><a class="nav-link fw-semi-bold" href="#bootstrap-wizard-tab2"
                                 data-bs-toggle="tab" data-wizard-step="2"><span class="nav-item-circle-parent"><span
                                         class="nav-item-circle"><span class="fas fa-user"></span></span></span><span
@@ -36,13 +36,13 @@
                 <div class="card-body py-4">
                     <div class="tab-content">
 
-                        {{--? Inicio da Primeira Seccao--}}
+                        {{-- ? Inicio da Primeira Seccao --}}
 
                         <div class="tab-pane active px-sm-3 px-md-5" role="tabpanel" aria-labelledby="bootstrap-wizard-tab1"
                             id="bootstrap-wizard-tab1">
                             <form novalidate="novalidate" data-wizard-form="1">
                                 <div class="mb-3"><label class="form-label"
-                                        for="bootstrap-wizard-wizard-name">Name</label><input class="form-control"
+                                        for="bootstrap-wizard-wizard-name">Nome</label><input class="form-control"
                                         type="text" name="name" placeholder="John Smith"
                                         id="bootstrap-wizard-wizard-name" /></div>
                                 <div class="mb-3"><label class="form-label"
@@ -53,42 +53,22 @@
                                         data-wizard-validate-email="true" />
                                     <div class="invalid-feedback">You must add email</div>
                                 </div>
+                                <div class="mb-3"><label class="form-label"
+                                        for="bootstrap-wizard-wizard-name">Senha</label><input class="form-control"
+                                        type="password" name="password" id="bootstrap-wizard-wizard-name" /></div>
+                                <div class="mb-3"><label class="form-label" for="bootstrap-wizard-wizard-name">Senha de
+                                        Confirmacao</label><input class="form-control" type="password"
+                                        name="password_confirmation" id="bootstrap-wizard-wizard-name" /></div>
                             </form>
                         </div>
 
-                        {{--? Inicio da segunda seccao--}}
+                        {{-- ? Inicio da segunda seccao --}}
 
                         <div class="tab-pane px-sm-3 px-md-5" role="tabpanel" aria-labelledby="bootstrap-wizard-tab2"
                             id="bootstrap-wizard-tab2">
                             <form data-wizard-form="2">
                                 <div class="mb-3">
-                                    <div class="row" data-dropzone="data-dropzone"
-                                        data-options='{"maxFiles":1,"data":[{"name":"avatar.png","size":"54kb","url":"../../assets/img/team"}]}'>
-                                        <div class="fallback"><input type="file" name="file" /></div>
-                                        <div class="col-md-auto">
-                                            <div class="dz-preview dz-preview-single">
-                                                <div
-                                                    class="dz-preview-cover d-flex align-items-center justify-content-center mb-3 mb-md-0">
-                                                    <div class="avatar avatar-4xl"><img class="rounded-circle"
-                                                            src="../../assets/img/team/avatar.png" alt="..."
-                                                            data-dz-thumbnail="data-dz-thumbnail" /></div>
-                                                    <div class="dz-progress"><span class="dz-upload"
-                                                            data-dz-uploadprogress=""></span></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md">
-                                            <div class="dz-message dropzone-area px-2 py-3"
-                                                data-dz-message="data-dz-message">
-                                                <div class="text-center"><img class="me-2"
-                                                        src="../../assets/img/icons/cloud-upload.svg" width="25"
-                                                        alt="" />Upload your profile picture<p
-                                                        class="mb-0 fs-10 text-400">Upload a 300x300 jpg image with <br />a
-                                                        maximum size of 400KB</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    <input class="form-control" type="file" name="Upload_file" accept=".jpg,.jpeg,.png,.gif,.docx,.pdf,.txt" />
                                 </div>
                                 <div class="mb-3"><label class="form-label"
                                         for="bootstrap-wizard-gender">Gender</label><select class="form-select"
@@ -114,7 +94,7 @@
                             </form>
                         </div>
 
-                        {{--?Inicio da terceira seccao--}}
+                        {{-- ?Inicio da terceira seccao --}}
 
                         <div class="tab-pane px-sm-3 px-md-5" role="tabpanel" aria-labelledby="bootstrap-wizard-tab3"
                             id="bootstrap-wizard-tab3">
