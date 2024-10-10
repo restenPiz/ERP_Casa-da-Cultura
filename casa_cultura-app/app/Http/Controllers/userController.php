@@ -67,6 +67,7 @@ class userController extends Controller
             case 'User':
                 $role = 'user';
                 $successMessage = 'O aluno foi adicionado com sucesso!';
+                $user->courses()->attach($validatedData['id_course']);
                 break;
             default:
                 $role = null;

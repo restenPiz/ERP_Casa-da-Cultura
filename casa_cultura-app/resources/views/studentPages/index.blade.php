@@ -33,17 +33,22 @@
                                     class="d-none d-md-block mt-1 fs-10">Confirmacao</span></a></li>
                     </ul>
                 </div>
-                <div class="card-body py-4">
-                    <div class="tab-content">
+                <form action="{{ route('storeUser') }}" method="post" enctype="multipart/form-data">
+                    @csrf
+                    <div class="card-body py-4">
+                        <div class="tab-content">
 
-                        {{-- ? Inicio da Primeira Seccao --}}
+                            {{-- !Inicio do formulario --}}
 
-                        <div class="tab-pane active px-sm-3 px-md-5" role="tabpanel" aria-labelledby="bootstrap-wizard-tab1"
-                            id="bootstrap-wizard-tab1">
-                            <form novalidate="novalidate" data-wizard-form="1">
+                            <div class="tab-pane active px-sm-3 px-md-5" role="tabpanel"
+                                aria-labelledby="bootstrap-wizard-tab1" id="bootstrap-wizard-tab1">
                                 <div class="mb-3"><label class="form-label"
                                         for="bootstrap-wizard-wizard-name">Nome</label><input class="form-control"
-                                        type="text" name="name" placeholder="Picardo Olindo"
+                                        type="text" name="name" placeholder="Picardo"
+                                        id="bootstrap-wizard-wizard-name" /></div>
+                                <div class="mb-3"><label class="form-label"
+                                        for="bootstrap-wizard-wizard-name">Apelido</label><input class="form-control"
+                                        type="text" name="surname" placeholder="Olindo"
                                         id="bootstrap-wizard-wizard-name" /></div>
                                 <div class="mb-3"><label class="form-label"
                                         for="bootstrap-wizard-wizard-email">Email*</label><input class="form-control"
@@ -58,14 +63,13 @@
                                 <div class="mb-3"><label class="form-label" for="bootstrap-wizard-wizard-name">Senha de
                                         Confirmacao</label><input class="form-control" type="password"
                                         name="password_confirmation" id="bootstrap-wizard-wizard-name" /></div>
-                            </form>
-                        </div>
 
-                        {{-- ? Inicio da segunda seccao --}}
+                            </div>
 
-                        <div class="tab-pane px-sm-3 px-md-5" role="tabpanel" aria-labelledby="bootstrap-wizard-tab2"
-                            id="bootstrap-wizard-tab2">
-                            <form data-wizard-form="2">
+                            {{-- ? Inicio da segunda seccao --}}
+
+                            <div class="tab-pane px-sm-3 px-md-5" role="tabpanel" aria-labelledby="bootstrap-wizard-tab2"
+                                id="bootstrap-wizard-tab2">
                                 <div class="mb-3">
                                     <input class="form-control" type="file" name="Upload_file"
                                         accept=".jpg,.jpeg,.png,.gif,.docx,.pdf,.txt" />
@@ -74,41 +78,44 @@
                                         for="bootstrap-wizard-wizard-phone">Contacto</label><input class="form-control"
                                         type="text" name="contact" placeholder="855686307"
                                         id="bootstrap-wizard-wizard-phone" /></div>
-                                <div class="mb-3"><label class="form-label"
-                                        for="bootstrap-wizard-wizard-datepicker">Date of Birth</label><input
-                                        class="form-control datetimepicker" type="date" placeholder="dd/mm/yy"
+                                <div class="mb-3"><label class="form-label" for="bootstrap-wizard-wizard-datepicker">Date
+                                        of
+                                        Birth</label><input class="form-control datetimepicker" type="date"
+                                        placeholder="dd/mm/yy"
                                         data-options='{"dateFormat":"dd/mm/yy","disableMobile":true}'
                                         id="bootstrap-wizard-wizard-datepicker" /></div>
-                                    <div class="mb-3"><label class="form-label" for="bootstrap-wizard-wizard-phone">
+                                <div class="mb-3"><label class="form-label" for="bootstrap-wizard-wizard-phone">
                                         Idade</label><input class="form-control" type="text" name="age"
                                         placeholder="12 Anos" id="bootstrap-wizard-wizard-phone" /></div>
                                 <div class="mb-3"><label class="form-label" for="bootstrap-wizard-wizard-phone">Numero
                                         de BI</label><input class="form-control" type="text" name="bi"
                                         placeholder="EX: 083902130290380213BM" id="bootstrap-wizard-wizard-phone" /></div>
-                            </form>
-                        </div>
+                            </div>
 
-                        {{-- ? Inicio da outra seccao --}}
+                            {{-- ? Inicio da outra seccao --}}
 
-                        <div class="tab-pane text-center px-sm-3 px-md-5" role="tabpanel"
-                            aria-labelledby="bootstrap-wizard-tab4" id="bootstrap-wizard-tab4">
-                            <div class="mb-3">
-                                    <label class="form-label" for="bootstrap-wizard-gender">Curso a se inscrever</label><select
-                                        class="form-select" name="gender" id="bootstrap-wizard-gender">
+                            <div class="tab-pane text-center px-sm-3 px-md-5" role="tabpanel"
+                                aria-labelledby="bootstrap-wizard-tab4" id="bootstrap-wizard-tab4">
+                                <div class="mb-3">
+                                    <label class="form-label" for="bootstrap-wizard-gender">Curso a se
+                                        inscrever</label><select class="form-select" name="gender"
+                                        id="bootstrap-wizard-gender">
                                         <option value="">Seleccione o Curso...</option>
                                         @foreach ($courses as $course)
-                                            <option value="{{$course->id}}">{{$course->Course_name}}</option>
+                                            <option value="{{ $course->id }}">{{ $course->Course_name }}</option>
                                         @endforeach
                                     </select>
                                 </div>
-                                <button type="submit" name="submit" class="btn btn-primary px-5 my-3" style="text-align: none"
-                                href="wizard.html">Inscrever Aluno</button>
+                                <input type="hidden" name="user_type" value="User">
+                                <button type="submit" name="submit" class="btn btn-primary px-5 my-3"
+                                    style="text-align: none" href="wizard.html">Inscrever Aluno</button>
+                            </div>
+
+                            {{-- ! Fim das seccoes --}}
+
                         </div>
-
-                        {{--! Fim das seccoes--}}
-
                     </div>
-                </div>
+                </form>
             </div>
         </div>
 
