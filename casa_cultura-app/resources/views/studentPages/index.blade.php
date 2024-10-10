@@ -18,19 +18,19 @@
                         <li class="nav-item"><a class="nav-link active fw-semi-bold" href="#bootstrap-wizard-tab1"
                                 data-bs-toggle="tab" data-wizard-step="1"><span class="nav-item-circle-parent"><span
                                         class="nav-item-circle"><span class="fas fa-lock"></span></span></span><span
-                                    class="d-none d-md-block mt-1 fs-10">Account</span></a></li>
+                                    class="d-none d-md-block mt-1 fs-10">Dados de Acesso</span></a></li>
                         <li class="nav-item"><a class="nav-link fw-semi-bold" href="#bootstrap-wizard-tab2"
                                 data-bs-toggle="tab" data-wizard-step="2"><span class="nav-item-circle-parent"><span
                                         class="nav-item-circle"><span class="fas fa-user"></span></span></span><span
-                                    class="d-none d-md-block mt-1 fs-10">Personal</span></a></li>
+                                    class="d-none d-md-block mt-1 fs-10">Dados Pessoais</span></a></li>
                         <li class="nav-item"><a class="nav-link fw-semi-bold" href="#bootstrap-wizard-tab3"
                                 data-bs-toggle="tab" data-wizard-step="3"><span class="nav-item-circle-parent"><span
                                         class="nav-item-circle"><span class="fas fa-dollar-sign"></span></span></span><span
-                                    class="d-none d-md-block mt-1 fs-10">Billing</span></a></li>
+                                    class="d-none d-md-block mt-1 fs-10">Outros</span></a></li>
                         <li class="nav-item"><a class="nav-link fw-semi-bold" href="#bootstrap-wizard-tab4"
                                 data-bs-toggle="tab" data-wizard-step="4"><span class="nav-item-circle-parent"><span
                                         class="nav-item-circle"><span class="fas fa-thumbs-up"></span></span></span><span
-                                    class="d-none d-md-block mt-1 fs-10">Done</span></a></li>
+                                    class="d-none d-md-block mt-1 fs-10">Confirmacao</span></a></li>
                     </ul>
                 </div>
                 <div class="card-body py-4">
