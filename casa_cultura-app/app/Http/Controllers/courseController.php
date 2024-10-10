@@ -21,14 +21,17 @@ class courseController extends Controller
     }
     public function detail($id)
     {
+        //*Selecionando o usuario formador relacionado a um curso
         $course = course::with([
             'users' => function ($query) {
                 $query->where('user_type', 'Trainer');
             }
         ])->findOrFail($id);
 
+        //*Retornando os capitulos de um curso em especifico
         $chapters = Chapter::where('id_course', $id)->get();
-        
+
+        //*Selecionando todos os usuarios inscritos nesse curso
         $users = course::with([
             'users' => function ($query) {
                 $query->where('user_type', '!=', 'Trainer');
