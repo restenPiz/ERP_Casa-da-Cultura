@@ -141,18 +141,18 @@
                                         </a><!-- more inner pages--></li>
                                 </ul>
                                 {{-- Inicio do terceiro link --}}
-                                <a class="nav-link dropdown-indicator {{ request()->routeIs('course.index', 'course.all') ? 'active' : '' }}" href="#customization" role="button"
+                                <a class="nav-link dropdown-indicator {{ request()->routeIs('course.index', 'course.all','course.detail') ? 'active' : '' }}" href="#customization" role="button"
                                     data-bs-toggle="collapse" aria-expanded="false" aria-controls="customization">
                                     <div class="d-flex align-items-center"><span class="nav-link-icon"><span
                                                 class="fas fa-graduation-cap"></span></span><span
                                             class="nav-link-text ps-1">Gerir Cursos</span></div>
                                 </a>
-                                <ul class="nav collapse {{ request()->routeIs('course.all', 'course.index') ? 'show' : '' }}" id="customization">
+                                <ul class="nav collapse {{ request()->routeIs('course.all', 'course.index','course.detail') ? 'show' : '' }}" id="customization">
                                     <li class="nav-item"><a class="nav-link {{ request()->routeIs('course.index') ? 'active' : '' }}" href="{{ route('course.index') }}">
                                             <div class="d-flex align-items-center"><span
                                                     class="nav-link-text ps-1">Adicionar Cursos</span></div>
                                         </a><!-- more inner pages--></li>
-                                    <li class="nav-item"><a class="nav-link {{ request()->routeIs('course.all') ? 'active' : '' }}" href="{{ route('course.all') }}">
+                                    <li class="nav-item"><a class="nav-link {{ request()->routeIs('course.all','course.detail') ? 'active' : '' }}" href="{{ route('course.all') }}">
                                             <div class="d-flex align-items-center"><span
                                                     class="nav-link-text ps-1">Detalhes de Curso</span></div>
                                         </a><!-- more inner pages--></li>
@@ -164,7 +164,7 @@
                                             class="nav-link-text ps-1">Gerir Artistas</span></div>
                                 </a>
                                 {{-- Inicio do Sexto link --}}
-                                <a class="nav-link {{ request()->routeIs('event.index') ? 'active' : '' }}" href="{{ route('event.index') }}" role="button">
+                                <a class="nav-link {{ request()->routeIs('event.index','event.detail') ? 'active' : '' }}" href="{{ route('event.index') }}" role="button">
                                     <div class="d-flex align-items-center"><span class="nav-link-icon"><span
                                                 class="fas fa-calendar-day"></span></span><span
                                             class="nav-link-text ps-1">Gerir Eventos</span></div>
