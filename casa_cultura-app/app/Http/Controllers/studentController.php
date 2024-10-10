@@ -17,7 +17,7 @@ class studentController extends Controller
         $courses = course::all();
         return view('studentPages.index', compact('users', 'courses'));
     }
-    public function storeUser(Request $request)
+    public function store(Request $request)
     {
         $validatedData = $request->validate([
             'name' => 'required|string|max:255',

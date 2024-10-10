@@ -35,7 +35,7 @@
 
                             {{-- !Inicio do formulario --}}
 
-                            <div class="tab-pane active px-sm-3 px-md-5" role="tabpanel"
+                            <div class="tab-pane active px-sm-3 px-md-2" role="tabpanel"
                                 aria-labelledby="bootstrap-wizard-tab1" id="bootstrap-wizard-tab1">
                                 <div class="mb-3"><label class="form-label"
                                         for="bootstrap-wizard-wizard-name">Nome</label><input class="form-control"
@@ -63,7 +63,7 @@
 
                             {{-- ? Inicio da segunda seccao --}}
 
-                            <div class="tab-pane px-sm-3 px-md-5" role="tabpanel" aria-labelledby="bootstrap-wizard-tab2"
+                            <div class="tab-pane px-sm-3 px-md-2" role="tabpanel" aria-labelledby="bootstrap-wizard-tab2"
                                 id="bootstrap-wizard-tab2">
                                 <div class="mb-3">
                                     <input class="form-control" type="file" name="upload_file"
@@ -87,7 +87,7 @@
 
                             {{-- ? Inicio da outra seccao --}}
 
-                            <div class="tab-pane text-center px-sm-3 px-md-5" role="tabpanel"
+                            <div class="tab-pane text-center px-sm-3 px-md-2" role="tabpanel"
                                 aria-labelledby="bootstrap-wizard-tab4" id="bootstrap-wizard-tab4">
                                 <div class="mb-3">
                                     <label class="form-label" for="bootstrap-wizard-gender">Curso a se
