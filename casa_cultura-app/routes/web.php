@@ -61,6 +61,8 @@ Route::middleware('auth')->group(function () {
     Route::get('/studentIndex', [studentController::class, 'index'])->name('student.index');
     Route::get('/studentAll', [studentController::class, 'all'])->name('student.all');
     Route::get('/studentDelete/{id}', [studentController::class, 'delete'])->name('student.delete');
+    Route::post('/studentStore', [studentController::class, 'store'])->name('student.store');
+    Route::post('/studentUpdate/{id}', [studentController::class, 'update'])->name('student.update');
 
     //*Inicio das rotas de capitulo
     Route::post('/chapterStore', [chapterController::class, 'store'])->name('chapter.store');
