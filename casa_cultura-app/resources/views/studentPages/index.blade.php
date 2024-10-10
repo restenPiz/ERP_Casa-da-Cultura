@@ -80,9 +80,6 @@
                                         placeholder="dd/mm/yy" name="Date_of_birth"
                                         data-options='{"dateFormat":"dd/mm/yy","disableMobile":true}'
                                         id="bootstrap-wizard-wizard-datepicker" /></div>
-                                {{-- <div class="mb-3"><label class="form-label" for="bootstrap-wizard-wizard-phone">
-                                        Idade</label><input class="form-control" type="text" name="age"
-                                        placeholder="12 Anos" id="bootstrap-wizard-wizard-phone" /></div> --}}
                                 <div class="mb-3"><label class="form-label" for="bootstrap-wizard-wizard-phone">Numero
                                         de BI</label><input class="form-control" type="text" name="bi"
                                         placeholder="EX: 083902130290380213BM" id="bootstrap-wizard-wizard-phone" /></div>
@@ -102,7 +99,7 @@
                                         @endforeach
                                     </select>
                                 </div>
-                                <input type="hidden" name="user_type" value="User">
+                                <input type="hidden" name="user_type" value="Users">
                                 <button type="submit" name="submit" class="btn btn-primary px-5 my-3"
                                     style="text-align: none" href="wizard.html">Inscrever Aluno</button>
                             </div>

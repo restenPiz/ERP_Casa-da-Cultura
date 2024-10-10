@@ -57,7 +57,7 @@ class userController extends Controller
             'user_type' => [
                 'required',
                 'string',
-                'in:Employee,Trainer,User', // Valida os tipos de usuário permitidos
+                'in:Employee,Trainer,Users', // Valida os tipos de usuário permitidos
             ],
             'id_course' => 'required_if:user_type,User|exists:courses,id', // Validação condicional
         ]);
@@ -87,10 +87,9 @@ class userController extends Controller
                 $role = 'trainer';
                 $successMessage = 'O usuário formador foi adicionado com sucesso!';
                 break;
-            case 'User':
-                $role = 'user';
+            case 'Users':
+                $role = 'users';
                 $successMessage = 'O aluno foi adicionado com sucesso!';
-                $user->users()->attach($validatedData['id_course']);
                 break;
             default:
                 $role = null;
@@ -99,6 +98,8 @@ class userController extends Controller
         }
 
         $user->addRole($role);
+
+        $user->courses()->attach($validatedData['id_course']);
 
         Alert::success('Adicionado', $successMessage);
 
@@ -152,7 +153,7 @@ class userController extends Controller
             'user_type' => [
                 'required',
                 'string',
-                'in:Employee,Trainer,User', // Valida os tipos de usuário permitidos
+                'in:Employee,Trainer,Users', // Valida os tipos de usuário permitidos
             ],
             'id_course' => 'required_if:user_type,User|exists:courses,id', // Validação condicional
         ]);
