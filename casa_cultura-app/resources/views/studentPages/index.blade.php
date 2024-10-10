@@ -23,10 +23,10 @@
                                 data-bs-toggle="tab" data-wizard-step="2"><span class="nav-item-circle-parent"><span
                                         class="nav-item-circle"><span class="fas fa-user"></span></span></span><span
                                     class="d-none d-md-block mt-1 fs-10">Dados Pessoais</span></a></li>
-                        <li class="nav-item"><a class="nav-link fw-semi-bold" href="#bootstrap-wizard-tab3"
+                        {{-- <li class="nav-item"><a class="nav-link fw-semi-bold" href="#bootstrap-wizard-tab3"
                                 data-bs-toggle="tab" data-wizard-step="3"><span class="nav-item-circle-parent"><span
                                         class="nav-item-circle"><span class="fas fa-dollar-sign"></span></span></span><span
-                                    class="d-none d-md-block mt-1 fs-10">Outros</span></a></li>
+                                    class="d-none d-md-block mt-1 fs-10">Outros</span></a></li> --}}
                         <li class="nav-item"><a class="nav-link fw-semi-bold" href="#bootstrap-wizard-tab4"
                                 data-bs-toggle="tab" data-wizard-step="4"><span class="nav-item-circle-parent"><span
                                         class="nav-item-circle"><span class="fas fa-thumbs-up"></span></span></span><span
@@ -43,15 +43,14 @@
                             <form novalidate="novalidate" data-wizard-form="1">
                                 <div class="mb-3"><label class="form-label"
                                         for="bootstrap-wizard-wizard-name">Nome</label><input class="form-control"
-                                        type="text" name="name" placeholder="John Smith"
+                                        type="text" name="name" placeholder="Picardo Olindo"
                                         id="bootstrap-wizard-wizard-name" /></div>
                                 <div class="mb-3"><label class="form-label"
                                         for="bootstrap-wizard-wizard-email">Email*</label><input class="form-control"
-                                        type="email" name="email" placeholder="Email address"
+                                        type="email" name="email" placeholder="picardo@gmail.com"
                                         pattern="^([a-zA-Z0-9_\.\-])+@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$"
                                         required="required" id="bootstrap-wizard-wizard-email"
                                         data-wizard-validate-email="true" />
-                                    <div class="invalid-feedback">You must add email</div>
                                 </div>
                                 <div class="mb-3"><label class="form-label"
                                         for="bootstrap-wizard-wizard-name">Senha</label><input class="form-control"
@@ -68,110 +67,46 @@
                             id="bootstrap-wizard-tab2">
                             <form data-wizard-form="2">
                                 <div class="mb-3">
-                                    <input class="form-control" type="file" name="Upload_file" accept=".jpg,.jpeg,.png,.gif,.docx,.pdf,.txt" />
+                                    <input class="form-control" type="file" name="Upload_file"
+                                        accept=".jpg,.jpeg,.png,.gif,.docx,.pdf,.txt" />
                                 </div>
                                 <div class="mb-3"><label class="form-label"
-                                        for="bootstrap-wizard-gender">Gender</label><select class="form-select"
-                                        name="gender" id="bootstrap-wizard-gender">
-                                        <option value="">Select your gender ...</option>
-                                        <option value="Male">Male</option>
-                                        <option value="Female">Female</option>
-                                        <option value="Other">Other</option>
-                                    </select></div>
-                                <div class="mb-3"><label class="form-label"
-                                        for="bootstrap-wizard-wizard-phone">Phone</label><input class="form-control"
-                                        type="text" name="phone" placeholder="Phone"
+                                        for="bootstrap-wizard-wizard-phone">Contacto</label><input class="form-control"
+                                        type="text" name="contact" placeholder="855686307"
                                         id="bootstrap-wizard-wizard-phone" /></div>
                                 <div class="mb-3"><label class="form-label"
                                         for="bootstrap-wizard-wizard-datepicker">Date of Birth</label><input
-                                        class="form-control datetimepicker" type="text" placeholder="dd/mm/yy"
+                                        class="form-control datetimepicker" type="date" placeholder="dd/mm/yy"
                                         data-options='{"dateFormat":"dd/mm/yy","disableMobile":true}'
                                         id="bootstrap-wizard-wizard-datepicker" /></div>
-                                <div class="mb-3"><label class="form-label"
-                                        for="bootstrap-wizard-wizard-address">Address</label>
-                                    <textarea class="form-control" rows="4" id="bootstrap-wizard-wizard-address"></textarea>
-                                </div>
+                                    <div class="mb-3"><label class="form-label" for="bootstrap-wizard-wizard-phone">
+                                        Idade</label><input class="form-control" type="text" name="age"
+                                        placeholder="12 Anos" id="bootstrap-wizard-wizard-phone" /></div>
+                                <div class="mb-3"><label class="form-label" for="bootstrap-wizard-wizard-phone">Numero
+                                        de BI</label><input class="form-control" type="text" name="bi"
+                                        placeholder="EX: 083902130290380213BM" id="bootstrap-wizard-wizard-phone" /></div>
                             </form>
                         </div>
 
-                        {{-- ?Inicio da terceira seccao --}}
+                        {{-- ? Inicio da outra seccao --}}
 
-                        <div class="tab-pane px-sm-3 px-md-5" role="tabpanel" aria-labelledby="bootstrap-wizard-tab3"
-                            id="bootstrap-wizard-tab3">
-                            <form class="form-validation" data-wizard-form="2">
-                                <div class="row g-2">
-                                    <div class="col">
-                                        <div class="mb-3"><label class="form-label"
-                                                for="bootstrap-wizard-card-number">Card Number</label><input
-                                                class="form-control" placeholder="XXXX XXXX XXXX XXXX" type="text"
-                                                id="bootstrap-wizard-card-number" /></div>
-                                    </div>
-                                    <div class="col">
-                                        <div class="mb-3"><label class="form-label"
-                                                for="bootstrap-wizard-card-name">Name on Card</label><input
-                                                class="form-control" placeholder="John Doe" name="cardName"
-                                                type="text" id="bootstrap-wizard-card-name" /></div>
-                                    </div>
-                                </div>
-                                <div class="row g-2">
-                                    <div class="col-6">
-                                        <div class="mb-3"><label class="form-label"
-                                                for="bootstrap-wizard-card-holder-country">Country</label><select
-                                                class="form-select" name="customSelectCountry"
-                                                id="bootstrap-wizard-card-holder-country">
-                                                <option value="">Select your country ...</option>
-
-                                                <option value="Yugoslavia">Yugoslavia</option>
-                                                <option value="Zambia">Zambia</option>
-                                                <option value="Zimbabwe">Zimbabwe</option>
-                                            </select></div>
-                                    </div>
-                                    <div class="col-6">
-                                        <div class="mb-3"><label class="form-label"
-                                                for="bootstrap-wizard-card-holder-zip-code">Zip Code</label><input
-                                                class="form-control" placeholder="1234" name="zipCode" type="text"
-                                                id="bootstrap-wizard-card-holder-zip-code" /></div>
-                                    </div>
-                                    <div class="col-6">
-                                        <div class="form-group mb-0"><label class="form-label"
-                                                for="bootstrap-wizard-card-exp-date">Exp Date</label><input
-                                                class="form-control" placeholder="15/2024" name="expDate" type="text"
-                                                id="bootstrap-wizard-card-exp-date" /></div>
-                                    </div>
-                                    <div class="col-6">
-                                        <div class="form-group mb-0"><label class="form-label"
-                                                for="bootstrap-wizard-card-cvv">CVV</label><span class="ms-1"
-                                                data-bs-toggle="tooltip" data-bs-placement="top"
-                                                title="Card verification value"><span
-                                                    class="fa fa-question-circle"></span></span><input
-                                                class="form-control" placeholder="123" name="cvv" maxlength="3"
-                                                pattern="[0-9]{3}" type="text" id="bootstrap-wizard-card-cvv" /></div>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
                         <div class="tab-pane text-center px-sm-3 px-md-5" role="tabpanel"
                             aria-labelledby="bootstrap-wizard-tab4" id="bootstrap-wizard-tab4">
-                            <div class="wizard-lottie-wrapper">
-                                <div class="lottie wizard-lottie mx-auto my-3"
-                                    data-options='{"path":"../../assets/img/animated-icons/celebration.json"}'></div>
-                            </div>
-                            <h4 class="mb-1">Your account is all set!</h4>
-                            <p>Now you can access to your account</p><a class="btn btn-primary px-5 my-3"
-                                href="wizard.html">Start Over</a>
+                            <div class="mb-3">
+                                    <label class="form-label" for="bootstrap-wizard-gender">Curso a se inscrever</label><select
+                                        class="form-select" name="gender" id="bootstrap-wizard-gender">
+                                        <option value="">Seleccione o Curso...</option>
+                                        @foreach ($courses as $course)
+                                            <option value="{{$course->id}}">{{$course->Course_name}}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                                <button type="submit" name="submit" class="btn btn-primary px-5 my-3" style="text-align: none"
+                                href="wizard.html">Inscrever Aluno</button>
                         </div>
-                    </div>
-                </div>
-                <div class="card-footer bg-body-tertiary">
-                    <div class="px-sm-3 px-md-5">
-                        <ul class="pager wizard list-inline mb-0">
-                            <li class="previous"><button class="btn btn-link ps-0" type="button"><span
-                                        class="fas fa-chevron-left me-2" data-fa-transform="shrink-3"></span>Prev</button>
-                            </li>
-                            <li class="next"><button class="btn btn-primary px-5 px-sm-6" type="submit">Next<span
-                                        class="fas fa-chevron-right ms-2" data-fa-transform="shrink-3"> </span></button>
-                            </li>
-                        </ul>
+
+                        {{--! Fim das seccoes--}}
+
                     </div>
                 </div>
             </div>
