@@ -134,17 +134,15 @@
                                 <thead class="bg-200">
                                     <tr>
                                         <th class="text-900 sort pe-1 align-middle white-space-nowrap" data-sort="name">
-                                            Name</th>
+                                            Nome Completo</th>
                                         <th class="text-900 sort pe-1 align-middle white-space-nowrap" data-sort="email">
                                             Email
                                         </th>
                                         <th class="text-900 sort pe-1 align-middle white-space-nowrap" data-sort="phone">
-                                            Phone
+                                            Contacto
                                         </th>
-                                        <th class="text-900 sort pe-1 align-middle white-space-nowrap ps-5"
-                                            data-sort="address" style="min-width: 200px;">Billing Address</th>
                                         <th class="text-900 sort pe-1 align-middle white-space-nowrap" data-sort="joined">
-                                            Actividade
+                                            Numero de BI
                                         </th>
                                         <th class="align-middle no-sort"></th>
                                     </tr>
@@ -158,9 +156,8 @@
                                             <td class="phone align-middle white-space-nowrap py-2">{{ $trainer->contact }}
                                             </td>
                                             <td class="address align-middle white-space-nowrap ps-5 py-2">
-                                                {{ $trainer->place }}
+                                                {{ $trainer->bi }}
                                             </td>
-                                            <td class="joined align-middle py-2">{{ $trainer->function }}</td>
                                             <td class="align-middle white-space-nowrap py-2 text-end">
                                                 <div class="dropdown font-sans-serif position-static"><button
                                                         class="btn btn-link text-600 btn-sm dropdown-toggle btn-reveal"

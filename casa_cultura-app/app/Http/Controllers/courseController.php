@@ -23,8 +23,9 @@ class courseController extends Controller
     {
         $course = course::with('users')->findOrFail($id);
         $chapters = Chapter::where('id_course', $id)->get();
+        $users = course::with('users')->findOrFail($id);
 
-        return view('coursePages.detail', compact('course', 'chapters'));
+        return view('coursePages.detail', compact('course', 'chapters', 'users'));
     }
     public function all()
     {

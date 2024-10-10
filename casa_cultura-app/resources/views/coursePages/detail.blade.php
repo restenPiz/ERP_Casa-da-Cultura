@@ -194,7 +194,9 @@
                             {{-- <span class="fas fa-lock fs-10 text-secondary"></span> --}}
                             <div class="btn-group">
                                 <!-- Botão de Editar -->
-                                <a href="#staticBackdro{{$chapter->id}}" data-bs-toggle="modal" data-bs-target="#staticBackdro{{$chapter->id}}" class="btn btn-sm btn-primary me-1">
+                                <a href="#staticBackdro{{ $chapter->id }}" data-bs-toggle="modal"
+                                    data-bs-target="#staticBackdro{{ $chapter->id }}"
+                                    class="btn btn-sm btn-primary me-1">
                                     <i class="fas fa-edit"></i>
                                 </a>
 
@@ -208,8 +210,9 @@
                     </div>
 
                     {{-- ? Inicio do modal de Edicao de Capitulos --}}
-                    <div class="modal fade" id="staticBackdro{{$chapter->id}}" data-bs-keyboard="false" data-bs-backdrop="static"
-                        tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal fade" id="staticBackdro{{ $chapter->id }}" data-bs-keyboard="false"
+                        data-bs-backdrop="static" tabindex="-1" aria-labelledby="staticBackdropLabel"
+                        aria-hidden="true">
                         <div class="modal-dialog modal-lg mt-6" role="document">
                             <div class="modal-content border-0">
                                 <div class="position-absolute top-0 end-0 mt-3 me-3 z-1"><button
@@ -221,7 +224,7 @@
                                         </h4>
                                     </div>
                                     <div class="p-4" style="margin-top:-3rem">
-                                        <form action="{{ route('chapter.update',['id'=>$chapter->id]) }}" method="post"
+                                        <form action="{{ route('chapter.update', ['id' => $chapter->id]) }}" method="post"
                                             enctype="multipart/form-data">
                                             @csrf
                                             <div class="row">
@@ -236,7 +239,8 @@
                                                                 width="200" alt="Foto do Formador" />
                                                             <!-- Input de Arquivo (Oculto) -->
                                                             <input name="Chapter_file" class="d-none" id="profile-image"
-                                                                type="file" accept="image/*" value="{{$chapter->Chapter_file}}" />
+                                                                type="file" accept="image/*"
+                                                                value="{{ $chapter->Chapter_file }}" />
                                                             <!-- Label que Atua como Botão para Selecionar a Imagem -->
                                                             <label class="mb-0 overlay-icon d-flex flex-center"
                                                                 for="profile-image">
@@ -252,11 +256,13 @@
                                                 </div>
                                                 {{-- ? Fim da coluna contendo a Imagem --}}
                                                 <div class="col-lg-6"> <label class="form-label" for="first-name">
-                                                        Titulo do Capitulo</label><input name="Title" value="{{$chapter->Title}}"
-                                                        class="form-control" id="first-name" type="text" /></div>
+                                                        Titulo do Capitulo</label><input name="Title"
+                                                        value="{{ $chapter->Title }}" class="form-control"
+                                                        id="first-name" type="text" /></div>
                                                 <div class="col-lg-6"> <label class="form-label"
-                                                        for="last-name">Subtitulo</label><input name="Description" 
-                                                        class="form-control" id="last-name" type="text" value="{{$chapter->Description}}" /></div>
+                                                        for="last-name">Subtitulo</label><input name="Description"
+                                                        class="form-control" id="last-name" type="text"
+                                                        value="{{ $chapter->Description }}" /></div>
                                                 <input type="hidden" name="id_course" value="{{ $course->id }}">
                                                 {{-- Fim dos inputs type hidden --}}
                                                 <div style="margin-top: 1rem" class="col-12 d-flex"><button
@@ -275,6 +281,43 @@
 
             </div>
             {{-- Fim da div de aulas --}}
+
+            {{-- ? Inicio da tabela contendo os estudantes do curso --}}
+            <div class="card mb-3">
+                <div class="card-header bg-body-tertiary">
+                    <div class="row">
+                        <div class="col">
+                            <h5 class="mb-0">Alunos Inscritos</h5>
+                        </div>
+                    </div>
+                </div>
+
+
+                @foreach ($users->users as $user)
+                    <div class="card-body p-0">
+                        <div class="d-flex align-items-center px-x1 py-2 border-bottom border-200">
+                            <div class="hoverbox me-3 my-1">
+                                <div class="bg-attachment bg-attachment-square">
+                                    <div class="bg-holder" style="background-image:url(../assets/dif.jpg);">
+                                    </div><!--/.bg-holder-->
+                                </div>
+                                <div class="hoverbox-content flex-center pe-none bg-holder overlay overlay-1 rounded">
+                                    <div class="position-relative fs-7 text-white" data-bs-theme="light"><span
+                                            class="fas fa-play-circle"></span></div>
+                                </div>
+                            </div>
+                            <div class="flex-1">
+                                <h5 class="fs-9"><a class="text-decoration-none" href="../../../assets/video/beach.mp4"
+                                        data-gallery="attachment-title">{{ $user->name }} {{ $user->Surname }}</a></h5>
+                                <p class="fs-10 mb-0">{{ $user->Date_of_birth }}</p>
+                            </div>
+
+                        </div>
+                    </div>
+                @endforeach
+
+            </div>
+            {{-- ? Fim da tabela contendo os estudantes do curso --}}
 
             <div class="card mb-3">
                 <div class="card-header d-flex flex-between-center">
