@@ -3,15 +3,14 @@
     {{-- ! Inicio da minha view --}}
     <div class="row mt-5">
         <div class="col-lg-6 col-xl-12 col-xxl-4 h-100">
-            <div class="d-flex mb-4"><span class="fa-stack me-2 ms-n1"><i class="fas fa-circle fa-stack-2x text-300"></i><i
+            {{-- <div class="d-flex mb-4"><span class="fa-stack me-2 ms-n1"><i class="fas fa-circle fa-stack-2x text-300"></i><i
                         class="fa-inverse fa-stack-1x text-primary fas fa-spinner"></i></span>
                 <div class="col">
                     <h5 class="mb-0 text-primary position-relative"><span class="bg-200 dark__bg-1100 pe-3">Inscricao de
                             Alunos</span><span
                             class="border position-absolute top-50 translate-middle-y w-100 start-0 z-n1"></span></h5>
-                    {{-- <p class="mb-0">You can easily show your stats content by using these cards.</p> --}}
-                </div>
-            </div>
+                    </div>
+            </div> --}}
             <div class="card theme-wizard mb-5">
                 <div class="card-header bg-body-tertiary pt-3 pb-2">
                     <ul class="nav justify-content-between nav-wizard">
@@ -74,7 +73,8 @@
                                         for="bootstrap-wizard-wizard-phone">Contacto</label><input class="form-control"
                                         type="text" name="contact" placeholder="855686307"
                                         id="bootstrap-wizard-wizard-phone" /></div>
-                                <div class="mb-3"><label class="form-label" for="bootstrap-wizard-wizard-datepicker">Date
+                                <div class="mb-3"><label class="form-label"
+                                        for="bootstrap-wizard-wizard-datepicker">Date
                                         of
                                         Birth</label><input class="form-control datetimepicker" type="date"
                                         placeholder="dd/mm/yy" name="Date_of_birth"
@@ -114,7 +114,16 @@
 
         {{-- *Inicio da outra coluna --}}
         <div class="col-lg-6 col-xl-12 col-xxl-8 h-100">
-
+            <div class="d-flex mb-4"><span class="fa-stack me-2 ms-n1"><i
+                        class="fas fa-circle fa-stack-2x text-300"></i><i
+                        class="fa-inverse fa-stack-1x text-primary fas fa-spinner"></i></span>
+                <div class="col">
+                    <h5 class="mb-0 text-primary position-relative"><span class="bg-200 dark__bg-1100 pe-3">Todos
+                            Alunos</span><span
+                            class="border position-absolute top-50 translate-middle-y w-100 start-0 z-n1"></span></h5>
+                    {{-- <p class="mb-0">You can easily show your stats content by using these cards.</p> --}}
+                </div>
+            </div>
             {{-- *inicio da tabela --}}
             <div class="card mb-3" id="customersTable"
                 data-list='{"valueNames":["name","email","phone","address","joined"],"page":10,"pagination":true}'>
@@ -144,9 +153,10 @@
                                     @foreach ($users as $trainer)
                                         <tr class="btn-reveal-trigger">
                                             <td class="email align-middle py-2">{{ $trainer->name }}
-                                                                {{ $trainer->Surname }}</td>
+                                                {{ $trainer->Surname }}</td>
                                             <td class="email align-middle py-2">{{ $trainer->email }}</td>
-                                            <td class="phone align-middle white-space-nowrap py-2">{{ $trainer->contact }}</td>
+                                            <td class="phone align-middle white-space-nowrap py-2">{{ $trainer->contact }}
+                                            </td>
                                             <td class="address align-middle white-space-nowrap ps-5 py-2">
                                                 {{ $trainer->place }}
                                             </td>

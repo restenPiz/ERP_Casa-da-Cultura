@@ -97,8 +97,10 @@ class userController extends Controller
                 break;
         }
 
+        //*Metodo de adicao de roles no usuario
         $user->addRole($role);
 
+        //*Metodo de adicao de relacionamento na tabela intermediaria
         $user->courses()->attach($validatedData['id_course']);
 
         Alert::success('Adicionado', $successMessage);
