@@ -21,9 +21,17 @@ class courseController extends Controller
     }
     public function detail($id)
     {
-        $course = course::with('users')->findOrFail($id);
+        $course = course::with([
+            'users' => function ($query) {
+                $query->where('user_type', 'Trainer');
+            }
+        ])->findOrFail($id);
         $chapters = Chapter::where('id_course', $id)->get();
-        $users = course::with('users')->findOrFail($id);
+        $users = course::with([
+            'users' => function ($query) {
+                $query->where('user_type', '!=', 'Trainer');
+            }
+        ])->findOrFail($id);
 
         return view('coursePages.detail', compact('course', 'chapters', 'users'));
     }

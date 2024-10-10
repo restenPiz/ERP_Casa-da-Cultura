@@ -302,14 +302,14 @@
                                     </div><!--/.bg-holder-->
                                 </div>
                                 <div class="hoverbox-content flex-center pe-none bg-holder overlay overlay-1 rounded">
-                                    <div class="position-relative fs-7 text-white" data-bs-theme="light"><span
-                                            class="fas fa-play-circle"></span></div>
+                                    <div class="position-relative fs-7 text-white" data-bs-theme="light"></div>
                                 </div>
                             </div>
                             <div class="flex-1">
                                 <h5 class="fs-9"><a class="text-decoration-none" href="../../../assets/video/beach.mp4"
                                         data-gallery="attachment-title">{{ $user->name }} {{ $user->Surname }}</a></h5>
-                                <p class="fs-10 mb-0">{{ $user->Date_of_birth }}</p>
+                                <h5 class="fs-9 mb-0">{{ $user->email }}</h5>
+                                <p class="fs-10 mb-0">Data de Nascimento: {{ $user->Date_of_birth }}</p>
                             </div>
 
                         </div>
