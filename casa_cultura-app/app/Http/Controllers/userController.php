@@ -15,6 +15,7 @@ class userController extends Controller
 {
     public function storeUser(Request $request)
     {
+        // dd($request->all());
         $validatedData = $request->validate([
             'name' => 'required|string|max:255',
             'Surname' => 'required|string|max:255',
@@ -24,6 +25,8 @@ class userController extends Controller
                 'email',
                 'max:255',
             ],
+            'id_course' => 'required|array',
+            'id_course.*' => 'exists:courses,id',
             'password' => 'required|string|min:8|confirmed',
             'Date_of_birth' => 'nullable|date',
             'bi' => 'nullable|string|max:50',
@@ -36,6 +39,30 @@ class userController extends Controller
                 'string',
             ],
         ]);
+        // $validatedData = $request->validate([
+        //     'name' => 'required|string|max:255',
+        //     'Surname' => 'required|string|max:255',
+        //     'email' => [
+        //         'required',
+        //         'string',
+        //         'email',
+        //         'max:255',
+        //         'unique:users,email', // Evita duplicatas de email
+        //     ],
+        //     'password' => 'required|string|min:8|confirmed',
+        //     'Date_of_birth' => 'nullable|date',
+        //     'bi' => 'nullable|string|max:50',
+        //     'place' => 'nullable|string|max:255',
+        //     'contact' => 'nullable|string|max:20',
+        //     'upload_file' => 'nullable|file|mimes:pdf,doc,docx,jpg,png|max:10240',
+        //     'function' => 'nullable|string|max:255',
+        //     'user_type' => [
+        //         'required',
+        //         'string',
+        //         'in:Employee,Trainer,User', // Valida os tipos de usuário permitidos
+        //     ],
+        //     'id_course' => 'required_if:user_type,User|exists:courses,id', // Validação condicional
+        // ]);
 
         if ($request->hasFile('upload_file')) {
             $validatedData['upload_file'] = $request->file('upload_file')->store('uploads/files', 'public');
@@ -86,6 +113,29 @@ class userController extends Controller
         //*Finding an user
         $user = User::findOrFail($id);
 
+        // $validatedData = $request->validate([
+        //     'name' => 'required|string|max:255',
+        //     'Surname' => 'required|string|max:255',
+        //     'email' => [
+        //         'required',
+        //         'string',
+        //         'email',
+        //         'max:255',
+        //         Rule::unique('users', 'email')->ignore($user->id),
+        //     ],
+        //     'password' => 'nullable|string|min:8|confirmed',
+        //     'Date_of_birth' => 'nullable|date',
+        //     'bi' => 'nullable|string|max:50',
+        //     'place' => 'nullable|string|max:255',
+        //     'contact' => 'nullable|string|max:20',
+        //     'upload_file' => 'nullable|file|mimes:jpg,jpeg,png,gif|max:10240', // 10MB
+        //     'function' => 'nullable|string|max:255',
+        //     'user_type' => [
+        //         'required',
+        //         'string',
+        //         Rule::in(['Employee', 'Trainer', 'User']),
+        //     ],
+        // ]);
         $validatedData = $request->validate([
             'name' => 'required|string|max:255',
             'Surname' => 'required|string|max:255',
@@ -94,20 +144,21 @@ class userController extends Controller
                 'string',
                 'email',
                 'max:255',
-                Rule::unique('users', 'email')->ignore($user->id),
+                'unique:users,email', // Evita duplicatas de email
             ],
-            'password' => 'nullable|string|min:8|confirmed',
+            'password' => 'required|string|min:8|confirmed',
             'Date_of_birth' => 'nullable|date',
             'bi' => 'nullable|string|max:50',
             'place' => 'nullable|string|max:255',
             'contact' => 'nullable|string|max:20',
-            'upload_file' => 'nullable|file|mimes:jpg,jpeg,png,gif|max:10240', // 10MB
+            'upload_file' => 'nullable|file|mimes:pdf,doc,docx,jpg,png|max:10240',
             'function' => 'nullable|string|max:255',
             'user_type' => [
                 'required',
                 'string',
-                Rule::in(['Employee', 'Trainer', 'User']),
+                'in:Employee,Trainer,User', // Valida os tipos de usuário permitidos
             ],
+            'id_course' => 'required_if:user_type,User|exists:courses,id', // Validação condicional
         ]);
 
         if ($request->hasFile('upload_file')) {

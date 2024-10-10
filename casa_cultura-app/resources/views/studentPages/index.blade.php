@@ -23,10 +23,6 @@
                                 data-bs-toggle="tab" data-wizard-step="2"><span class="nav-item-circle-parent"><span
                                         class="nav-item-circle"><span class="fas fa-user"></span></span></span><span
                                     class="d-none d-md-block mt-1 fs-10">Dados Pessoais</span></a></li>
-                        {{-- <li class="nav-item"><a class="nav-link fw-semi-bold" href="#bootstrap-wizard-tab3"
-                                data-bs-toggle="tab" data-wizard-step="3"><span class="nav-item-circle-parent"><span
-                                        class="nav-item-circle"><span class="fas fa-dollar-sign"></span></span></span><span
-                                    class="d-none d-md-block mt-1 fs-10">Outros</span></a></li> --}}
                         <li class="nav-item"><a class="nav-link fw-semi-bold" href="#bootstrap-wizard-tab4"
                                 data-bs-toggle="tab" data-wizard-step="4"><span class="nav-item-circle-parent"><span
                                         class="nav-item-circle"><span class="fas fa-thumbs-up"></span></span></span><span
@@ -48,7 +44,7 @@
                                         id="bootstrap-wizard-wizard-name" /></div>
                                 <div class="mb-3"><label class="form-label"
                                         for="bootstrap-wizard-wizard-name">Apelido</label><input class="form-control"
-                                        type="text" name="surname" placeholder="Olindo"
+                                        type="text" name="Surname" placeholder="Olindo"
                                         id="bootstrap-wizard-wizard-name" /></div>
                                 <div class="mb-3"><label class="form-label"
                                         for="bootstrap-wizard-wizard-email">Email*</label><input class="form-control"
@@ -71,7 +67,7 @@
                             <div class="tab-pane px-sm-3 px-md-5" role="tabpanel" aria-labelledby="bootstrap-wizard-tab2"
                                 id="bootstrap-wizard-tab2">
                                 <div class="mb-3">
-                                    <input class="form-control" type="file" name="Upload_file"
+                                    <input class="form-control" type="file" name="upload_file"
                                         accept=".jpg,.jpeg,.png,.gif,.docx,.pdf,.txt" />
                                 </div>
                                 <div class="mb-3"><label class="form-label"
@@ -81,12 +77,12 @@
                                 <div class="mb-3"><label class="form-label" for="bootstrap-wizard-wizard-datepicker">Date
                                         of
                                         Birth</label><input class="form-control datetimepicker" type="date"
-                                        placeholder="dd/mm/yy"
+                                        placeholder="dd/mm/yy" name="Date_of_birth"
                                         data-options='{"dateFormat":"dd/mm/yy","disableMobile":true}'
                                         id="bootstrap-wizard-wizard-datepicker" /></div>
-                                <div class="mb-3"><label class="form-label" for="bootstrap-wizard-wizard-phone">
+                                {{-- <div class="mb-3"><label class="form-label" for="bootstrap-wizard-wizard-phone">
                                         Idade</label><input class="form-control" type="text" name="age"
-                                        placeholder="12 Anos" id="bootstrap-wizard-wizard-phone" /></div>
+                                        placeholder="12 Anos" id="bootstrap-wizard-wizard-phone" /></div> --}}
                                 <div class="mb-3"><label class="form-label" for="bootstrap-wizard-wizard-phone">Numero
                                         de BI</label><input class="form-control" type="text" name="bi"
                                         placeholder="EX: 083902130290380213BM" id="bootstrap-wizard-wizard-phone" /></div>
@@ -98,7 +94,7 @@
                                 aria-labelledby="bootstrap-wizard-tab4" id="bootstrap-wizard-tab4">
                                 <div class="mb-3">
                                     <label class="form-label" for="bootstrap-wizard-gender">Curso a se
-                                        inscrever</label><select class="form-select" name="gender"
+                                        inscrever</label><select class="form-select" name="id_course"
                                         id="bootstrap-wizard-gender">
                                         <option value="">Seleccione o Curso...</option>
                                         @foreach ($courses as $course)
@@ -150,26 +146,10 @@
                                 <tbody class="list" id="table-customers-body">
                                     @foreach ($users as $trainer)
                                         <tr class="btn-reveal-trigger">
-                                            <td class="name align-middle {{-- white-space-nowrap --}} py-2"><a
-                                                    href="customer-details.html">
-                                                    <div class="d-flex d-flex align-items-center">
-                                                        <div class="avatar avatar-xl me-2">
-                                                            <img class="rounded-circle"
-                                                                src="{{ asset('storage/' . $trainer->upload_file) }}"
-                                                                alt="" />
-                                                        </div>
-                                                        <div class="flex-1">
-                                                            <h5 class="mb-0 fs-10">{{ $trainer->name }}
-                                                                {{ $trainer->Surname }}
-                                                            </h5>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </td>
-                                            <td class="email align-middle py-2"><a
-                                                    href="mailto:emma@example.com">{{ $trainer->email }}</a></td>
-                                            <td class="phone align-middle white-space-nowrap py-2"><a
-                                                    href="tel:2122288403">{{ $trainer->contact }}</a></td>
+                                            <td class="email align-middle py-2">{{ $trainer->name }}
+                                                                {{ $trainer->Surname }}</td>
+                                            <td class="email align-middle py-2">{{ $trainer->email }}</td>
+                                            <td class="phone align-middle white-space-nowrap py-2">{{ $trainer->contact }}</td>
                                             <td class="address align-middle white-space-nowrap ps-5 py-2">
                                                 {{ $trainer->place }}
                                             </td>
