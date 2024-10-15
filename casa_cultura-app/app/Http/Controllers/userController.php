@@ -103,4 +103,14 @@ class userController extends Controller
 
         return back();
     }
+    public function delete($id)
+    {
+        $user = User::findOrFail($id);
+
+        $user->delete();
+
+        Alert::success('Eliminado!', 'O usuario foi eliminado com sucesso!');
+
+        return back();
+    }
 }
