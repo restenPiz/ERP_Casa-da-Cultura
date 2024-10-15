@@ -433,7 +433,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="load-more-btn mt--60 text-center">
-                            <a class="edu-btn" href="course-style-3.html">View All Courses<i
+                            <a class="edu-btn" href="course-style-3.html">Ver Todos Cursos<i
                                     class="icon-arrow-right-line-right"></i></a>
                         </div>
                     </div>
@@ -785,100 +785,44 @@
                 <div class="col-lg-12">
                     <div class="section-title text-center" data-sal-delay="150" data-sal="slide-up"
                         data-sal-duration="800">
-                        <span class="pre-title">Upcomming Event</span>
-                        <h3 class="title">Let’s Join Our Community</h3>
+                        <span class="pre-title">Eventos Mais Esperados</span>
+                        <h3 class="title">Junte-se A Nos Nesse Grande Evento</h3>
                     </div>
                 </div>
             </div>
             <div class="row g-5 mt--20">
-                <!-- Start Event Grid   -->
-                <div class="col-lg-4 col-md-6 col-sm-6 col-12" data-sal-delay="150" data-sal="slide-up"
+            
+                {{--* Inicio do foreach dos eventos--}}
+                @foreach ($events as $event)
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-12" data-sal-delay="150" data-sal="slide-up"
                     data-sal-duration="800">
-                    <div class="edu-event event-grid-1 bg-shade radius-small">
-                        <div class="inner">
-                            <div class="thumbnail">
-                                <a href="event-details.html">
-                                    <img src="asset/images/event/event-02/event-01.jpg" alt="Event Images">
-                                </a>
-                                <div class="top-position status-group left-top">
-                                    <span class="eduvibe-status status-06">04 Dec 2023</span>
+                        <div class="edu-event event-grid-1 bg-shade radius-small">
+                            <div class="inner">
+                                <div class="thumbnail">
+                                    <a href="event-details.html">
+                                        <img src="{{ asset('storage/' . $event->Event_picture) }}" alt="Event Images">
+                                    </a>
+                                    <div class="top-position status-group left-top">
+                                        <span class="eduvibe-status status-06">{{ \Carbon\Carbon::parse($event->Date)->format('d-M-Y') }}</span>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="content">
-                                <ul class="event-meta">
-                                    <li><i class="icon-map-pin-line"></i>Alpaca Way Anaheim, CA 92805</li>
-                                </ul>
-                                <h5 class="title"><a href="event-details.html">Innovation & Technological
-                                        Entrepreneurship Team</a>
-                                </h5>
-                                <div class="read-more-btn">
-                                    <a class="btn-transparent" href="course-details.html">Get Ticket<i
-                                            class="icon-arrow-right-line-right"></i></a>
+                                <div class="content">
+                                    <ul class="event-meta">
+                                        <li><i class="icon-map-pin-line"></i>{{$event->Location}}</li>
+                                    </ul>
+                                    <h5 class="title"><a href="event-details.html">{{$event->Name}}</a>
+                                    </h5>
+                                    <div class="read-more-btn">
+                                        <a class="btn-transparent" href="course-details.html">Saber Mais<i
+                                                class="icon-arrow-right-line-right"></i></a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <!-- End Event Grid   -->
+                @endforeach
+                {{--* Fim do foreach dos eventos--}}
 
-                <!-- Start Event Grid   -->
-                <div class="col-lg-4 col-md-6 col-sm-6 col-12" data-sal-delay="200" data-sal="slide-up"
-                    data-sal-duration="800">
-                    <div class="edu-event event-grid-1 bg-shade radius-small">
-                        <div class="inner">
-                            <div class="thumbnail">
-                                <a href="event-details.html">
-                                    <img src="asset/images/event/event-02/event-02.jpg" alt="Event Images">
-                                </a>
-                                <div class="top-position status-group left-top">
-                                    <span class="eduvibe-status status-06">30th Oct 2023</span>
-                                </div>
-                            </div>
-                            <div class="content">
-                                <ul class="event-meta">
-                                    <li><i class="icon-map-pin-line"></i>Ritter Avenue Detroit, MI 48226</li>
-                                </ul>
-                                <h5 class="title"><a href="event-details.html">Virtual Spring Part-time Jobs Fair for
-                                        Student</a></h5>
-                                <div class="read-more-btn">
-                                    <a class="btn-transparent" href="course-details.html">Get Ticket<i
-                                            class="icon-arrow-right-line-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- End Event Grid   -->
-
-                <!-- Start Event Grid   -->
-                <div class="col-lg-4 col-md-6 col-sm-6 col-12" data-sal-delay="250" data-sal="slide-up"
-                    data-sal-duration="800">
-                    <div class="edu-event event-grid-1 bg-shade radius-small">
-                        <div class="inner">
-                            <div class="thumbnail">
-                                <a href="event-details.html">
-                                    <img src="asset/images/event/event-02/event-03.jpg" alt="Event Images">
-                                </a>
-                                <div class="top-position status-group left-top">
-                                    <span class="eduvibe-status status-06">18th Sep 2023</span>
-                                </div>
-                            </div>
-                            <div class="content">
-                                <ul class="event-meta">
-                                    <li><i class="icon-map-pin-line"></i>Stout Street York, PA 17401</li>
-                                </ul>
-                                <h5 class="title"><a href="event-details.html">Explorations of Regional Chief Executive
-                                        Network</a>
-                                </h5>
-                                <div class="read-more-btn">
-                                    <a class="btn-transparent" href="course-details.html">Get Ticket<i
-                                            class="icon-arrow-right-line-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- End Event Grid   -->
             </div>
 
             <div class="shape-dot-wrapper shape-wrapper d-xl-block d-none">
