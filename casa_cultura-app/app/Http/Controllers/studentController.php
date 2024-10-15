@@ -42,7 +42,7 @@ class studentController extends Controller
         $user->addRole('users');
 
         //*Metodo de adicao de relacionamento na tabela intermediaria
-        $user->courses()->attach($user['id_course']);
+        $user->courses()->attach($request->input('id_course'));
 
         Alert::success('Adicionado', 'O aluno foi adicionado com sucesso!');
 
