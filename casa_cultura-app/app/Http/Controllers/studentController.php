@@ -47,41 +47,19 @@ class studentController extends Controller
             $validatedData['upload_file'] = $request->file('upload_file')->store('uploads/files', 'public');
         }
 
-        $user = User::create([
-            'name' => $validatedData['name'],
-            'Surname' => $validatedData['Surname'],
-            'email' => $validatedData['email'],
-            'user_type' => $validatedData['user_type'],
-            'password' => Hash::make($validatedData['password']),
-            'Date_of_birth' => $validatedData['Date_of_birth'],
-            'bi' => $validatedData['bi'],
-            'contact' => $validatedData['contact'],
-            'upload_file' => $validatedData['upload_file'],
-        ]);
+        $user = new User();
 
-        if ($validatedData('user_type')) {
-            $role = 'users';
-            $successMessage = 'O aluno foi adicionado com sucesso!';
-        }
+        $user->name = $request->input('name');
+        $user->Surname = $request->input('Surname');
+        $user->email = $request->input('email');
+        $user->user_type = $request->input('user_type');
+        $user->password = $request->input('password');
+        $user->Date_of_birth = $request->input('Date_of_birth');
+        $user->bi = $request->input('bi');
+        $user->contact = $request->input('contact');
+        $user->upload_file = $request->input('upload_file');
 
-        // switch ($validatedData['user_type']) {
-        //     case 'Employee':
-        //         $role = 'employee';
-        //         $successMessage = 'O usuário funcionário foi adicionado com sucesso!';
-        //         break;
-        //     case 'Trainer':
-        //         $role = 'trainer';
-        //         $successMessage = 'O usuário formador foi adicionado com sucesso!';
-        //         break;
-        //     case 'Users':
-        //         $role = 'users';
-        //         $successMessage = 'O aluno foi adicionado com sucesso!';
-        //         break;
-        //     default:
-        //         $role = null;
-        //         $successMessage = 'Usuário adicionado com sucesso!';
-        //         break;
-        // }
+        $user->save();
 
         //*Metodo de adicao de roles no usuario
         $user->addRole($role);
@@ -89,7 +67,7 @@ class studentController extends Controller
         //*Metodo de adicao de relacionamento na tabela intermediaria
         $user->courses()->attach($validatedData['id_course']);
 
-        Alert::success('Adicionado', $successMessage);
+        Alert::success('Adicionado', 'O aluno foi adicionado com sucesso!');
 
         return back();
     }
