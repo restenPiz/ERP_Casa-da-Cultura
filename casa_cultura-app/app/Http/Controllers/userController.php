@@ -65,19 +65,19 @@ class userController extends Controller
         switch ($request->input('user_type')) {
             case 'Employee':
                 $role = 'employee';
-                $successMessage = 'O usuário funcionário foi adicionado com sucesso!';
+                $successMessage = 'O usuário funcionário foi actualizado com sucesso!';
                 break;
             case 'Trainer':
                 $role = 'trainer';
-                $successMessage = 'O usuário formador foi adicionado com sucesso!';
+                $successMessage = 'O usuário formador foi actualizado com sucesso!';
                 break;
             case 'Users':
                 $role = 'users';
-                $successMessage = 'O aluno foi adicionado com sucesso!';
+                $successMessage = 'O aluno foi actualizado com sucesso!';
                 break;
             default:
                 $role = null;
-                $successMessage = 'Usuário adicionado com sucesso!';
+                $successMessage = 'Usuário actualizado com sucesso!';
                 break;
         }
 
@@ -99,7 +99,7 @@ class userController extends Controller
 
         $user->addRole('users');
 
-        Alert::success('Adicionado!', $successMessage);
+        Alert::success('Actualizado!', $successMessage);
 
         return back();
     }
