@@ -17,4 +17,8 @@ class redirectController extends Controller
     {
         return view('auth.login');
     }
+    public function web()
+    {
+        return view('websitePages.index');
+    }
 }

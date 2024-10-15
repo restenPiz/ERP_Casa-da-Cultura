@@ -72,4 +72,7 @@ Route::middleware('auth')->group(function () {
 
 });
 
+//?Inicio das rotas da parte da website
+Route::get('/main', [redirectController::class, 'web']);
+
 require __DIR__ . '/auth.php';
