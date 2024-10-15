@@ -8,6 +8,7 @@ use DB;
 use Hash;
 use Illuminate\Http\Request;
 use RealRashid\SweetAlert\Facades\Alert;
+use Storage;
 
 class studentController extends Controller
 {
@@ -58,24 +59,29 @@ class studentController extends Controller
             'upload_file' => $validatedData['upload_file'],
         ]);
 
-        switch ($validatedData['user_type']) {
-            case 'Employee':
-                $role = 'employee';
-                $successMessage = 'O usuário funcionário foi adicionado com sucesso!';
-                break;
-            case 'Trainer':
-                $role = 'trainer';
-                $successMessage = 'O usuário formador foi adicionado com sucesso!';
-                break;
-            case 'Users':
-                $role = 'users';
-                $successMessage = 'O aluno foi adicionado com sucesso!';
-                break;
-            default:
-                $role = null;
-                $successMessage = 'Usuário adicionado com sucesso!';
-                break;
+        if ($validatedData('user_type')) {
+            $role = 'users';
+            $successMessage = 'O aluno foi adicionado com sucesso!';
         }
+
+        // switch ($validatedData['user_type']) {
+        //     case 'Employee':
+        //         $role = 'employee';
+        //         $successMessage = 'O usuário funcionário foi adicionado com sucesso!';
+        //         break;
+        //     case 'Trainer':
+        //         $role = 'trainer';
+        //         $successMessage = 'O usuário formador foi adicionado com sucesso!';
+        //         break;
+        //     case 'Users':
+        //         $role = 'users';
+        //         $successMessage = 'O aluno foi adicionado com sucesso!';
+        //         break;
+        //     default:
+        //         $role = null;
+        //         $successMessage = 'Usuário adicionado com sucesso!';
+        //         break;
+        // }
 
         //*Metodo de adicao de roles no usuario
         $user->addRole($role);
@@ -172,5 +178,9 @@ class studentController extends Controller
         Alert::success('Eliminado!', 'O aluno foi eliminado com sucesso!');
 
         return back();
+    }
+    public function register()
+    {
+        return 0;
     }
 }

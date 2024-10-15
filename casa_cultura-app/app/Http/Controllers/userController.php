@@ -39,73 +39,71 @@ class userController extends Controller
         //         'string',
         //     ],
         // ]);
-        $validatedData = $request->validate([
-            'name' => 'required|string|max:255',
-            'Surname' => 'required|string|max:255',
-            'email' => [
-                'required',
-                'string',
-                'email',
-                'max:255',
-                'unique:users,email', // Evita duplicatas de email
-            ],
-            'password' => 'required|string|min:8|confirmed',
-            'Date_of_birth' => 'nullable|date',
-            'bi' => 'nullable|string|max:50',
-            'contact' => 'nullable|string|max:20',
-            'upload_file' => 'nullable|file|mimes:pdf,doc,docx,jpg,png|max:10240',
-            'user_type' => [
-                'required',
-                'string',
-                'in:Employee,Trainer,Users', // Valida os tipos de usuário permitidos
-            ],
-            'id_course' => 'required_if:user_type,User|exists:courses,id', // Validação condicional
-        ]);
+        dd($request->all());
+        // $validatedData = $request->validate([
+        //     'name' => 'required|string|max:255',
+        //     'Surname' => 'required|string|max:255',
+        //     'email' => [
+        //         'required',
+        //         'string',
+        //         'email',
+        //         'max:255',
+        //         'unique:users,email', // Evita duplicatas de email
+        //     ],
+        //     'password' => 'required|string|min:8|confirmed',
+        //     'Date_of_birth' => 'nullable|date',
+        //     'bi' => 'nullable|string|max:50',
+        //     'contact' => 'nullable|string|max:20',
+        //     'upload_file' => 'nullable|file|mimes:pdf,doc,docx,jpg,png|max:10240',
+        //     'user_type' => [
+        //         'required',
+        //         'string',
+        //         'in:Employee,Trainer,Users', // Valida os tipos de usuário permitidos
+        //     ],
+        //     'id_course' => 'required_if:user_type,User|exists:courses,id', // Validação condicional
+        // ]);
 
-        if ($request->hasFile('upload_file')) {
-            $validatedData['upload_file'] = $request->file('upload_file')->store('uploads/files', 'public');
-        }
+        // if ($request->hasFile('upload_file')) {
+        //     $validatedData['upload_file'] = $request->file('upload_file')->store('uploads/files', 'public');
+        // }
 
-        $user = User::create([
-            'name' => $validatedData['name'],
-            'Surname' => $validatedData['Surname'],
-            'email' => $validatedData['email'],
-            'user_type' => $validatedData['user_type'],
-            'password' => Hash::make($validatedData['password']),
-            'Date_of_birth' => $validatedData['Date_of_birth'],
-            'bi' => $validatedData['bi'],
-            'contact' => $validatedData['contact'],
-            'upload_file' => $validatedData['upload_file'],
-        ]);
+        // $user = User::create([
+        //     'name' => $validatedData['name'],
+        //     'Surname' => $validatedData['Surname'],
+        //     'email' => $validatedData['email'],
+        //     'user_type' => $validatedData['user_type'],
+        //     'password' => Hash::make($validatedData['password']),
+        //     'Date_of_birth' => $validatedData['Date_of_birth'],
+        //     'bi' => $validatedData['bi'],
+        //     'contact' => $validatedData['contact'],
+        //     'upload_file' => $validatedData['upload_file'],
+        // ]);
 
-        switch ($validatedData['user_type']) {
-            case 'Employee':
-                $role = 'employee';
-                $successMessage = 'O usuário funcionário foi adicionado com sucesso!';
-                break;
-            case 'Trainer':
-                $role = 'trainer';
-                $successMessage = 'O usuário formador foi adicionado com sucesso!';
-                break;
-            case 'Users':
-                $role = 'users';
-                $successMessage = 'O aluno foi adicionado com sucesso!';
-                break;
-            default:
-                $role = null;
-                $successMessage = 'Usuário adicionado com sucesso!';
-                break;
-        }
+        // switch ($validatedData['user_type']) {
+        //     case 'Employee':
+        //         $role = 'employee';
+        //         $successMessage = 'O usuário funcionário foi adicionado com sucesso!';
+        //         break;
+        //     case 'Trainer':
+        //         $role = 'trainer';
+        //         $successMessage = 'O usuário formador foi adicionado com sucesso!';
+        //         break;
+        //     case 'Users':
+        //         $role = 'users';
+        //         $successMessage = 'O aluno foi adicionado com sucesso!';
+        //         break;
+        //     default:
+        //         $role = null;
+        //         $successMessage = 'Usuário adicionado com sucesso!';
+        //         break;
+        // }
 
-        //*Metodo de adicao de roles no usuario
-        $user->addRole($role);
+        // //*Metodo de adicao de roles no usuario
+        // $user->addRole($role);
 
-        //*Metodo de adicao de relacionamento na tabela intermediaria
-        // $user->courses()->attach($validatedData['id_course']);
+        // Alert::success('Adicionado', $successMessage);
 
-        Alert::success('Adicionado', $successMessage);
-
-        return back();
+        // return back();
     }
     public function update(Request $request, $id)
     {
