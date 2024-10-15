@@ -28,7 +28,7 @@ class studentController extends Controller
                 'string',
                 'email',
                 'max:255',
-                'unique:users,email', // Evita duplicatas de email
+                'unique:users,email',
             ],
             'password' => 'required|string|min:8|confirmed',
             'Date_of_birth' => 'nullable|date',
