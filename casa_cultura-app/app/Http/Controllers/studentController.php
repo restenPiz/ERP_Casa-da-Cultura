@@ -20,10 +20,6 @@ class studentController extends Controller
     }
     public function store(Request $request)
     {
-        if ($request->hasFile('upload_file')) {
-            $request->file('upload_file')->store('uploads/files', 'public');
-        }
-
         $user = new User();
 
         $user->name = $request->input('name');
@@ -35,6 +31,10 @@ class studentController extends Controller
         $user->bi = $request->input('bi');
         $user->contact = $request->input('contact');
         $user->upload_file = $request->input('upload_file');
+
+        if ($request->hasFile('upload_file')) {
+            $user['upload_file'] = $request->file('upload_file')->store('uploads/files', 'public');
+        }
 
         $user->save();
 
