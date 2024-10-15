@@ -98,6 +98,7 @@ class studentController extends Controller
         //*Finding an user
         $user = User::findOrFail($id);
 
+        //*Inicio do metodo de validacao
         $validatedData = $request->validate([
             'name' => 'required|string|max:255',
             'Surname' => 'required|string|max:255',
