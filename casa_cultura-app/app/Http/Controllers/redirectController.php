@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\course;
+use App\Models\event;
 use Illuminate\Http\Request;
 
 class redirectController extends Controller
@@ -19,6 +20,8 @@ class redirectController extends Controller
     }
     public function web()
     {
-        return view('websitePages.index');
+        $events = event::all();
+        $courses = course::all();
+        return view('websitePages.index', compact('events', 'courses'));
     }
 }

@@ -1,5 +1,5 @@
 @extends('layouts.webLayout')
-@section('section')
+@section('content')
 
 <div class="slider-area banner-style-3 bg-image">
     <div class="d-flex align-items-center height-940">
@@ -8,7 +8,7 @@
                 <div class="col-lg-6">
                     <div class="inner">
                         <div class="content text-start">
-                            <span class="pre-title" data-sal-delay="150" data-sal="slide-up" data-sal-duration="800">Better
+                            <span class="pre-title" data-sal-delay="150" data-sal="slide-up" data-sal-duration="800">Melhor
                                 Learning Future With Us</span>
                             <h1 class="title" data-sal-delay="250" data-sal="slide-up" data-sal-duration="800">
                                 Education Is About Academic Excellence</h1>
@@ -388,25 +388,26 @@
                 <div class="col-lg-12">
                     <div class="section-title text-center" data-sal-delay="150" data-sal="slide-up"
                         data-sal-duration="800">
-                        <span class="pre-title">Popular Courses</span>
-                        <h3 class="title">Our Popular Courses</h3>
+                        <span class="pre-title">Cursos Populares</span>
+                        <h3 class="title">Nossos Cursos Mais Populares</h3>
                     </div>
                 </div>
             </div>
 
             <div class="row g-5 mt--25">
-                <!-- Start Single Card  -->
+                
+                @foreach ($courses as $course)
                 <div class="col-12 col-sm-12 col-xl-4 col-md-6" data-sal-delay="150" data-sal="slide-up"
                     data-sal-duration="800">
                     <div class="edu-card card-type-1 bg-white radius-small">
                         <div class="inner">
                             <div class="thumbnail">
                                 <a href="course-details.html">
-                                    <img class="w-100" src="asset/images/course/course-01/course-01.jpg"
+                                    <img class="w-100" src="{{ asset('storage/' . $course->Upload_file) }}"
                                         alt="Course Meta">
                                 </a>
                                 <div class="top-position status-group left-top">
-                                    <span class="eduvibe-status status-01">Intermediate</span>
+                                    <span class="eduvibe-status status-01">Online</span>
                                 </div>
                                 <div class="wishlist-top-right">
                                     <button class="wishlist-btn"><i class="icon-Heart"></i></button>
@@ -415,23 +416,12 @@
                             <div class="content">
                                 <ul class="edu-meta meta-01">
                                     <li><i class="icon-file-list-4-line"></i>35 Lessons</li>
-                                    <li><i class="icon-time-line"></i>18h 15m 44s</li>
+                                    {{-- <li><i class="icon-time-line"></i>18h 15m 44s</li> --}}
                                 </ul>
-                                <h6 class="title"><a href="course-details.html">Competitive Strategy law for all
-                                        students</a>
+                                <h6 class="title"><a href="course-details.html">{{$course->Course_name}}</a>
                                 </h6>
-                                <div class="edu-rating rating-default">
-                                    <div class="rating">
-                                        <i class="icon-Star"></i>
-                                        <i class="icon-Star"></i>
-                                        <i class="icon-Star"></i>
-                                        <i class="icon-Star"></i>
-                                        <i class="icon-Star"></i>
-                                    </div>
-                                    <span class="rating-count">(18 Review)</span>
-                                </div>
                                 <div class="card-bottom">
-                                    <div class="badge-transparent">Free</div>
+                                    <div class="badge-transparent">Pago</div>
                                     <ul class="edu-meta meta-01">
                                         <li><i class="icon-account-circle-line"></i>47 Students</li>
                                     </ul>
@@ -440,257 +430,8 @@
                         </div>
                     </div>
                 </div>
-                <!-- End Single Card  -->
+                @endforeach
 
-                <!-- Start Single Card  -->
-                <div class="col-12 col-sm-12 col-xl-4 col-md-6" data-sal-delay="200" data-sal="slide-up"
-                    data-sal-duration="800">
-                    <div class="edu-card card-type-1 bg-white radius-small">
-                        <div class="inner">
-                            <div class="thumbnail">
-                                <a href="course-details.html">
-                                    <img class="w-100" src="asset/images/course/course-01/course-02.jpg"
-                                        alt="Course Meta">
-                                </a>
-                                <div class="top-position status-group left-top">
-                                    <span class="eduvibe-status status-01">Advanced</span>
-                                </div>
-                                <div class="wishlist-top-right">
-                                    <button class="wishlist-btn"><i class="icon-Heart"></i></button>
-                                </div>
-                            </div>
-                            <div class="content">
-                                <ul class="edu-meta meta-01">
-                                    <li><i class="icon-file-list-4-line"></i>48 Lessons</li>
-                                    <li><i class="icon-time-line"></i>15h 38m 14s</li>
-                                </ul>
-                                <h6 class="title"><a href="course-details.html">Machine Learning A-Z: Hands-On Python
-                                        and
-                                        java</a>
-                                </h6>
-                                <div class="edu-rating rating-default">
-                                    <div class="rating">
-                                        <i class="icon-Star"></i>
-                                        <i class="icon-Star"></i>
-                                        <i class="icon-Star"></i>
-                                        <i class="icon-Star"></i>
-                                        <i class="icon-Star"></i>
-                                    </div>
-                                    <span class="rating-count">(38 Review)</span>
-                                </div>
-                                <div class="card-bottom">
-                                    <div class="price-list price-style-03">
-                                        <div class="price current-price">$29.00</div>
-                                        <div class="price old-price">$39.00</div>
-                                    </div>
-                                    <ul class="edu-meta meta-01">
-                                        <li><i class="icon-account-circle-line"></i>65 Students</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- End Single Card  -->
-
-                <!-- Start Single Card  -->
-                <div class="col-12 col-sm-12 col-xl-4 col-md-6" data-sal-delay="250" data-sal="slide-up"
-                    data-sal-duration="800">
-                    <div class="edu-card card-type-1 bg-white radius-small">
-                        <div class="inner">
-                            <div class="thumbnail">
-                                <a href="course-details.html">
-                                    <img class="w-100" src="asset/images/course/course-01/course-03.jpg"
-                                        alt="Course Meta">
-                                </a>
-                                <div class="top-position status-group left-top">
-                                    <span class="eduvibe-status status-01">Basic</span>
-                                </div>
-                                <div class="wishlist-top-right">
-                                    <button class="wishlist-btn"><i class="icon-Heart"></i></button>
-                                </div>
-                            </div>
-                            <div class="content">
-                                <ul class="edu-meta meta-01">
-                                    <li><i class="icon-file-list-4-line"></i>80 Lessons</li>
-                                    <li><i class="icon-time-line"></i>23h 13m 41s</li>
-                                </ul>
-                                <h6 class="title"><a href="course-details.html">Achieving Advanced in Insights with
-                                        Big</a>
-                                </h6>
-                                <div class="edu-rating rating-default">
-                                    <div class="rating">
-                                        <i class="icon-Star"></i>
-                                        <i class="icon-Star"></i>
-                                        <i class="icon-Star"></i>
-                                        <i class="icon-Star"></i>
-                                        <i class="icon-Star"></i>
-                                    </div>
-                                    <span class="rating-count">(28 Review)</span>
-                                </div>
-                                <div class="card-bottom">
-                                    <div class="price-list price-style-03">
-                                        <div class="price current-price">$59.00</div>
-                                        <div class="price old-price">$69.00</div>
-                                    </div>
-                                    <ul class="edu-meta meta-01">
-                                        <li><i class="icon-account-circle-line"></i>42 Students</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- End Single Card  -->
-
-                <!-- Start Single Card  -->
-                <div class="col-12 col-sm-12 col-xl-4 col-md-6" data-sal-delay="300" data-sal="slide-up"
-                    data-sal-duration="800">
-                    <div class="edu-card card-type-1 bg-white radius-small">
-                        <div class="inner">
-                            <div class="thumbnail">
-                                <a href="course-details.html">
-                                    <img class="w-100" src="asset/images/course/course-01/course-04.jpg"
-                                        alt="Course Meta">
-                                </a>
-                                <div class="top-position status-group left-top">
-                                    <span class="eduvibe-status status-01">Intermediate</span>
-                                </div>
-                                <div class="wishlist-top-right">
-                                    <button class="wishlist-btn"><i class="icon-Heart"></i></button>
-                                </div>
-                            </div>
-                            <div class="content">
-                                <ul class="edu-meta meta-01">
-                                    <li><i class="icon-file-list-4-line"></i>31 Lessons</li>
-                                    <li><i class="icon-time-line"></i>14h 40m 20s</li>
-                                </ul>
-                                <h6 class="title"><a href="course-details.html">Education Makes A Person A
-                                        Responsible
-                                        Citizen</a>
-                                </h6>
-                                <div class="edu-rating rating-default">
-                                    <div class="rating">
-                                        <i class="icon-Star"></i>
-                                        <i class="icon-Star"></i>
-                                        <i class="icon-Star"></i>
-                                        <i class="icon-Star"></i>
-                                        <i class="icon-Star"></i>
-                                    </div>
-                                    <span class="rating-count">(23 Review)</span>
-                                </div>
-                                <div class="card-bottom">
-                                    <div class="price-list price-style-03">
-                                        <div class="price current-price">$49.00</div>
-                                        <div class="price old-price">$59.00</div>
-                                    </div>
-                                    <ul class="edu-meta meta-01">
-                                        <li><i class="icon-account-circle-line"></i>46 Students</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- End Single Card  -->
-
-                <!-- Start Single Card  -->
-                <div class="col-12 col-sm-12 col-xl-4 col-md-6" data-sal-delay="350" data-sal="slide-up"
-                    data-sal-duration="800">
-                    <div class="edu-card card-type-1 bg-white radius-small">
-                        <div class="inner">
-                            <div class="thumbnail">
-                                <a href="course-details.html">
-                                    <img class="w-100" src="asset/images/course/course-01/course-05.jpg"
-                                        alt="Course Meta">
-                                </a>
-                                <div class="top-position status-group left-top">
-                                    <span class="eduvibe-status status-01">Advanced</span>
-                                </div>
-                                <div class="wishlist-top-right">
-                                    <button class="wishlist-btn"><i class="icon-Heart"></i></button>
-                                </div>
-                            </div>
-                            <div class="content">
-                                <ul class="edu-meta meta-01">
-                                    <li><i class="icon-file-list-4-line"></i>36 Lessons</li>
-                                    <li><i class="icon-time-line"></i>20h 25m 28s</li>
-                                </ul>
-                                <h6 class="title"><a href="course-details.html">Building A Better World One Student
-                                        At A
-                                        Time</a>
-                                </h6>
-                                <div class="edu-rating rating-default">
-                                    <div class="rating">
-                                        <i class="icon-Star"></i>
-                                        <i class="icon-Star"></i>
-                                        <i class="icon-Star"></i>
-                                        <i class="icon-Star"></i>
-                                        <i class="icon-Star"></i>
-                                    </div>
-                                    <span class="rating-count">(31 Review)</span>
-                                </div>
-                                <div class="card-bottom">
-                                    <div class="badge-transparent">Free</div>
-                                    <ul class="edu-meta meta-01">
-                                        <li><i class="icon-account-circle-line"></i>91 Students</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- End Single Card  -->
-
-                <!-- Start Single Card  -->
-                <div class="col-12 col-sm-12 col-xl-4 col-md-6" data-sal-delay="400" data-sal="slide-up"
-                    data-sal-duration="800">
-                    <div class="edu-card card-type-1 bg-white radius-small">
-                        <div class="inner">
-                            <div class="thumbnail">
-                                <a href="course-details.html">
-                                    <img class="w-100" src="asset/images/course/course-01/course-06.jpg"
-                                        alt="Course Meta">
-                                </a>
-                                <div class="top-position status-group left-top">
-                                    <span class="eduvibe-status status-01">Basic</span>
-                                </div>
-                                <div class="wishlist-top-right">
-                                    <button class="wishlist-btn"><i class="icon-Heart"></i></button>
-                                </div>
-                            </div>
-                            <div class="content">
-                                <ul class="edu-meta meta-01">
-                                    <li><i class="icon-file-list-4-line"></i>21 Lessons</li>
-                                    <li><i class="icon-time-line"></i>12h 45m 50s</li>
-                                </ul>
-                                <h6 class="title"><a href="course-details.html">Education is About Forming Faithful
-                                        Disciples</a>
-                                </h6>
-                                <div class="edu-rating rating-default">
-                                    <div class="rating">
-                                        <i class="icon-Star"></i>
-                                        <i class="icon-Star"></i>
-                                        <i class="icon-Star"></i>
-                                        <i class="icon-Star"></i>
-                                        <i class="icon-Star"></i>
-                                    </div>
-                                    <span class="rating-count">(35 Review)</span>
-                                </div>
-                                <div class="card-bottom">
-                                    <div class="price-list price-style-03">
-                                        <div class="price current-price">$79.00</div>
-                                        <div class="price old-price">$89.00</div>
-                                    </div>
-                                    <ul class="edu-meta meta-01">
-                                        <li><i class="icon-account-circle-line"></i>22 Students</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- End Single Card  -->
             </div>
 
             <div class="row">

@@ -23,8 +23,8 @@
     <link rel="stylesheet" href="../asset/css/vendor/jqueru-ui-min.css">
     <link rel="stylesheet" href="../asset/css/style.css">
 
-    {{-- Inicio do link do vite
-    @vite(['resources/css/app.css', 'resources/js/app.js']) --}}
+    {{-- {{-- Inicio do link do vite --}}
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
 <body>
