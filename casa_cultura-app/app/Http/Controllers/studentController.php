@@ -20,31 +20,8 @@ class studentController extends Controller
     }
     public function store(Request $request)
     {
-        $validatedData = $request->validate([
-            'name' => 'required|string|max:255',
-            'Surname' => 'required|string|max:255',
-            'email' => [
-                'required',
-                'string',
-                'email',
-                'max:255',
-                'unique:users,email',
-            ],
-            'password' => 'required|string|min:8|confirmed',
-            'Date_of_birth' => 'nullable|date',
-            'bi' => 'nullable|string|max:50',
-            'contact' => 'nullable|string|max:20',
-            'upload_file' => 'nullable|file|mimes:pdf,doc,docx,jpg,png|max:10240',
-            'user_type' => [
-                'required',
-                'string',
-                'in:Employee,Trainer,Users', // Valida os tipos de usuário permitidos
-            ],
-            'id_course' => 'required_if:user_type,User|exists:courses,id', // Validação condicional
-        ]);
-
         if ($request->hasFile('upload_file')) {
-            $validatedData['upload_file'] = $request->file('upload_file')->store('uploads/files', 'public');
+            $request->file('upload_file')->store('uploads/files', 'public');
         }
 
         $user = new User();
@@ -62,10 +39,10 @@ class studentController extends Controller
         $user->save();
 
         //*Metodo de adicao de roles no usuario
-        $user->addRole($role);
+        $user->addRole('users');
 
         //*Metodo de adicao de relacionamento na tabela intermediaria
-        $user->courses()->attach($validatedData['id_course']);
+        $user->courses()->attach($user['id_course']);
 
         Alert::success('Adicionado', 'O aluno foi adicionado com sucesso!');
 
