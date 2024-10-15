@@ -45,6 +45,8 @@ class userController extends Controller
         $user->bi = $request->input('bi');
         $user->contact = $request->input('contact');
         $user->upload_file = $request->input('upload_file');
+        $user->function = $request->input('function');
+        $user->place = $request->input('place');
 
         if ($request->hasFile('upload_file')) {
             $user['upload_file'] = $request->file('upload_file')->store('uploads/files', 'public');
@@ -90,6 +92,8 @@ class userController extends Controller
         $user->bi = $request->input('bi');
         $user->contact = $request->input('contact');
         $user->upload_file = $request->input('upload_file');
+        $user->function = $request->input('function');
+        $user->place = $request->input('place');
 
         if ($request->hasFile('upload_file')) {
             $user['upload_file'] = $request->file('upload_file')->store('uploads/files', 'public');
