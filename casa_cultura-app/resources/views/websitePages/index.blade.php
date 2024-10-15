@@ -7,10 +7,9 @@
                     <div class="col-lg-6">
                         <div class="inner">
                             <div class="content text-start">
-                                <span class="pre-title" data-sal-delay="150" data-sal="slide-up" data-sal-duration="800">Melhor
-                                    Learning Future With Us</span>
+                                <span class="pre-title" data-sal-delay="150" data-sal="slide-up" data-sal-duration="800">Aprenda melhor na casa da cultura</span>
                                 <h1 class="title" data-sal-delay="250" data-sal="slide-up" data-sal-duration="800">
-                                    Education Is About Academic Excellence</h1>
+                                  Educação é sobre excelência acadêmica</h1>
                                 <p class="description" data-sal-delay="350" data-sal="slide-up" data-sal-duration="800">Sed
                                     eu volutpat arcu, a tincidunt nulla quam, feugiat sit amet ipsum a, dapibus porta velit.
                                 </p>
@@ -58,176 +57,7 @@
         </div>
     </div>
     <!-- End Sldier Area  -->
-
-    <div class="sercice-area eduvibe-service-five service-wrapper-5 edu-section-gap bg-color-white">
-        <div class="container eduvibe-animated-shape">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="section-title text-center" data-sal-delay="150" data-sal="slide-up" data-sal-duration="800">
-                        <span class="pre-title">Course Categories</span>
-                        <h3 class="title">Popular Topics To Learn</h3>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row g-5 mt--25">
-
-                <!-- Start Service Grid  -->
-                <div class="col-lg-4 col-md-6 col-12" data-sal-delay="150" data-sal="slide-up" data-sal-duration="800">
-                    <div class="service-card service-card-5">
-                        <div class="inner">
-                            <div class="icon">
-                                <i class="icon-Schoolbag"></i>
-                            </div>
-                            <div class="content">
-                                <h6 class="title"><a href="#">Personal Development</a></h6>
-                                <p class="description">39 Course</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- End Service Grid  -->
-
-                <!-- Start Service Grid  -->
-                <div class="col-lg-4 col-md-6 col-12" data-sal-delay="150" data-sal="slide-up" data-sal-duration="800">
-                    <div class="service-card service-card-5">
-                        <div class="inner">
-                            <div class="icon">
-                                <i class="icon-student-read"></i>
-                            </div>
-                            <div class="content">
-                                <h6 class="title"><a href="#">Human Research</a></h6>
-                                <p class="description">24 Course</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- End Service Grid  -->
-
-                <!-- Start Service Grid  -->
-                <div class="col-lg-4 col-md-6 col-12" data-sal-delay="150" data-sal="slide-up" data-sal-duration="800">
-                    <div class="service-card service-card-5">
-                        <div class="inner">
-                            <div class="icon">
-                                <i class="icon-Pencil"></i>
-                            </div>
-                            <div class="content">
-                                <h6 class="title"><a href="#">Art & Design</a></h6>
-                                <p class="description">39 Course</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- End Service Grid  -->
-
-                <!-- Start Service Grid  -->
-                <div class="col-lg-4 col-md-6 col-12" data-sal-delay="150" data-sal="slide-up" data-sal-duration="800">
-                    <div class="service-card service-card-5">
-                        <div class="inner">
-                            <div class="icon">
-                                <i class="icon-Class"></i>
-                            </div>
-                            <div class="content">
-                                <h6 class="title"><a href="#">Business Management</a></h6>
-                                <p class="description">39 Course</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- End Service Grid  -->
-
-                <!-- Start Service Grid  -->
-                <div class="col-lg-4 col-md-6 col-12" data-sal-delay="150" data-sal="slide-up" data-sal-duration="800">
-                    <div class="service-card service-card-5">
-                        <div class="inner">
-                            <div class="icon">
-                                <i class="icon-Setting"></i>
-                            </div>
-                            <div class="content">
-                                <h6 class="title"><a href="#">Web Development</a></h6>
-                                <p class="description">39 Course</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- End Service Grid  -->
-
-                <!-- Start Service Grid  -->
-                <div class="col-lg-4 col-md-6 col-12" data-sal-delay="150" data-sal="slide-up" data-sal-duration="800">
-                    <div class="service-card service-card-5">
-                        <div class="inner">
-                            <div class="icon">
-                                <i class="icon-Mind"></i>
-                            </div>
-                            <div class="content">
-                                <h6 class="title"><a href="#">Lifestyle</a></h6>
-                                <p class="description">39 Course</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- End Service Grid  -->
-
-                <!-- Start Service Grid  -->
-                <div class="col-lg-4 col-md-6 col-12" data-sal-delay="150" data-sal="slide-up" data-sal-duration="800">
-                    <div class="service-card service-card-5">
-                        <div class="inner">
-                            <div class="icon">
-                                <i class="icon-Headphone"></i>
-                            </div>
-                            <div class="content">
-                                <h6 class="title"><a href="#">Digital Marketing</a></h6>
-                                <p class="description">39 Course</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- End Service Grid  -->
-
-                <!-- Start Service Grid  -->
-                <div class="col-lg-4 col-md-6 col-12" data-sal-delay="150" data-sal="slide-up" data-sal-duration="800">
-                    <div class="service-card service-card-5">
-                        <div class="inner">
-                            <div class="icon">
-                                <i class="icon-Microscope"></i>
-                            </div>
-                            <div class="content">
-                                <h6 class="title"><a href="#">Data Sciences</a></h6>
-                                <p class="description">39 Course</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- End Service Grid  -->
-
-                <!-- Start Service Grid  -->
-                <div class="col-lg-4 col-md-6 col-12" data-sal-delay="150" data-sal="slide-up" data-sal-duration="800">
-                    <div class="service-card service-card-5">
-                        <div class="inner">
-                            <div class="icon">
-                                <i class="icon-Fitness"></i>
-                            </div>
-                            <div class="content">
-                                <h6 class="title"><a href="#">Health & Fitness</a></h6>
-                                <p class="description">39 Course</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- End Service Grid  -->
-
-            </div>
-            <div class="shape-dot-wrapper shape-wrapper d-xl-block d-none">
-                <div class="shape-image shape-image-1">
-                    <img src="asset/images/shapes/shape-19-02.png" alt="Shape Thumb" />
-                </div>
-                <div class="shape-image shape-image-2">
-                    <img src="asset/images/shapes/shape-21.png" alt="Shape Thumb" />
-                </div>
-            </div>
-        </div>
-    </div>
-
+    <br><br><br>
     <div class="home-three-about edu-about-area about-style-4 bg-color-white edu-section-gapBottom">
         <div class="container eduvibe-animated-shape">
             <div class="row g-lg-5 g-md-5 g-sm-5">
@@ -314,10 +144,10 @@
                                     <i class="icon-Bag"></i>
                                 </div>
                                 <div class="content">
-                                    <h3 class="counter"><span class="odometer" data-count="449">00</span>
+                                    <h3 class="counter"><span class="odometer" data-count="243">00</span>
                                         <span class="after-icon">+</span>
                                     </h3>
-                                    <span class="subtitle">Students Enrolled</span>
+                                    <span class="subtitle">Estudantes Inscritos</span>
                                 </div>
                             </div>
                         </div>
@@ -332,10 +162,10 @@
                                     <i class="icon-trophy"></i>
                                 </div>
                                 <div class="content">
-                                    <h3 class="counter"><span class="odometer" data-count="378">00</span>
+                                    <h3 class="counter"><span class="odometer" data-count="1">00</span>
                                         <span class="after-icon">+</span>
                                     </h3>
-                                    <span class="subtitle">Winning Award</span>
+                                    <span class="subtitle">Awards Ganhos</span>
                                 </div>
                             </div>
                         </div>
@@ -350,10 +180,10 @@
                                     <i class="icon-Open-book"></i>
                                 </div>
                                 <div class="content">
-                                    <h3 class="counter"><span class="odometer" data-count="289">00</span>
+                                    <h3 class="counter"><span class="odometer" data-count="8">00</span>
                                         <span class="after-icon">+</span>
                                     </h3>
-                                    <span class="subtitle">Academic Programs</span>
+                                    <span class="subtitle">Cursos Oferecidos</span>
                                 </div>
                             </div>
                         </div>
@@ -368,10 +198,10 @@
                                     <i class="icon-presentation"></i>
                                 </div>
                                 <div class="content">
-                                    <h3 class="counter"><span class="odometer" data-count="235">00</span>
+                                    <h3 class="counter"><span class="odometer" data-count="10">00</span>
                                         <span class="after-icon">+</span>
                                     </h3>
-                                    <span class="subtitle">Online Instructor</span>
+                                    <span class="subtitle">Formadores</span>
                                 </div>
                             </div>
                         </div>
@@ -507,132 +337,7 @@
     </div>
     <!-- End Video Area  -->
 
-    <!-- Start Accordion Area  -->
-    <div class="edu-accordion-area eduvibe-home-three-accordion accordion-shape-1 edu-section-gap bg-color-white">
-        <div class="container eduvibe-animated-shape">
-            <div class="row g-5">
-                <div class="col-lg-6 gallery-wrapper">
-                    <div class="row">
-                        <div class="col-lg-6 col-md-6 col-sm-6">
-                            <div class="thumbnail" data-sal-delay="150" data-sal="fade" data-sal-duration="800">
-                                <img class="radius-small w-100" src="asset/images/about/about-02/accordion-gallery-01.jpg"
-                                    alt="Shape Images">
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-sm-6 mt--35 mt_sm--15">
-                            <div class="thumbnail" data-sal-delay="150" data-sal="fade" data-sal-duration="800">
-                                <img class="radius-small w-100" src="asset/images/about/about-02/accordion-gallery-02.jpg"
-                                    alt="Shape Images">
-                            </div>
-                            <div class="thumbnail mt--15" data-sal-delay="150" data-sal="fade" data-sal-duration="800">
-                                <img class="radius-small w-100" src="asset/images/about/about-02/accordion-gallery-03.jpg"
-                                    alt="Shape Images">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-6">
-                    <div class="accordion-style-1">
-                        <div class="section-title text-start mb--40" data-sal-delay="150" data-sal="slide-up"
-                            data-sal-duration="800">
-                            <span class="pre-title">About Us</span>
-                            <h3 class="title">Get Every General Answers From Here</h3>
-                        </div>
-
-                        <div class="edu-accordion edu-accordion-01" id="accordionExample1" data-sal-delay="150"
-                            data-sal="slide-up" data-sal-duration="800">
-                            <div class="edu-accordion-item">
-                                <div class="edu-accordion-header" id="headingOne">
-                                    <button class="edu-accordion-button" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                        What does it take become an author?
-                                    </button>
-                                </div>
-                                <div id="collapseOne" class="accordion-collapse collapse show"
-                                    aria-labelledby="headingOne" data-bs-parent="#accordionExample1">
-                                    <div class="edu-accordion-body">
-                                        Learning management system, combines a wide range of features to present
-                                        a class setting without having the students come into a physical classroom. It all
-                                        depends on the WordPress LMS plugin you go with, but
-                                        in general.
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="edu-accordion-item">
-                                <div class="edu-accordion-header" id="headingTwo">
-                                    <button class="edu-accordion-button collapsed" type="button"
-                                        data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
-                                        aria-controls="collapseTwo">
-                                        How to Change my Password easily?
-                                    </button>
-                                </div>
-                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-                                    data-bs-parent="#accordionExample1">
-                                    <div class="edu-accordion-body">
-                                        Learning management system, combines a wide range of features to present
-                                        a class setting without having the students come into a physical
-                                        classroom. It all depends on the WordPress LMS plugin you go with, but
-                                        in general.
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="edu-accordion-item">
-                                <div class="edu-accordion-header" id="headingThree">
-                                    <button class="edu-accordion-button collapsed" type="button"
-                                        data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false"
-                                        aria-controls="collapseThree">
-                                        How to Change my Plan using PayPal?
-                                    </button>
-                                </div>
-                                <div id="collapseThree" class="accordion-collapse collapse"
-                                    aria-labelledby="headingThree" data-bs-parent="#accordionExample1">
-                                    <div class="edu-accordion-body">
-                                        Learning management system, combines a wide range of features to present
-                                        a class setting without having the students come into a physical
-                                        classroom. It all depends on the WordPress LMS plugin you go with, but
-                                        in general.
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="edu-accordion-item">
-                                <div class="edu-accordion-header" id="headingFour">
-                                    <button class="edu-accordion-button collapsed" type="button"
-                                        data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false"
-                                        aria-controls="collapseFour">
-                                        How long it take to create a video course?
-                                    </button>
-                                </div>
-                                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
-                                    data-bs-parent="#accordionExample1">
-                                    <div class="edu-accordion-body">
-                                        Learning management system, combines a wide range of features to present
-                                        a class setting without having the students come into a physical
-                                        classroom. It all depends on the WordPress LMS plugin you go with, but
-                                        in general.
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="shape-dot-wrapper shape-wrapper d-xl-block d-none">
-                <div class="shape shape-1"><span class="shape-dot"></span></div>
-                <div class="shape-image shape-image-2">
-                    <img src="asset/images/shapes/shape-11-04.png" alt="Shape Thumb" />
-                </div>
-                <div class="shape-image shape-image-3">
-                    <img src="asset/images/shapes/shape-25-01.png" alt="Shape Thumb" />
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End Accordion Area  -->
-
+    
     <div class="eduvibe-home-three-testimonial edu-testimonial-area testimonial-four-wrapper edu-section-gap bg-image">
         <div class="container eduvibe-animated-shape">
             <div class="row g-5 align-items-center">
@@ -643,40 +348,6 @@
                         <div class="testimonial-card-box variation-2">
                             <div class="eduvibe-testimonial-three inner testimonial-card-activation-1 slick-arrow-style-2">
                                 <div class="single-card">
-                                    <div class="rating">
-                                        <i class="on icon-Star"></i>
-                                        <i class="on icon-Star"></i>
-                                        <i class="on icon-Star"></i>
-                                        <i class="on icon-Star"></i>
-                                        <i class="on icon-Star"></i>
-                                    </div>
-                                    <p class="description">“Lorem ipsum dolor sit amet, consectetur dloril adipiscing elit,
-                                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                                        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.”
-                                    </p>
-                                    <div class="client-info">
-                                        <div class="thumbnail">
-                                            <img src="asset/images/testimonial/testimonial-04/client-04.png"
-                                                alt="Client Images">
-                                        </div>
-                                        <div class="content">
-                                            <h6 class="title">Michle A. Smith</h6>
-                                            <span class="designation">Web Developer</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="single-card">
-                                    <div class="rating">
-                                        <i class="on icon-Star"></i>
-                                        <i class="on icon-Star"></i>
-                                        <i class="on icon-Star"></i>
-                                        <i class="on icon-Star"></i>
-                                        <i class="on icon-Star"></i>
-                                    </div>
-                                    <p class="description">“Quis autem vel eum iure reprehenderit qui in ea voluptate velit
-                                        esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas
-                                        nulla pariatur? At vero eos et accusamus et iusto odio dignissimos ducimus qui
-                                        blanditiis.”</p>
                                     <div class="client-info">
                                         <div class="thumbnail">
                                             <img src="asset/images/testimonial/testimonial-04/client-01.png"
@@ -689,17 +360,6 @@
                                     </div>
                                 </div>
                                 <div class="single-card">
-                                    <div class="rating">
-                                        <i class="on icon-Star"></i>
-                                        <i class="on icon-Star"></i>
-                                        <i class="on icon-Star"></i>
-                                        <i class="on icon-Star"></i>
-                                        <i class="on icon-Star"></i>
-                                    </div>
-                                    <p class="description">“Duis aute irure dolor in reprehenderit in voluptate velit esse
-                                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum finibus
-                                        bonorum.”</p>
                                     <div class="client-info">
                                         <div class="thumbnail">
                                             <img src="asset/images/testimonial/testimonial-04/client-03.png"
@@ -842,47 +502,6 @@
         </div>
     </div>
     <!-- End Event Area  -->
-
-    <!-- Start Newsletter Area  -->
-    <div class="eduvibe-home-three-newsletter edu-newsletter-area newsletter-style-4 edu-section-gap bg-image">
-        <div class="container eduvibe-animated-shape">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="inner text-center" data-sal-delay="150" data-sal="slide-up" data-sal-duration="800">
-                        <div class="section-title text-center" data-sal-delay="150" data-sal="slide-up"
-                            data-sal-duration="800">
-                            <span class="pre-title">Subscribe Newsletter</span>
-                            <h3 class="title">Get Every Latest News</h3>
-                        </div>
-                        <div class="newsletter-form newsletter-form-style-1 mt--60 mt_md--30 mt_sm--30 position-relative">
-                            <div class="input-box text-start">
-                                <input class="large-input-box" type="email" placeholder="Enter your mail address">
-                                <div class="mail-icon">
-                                    <i class="icon-mail-open-line"></i>
-                                </div>
-                                <button class="edu-btn">Subscribe<i class="icon-arrow-right-line-right"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="shape-dot-wrapper shape-wrapper d-xl-block d-none">
-                <div class="shape-image shape-image-1">
-                    <img src="asset/images/shapes/shape-04-03.png" alt="Shape Thumb" />
-                </div>
-                <div class="shape-image shape-image-2">
-                    <img src="asset/images/shapes/shape-15-04.png" alt="Shape Thumb" />
-                </div>
-                <div class="shape-image shape-image-3">
-                    <img src="asset/images/shapes/shape-13-07.png" alt="Shape Thumb" />
-                </div>
-                <div class="shape-image shape-image-4">
-                    <img src="asset/images/shapes/shape-02-05.png" alt="Shape Thumb" />
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End Newsletter Area  -->
 
     <!-- Start Footer Area  -->
     <footer class="eduvibe-footer-one edu-footer footer-style-default">

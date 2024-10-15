@@ -74,7 +74,7 @@ Route::middleware('auth')->group(function () {
 
 //?Inicio das rotas da parte da website
 Route::get('/main', [redirectController::class, 'web']);
-Route::get('/courseDetail/{id}', [redirectController::class, 'courseDetails']);
+Route::get('/courseDetails/{id}', [redirectController::class, 'courseDetails']);
 Route::get('/eventDetail/{id}', [redirectController::class, 'eventDetails']);
 
 require __DIR__ . '/auth.php';
