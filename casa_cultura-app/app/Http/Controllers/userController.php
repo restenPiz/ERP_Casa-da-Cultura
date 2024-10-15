@@ -53,8 +53,7 @@ class userController extends Controller
         $user->save();
 
         $user->addRole('users');
-        $user->courses()->attach($request->input('id_course'));
-
+        
         Alert::success('Adicionado!', $successMessage);
 
         return back();
