@@ -282,18 +282,8 @@
                                         </div>
 
                                         <div class="read-more-btn mt--15">
-                                            <a class="edu-btn w-100 text-center" href="#">Pagar Agora</a>
+                                            <a class="edu-btn w-100 text-center" href="{{route('login')}}">Pagar Agora</a>
                                         </div>
-
-                                        {{-- <div class="read-more-btn mt--30 text-center">
-                                                <div class="eduvibe-post-share">
-                                                    <span>Share: </span>
-                                                    <a class="linkedin" href="#"><i class="icon-linkedin"></i></a>
-                                                    <a class="facebook" href="#"><i class="icon-Fb"></i></a>
-                                                    <a class="twitter" href="#"><i class="icon-Twitter"></i></a>
-                                                    <a class="youtube" href="#"><i class="icon-youtube"></i></a>
-                                                </div>
-                                            </div> --}}
                                     </div>
                                 </div>
                             </div>

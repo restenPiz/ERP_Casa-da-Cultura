@@ -423,10 +423,6 @@
                                         'id'=>$event->id
                                     ])}}">{{$event->Name}}</a>
                                     </h5>
-                                    <div class="read-more-btn">
-                                        <a class="btn-transparent" href="course-details.html">Saber Mais<i
-                                                class="icon-arrow-right-line-right"></i></a>
-                                    </div>
                                 </div>
                             </div>
                         </div>
