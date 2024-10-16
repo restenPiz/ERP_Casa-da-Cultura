@@ -282,8 +282,13 @@
                                         </div>
 
                                         <div class="read-more-btn mt--15">
-                                            <a class="edu-btn w-100 text-center" href="{{route('login')}}">Pagar Agora</a>
+                                            <a class="edu-btn w-100 text-center" href="">Pagar Agora</a>
                                         </div>
+
+                                        {{--! Inicio do metodo de Pagamento--}}
+
+                                        {{--! Fim do metodo de Pagamento--}}
+
                                     </div>
                                 </div>
                             </div>
