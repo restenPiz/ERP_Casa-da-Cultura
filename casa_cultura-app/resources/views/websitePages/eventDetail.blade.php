@@ -71,16 +71,15 @@
         </div>
     </div>
 
-    <!-- Start Footer Area  -->
     <footer class="eduvibe-footer-one edu-footer footer-style-default">
         <div class="footer-top">
             <div class="container eduvibe-animated-shape">
                 <div class="row g-5">
-                    <div class="col-lg-3 col-md-6 col-sm-12 col-12">
+                    <div class="col-lg-4 col-md-6 col-sm-12 col-12">
                         <div class="edu-footer-widget">
                             <div class="logo">
                                 <a href="index.html">
-                                    <img class="logo-light" src="../asset/images/logo/logo-white.png" alt="Site Logo">
+                                    <img class="logo-light" src="../asset/images/logo/logo2.png" alt="Site Logo">
                                 </a>
                             </div>
                             <p class="description">It is a long established fact that a reader will be distracted by the
@@ -88,15 +87,13 @@
                             <ul class="social-share">
                                 <li><a href="#"><i class="icon-Fb"></i></a></li>
                                 <li><a href="#"><i class="icon-linkedin"></i></a></li>
-                                <li><a href="#"><i class="icon-Pinterest"></i></a></li>
-                                <li><a href="#"><i class="icon-Twitter"></i></a></li>
                             </ul>
                         </div>
                     </div>
 
-                    <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-12">
                         <div class="edu-footer-widget explore-widget">
-                            <h5 class="widget-title">Explore</h5>
+                            <h5 class="widget-title">Navegue Mais</h5>
                             <div class="inner">
                                 <ul class="footer-link link-hover">
                                     <li><a href="about-us-1.html"><i class="icon-Double-arrow"></i>About Us</a></li>
@@ -112,39 +109,20 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-                        <div class="edu-footer-widget quick-link-widget">
-                            <h5 class="widget-title">Useful Links</h5>
-                            <div class="inner">
-                                <ul class="footer-link link-hover">
-                                    <li><a href="contact-us.html"><i class="icon-Double-arrow"></i>Contact Us</a></li>
-                                    <li><a href="pricing.html"><i class="icon-Double-arrow"></i>Pricing Plan</a></li>
-                                    <li><a href="instructor-profile.html"><i class="icon-Double-arrow"></i>Instructor
-                                            Profile</a></li>
-                                    <li><a href="faq.html"><i class="icon-Double-arrow"></i>FAQ</a></li>
-                                    <li><a href="course-style-3.html"><i class="icon-Double-arrow"></i>Popular Courses</a>
-                                    </li>
-                                    <li><a href="purchase-guide.html"><i class="icon-Double-arrow"></i>Terms &
-                                            Conditions</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-12">
                         <div class="edu-footer-widget">
-                            <h5 class="widget-title">Contact Info</h5>
+                            <h5 class="widget-title">Contacto</h5>
                             <div class="inner">
                                 <div class="widget-information">
                                     <ul class="information-list">
-                                        <li><i class="icon-map-pin-line"></i>275 Quadra Street Victoria Road, New York
+                                        <li><i class="icon-map-pin-line"></i>Cidade da Beira
                                         </li>
-                                        <li><i class="icon-phone-fill"></i><a href="tel:+1(237)382-2839">+ 1 (237)
-                                                382-2839</a></li>
-                                        <li><i class="icon-phone-fill"></i><a href="tel:+1(237)382-2840">+ 1 (237)
-                                                382-2840</a></li>
+                                        <li><i class="icon-phone-fill"></i><a href="tel:+1(237)382-2839">+ 258
+                                                867336817</a></li>
+                                        <li><i class="icon-phone-fill"></i><a href="tel:+1(237)382-2840">+ 258
+                                                833138308</a></li>
                                         <li><i class="icon-mail-line-2"></i><a target="_blank"
-                                                href="mailto:yourmailaddress@example.com">yourmailaddress@example.com</a>
+                                                href="mailto:yourmailaddress@example.com">email@example.com</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -168,8 +146,9 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="inner text-center">
-                            <p>Copyright 2023 <a href="#">EduVibe</a> Designed By <a
-                                    href="https://themeforest.net/user/devsvibe">DevsVibe</a>. All Rights Reserved</p>
+                            <p>Copyright 2024 <a href="#">Casa Da Cultura - Beira</a> Desenvolvido Por <a
+                                    href="https://themeforest.net/user/devsvibe">Picardo Olindo</a>. Todos Direitos
+                                Reservados</p>
                         </div>
                     </div>
                 </div>
