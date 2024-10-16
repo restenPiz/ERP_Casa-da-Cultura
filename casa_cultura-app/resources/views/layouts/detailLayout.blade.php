@@ -41,7 +41,7 @@
                 <div class="col-lg-6 d-none d-xl-block">
                     <nav class="mainmenu-nav d-none d-lg-block">
                         <ul class="mainmenu">
-                            <li><a href="#">Inicio</a>
+                            <li><a href="/main">Inicio</a>
                             </li>
                             <li><a href="#">Sobre Nos</a>
                             </li>
