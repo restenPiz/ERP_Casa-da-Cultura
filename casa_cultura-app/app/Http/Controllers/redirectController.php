@@ -31,7 +31,13 @@ class redirectController extends Controller
         $course = course::findOrFail($id);
         $chapters = DB::table('chapters')->where('id_course', $id)->get();
 
-        return view('websitePages.courseDetail', compact('course', 'chapters'));
+        $users = course::with([
+            'users' => function ($query) {
+                $query->where('user_type', 'Trainer');
+            }
+        ])->findOrFail($id);
+
+        return view('websitePages.courseDetail', compact('course', 'chapters', 'users'));
     }
     public function eventDetails($id)
     {
