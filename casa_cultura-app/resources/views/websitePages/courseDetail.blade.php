@@ -265,18 +265,15 @@
                                     <div class="widget-content">
                                         <ul>
                                             <li><span><i class="icon-user-2"></i> Estudantes
-                                                    Inscritos</span><span>89</span></li>
+                                                    Inscritos</span><span>{{$countStudent}}</span></li>
 
-                                            <li><span><i class="icon-draft-line"></i> Capitulos</span><span>23</span></li>
+                                            <li><span><i class="icon-draft-line"></i> Capitulos</span><span>{{$countChapter}}</span></li>
 
                                             <li><span><i class="icon-translate"></i> Linguagem</span><span>Portugues</span>
                                             </li>
 
                                             <li><span><i class="icon-award-line"></i> Certificado</span><span>Sim</span>
                                             </li>
-
-                                            <li><span><i class="icon-user-2-line_tie"></i> Instructor</span><span>Daniel
-                                                    Stiva</span></li>
                                         </ul>
 
                                         <div class="read-more-btn mt--45">

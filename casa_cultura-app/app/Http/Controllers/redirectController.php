@@ -37,7 +37,17 @@ class redirectController extends Controller
             }
         ])->findOrFail($id);
 
-        return view('websitePages.courseDetail', compact('course', 'chapters', 'users'));
+        //*Inicio das consultas de retorno de count
+        $countChapter = DB::table('chapters')->where('id_course', $id)
+            ->count('id');
+
+        $countStudent = course::with([
+            'users' => function ($query) {
+                $query->where('user_type', '!=', 'Trainer');
+            }
+        ])->count('id');
+
+        return view('websitePages.courseDetail', compact('course', 'chapters', 'users', 'countChapter', 'countStudent'));
     }
     public function eventDetails($id)
     {
