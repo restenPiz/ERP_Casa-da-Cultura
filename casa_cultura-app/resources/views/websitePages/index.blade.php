@@ -334,7 +334,7 @@
                                     <div class="single-card">
                                         <div class="client-info">
                                             <div class="thumbnail">
-                                                <img src="{{ asset('storage/' . $user->upload_file) }}"
+                                                <img style="width:7rem;" src="{{ asset('storage/' . $user->upload_file) }}"
                                                     alt="Client Images">
                                             </div>
                                             <div class="content">
