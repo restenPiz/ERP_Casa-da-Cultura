@@ -12,8 +12,16 @@ class redirectController extends Controller
     public function index()
     {
         $course = course::all();
+        $countCourse = DB::table('courses')
+            ->count('id');
 
-        return view('dashboard', compact('course'));
+        $countStudent = DB::table('users')->where('user_type', 'Users')
+            ->count('id');
+
+        $countTrainer = DB::table('users')->where('user_type', 'Trainer')
+            ->count('id');
+
+        return view('dashboard', compact('course', 'countStudent', 'countCourse', 'countTrainer'));
     }
     public function main()
     {

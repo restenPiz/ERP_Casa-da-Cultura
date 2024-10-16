@@ -8,27 +8,27 @@
                     <div class="icon-circle icon-circle-primary"><span class="fs-7 fas fa-user-graduate text-primary"></span>
                     </div>
                     <h4 class="mb-1 font-sans-serif"><span class="text-700 mx-2"
-                            data-countup='{"endValue":"4968"}'>0</span><span class="fw-normal text-600">Novos
+                            data-countup='{"endValue":"{{$countStudent}}"}'>0</span><span class="fw-normal text-600">Novos
                             Estudantes</span></h4>
-                    <p class="fs-10 fw-semi-bold mb-0">4203 <span class="text-600 fw-normal">Ultimo Mes</span></p>
+                    {{-- <p class="fs-10 fw-semi-bold mb-0">4203 <span class="text-600 fw-normal">Ultimo Mes</span></p> --}}
                 </div>
                 <div
                     class="col-xxl-4 col-md-6 px-3 text-center border-end-xxl border-bottom border-bottom-xxl-0 pb-3 pt-4 pt-md-0 pe-md-0 p-xxl-0">
                     <div class="icon-circle icon-circle-info"><span class="fs-7 fas fa-chalkboard-teacher text-info"></span>
                     </div>
                     <h4 class="mb-1 font-sans-serif"><span class="text-700 mx-2"
-                            data-countup='{"endValue":"324"}'>0</span><span class="fw-normal text-600">Novos
+                            data-countup='{"endValue":"{{$countTrainer}}"}'>0</span><span class="fw-normal text-600">Novos
                             Formadores</span></h4>
-                    <p class="fs-10 fw-semi-bold mb-0">301 <span class="text-600 fw-normal">Ultimo Mes</span></p>
+                    {{-- <p class="fs-10 fw-semi-bold mb-0">301 <span class="text-600 fw-normal">Ultimo Mes</span></p> --}}
                 </div>
                 <div
                     class="col-xxl-4 col-md-6 px-3 text-center border-end-md border-bottom border-bottom-md-0 pb-3 pt-4 p-xxl-0 pb-md-0 ps-md-0">
                     <div class="icon-circle icon-circle-success"><span class="fs-7 fas fa-book-open text-success"></span>
                     </div>
                     <h4 class="mb-1 font-sans-serif"><span class="text-700 mx-2"
-                            data-countup='{"endValue":"3712"}'>0</span><span class="fw-normal text-600">Novos Cursos</span>
+                            data-countup='{"endValue":"{{$countCourse}}"}'>0</span><span class="fw-normal text-600">Novos Cursos</span>
                     </h4>
-                    <p class="fs-10 fw-semi-bold mb-0">2779 <span class="text-600 fw-normal">Ultimo Mes</span></p>
+                    {{-- <p class="fs-10 fw-semi-bold mb-0">2779 <span class="text-600 fw-normal">Ultimo Mes</span></p> --}}
                 </div>
             </div>
         </div>
