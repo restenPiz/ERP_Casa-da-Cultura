@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\course;
 use App\Models\event;
+use DB;
 use Illuminate\Http\Request;
 
 class redirectController extends Controller
@@ -22,6 +23,7 @@ class redirectController extends Controller
     {
         $events = event::all();
         $courses = course::all();
-        return view('websitePages.index', compact('events', 'courses'));
+        $users = DB::table('users')->where('user_type', 'Trainer')->get();
+        return view('websitePages.index', compact('events', 'courses', 'users'));
     }
 }

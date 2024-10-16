@@ -329,30 +329,22 @@
                         <!-- Start Tastimonial Card  -->
                         <div class="testimonial-card-box variation-2">
                             <div class="eduvibe-testimonial-three inner testimonial-card-activation-1 slick-arrow-style-2">
-                                <div class="single-card">
-                                    <div class="client-info">
-                                        <div class="thumbnail">
-                                            <img src="asset/images/testimonial/testimonial-04/client-01.png"
-                                                alt="Client Images">
-                                        </div>
-                                        <div class="content">
-                                            <h6 class="title">David M. Bard</h6>
-                                            <span class="designation">Laravel Developer</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="single-card">
-                                    <div class="client-info">
-                                        <div class="thumbnail">
-                                            <img src="asset/images/testimonial/testimonial-04/client-03.png"
-                                                alt="Client Images">
-                                        </div>
-                                        <div class="content">
-                                            <h6 class="title">Lorraine D. Raines</h6>
-                                            <span class="designation">WordPress Expert</span>
+                                
+                                @foreach ($users as $user)
+                                    <div class="single-card">
+                                        <div class="client-info">
+                                            <div class="thumbnail">
+                                                <img src="asset/images/testimonial/testimonial-04/client-01.png"
+                                                    alt="Client Images">
+                                            </div>
+                                            <div class="content">
+                                                <h6 class="title">{{$user->name}} {{$user->Surname}}</h6>
+                                                <span class="designation">{{$user->function}}</span>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
+                                @endforeach
+                                
                             </div>
                         </div>
                         <!-- End Tastimonial Card  -->
