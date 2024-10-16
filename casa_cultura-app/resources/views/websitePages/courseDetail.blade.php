@@ -111,16 +111,18 @@
                                 <div class="course-tab-content">
                                     <div class="course-author-wrapper">
                                         @foreach ($users->users as $user)
-                                        <div class="thumbnail">
-                                            <img style="width: 20rem" src="{{ asset('storage/' . $user->upload_file) }}"
-                                                alt="Author Images">
-                                        </div>
-                                        
+                                            <div class="thumbnail">
+                                                <img style="width: 20rem"
+                                                    src="{{ asset('storage/' . $user->upload_file) }}"
+                                                    alt="Author Images">
+                                            </div>
+
                                             <div class="author-content">
                                                 <h6 class="title">
-                                                    <a href="instructor-profile.html">{{$user->name}} {{$user->Surname}}</a>
+                                                    <a href="instructor-profile.html">{{ $user->name }}
+                                                        {{ $user->Surname }}</a>
                                                 </h6>
-                                                <span class="subtitle">{{$user->function}}</span>
+                                                <span class="subtitle">{{ $user->function }}</span>
                                                 {{-- <p>Lorem Ipsum is simply dummy text of the printing and typesetting
                                                     industry. Lorem Ipsum has been the industry's standard dummy text ever
                                                     since the 1500s, when an unknown printer took a galley...</p> --}}
@@ -265,9 +267,10 @@
                                     <div class="widget-content">
                                         <ul>
                                             <li><span><i class="icon-user-2"></i> Estudantes
-                                                    Inscritos</span><span>{{$countStudent}}</span></li>
+                                                    Inscritos</span><span>{{ $countStudent }}</span></li>
 
-                                            <li><span><i class="icon-draft-line"></i> Capitulos</span><span>{{$countChapter}}</span></li>
+                                            <li><span><i class="icon-draft-line"></i>
+                                                    Capitulos</span><span>{{ $countChapter }}</span></li>
 
                                             <li><span><i class="icon-translate"></i> Linguagem</span><span>Portugues</span>
                                             </li>
@@ -282,12 +285,55 @@
                                         </div>
 
                                         <div class="read-more-btn mt--15">
-                                            <a class="edu-btn w-100 text-center" href="">Pagar Agora</a>
+                                            <a class="edu-btn w-100 text-center" data-bs-target="#staticBack"
+                                                href="#staticBack" data-bs-toggle="modal">Pagar Agora</a>
                                         </div>
 
-                                        {{--! Inicio do metodo de Pagamento--}}
-
-                                        {{--! Fim do metodo de Pagamento--}}
+                                        {{-- ! Inicio do metodo de Pagamento --}}
+                                        <div class="modal fade sm" id="staticBack" data-bs-backdrop="static"
+                                            data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+                                            aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered ">
+                                                <div class=" modal-content ">
+                                                    <div class="modal-header bg-danger text-white ">
+                                                        <h5 class="modal-title text-white text-center"
+                                                            id="staticBackdropLabel">Pagamento M-Pesa</h5>
+                                                        <button type="button" class="btn-close bg-white border-white"
+                                                            data-bs-dismiss="modal" aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <img src="mpesalogo.svg" width="100px"
+                                                            class="img-fluid rounded-top mx-auto d-block" alt="">
+                                                        <h6 class="text-center">Digite o seu número de Telefone M-Pesa</h6>
+                                                        <form action="{{ route('payment.store') }}" method="post">
+                                                            @csrf
+                                                            <div class="modal-body">
+                                                                <div class="input-group flex-nowrap">
+                                                                    <span class="input-group-text"
+                                                                        id="addon-wrapping">+258</span>
+                                                                    <input type="tel" minlength="9" maxlength="9"
+                                                                        name="numero" class="form-control"
+                                                                        placeholder="84xxxxxxxx" aria-label="Username"
+                                                                        aria-describedby="addon-wrapping" required>
+                                                                </div>
+                                                                <div class="input-group flex-nowrap">
+                                                                    {{-- <span class="input-group-text" id="addon-wrapping">+258</span> --}}
+                                                                    <input type="tel" name="valor"
+                                                                        class="form-control" placeholder=""
+                                                                        aria-label="Username"
+                                                                        aria-describedby="addon-wrapping" required>
+                                                                </div>
+                                                            </div>
+                                                            <div class="d-grid gap-2 container mb-4">
+                                                                <button class="btn btn-primary" type="Submit">PAGAR COM
+                                                                    M-PESA</button>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        {{-- ! Fim do metodo de Pagamento --}}
 
                                     </div>
                                 </div>
