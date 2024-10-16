@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Paymentsds\MPesa\Client;
 use Illuminate\Http\Response;
 use Illuminate\Support\Str;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class paymentController extends Controller
 {
@@ -30,11 +31,13 @@ class paymentController extends Controller
         ];
 
         $result = $client->receive($paymentData);
-        // return $client->receive($paymentData);
 
         if ($result->success) {
             // Handle success
             dd($result);
+        } else {
+            Alert::error('Falha!', 'Erro ao concretizar o pagamento');
+            return back();
         }
     }
 }
