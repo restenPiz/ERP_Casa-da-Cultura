@@ -26,4 +26,12 @@ class redirectController extends Controller
         $users = DB::table('users')->where('user_type', 'Trainer')->get();
         return view('websitePages.index', compact('events', 'courses', 'users'));
     }
+    public function courseDetails($id)
+    {
+
+    }
+    public function eventDetails($id)
+    {
+
+    }
 }
