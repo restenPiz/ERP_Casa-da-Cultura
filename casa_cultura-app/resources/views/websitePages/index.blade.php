@@ -386,8 +386,6 @@
         </div>
     </div>
 
-
-    <!-- Start Event Area  -->
     <div class="eduvibe-home-three-event edu-event-area bg-color-white edu-section-gap">
         <div class="container eduvibe-animated-shape">
             <div class="row">
