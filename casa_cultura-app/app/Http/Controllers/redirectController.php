@@ -28,10 +28,14 @@ class redirectController extends Controller
     }
     public function courseDetails($id)
     {
+        $course = course::findOrFail($id);
 
+        return view('websitePages.courseDetail', compact('course'));
     }
     public function eventDetails($id)
     {
+        $event = event::findOrFail($id);
 
+        return view('websitePages.eventDetail', compact('event'));
     }
 }
