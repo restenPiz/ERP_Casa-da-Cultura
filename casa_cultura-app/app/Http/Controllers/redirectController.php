@@ -37,15 +37,11 @@ class redirectController extends Controller
             }
         ])->findOrFail($id);
 
-        //*Inicio das consultas de retorno de count
+        //* Retornando o numero total de Capitulos e Estudantes vinculados ao curso
         $countChapter = DB::table('chapters')->where('id_course', $id)
             ->count('id');
 
-        $countStudent = course::with([
-            'users' => function ($query) {
-                $query->where('user_type', '!=', 'Trainer');
-            }
-        ])->count('id');
+        $countStudent = $course->users()->where('user_type', 'Users')->count();
 
         return view('websitePages.courseDetail', compact('course', 'chapters', 'users', 'countChapter', 'countStudent'));
     }
