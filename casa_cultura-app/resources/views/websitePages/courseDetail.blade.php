@@ -280,7 +280,7 @@
                                         </ul>
 
                                         <div class="read-more-btn mt--45">
-                                            <a class="edu-btn btn-bg-alt w-100 text-center" href="#">Price:
+                                            <a class="edu-btn btn-bg-alt w-100 text-center">Price:
                                                 {{ $course->Price }} MZN</a>
                                         </div>
 
