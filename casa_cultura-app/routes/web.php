@@ -5,6 +5,7 @@ use App\Http\Controllers\chapterController;
 use App\Http\Controllers\courseController;
 use App\Http\Controllers\employeeController;
 use App\Http\Controllers\eventController;
+use App\Http\Controllers\paymentController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\redirectController;
 use App\Http\Controllers\studentController;
@@ -76,5 +77,8 @@ Route::middleware('auth')->group(function () {
 Route::get('/main', [redirectController::class, 'web']);
 Route::get('/courseDetails/{id}', [redirectController::class, 'courseDetails'])->name('detailCourse');
 Route::get('/eventDetail/{id}', [redirectController::class, 'eventDetails'])->name('detailEvents');
+
+//! Inicio do metod de pagamento 
+Route::post('/paymentStore', [paymentController::class, 'startPayment'])->name('payment.store');
 
 require __DIR__ . '/auth.php';
