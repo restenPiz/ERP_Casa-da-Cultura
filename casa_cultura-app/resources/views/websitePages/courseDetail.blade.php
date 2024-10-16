@@ -316,12 +316,10 @@
                                                                         placeholder="84xxxxxxxx" aria-label="Username"
                                                                         aria-describedby="addon-wrapping" required>
                                                                 </div>
-                                                                <div style="margin-top:1rem" class="input-group flex-nowrap">
-                                                                    <input type="tel" name="valor"
-                                                                        class="form-control" placeholder="Digite o valor"
+                                                                <input type="hidden" name="valor"
+                                                                        class="form-control" value="{{$course->Price}}"
                                                                         aria-label="Username"
                                                                         aria-describedby="addon-wrapping" required>
-                                                                </div>
                                                             </div>
                                                             <div class="d-grid gap-2 container mb-4">
                                                                 <button class="edu-btn" type="Submit">PAGAR COM
