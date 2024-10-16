@@ -222,7 +222,9 @@
                                         </div>
                                     </div>
                                     <div class="content">
-                                        <h6 class="title"><a href="course-details.html">{{ $course->Course_name }}</a>
+                                        <h6 class="title"><a href="{{route('detailCourse',[
+                                            'id'=>$course->id
+                                        ])}}">{{ $course->Course_name }}</a>
                                         </h6>
                                         <ul class="edu-meta meta-01">
                                             {{-- <li><i class="icon-group-line"></i>190 Students</li> --}}
@@ -417,7 +419,9 @@
                                     <ul class="event-meta">
                                         <li><i class="icon-map-pin-line"></i>{{$event->Location}}</li>
                                     </ul>
-                                    <h5 class="title"><a href="event-details.html">{{$event->Name}}</a>
+                                    <h5 class="title"><a href="{{route('detailEvents',[
+                                        'id'=>$event->id
+                                    ])}}">{{$event->Name}}</a>
                                     </h5>
                                     <div class="read-more-btn">
                                         <a class="btn-transparent" href="course-details.html">Saber Mais<i
