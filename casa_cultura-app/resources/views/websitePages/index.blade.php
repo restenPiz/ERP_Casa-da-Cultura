@@ -14,7 +14,7 @@
                                     eu volutpat arcu, a tincidunt nulla quam, feugiat sit amet ipsum a, dapibus porta velit.
                                 </p>
                                 <a class="edu-btn" href="#" data-sal-delay="450" data-sal="slide-up"
-                                    data-sal-duration="800">Get Started Today <i
+                                    data-sal-duration="800">Saber Mais <i
                                         class="icon-arrow-right-line-right"></i></a>
                             </div>
                         </div>
@@ -73,8 +73,8 @@
                     <div class="inner mt_mobile--40">
                         <div class="section-title text-start" data-sal-delay="150" data-sal="slide-up"
                             data-sal-duration="800">
-                            <span class="pre-title">Who We Are</span>
-                            <h3 class="title">We Offer The Best Carrier</h3>
+                            <span class="pre-title">Quem Somos Nos</span>
+                            <h3 class="title">Nos Oferecemos As Melhores Opcoes Para Voce</h3>
                         </div>
                         <div class="feature-style-6 mt--40">
                             <div class="edu-feature-list color-variation-1" data-sal-delay="150" data-sal="slide-up"
@@ -83,7 +83,7 @@
                                     <img src="asset/images/icons/student.png" alt="Icons Images">
                                 </div>
                                 <div class="content">
-                                    <h6 class="title">Industry Expert Instructor</h6>
+                                    <h6 class="title">Formadores Profissionais</h6>
                                     <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                                         eiusmoded tempor incididunt dolore magna aliqua.</p>
                                 </div>
@@ -95,7 +95,7 @@
                                     <img src="asset/images/icons/book.png" alt="Icons Images">
                                 </div>
                                 <div class="content">
-                                    <h6 class="title">Up-to-Date Course Content</h6>
+                                    <h6 class="title">Cursos Mais Relevantes do Mercado</h6>
                                     <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                                         eiusmoded tempor incididunt dolore magna aliqua.</p>
                                 </div>
@@ -107,17 +107,17 @@
                                     <img src="asset/images/icons/reward.png" alt="Icons Images">
                                 </div>
                                 <div class="content">
-                                    <h6 class="title">Biggest Student Community</h6>
+                                    <h6 class="title">Grande Comunidade de Estudantes</h6>
                                     <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                                         eiusmoded tempor incididunt dolore magna aliqua.</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="read-more-btn mt--30" data-sal-delay="150" data-sal="slide-up"
+                        {{-- <div class="read-more-btn mt--30" data-sal-delay="150" data-sal="slide-up"
                             data-sal-duration="800">
                             <a class="edu-btn" href="about-us-1.html">Know About Us <i
                                     class="icon-arrow-right-line-right"></i></a>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
             </div>
@@ -137,7 +137,7 @@
             <div class="counterup-style-2 bg-color-primary radius-small ptb--80 ">
                 <div class="row g-5">
                     <!-- Start Single Counter  -->
-                    <div class="col-lg-3 col-md-6 col-sm-6 col-12 line-separator">
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-12 line-separator">
                         <div class="edu-counterup-2 text-center">
                             <div class="inner">
                                 <div class="icon">
@@ -155,25 +155,7 @@
                     <!-- End Single Counter  -->
 
                     <!-- Start Single Counter  -->
-                    <div class="col-lg-3 col-md-6 col-sm-6 col-12 line-separator">
-                        <div class="edu-counterup-2 text-center">
-                            <div class="inner">
-                                <div class="icon">
-                                    <i class="icon-trophy"></i>
-                                </div>
-                                <div class="content">
-                                    <h3 class="counter"><span class="odometer" data-count="1">00</span>
-                                        <span class="after-icon">+</span>
-                                    </h3>
-                                    <span class="subtitle">Awards Ganhos</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End Single Counter  -->
-
-                    <!-- Start Single Counter  -->
-                    <div class="col-lg-3 col-md-6 col-sm-6 col-12 line-separator">
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-12 line-separator">
                         <div class="edu-counterup-2 text-center">
                             <div class="inner">
                                 <div class="icon">
@@ -191,7 +173,7 @@
                     <!-- End Single Counter  -->
 
                     <!-- Start Single Counter  -->
-                    <div class="col-lg-3 col-md-6 col-sm-6 col-12 line-separator">
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-12 line-separator">
                         <div class="edu-counterup-2 text-center">
                             <div class="inner">
                                 <div class="icon">
@@ -298,16 +280,16 @@
                     <div class="workshop-inner">
                         <div class="section-title text-white" data-sal-delay="150" data-sal="slide-up"
                             data-sal-duration="800">
-                            <span class="pre-title">Free Workshop</span>
-                            <h3 class="title">Join Our Free Workshops</h3>
+                            <span class="pre-title">Aprenda da Melhor Forma</span>
+                            <h3 class="title">Junte-se a Nos Para Fazer Parte Do Nosso Ambiente</h3>
                         </div>
                         <p class="description" data-sal-delay="250" data-sal="slide-up" data-sal-duration="800">Lorem
                             ipsum dolor sit amet, consectetur adipiscing elit. Sit amet, consect adipi scing elit, sed do
                             eiusmod tempor incididunt ut sed do eiusmod tempor incididunt ut labore et dolore aliqua.</p>
-                        <div class="read-more-btn" data-sal-delay="350" data-sal="slide-up" data-sal-duration="800">
+                        {{-- <div class="read-more-btn" data-sal-delay="350" data-sal="slide-up" data-sal-duration="800">
                             <a class="edu-btn btn-white" href="event-list.html">More Upcomming Workshop<i
                                     class="icon-arrow-right-line-right"></i></a>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
                 <div class="col-lg-6 order-1 order-lg-2">
@@ -381,40 +363,13 @@
                     <div class="testimonial-four-right-content">
                         <div class="section-title text-start" data-sal-delay="150" data-sal="slide-up"
                             data-sal-duration="800">
-                            <span class="pre-title">Testimonials</span>
-                            <h3 class="title">Students Feedback</h3>
+                            <span class="pre-title">Formadores</span>
+                            <h3 class="title">Formadores Credenciados</h3>
                         </div>
                         <p class="description mt--25 mb--25" data-sal-delay="150" data-sal="slide-up"
                             data-sal-duration="800">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet,
                             venenatis
                             dictum et nec.</p>
-                        <h6 class="subtitle" data-sal-delay="150" data-sal="slide-up" data-sal-duration="800">People
-                            Love To Learn With Us</h6>
-
-                        <div class="row g-5">
-                            <!-- Start Single Feature  -->
-                            <div class="col-lg-6 col-md-6" data-sal-delay="150" data-sal="slide-up"
-                                data-sal-duration="800">
-                                <div class="feature-style-3">
-                                    <div class="feature-content">
-                                        <h6 class="feature-title">90%</h6>
-                                        <p class="feature-description">Students Complete Course Successfully </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- End Single Feature  -->
-
-                            <!-- Start Single Feature  -->
-                            <div class="col-lg-6 col-md-6" data-sal-delay="150" data-sal="slide-up"
-                                data-sal-duration="800">
-                                <div class="feature-style-3">
-                                    <div class="feature-content">
-                                        <h6 class="feature-title">9/10</h6>
-                                        <p class="feature-description">Users reported better learning outcomes.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- End Single Feature  -->
                         </div>
                     </div>
                 </div>
