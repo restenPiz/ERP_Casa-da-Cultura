@@ -29,8 +29,9 @@ class redirectController extends Controller
     public function courseDetails($id)
     {
         $course = course::findOrFail($id);
+        $chapters = DB::table('chapters')->where('id_course', $id)->get();
 
-        return view('websitePages.courseDetail', compact('course'));
+        return view('websitePages.courseDetail', compact('course', 'chapters'));
     }
     public function eventDetails($id)
     {
