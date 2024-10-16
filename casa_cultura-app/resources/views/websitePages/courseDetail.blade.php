@@ -302,7 +302,7 @@
                                                             data-bs-dismiss="modal" aria-label="Close"></button>
                                                     </div>
                                                     <div class="modal-body">
-                                                        <img src="mpesalogo.svg" width="100px"
+                                                        <img src="../mpesalogo.svg" width="100px"
                                                             class="img-fluid rounded-top mx-auto d-block" alt="">
                                                         <h6 class="text-center">Digite o seu número de Telefone M-Pesa</h6>
                                                         <form action="{{ route('payment.store') }}" method="post">
@@ -312,20 +312,19 @@
                                                                     <span class="input-group-text"
                                                                         id="addon-wrapping">+258</span>
                                                                     <input type="tel" minlength="9" maxlength="9"
-                                                                        name="numero" class="form-control"
+                                                                        name="numero" class="input-box"
                                                                         placeholder="84xxxxxxxx" aria-label="Username"
                                                                         aria-describedby="addon-wrapping" required>
                                                                 </div>
-                                                                <div class="input-group flex-nowrap">
-                                                                    {{-- <span class="input-group-text" id="addon-wrapping">+258</span> --}}
+                                                                <div style="margin-top:1rem" class="input-group flex-nowrap">
                                                                     <input type="tel" name="valor"
-                                                                        class="form-control" placeholder=""
+                                                                        class="form-control" placeholder="Digite o valor"
                                                                         aria-label="Username"
                                                                         aria-describedby="addon-wrapping" required>
                                                                 </div>
                                                             </div>
                                                             <div class="d-grid gap-2 container mb-4">
-                                                                <button class="btn btn-primary" type="Submit">PAGAR COM
+                                                                <button class="edu-btn" type="Submit">PAGAR COM
                                                                     M-PESA</button>
                                                             </div>
                                                         </form>
