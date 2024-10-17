@@ -4,8 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Models\course;
 use App\Models\User;
+use Auth;
 use DB;
 use Hash;
+use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\Request;
 use RealRashid\SweetAlert\Facades\Alert;
 use Storage;
@@ -73,7 +75,9 @@ class studentController extends Controller
         //*Metodo de adicao de roles no usuario
         $user->addRole('users');
 
-        // $user->courses()->attach($request->input('id_course'));
+        event(new Registered($user));
+
+        Auth::login($user);
 
         Alert::success('Bem Vindo!', 'O aluno foi adicionado com sucesso!');
 
