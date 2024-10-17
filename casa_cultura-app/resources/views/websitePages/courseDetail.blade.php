@@ -285,52 +285,56 @@
                                         </div>
 
                                         <div class="read-more-btn mt--15">
-                                            <a class="edu-btn w-100 text-center" data-bs-target="#staticBack"
-                                                href="#staticBack" data-bs-toggle="modal">Pagar Agora</a>
+                                            <a class="edu-btn w-100 text-center"
+                                                @auth
+                                                data-bs-target="#staticBack"href="#staticBack" data-bs-toggle="modal"
+                                                @else
+                                                href="{{ route('login') }}" @endauth>Pagar Agora</a>
                                         </div>
 
-                                        {{-- ! Inicio do metodo de Pagamento --}}
-                                        <div class="modal fade sm" id="staticBack" data-bs-backdrop="static"
-                                            data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
-                                            aria-hidden="true">
-                                            <div class="modal-dialog modal-dialog-centered ">
-                                                <div class=" modal-content ">
-                                                    <div class="modal-header bg-danger text-white ">
-                                                        <h5 class="modal-title text-white text-center"
-                                                            id="staticBackdropLabel">Pagamento M-Pesa</h5>
-                                                        <button type="button" class="btn-close bg-white border-white"
-                                                            data-bs-dismiss="modal" aria-label="Close"></button>
-                                                    </div>
-                                                    <div class="modal-body">
-                                                        <img src="../mpesalogo.svg" width="100px"
-                                                            class="img-fluid rounded-top mx-auto d-block" alt="">
-                                                        <h6 class="text-center">Digite o seu número de Telefone M-Pesa</h6>
-                                                        <form action="{{ route('payment.store') }}" method="post">
-                                                            @csrf
-                                                            <div class="modal-body">
-                                                                <div class="input-group flex-nowrap">
-                                                                    <span class="input-group-text"
-                                                                        id="addon-wrapping">+258</span>
-                                                                    <input type="tel" minlength="9" maxlength="9"
-                                                                        name="numero" class="input-box"
-                                                                        placeholder="84xxxxxxxx" aria-label="Username"
+                                        @auth
+                                            {{-- ! Inicio do metodo de Pagamento --}}
+                                            <div class="modal fade sm" id="staticBack" data-bs-backdrop="static"
+                                                data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+                                                aria-hidden="true">
+                                                <div class="modal-dialog modal-dialog-centered ">
+                                                    <div class=" modal-content ">
+                                                        <div class="modal-header bg-danger text-white ">
+                                                            <h5 class="modal-title text-white text-center"
+                                                                id="staticBackdropLabel">Pagamento M-Pesa</h5>
+                                                            <button type="button" class="btn-close bg-white border-white"
+                                                                data-bs-dismiss="modal" aria-label="Close"></button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <img src="../mpesalogo.svg" width="100px"
+                                                                class="img-fluid rounded-top mx-auto d-block" alt="">
+                                                            <h6 class="text-center">Digite o seu número de Telefone M-Pesa</h6>
+                                                            <form action="{{ route('payment.store') }}" method="post">
+                                                                @csrf
+                                                                <div class="modal-body">
+                                                                    <div class="input-group flex-nowrap">
+                                                                        <span class="input-group-text"
+                                                                            id="addon-wrapping">+258</span>
+                                                                        <input type="tel" minlength="9" maxlength="9"
+                                                                            name="numero" class="input-box"
+                                                                            placeholder="84xxxxxxxx" aria-label="Username"
+                                                                            aria-describedby="addon-wrapping" required>
+                                                                    </div>
+                                                                    <input type="hidden" name="valor" class="form-control"
+                                                                        value="{{ $course->Price }}" aria-label="Username"
                                                                         aria-describedby="addon-wrapping" required>
                                                                 </div>
-                                                                <input type="hidden" name="valor"
-                                                                        class="form-control" value="{{$course->Price}}"
-                                                                        aria-label="Username"
-                                                                        aria-describedby="addon-wrapping" required>
-                                                            </div>
-                                                            <div class="d-grid gap-2 container mb-4">
-                                                                <button class="edu-btn" type="Submit">PAGAR COM
-                                                                    M-PESA</button>
-                                                            </div>
-                                                        </form>
+                                                                <div class="d-grid gap-2 container mb-4">
+                                                                    <button class="edu-btn" type="Submit">PAGAR COM
+                                                                        M-PESA</button>
+                                                                </div>
+                                                            </form>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        {{-- ! Fim do metodo de Pagamento --}}
+                                            {{-- ! Fim do metodo de Pagamento --}}
+                                        @endauth
 
                                     </div>
                                 </div>
