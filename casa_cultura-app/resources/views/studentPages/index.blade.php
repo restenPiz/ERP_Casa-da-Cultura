@@ -100,6 +100,7 @@
                                     </select>
                                 </div>
                                 <input type="hidden" name="user_type" value="Users">
+                                <input type="hidden" name="status" value="Activo">
                                 <button type="submit" name="submit" class="btn btn-primary px-5 my-3"
                                     style="text-align: none" href="wizard.html">Inscrever Aluno</button>
                             </div>

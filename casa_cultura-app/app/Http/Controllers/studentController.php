@@ -31,6 +31,7 @@ class studentController extends Controller
         $user->bi = $request->input('bi');
         $user->contact = $request->input('contact');
         $user->upload_file = $request->input('upload_file');
+        $user->status = $request->input('status');
 
         if ($request->hasFile('upload_file')) {
             $user['upload_file'] = $request->file('upload_file')->store('uploads/files', 'public');

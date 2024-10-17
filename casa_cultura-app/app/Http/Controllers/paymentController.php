@@ -33,8 +33,13 @@ class paymentController extends Controller
         $result = $client->receive($paymentData);
 
         if ($result->success) {
-            // Handle success
-            dd($result);
+
+            $user = auth()->user();
+            $user->status = 'Activo';
+            $user->save();
+
+            Alert::success('Sucesso!', 'Pagamento realizado com sucesso. Status atualizado para Activo.');
+            return back();
         } else {
             Alert::error('Falha!', 'Erro ao concretizar o pagamento');
             return back();
