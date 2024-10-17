@@ -1,6 +1,8 @@
 @extends('layouts.layout')
 @section('content')
 
-   <h1>Formador</h1>
+   {{--* Inicio do conteudo do dash--}}
+
+    {{--* Fim do conteudo--}}
 
 @endsection
