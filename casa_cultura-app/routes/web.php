@@ -81,6 +81,6 @@ Route::get('/courseDetails/{id}', [redirectController::class, 'courseDetails'])-
 Route::get('/eventDetail/{id}', [redirectController::class, 'eventDetails'])->name('detailEvents');
 
 //* Inicio de adicao de Estudantes de forma manual
-Route::post('/studentStoreManual', [studentController::class, 'storeManual'])->name('student.manual');
+Route::post('/studentStoreManual', [studentController::class, 'manual'])->name('student.manual');
 
 require __DIR__ . '/auth.php';
