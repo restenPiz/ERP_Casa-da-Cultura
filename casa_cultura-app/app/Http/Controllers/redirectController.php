@@ -4,24 +4,46 @@ namespace App\Http\Controllers;
 
 use App\Models\course;
 use App\Models\event;
+use Auth;
 use DB;
 use Illuminate\Http\Request;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class redirectController extends Controller
 {
     public function index()
     {
-        $course = course::all();
-        $countCourse = DB::table('courses')
-            ->count('id');
+        if (Auth::user()->hasRole('admin')) {
 
-        $countStudent = DB::table('users')->where('user_type', 'Users')
-            ->count('id');
+            $course = course::all();
+            $countCourse = DB::table('courses')
+                ->count('id');
 
-        $countTrainer = DB::table('users')->where('user_type', 'Trainer')
-            ->count('id');
+            $countStudent = DB::table('users')->where('user_type', 'Users')
+                ->count('id');
 
-        return view('dashboard', compact('course', 'countStudent', 'countCourse', 'countTrainer'));
+            $countTrainer = DB::table('users')->where('user_type', 'Trainer')
+                ->count('id');
+
+            return view('dashboard', compact('course', 'countStudent', 'countCourse', 'countTrainer'));
+
+        } elseif (Auth::user()->hasRole('users')) {
+
+            $events = event::all();
+            $courses = course::all();
+            $users = DB::table('users')->where('user_type', 'Trainer')->get();
+            return view('websitePages.index', compact('events', 'courses', 'users'));
+
+        } elseif (Auth::user()->hasRole('trainer')) {
+            //*Inicio da rota mae para os formadores
+        } elseif (Auth::user()->hasRole('employee')) {
+            //*Inicio da rota mae para os funcionarios
+        } else {
+
+            Alert::error('Falha!', 'Tente logar-se novamento...');
+
+            return redirect()->route('login');
+        }
     }
     public function main()
     {
