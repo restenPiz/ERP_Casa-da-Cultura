@@ -57,12 +57,15 @@
                 <div class="col-lg-8 col-xl-3 col-md-6 col-6">
                     <div class="header-right d-flex justify-content-end">
                         <div class="header-menu-bar">
-                            <div class="quote-icon quote-user d-none d-md-block ml--15 ml_sm--5">
-                                <a class="edu-btn btn-medium left-icon header-button" href="login-register.html"><i class="ri-user-line"></i>Login / Registro</a>
-                            </div>
-                            <div class="quote-icon quote-user d-block d-md-none ml--15 ml_sm--5">
-                                <a class="white-box-icon" href="login-register.html"><i class="ri-user-line"></i></a>
-                            </div>
+                            @auth
+                                <div class="quote-icon quote-user ml--15 ml_sm--5">
+                                    <a class="white-box-icon" href=""><i class="ri-user-line"></i></a>
+                                </div>
+                            @else
+                                <div class="quote-icon quote-user d-none d-md-block ml--15 ml_sm--5">
+                                    <a class="edu-btn btn-medium left-icon header-button" href="{{route('login')}}"><i class="ri-user-line"></i>Login / Registro</a>
+                                </div>
+                            @endauth
                         </div>
 
                         <div class="mobile-menu-bar ml--15 ml_sm--5 d-block d-xl-none">
