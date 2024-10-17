@@ -52,14 +52,6 @@
                     </div>
                 </div>
                 <div class="card-body p-2 d-flex flex-center">
-                    {{-- <div class="d3-trending-keywords position-relative w-100"><svg
-                            class="d3-trending-keywords-svg h-100 w-100"></svg>
-                        <div class="d3-trending-keywords-tooltip pe-none position-fixed py-1 px-2 rounded">
-                            <div class="d-flex align-items-center fs-10"><span class="dot d3-tooltip-dot"></span><span
-                                    class="fw-semi-bold d3-tooltip-name pe-2"></span><span
-                                    class="fw-semi-bold d3-tooltip-value"></span></div>
-                        </div>
-                    </div> --}}
                 </div>
                 <div class="card-footer bg-body-tertiary py-2">
                     <div class="row justify-content-between">
