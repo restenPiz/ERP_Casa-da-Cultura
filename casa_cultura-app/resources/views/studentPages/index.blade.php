@@ -143,7 +143,7 @@
                                             Contacto
                                         </th>
                                         <th class="text-900 sort pe-1 align-middle white-space-nowrap" data-sort="joined">
-                                            Numero de BI
+                                            Status
                                         </th>
                                         <th class="align-middle no-sort"></th>
                                     </tr>
@@ -157,7 +157,15 @@
                                             <td class="phone align-middle white-space-nowrap py-2">{{ $trainer->contact }}
                                             </td>
                                             <td class="address align-middle white-space-nowrap ps-5 py-2">
-                                                {{ $trainer->bi }}
+                                                {{--! Inicio da condicao de verificacao de status de usuario--}}
+                                                @if ($trainer->status == 'Activo')
+                                                    <small class="badge rounded badge-subtle-success false">{{$trainer->status}}</small>
+                                                @endif
+
+                                                @if ($trainer->status == 'Pendente')
+                                                    <small class="badge rounded badge-subtle-danger false">{{$trainer->status}}</small>
+                                                @endif
+                                                {{--! Fim da Verificacao de Status do usuario--}}
                                             </td>
                                             <td class="align-middle white-space-nowrap py-2 text-end">
                                                 <div class="dropdown font-sans-serif position-static"><button

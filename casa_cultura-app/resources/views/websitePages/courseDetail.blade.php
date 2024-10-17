@@ -279,6 +279,9 @@
                                             </li>
                                         </ul>
 
+                                        @if(auth()->user()->status === 'Activo' && auth()->user()->courses->contains($course->id))
+                                        
+                                        @else
                                         <div class="read-more-btn mt--45">
                                             <a class="edu-btn btn-bg-alt w-100 text-center">Price:
                                                 {{ $course->Price }} MZN</a>
@@ -291,6 +294,7 @@
                                                 @else
                                                 href="{{ route('login') }}" @endauth>Pagar Agora</a>
                                         </div>
+                                        @endif
 
                                         @auth
                                             {{-- ! Inicio do metodo de Pagamento --}}

@@ -76,7 +76,6 @@ Route::middleware('auth')->group(function () {
 });
 
 //?Inicio das rotas da parte da website
-Route::get('/main', [redirectController::class, 'web'])->name('website');
 Route::get('/courseDetails/{id}', [redirectController::class, 'courseDetails'])->name('detailCourse');
 Route::get('/eventDetail/{id}', [redirectController::class, 'eventDetails'])->name('detailEvents');
 

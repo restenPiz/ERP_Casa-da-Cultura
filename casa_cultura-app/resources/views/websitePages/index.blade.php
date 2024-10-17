@@ -230,12 +230,15 @@
                                             {{-- <li><i class="icon-group-line"></i>190 Students</li> --}}
                                             <li><i class="icon-file-list-4-line"></i>Cidade da Beira</li>
                                         </ul>
+                                        @if(auth()->user()->status === 'Activo' && auth()->user()->courses->contains($course->id))
+                                        @else
                                         <div class="card-bottom">
                                             <div class="price-list price-style-01">
                                                 <div class="price current-price">{{$course->Price}} MZN</div>
                                                 <div class="price old-price">{{$course->Price + 1000}} MZN</div>
                                             </div>
                                         </div>
+                                        @endif
                                     </div>
                                 </div>
                             </div>
