@@ -41,7 +41,7 @@
                 <div class="col-lg-6 d-none d-xl-block">
                     <nav class="mainmenu-nav d-none d-lg-block">
                         <ul class="mainmenu">
-                            <li><a href="/main">Inicio</a>
+                            <li><a href="/dashboard">Inicio</a>
                             </li>
                             <li><a href="#">Sobre Nos</a>
                             </li>
@@ -58,8 +58,14 @@
                     <div class="header-right d-flex justify-content-end">
                         <div class="header-menu-bar">
                             @auth
-                                <div class="quote-icon quote-user ml--15 ml_sm--5">
-                                    <a class="white-box-icon" href=""><i class="ri-user-line"></i></a>
+                                <div class="quote-icon quote-user ml--15 ml_sm--5 dropdown">
+                                    <a class="white-box-icon dropdown-toggle" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <i class="ri-user-line"></i>
+                                    </a>
+
+                                    <ul class="dropdown-menu" aria-labelledby="userDropdown">
+                                        <li><a class="dropdown-item" href="{{route('logout')}}">Sair</a></li>
+                                    </ul>
                                 </div>
                             @else
                                 <div class="quote-icon quote-user d-none d-md-block ml--15 ml_sm--5">
@@ -94,7 +100,7 @@
                     </div>
                 </div>
                     <ul class="mainmenu">
-                        <li><a href="#">Inicio</a>
+                        <li><a href="/dashboard">Inicio</a>
                         </li>
                         <li><a href="#">Sobre Nos</a>
                         </li>
