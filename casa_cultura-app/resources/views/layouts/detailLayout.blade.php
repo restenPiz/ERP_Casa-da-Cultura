@@ -152,5 +152,10 @@
     <script src="../asset/js/vendor/tilt.jquery.min.js"></script>
     <!-- Main JS -->
     <script src="asset/js/main.js"></script>
+    
+    {{-- Inicio do link do sweetalert --}}
+    @include('sweetalert::alert')
+    {{-- Fim dos links do javascript --}}
+
 </body>
 </html>

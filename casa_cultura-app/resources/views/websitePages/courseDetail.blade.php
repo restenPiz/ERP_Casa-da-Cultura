@@ -324,6 +324,7 @@
                                                                         value="{{ $course->Price }}" aria-label="Username"
                                                                         aria-describedby="addon-wrapping" required>
                                                                 </div>
+                                                                <input type="hidden" name="id_course" value="{{$course->id}}"/>
                                                                 <div class="d-grid gap-2 container mb-4">
                                                                     <button class="edu-btn" type="Submit">PAGAR COM
                                                                         M-PESA</button>

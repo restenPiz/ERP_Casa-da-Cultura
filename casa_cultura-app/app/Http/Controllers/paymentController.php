@@ -38,7 +38,10 @@ class paymentController extends Controller
             $user->status = 'Activo';
             $user->save();
 
-            Alert::success('Sucesso!', 'Pagamento realizado com sucesso. Status atualizado para Activo.');
+            $user->courses()->attach($request->id_course);
+
+            Alert::success('Pagamento Concluído', 'O pagamento foi realizado com sucesso e você foi vinculado ao curso.');
+
             return back();
         } else {
             Alert::error('Falha!', 'Erro ao concretizar o pagamento');
