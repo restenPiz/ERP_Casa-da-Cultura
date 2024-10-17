@@ -52,7 +52,98 @@
                         src="../../../assets/img/icons/spot-illustrations/bg-shape.png" alt=""
                         width="250"><img class="bg-auth-circle-shape-2"
                         src="../../../assets/img/icons/spot-illustrations/shape-1.png" alt="" width="150">
-                    <div class="card overflow-hidden z-1">
+                        <div class="card theme-wizard mb-5">
+                            <div class="card-header bg-body-tertiary pt-3 pb-2">
+                                <ul class="nav justify-content-between nav-wizard">
+                                    <li class="nav-item"><a class="nav-link active fw-semi-bold" href="#bootstrap-wizard-tab1"
+                                            data-bs-toggle="tab" data-wizard-step="1"><span class="nav-item-circle-parent"><span
+                                                    class="nav-item-circle"><span class="fas fa-lock"></span></span></span><span
+                                                class="d-none d-md-block mt-1 fs-10">Acesso</span></a></li>
+                                    <li class="nav-item"><a class="nav-link fw-semi-bold" href="#bootstrap-wizard-tab2"
+                                            data-bs-toggle="tab" data-wizard-step="2"><span class="nav-item-circle-parent"><span
+                                                    class="nav-item-circle"><span class="fas fa-user"></span></span></span><span
+                                                class="d-none d-md-block mt-1 fs-10">Dados Pessoais</span></a></li>
+                                    <li class="nav-item"><a class="nav-link fw-semi-bold" href="#bootstrap-wizard-tab4"
+                                            data-bs-toggle="tab" data-wizard-step="4"><span class="nav-item-circle-parent"><span
+                                                    class="nav-item-circle"><span class="fas fa-thumbs-up"></span></span></span><span
+                                                class="d-none d-md-block mt-1 fs-10">Confirmacao</span></a></li>
+                                </ul>
+                            </div>
+                            <form action="{{ route('student.store') }}" method="post" enctype="multipart/form-data">
+                                @csrf
+                                <div class="card-body py-4">
+                                    <div class="tab-content">
+
+                                        {{-- !Inicio do formulario --}}
+
+                                        <div class="tab-pane active px-sm-3 px-md-2" role="tabpanel"
+                                            aria-labelledby="bootstrap-wizard-tab1" id="bootstrap-wizard-tab1">
+                                            <div class="mb-3"><label class="form-label"
+                                                    for="bootstrap-wizard-wizard-name">Nome</label><input class="form-control"
+                                                    type="text" name="name" placeholder="Picardo"
+                                                    id="bootstrap-wizard-wizard-name" /></div>
+                                            <div class="mb-3"><label class="form-label"
+                                                    for="bootstrap-wizard-wizard-name">Apelido</label><input class="form-control"
+                                                    type="text" name="Surname" placeholder="Olindo"
+                                                    id="bootstrap-wizard-wizard-name" /></div>
+                                            <div class="mb-3"><label class="form-label"
+                                                    for="bootstrap-wizard-wizard-email">Email*</label><input class="form-control"
+                                                    type="email" name="email" placeholder="picardo@gmail.com"
+                                                    pattern="^([a-zA-Z0-9_\.\-])+@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$"
+                                                    required="required" id="bootstrap-wizard-wizard-email"
+                                                    data-wizard-validate-email="true" />
+                                            </div>
+                                            <div class="mb-3"><label class="form-label"
+                                                    for="bootstrap-wizard-wizard-name">Senha</label><input class="form-control"
+                                                    type="password" name="password" id="bootstrap-wizard-wizard-name" /></div>
+                                            <div class="mb-3"><label class="form-label" for="bootstrap-wizard-wizard-name">Senha de
+                                                    Confirmacao</label><input class="form-control" type="password"
+                                                    name="password_confirmation" id="bootstrap-wizard-wizard-name" /></div>
+
+                                        </div>
+
+                                        {{-- ? Inicio da segunda seccao --}}
+
+                                        <div class="tab-pane px-sm-3 px-md-2" role="tabpanel" aria-labelledby="bootstrap-wizard-tab2"
+                                            id="bootstrap-wizard-tab2">
+                                            <div class="mb-3">
+                                                <input class="form-control" type="file" name="upload_file"
+                                                    accept=".jpg,.jpeg,.png,.gif,.docx,.pdf,.txt" />
+                                            </div>
+                                            <div class="mb-3"><label class="form-label"
+                                                    for="bootstrap-wizard-wizard-phone">Contacto</label><input class="form-control"
+                                                    type="text" name="contact" placeholder="855686307"
+                                                    id="bootstrap-wizard-wizard-phone" /></div>
+                                            <div class="mb-3"><label class="form-label"
+                                                    for="bootstrap-wizard-wizard-datepicker">Date
+                                                    of
+                                                    Birth</label><input class="form-control datetimepicker" type="date"
+                                                    placeholder="dd/mm/yy" name="Date_of_birth"
+                                                    data-options='{"dateFormat":"dd/mm/yy","disableMobile":true}'
+                                                    id="bootstrap-wizard-wizard-datepicker" /></div>
+                                            <div class="mb-3"><label class="form-label" for="bootstrap-wizard-wizard-phone">Numero
+                                                    de BI</label><input class="form-control" type="text" name="bi"
+                                                    placeholder="EX: 083902130290380213BM" id="bootstrap-wizard-wizard-phone" /></div>
+                                        </div>
+
+                                        {{-- ? Inicio da outra seccao --}}
+
+                                        <div class="tab-pane text-center px-sm-3 px-md-2" role="tabpanel"
+                                            aria-labelledby="bootstrap-wizard-tab4" id="bootstrap-wizard-tab4">
+                                            <input type="hidden" name="user_type" value="Users">
+                                            <input type="hidden" name="status" value="Activo">
+                                            <button type="submit" name="submit" class="btn btn-primary px-5 my-3"
+                                                style="text-align: none" href="wizard.html">Inscrever Aluno</button>
+                                        </div>
+
+                                        {{-- ! Fim das seccoes --}}
+
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    {{-- <div class="card overflow-hidden z-1">
                         <div class="card-body p-4 p-sm-5">
                             <div class="row g-0 h-100">
                                 <div class="col-md-12 d-flex flex-center">
@@ -98,7 +189,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
         </div>
