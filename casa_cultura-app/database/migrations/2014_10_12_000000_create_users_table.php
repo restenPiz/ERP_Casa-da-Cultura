@@ -22,6 +22,9 @@ return new class extends Migration {
             $table->string('user_type')->nullable();
             $table->string('upload_file')->nullable();
             $table->string('function')->nullable();
+
+            //*Inicio da coluna status
+            $table->string('status')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });
