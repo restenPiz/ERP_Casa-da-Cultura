@@ -71,14 +71,16 @@ Route::middleware('auth')->group(function () {
     Route::post('/chapterUpdate/{id}', [chapterController::class, 'update'])->name('chapter.update');
     Route::get('/chapterDelete/{id}', [chapterController::class, 'delete'])->name('chapter.delete');
 
+    //! Inicio do metod de pagamento 
+    Route::post('/paymentStore', [paymentController::class, 'startPayment'])->name('payment.store');
 });
 
 //?Inicio das rotas da parte da website
-Route::get('/main', [redirectController::class, 'web']);
+Route::get('/main', [redirectController::class, 'web'])->name('website');
 Route::get('/courseDetails/{id}', [redirectController::class, 'courseDetails'])->name('detailCourse');
 Route::get('/eventDetail/{id}', [redirectController::class, 'eventDetails'])->name('detailEvents');
 
-//! Inicio do metod de pagamento 
-Route::post('/paymentStore', [paymentController::class, 'startPayment'])->name('payment.store');
+//* Inicio de adicao de Estudantes de forma manual
+Route::post('/studentStoreManual', [studentController::class, 'storeManual'])->name('student.manual');
 
 require __DIR__ . '/auth.php';
