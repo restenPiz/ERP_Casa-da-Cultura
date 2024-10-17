@@ -26,7 +26,8 @@ class User extends Authenticatable
         'contact',
         'user_type',
         'upload_file',
-        'function'
+        'function',
+        'status'
     ];
 
     protected $hidden = [
