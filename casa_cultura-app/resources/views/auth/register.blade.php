@@ -131,7 +131,7 @@
                                         <div class="tab-pane text-center px-sm-3 px-md-2" role="tabpanel"
                                             aria-labelledby="bootstrap-wizard-tab4" id="bootstrap-wizard-tab4">
                                             <input type="hidden" name="user_type" value="Users">
-                                            <input type="hidden" name="status" value="Activo">
+                                            <input type="hidden" name="status" value="Pendente">
                                             <button type="submit" name="submit" class="btn btn-primary px-5 my-3"
                                                 style="text-align: none" href="wizard.html">Inscrever Aluno</button>
                                         </div>
