@@ -35,7 +35,9 @@ class redirectController extends Controller
             return view('websitePages.index', compact('events', 'courses', 'users'));
 
         } elseif (Auth::user()->hasRole('trainer')) {
-            //*Inicio da rota mae para os formadores
+
+            return view('trainerDashboard');
+
         } elseif (Auth::user()->hasRole('employee')) {
             //*Inicio da rota mae para os funcionarios
         } else {

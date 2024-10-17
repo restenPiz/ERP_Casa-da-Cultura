@@ -1,5 +1,6 @@
 @extends('layouts.layout')
 @section('content')
+
     <div class="card mb-3">
         <div class="card-body px-xxl-0 pt-4">
             <div class="row g-0">
@@ -155,5 +156,9 @@
             </div>
         </div>
     </div>
-    </div>
+
+    @if(Auth::user()->user_type == 'Trainer')
+        <h1>Formador</h1>
+    @endif
+
 @endsection

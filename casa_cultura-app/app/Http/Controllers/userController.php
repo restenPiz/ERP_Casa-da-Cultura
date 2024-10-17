@@ -54,7 +54,7 @@ class userController extends Controller
 
         $user->save();
 
-        $user->addRole('users');
+        $user->addRole($role);
 
         Alert::success('Adicionado!', $successMessage);
 
