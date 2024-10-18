@@ -67,7 +67,7 @@
     @endrole
 
     @role('trainer')
-<div class="row g-3">
+    <div class="row g-3">
         <div class="col-xxl-12 col-xl-9">
             <div class="card mb-3">
                 <div class="card-header position-relative">
@@ -110,12 +110,6 @@
                                         <a class="btn btn-sm btn-falcon-default me-2 hover-primary" href="{{route('course.edit',['id'=>$course->id])}}"
                                             data-bs-toggle="tooltip" data-bs-placement="top" title="Editar">
                                             <span class="fas fa-edit" data-fa-transform="down-2"></span>
-                                        </a>
-
-                                        <!-- Botão de Eliminar -->
-                                        <a class="btn btn-sm btn-falcon-default hover-danger" href="{{route('course.delete',['id'=>$course->id])}}"
-                                            data-bs-toggle="tooltip" data-bs-placement="top" title="Eliminar">
-                                            <span class="fas fa-trash-alt" data-fa-transform="down-2"></span>
                                         </a>
                                     </div>
 
