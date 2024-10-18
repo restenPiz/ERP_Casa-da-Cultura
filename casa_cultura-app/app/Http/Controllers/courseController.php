@@ -17,17 +17,13 @@ class courseController extends Controller
     {
         $user = Auth::user();
 
-        if (!$user->hasRole('Trainer')) {
-            return abort(403, 'Você não tem permissão para acessar essa área.');
-        }
-
         $courses = $user->courses()->get();
 
         if ($courses->isEmpty()) {
             return abort(404, 'Nenhum curso vinculado ao formador.');
         }
 
-        return view('trainerCourses', compact('courses'));
+        return view('coursePages.all', compact('courses'));
     }
     public function edit($id)
     {

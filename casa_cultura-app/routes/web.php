@@ -82,4 +82,7 @@ Route::get('/eventDetail/{id}', [redirectController::class, 'eventDetails'])->na
 //* Inicio de adicao de Estudantes de forma manual
 Route::post('/studentStoreManual', [studentController::class, 'manual'])->name('student.manual');
 
+//?Inicio das rotas do formador
+Route::get('/getCourse', [courseController::class, 'getTrainer'])->name('course.get');
+
 require __DIR__ . '/auth.php';
