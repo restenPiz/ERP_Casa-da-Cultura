@@ -132,9 +132,6 @@
                                                         {{ $user->Surname }}</a>
                                                 </h6>
                                                 <span class="subtitle">{{ $user->function }}</span>
-                                                {{-- <p>Lorem Ipsum is simply dummy text of the printing and typesetting
-                                                    industry. Lorem Ipsum has been the industry's standard dummy text ever
-                                                    since the 1500s, when an unknown printer took a galley...</p> --}}
                                                 <ul class="social-share border-style">
                                                     <li><a href="#"><i class="icon-Fb"></i></a></li>
                                                 </ul>
