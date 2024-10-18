@@ -12,6 +12,22 @@ use RealRashid\SweetAlert\Facades\Alert;
 
 class courseController extends Controller
 {
+    public function getCoursesForTrainer()
+    {
+        $user = Auth::user();
+
+        if (!$user->hasRole('Trainer')) {
+            return abort(403, 'Você não tem permissão para acessar essa área.');
+        }
+
+        $courses = $user->courses()->get();
+
+        if ($courses->isEmpty()) {
+            return abort(404, 'Nenhum curso vinculado ao formador.');
+        }
+
+        return view('trainerCourses', compact('courses'));
+    }
     public function edit($id)
     {
         $trainers = User::all();
