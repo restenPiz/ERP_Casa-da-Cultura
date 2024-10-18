@@ -30,9 +30,8 @@
                     </div>
                     <hr class="text-secondary text-opacity-50" />
                     <ul class="list-unstyled d-flex flex-wrap gap-3 fs-10 fw-semi-bold text-300 mt-3 mb-0">
-                        <li><span class="fas fa-graduation-cap text-white me-1"> </span>7,302 Numero de Estudantes Inscritos
+                        <li><span class="fas fa-graduation-cap text-white me-1"> </span>{{$countStudent}} Numero de Estudantes Inscritos
                         </li>
-                        <li><span class="fas fa-user-graduate text-white me-1"> </span>91% Completion</li>
                         <li><span class="fas fa-headphones text-white me-1"> </span>Portugues</li>
                     </ul>
                 </div>
