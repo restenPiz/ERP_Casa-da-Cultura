@@ -201,6 +201,66 @@
                                 </ul>
                                 @endrole
 
+                                @role('employee')
+
+                                <a class="nav-link {{ request()->routeIs('dashboard') ? 'active' : '' }}"
+                                    href="/dashboard" role="button">
+                                    <div class="d-flex align-items-center"><span class="nav-link-icon"><span
+                                                class="fas fa-chart-pie"></span></span><span
+                                            class="nav-link-text ps-1">Tela Inicial</span></div>
+                                </a>
+                                
+                                <a class="nav-link dropdown-indicator {{ request()->routeIs('trainer.all', 'trainer.index') ? 'active' : '' }}"
+                                    href="#customizatio" role="button" data-bs-toggle="collapse"
+                                    aria-expanded="{{ request()->routeIs('trainer.all', 'trainer.index') ? 'true' : 'false' }}"
+                                    aria-controls="customization">
+                                    <div class="d-flex align-items-center">
+                                        <span class="nav-link-icon">
+                                            <span class="fas fa-layer-group"></span>
+                                        </span>
+                                        <span class="nav-link-text ps-1">Gerir Formadores</span>
+                                    </div>
+                                </a>
+
+                                <ul class="nav collapse {{ request()->routeIs('trainer.all', 'trainer.index') ? 'show' : '' }}"
+                                    id="customizatio">
+                                    <li class="nav-item">
+                                        <a class="nav-link {{ request()->routeIs('trainer.index') ? 'active' : '' }}"
+                                            href="{{ route('trainer.index') }}">
+                                            <div class="d-flex align-items-center">
+                                                <span class="nav-link-text ps-1">Adicionar Formador</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link {{ request()->routeIs('trainer.all') ? 'active' : '' }}"
+                                            href="{{ route('trainer.all') }}">
+                                            <div class="d-flex align-items-center">
+                                                <span class="nav-link-text ps-1">Detalhes dos Formadores</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+
+                                <a class="nav-link {{ request()->routeIs('artist.index') ? 'active' : '' }}" href="{{ route('artist.index') }}" role="button">
+                                    <div class="d-flex align-items-center"><span class="nav-link-icon"><span
+                                                class="fas fa-thumbtack"></span></span><span
+                                            class="nav-link-text ps-1">Gerir Artistas</span></div>
+                                </a>
+                                {{-- Inicio do Sexto link --}}
+                                <a class="nav-link {{ request()->routeIs('event.index','event.detail') ? 'active' : '' }}" href="{{ route('event.index') }}" role="button">
+                                    <div class="d-flex align-items-center"><span class="nav-link-icon"><span
+                                                class="fas fa-calendar-day"></span></span><span
+                                            class="nav-link-text ps-1">Gerir Eventos</span></div>
+                                </a>
+                                {{-- Inicio do Setimo Link --}}
+                                <a class="nav-link {{ request()->routeIs('student.index') ? 'active' : '' }}" href="{{ route('student.index') }}" role="button">
+                                    <div class="d-flex align-items-center"><span class="nav-link-icon"><span
+                                                class="fas fa-user"></span></span><span
+                                            class="nav-link-text ps-1">Inscricao de Alunos</span></div>
+                                </a>
+                                @endrole
+
                             </li>
                         </ul>
 
