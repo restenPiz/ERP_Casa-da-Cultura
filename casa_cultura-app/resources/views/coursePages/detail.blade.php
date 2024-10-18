@@ -74,18 +74,6 @@
                                     data-fa-transform="shrink-8"></span><span
                                     style="text-align: justify">{{ $course->Goals }}</span></div>
                         </li>
-                        {{-- <li class="mb-2">
-                            <div class="d-flex"><span class="fas fa-circle me-2 mt-1"
-                                    data-fa-transform="shrink-8"></span><span>Learners with following skills might be more
-                                    benefited, but little extra work is all that’ll take to catch up to experts’
-                                    level</span></div>
-                            <ol class="bullet-inside mt-2">
-                                <li class="mb-2">Comfortable with Computer</li>
-                                <li class="mb-2">Access to Internet and Computer</li>
-                                <li class="mb-2">Background in Fine Arts or Any Creative Field</li>
-                                <li class="mb-2">Digital Drawing Experience</li>
-                            </ol>
-                        </li> --}}
                     </ul>
                 </div>
             </div>
@@ -357,37 +345,8 @@
                                 <button class="btn btn-primary btn-lg w-100 fs-9 mt-1" id="course-purchase-btn">Efectuar
                                     Pagamento</button>
                             </div>
-                            {{-- <div class="col-md-5 col-lg-12">
-                                <hr class="border-top border-dashed d-md-none d-lg-block" />
-                                <h6 class="fw-bold">Course Contents</h6>
-                                {{-- <ul class="list-unstyled fs-10 mb-0">
-                                    <li class="mb-1"><span class="fs-11 fas fa-check me-2"></span>Total 13 hours of
-                                        video lectures</li>
-                                    <li class="mb-1"><span class="fs-11 fas fa-check me-2"></span>12 premium article
-                                        access</li>
-                                    <li class="mb-1"><span class="fs-11 fas fa-check me-2"></span>11 downloadable
-                                        resources</li>
-                                    <li class="mb-1"><span class="fs-11 fas fa-check me-2"></span>Mobile, Tab or TV
-                                        friendly content</li>
-                                    <li class="mb-1"><span class="fs-11 fas fa-check me-2"></span>Certificate upon
-                                        completion</li>
-                                    <li class="mb-1"><span class="fs-11 fas fa-infinity me-2"></span>Lifetime permission
-                                        to access</li>
-                                </ul> --}}
                         </div>
                     </div>
-                    {{-- <hr class="border-top border-dashed" /> --}}
-                    {{-- <h6 class="fw-bold">Share with friends</h6>
-                        <div class="d-flex gap-2"><button
-                                class="btn btn-falcon-default icon-item fs-11 icon-item-lg"><span
-                                    class="fs-9 fab fa-facebook-f mr-1 text-primary"></span></button><button
-                                class="btn btn-falcon-default icon-item fs-11 icon-item-lg"><span
-                                    class="fs-9 fab fa-twitter mr-1 text-twitter"></span></button><button
-                                class="btn btn-falcon-default icon-item fs-11 icon-item-lg"><span
-                                    class="fs-9 fab fa-google-plus-g mr-1 text-google-plus"></span></button><button
-                                class="btn btn-falcon-default icon-item fs-11 icon-item-lg"><span
-                                    class="fs-9 fab fa-linkedin-in mr-1 text-info"></span></button></div>
-                    </div> --}}
                 </div>
                 <div class="d-none d-xl-block position-absolute z-n1 top-0 end-0 text-end me-n2 me-xxl-4 mt-xl-6"><img
                         class="bg-card" src="../../../assets/img/illustrations/bg-wave.png" alt=""
