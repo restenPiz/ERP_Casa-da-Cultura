@@ -34,7 +34,6 @@
                         </li>
                         <li><span class="fas fa-user-graduate text-white me-1"> </span>91% Completion</li>
                         <li><span class="fas fa-headphones text-white me-1"> </span>Portugues</li>
-                        {{-- <li><span class="fas fa-closed-captioning text-white me-1"> </span>English</li> --}}
                     </ul>
                 </div>
             </div>
@@ -179,16 +178,12 @@
                                         data-gallery="attachment-title">{{ $chapter->Title }}</a></h5>
                                 <p class="fs-10 mb-0">{{ $chapter->Description }}</p>
                             </div>
-                            {{-- <span class="fas fa-lock fs-10 text-secondary"></span> --}}
                             <div class="btn-group">
-                                <!-- Botão de Editar -->
                                 <a href="#staticBackdro{{ $chapter->id }}" data-bs-toggle="modal"
                                     data-bs-target="#staticBackdro{{ $chapter->id }}"
                                     class="btn btn-sm btn-primary me-1">
                                     <i class="fas fa-edit"></i>
                                 </a>
-
-                                <!-- Botão de Eliminar -->
                                 <a href="{{ route('chapter.delete', ['id' => $chapter->id]) }}" type="submit"
                                     class="btn btn-sm btn-danger">
                                     <i class="fas fa-trash"></i>
