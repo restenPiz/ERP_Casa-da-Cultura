@@ -90,14 +90,23 @@
                                                 aria-labelledby="headingOne" data-bs-parent="#accordionExample1">
                                                 <div class="edu-accordion-body">
                                                     <ul>
-                                                        @foreach ($chapters as $chapter)
-                                                            <li>
-                                                                <div class="text"><i class="icon-draft-line"></i>
-                                                                    {{ $chapter->Title }}</div>
-                                                                <div class="icon"><i
-                                                                        class="icon-lock-password-line"></i></div>
-                                                            </li>
-                                                        @endforeach
+                                                        @if(auth()->user()->status === 'Activo' && auth()->user()->courses->contains($course->id))
+                                                            @foreach ($chapters as $chapter)
+                                                                <li>
+                                                                    <div class="text"><i class="icon-draft-line"></i>
+                                                                        <a href="{{ asset('storage/' . $course->Upload_video) }}">{{ $chapter->Title }}</a></div>
+                                                                </li>
+                                                            @endforeach
+                                                        @else
+                                                            @foreach ($chapters as $chapter)
+                                                                <li>
+                                                                    <div class="text"><i class="icon-draft-line"></i>
+                                                                        {{ $chapter->Title }}</div>
+                                                                    <div class="icon"><i
+                                                                            class="icon-eye-password-line"></i></div>
+                                                                </li>
+                                                            @endforeach
+                                                        @endif
                                                     </ul>
                                                 </div>
                                             </div>
