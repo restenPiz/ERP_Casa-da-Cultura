@@ -40,7 +40,17 @@ class redirectController extends Controller
             return view('trainerDashboard');
 
         } elseif (Auth::user()->hasRole('employee')) {
-            //*Inicio da rota mae para os funcionarios
+            $countCourse = DB::table('courses')
+                ->count('id');
+
+            $countStudent = DB::table('users')->where('user_type', 'Users')
+                ->count('id');
+
+            $countTrainer = DB::table('users')->where('user_type', 'Trainer')
+                ->count('id');
+
+            return view('employeeDashboard', compact('countStudent', 'countCourse', 'countTrainer'));
+
         } else {
 
             Alert::error('Falha!', 'Tente logar-se novamento...');
