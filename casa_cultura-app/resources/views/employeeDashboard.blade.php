@@ -41,14 +41,14 @@
                     <h5 class="mb-2">{{Auth::user()->name}} {{Auth::user()->Surname}} (<a href="mailto:{{Auth::user()->email}}">{{Auth::user()->email}}</a>)</h5>
                 </div>
                 <div class="col-auto d-none d-sm-block">
-                    <h6 class="text-uppercase text-600">Formador<span class="fas fa-user ms-2"></span></h6>
+                    <h6 class="text-uppercase text-600">Funcionario<span class="fas fa-user ms-2"></span></h6>
                 </div>
             </div>
         </div>
         <div class="card-body border-top">
             <div class="d-flex"><span class="fas fa-user text-success me-2" data-fa-transform="down-5"></span>
                 <div class="flex-1">
-                    <p class="mb-0">Formador foi criado em</p>
+                    <p class="mb-0">Funcionario foi criado em</p>
                     <p class="fs-10 mb-0 text-600">{{ \Carbon\Carbon::parse(Auth::user()->created_at)->format('d-M-y') }}, {{ \Carbon\Carbon::parse(Auth::user()->created_at)->format('H:i') }}</p>
                 </div>
             </div>
