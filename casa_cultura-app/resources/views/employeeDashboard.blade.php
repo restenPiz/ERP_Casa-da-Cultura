@@ -29,7 +29,6 @@
                     <h4 class="mb-1 font-sans-serif"><span class="text-700 mx-2"
                             data-countup='{"endValue":"{{$countCourse}}"}'>0</span><span class="fw-normal text-600">Novos Cursos</span>
                     </h4>
-                    {{-- <p class="fs-10 fw-semi-bold mb-0">2779 <span class="text-600 fw-normal">Ultimo Mes</span></p> --}}
                 </div>
             </div>
         </div>
