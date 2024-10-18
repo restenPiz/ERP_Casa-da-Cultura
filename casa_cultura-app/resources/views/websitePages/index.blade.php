@@ -213,7 +213,9 @@
                             <div class="edu-card card-type-2 bg-white radius-small">
                                 <div class="inner">
                                     <div class="thumbnail">
-                                        <a href="course-details.html">
+                                        <a href="{{route('detailCourse',[
+                                            'id'=>$course->id
+                                        ])}}">
                                             <img class="w-100" src="{{ asset('storage/' . $course->Upload_file) }}"
                                                 alt="Course Meta">
                                         </a>
