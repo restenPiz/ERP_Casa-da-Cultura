@@ -103,7 +103,7 @@
                                                                     <div class="text"><i class="icon-draft-line"></i>
                                                                         {{ $chapter->Title }}</div>
                                                                     <div class="icon"><i
-                                                                            class="icon-eye-password-line"></i></div>
+                                                                            class="icon-lock-password-line"></i></div>
                                                                 </li>
                                                             @endforeach
                                                         @endif
