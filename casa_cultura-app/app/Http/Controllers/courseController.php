@@ -51,7 +51,13 @@ class courseController extends Controller
             }
         ])->findOrFail($id);
 
-        return view('coursePages.detail', compact('course', 'chapters', 'users'));
+        //?Inicio do metodo que faz o count de dados dos estudantes de cada curso
+        $cours = Course::findOrFail($id);
+
+        // Contar os usuários vinculados ao curso que tenham 'user_type' igual a 'Users'
+        $countStudent = $cours->users()->where('user_type', 'Users')->count();
+
+        return view('coursePages.detail', compact('course', 'chapters', 'users', 'countStudent'));
     }
     public function all()
     {
