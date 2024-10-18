@@ -179,7 +179,6 @@
                                 @endrole
                                 
                                 @role('trainer')
-{{-- Inicio do primeiro link --}}
                                 <a class="nav-link {{ request()->routeIs('dashboard') ? 'active' : '' }}"
                                     href="/dashboard" role="button">
                                     <div class="d-flex align-items-center"><span class="nav-link-icon"><span
@@ -193,9 +192,9 @@
                                                 class="fas fa-graduation-cap"></span></span><span
                                             class="nav-link-text ps-1">Gerir Cursos</span></div>
                                 </a>
-                                <ul class="nav collapse {{ request()->routeIs('course.all', 'course.index','course.detail') ? 'show' : '' }}" id="customization">
+                                <ul class="nav collapse {{ request()->routeIs('course.get', 'course.index','course.detail') ? 'show' : '' }}" id="customization">
                                     
-                                    <li class="nav-item"><a class="nav-link {{ request()->routeIs('course.all','course.detail') ? 'active' : '' }}" href="{{ route('course.all') }}">
+                                    <li class="nav-item"><a class="nav-link {{ request()->routeIs('course.get','course.detail') ? 'active' : '' }}" href="{{ route('course.get') }}">
                                             <div class="d-flex align-items-center"><span
                                                     class="nav-link-text ps-1">Detalhes de Curso</span></div>
                                         </a><!-- more inner pages--></li>
