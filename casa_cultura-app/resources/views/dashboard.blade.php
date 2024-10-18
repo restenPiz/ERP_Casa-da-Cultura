@@ -157,8 +157,4 @@
         </div>
     </div>
 
-    @if(Auth::user()->user_type == 'Trainer')
-        <h1>Formador</h1>
-    @endif
-
 @endsection

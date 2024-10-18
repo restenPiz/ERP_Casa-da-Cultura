@@ -84,7 +84,8 @@
                                         <hr class="mb-0 navbar-vertical-divider" />
                                     </div>
                                 </div>
-                                {{-- Inicio do primeiro link --}}
+                                
+                                @role('admin')
                                 <a class="nav-link {{ request()->routeIs('dashboard') ? 'active' : '' }}"
                                     href="/dashboard" role="button">
                                     <div class="d-flex align-items-center"><span class="nav-link-icon"><span
@@ -175,6 +176,32 @@
                                                 class="fas fa-user"></span></span><span
                                             class="nav-link-text ps-1">Inscricao de Alunos</span></div>
                                 </a>
+                                @endrole
+                                
+                                @role('trainer')
+{{-- Inicio do primeiro link --}}
+                                <a class="nav-link {{ request()->routeIs('dashboard') ? 'active' : '' }}"
+                                    href="/dashboard" role="button">
+                                    <div class="d-flex align-items-center"><span class="nav-link-icon"><span
+                                                class="fas fa-chart-pie"></span></span><span
+                                            class="nav-link-text ps-1">Tela Inicial</span></div>
+                                </a>
+                                {{-- Inicio do terceiro link --}}
+                                <a class="nav-link dropdown-indicator {{ request()->routeIs('course.index', 'course.all','course.detail') ? 'active' : '' }}" href="#customization" role="button"
+                                    data-bs-toggle="collapse" aria-expanded="false" aria-controls="customization">
+                                    <div class="d-flex align-items-center"><span class="nav-link-icon"><span
+                                                class="fas fa-graduation-cap"></span></span><span
+                                            class="nav-link-text ps-1">Gerir Cursos</span></div>
+                                </a>
+                                <ul class="nav collapse {{ request()->routeIs('course.all', 'course.index','course.detail') ? 'show' : '' }}" id="customization">
+                                    
+                                    <li class="nav-item"><a class="nav-link {{ request()->routeIs('course.all','course.detail') ? 'active' : '' }}" href="{{ route('course.all') }}">
+                                            <div class="d-flex align-items-center"><span
+                                                    class="nav-link-text ps-1">Detalhes de Curso</span></div>
+                                        </a><!-- more inner pages--></li>
+                                </ul>
+                                @endrole
+
                             </li>
                         </ul>
 
