@@ -337,8 +337,8 @@
                         <div class="row">
                             <div class="col-md-7 col-lg-12 order-md-1 order-lg-0">
                                 <h2 class="fw-medium d-flex align-items-center">{{ $course->Price }} MZN</h2>
-                                <button class="btn btn-primary btn-lg w-100 fs-9 mt-1" id="course-purchase-btn">Efectuar
-                                    Pagamento</button>
+                                {{-- <button class="btn btn-primary btn-lg w-100 fs-9 mt-1" id="course-purchase-btn">Efectuar
+                                    Pagamento</button> --}}
                             </div>
                         </div>
                     </div>
