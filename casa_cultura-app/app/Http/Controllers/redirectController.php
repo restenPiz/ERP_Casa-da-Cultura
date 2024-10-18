@@ -37,25 +37,7 @@ class redirectController extends Controller
 
         } elseif (Auth::user()->hasRole('trainer')) {
 
-            $user = Auth::user();
-
-            // Obter os cursos vinculados ao usuário
-            $courses = $user->courses;
-
-            // Verificar se o usuário tem cursos
-            if ($courses->isEmpty()) {
-                return abort(404, 'Usuário não tem cursos vinculados');
-            }
-
-            // Obter os capítulos do primeiro curso, por exemplo
-            $course = $courses->first(); // Aqui você pode ajustar para selecionar o curso que precisa
-            $chapters = Chapter::where('id_course', $course->id)->get();
-
-            // Obter todos os usuários inscritos no curso, excluindo o Trainer
-            $users = $course->users()->where('user_type', '!=', 'Trainer')->get();
-
-            // Retornar para a view com os dados necessários
-            return view('trainerDashboard', compact('course', 'chapters', 'users'));
+            return view('trainerDashboard');
 
         } elseif (Auth::user()->hasRole('employee')) {
             //*Inicio da rota mae para os funcionarios
