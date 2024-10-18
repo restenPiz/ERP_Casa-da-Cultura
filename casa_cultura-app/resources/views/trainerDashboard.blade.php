@@ -47,10 +47,10 @@
                     </div>
                     <div class="row">
                         <div class="col-5 col-sm-4">
-                            <p class="fw-semi-bold mb-1">Descricao</p>
+                            <p class="fw-semi-bold mb-1">Nivel de Acesso</p>
                         </div>
                         <div class="col">
-                            <p class="fst-italic text-400 mb-1">Sem Descricao</p>
+                            <p class="fst-italic text-400 mb-1">{{Auth::user()->user_type}}</p>
                         </div>
                     </div>
                     <div class="row">
