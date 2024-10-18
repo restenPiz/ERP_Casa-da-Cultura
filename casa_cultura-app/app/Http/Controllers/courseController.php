@@ -6,13 +6,14 @@ use App\Models\Chapter;
 use App\Models\course;
 use App\Models\Course_user;
 use App\Models\User;
+use Auth;
 use DB;
 use Illuminate\Http\Request;
 use RealRashid\SweetAlert\Facades\Alert;
 
 class courseController extends Controller
 {
-    public function getCoursesForTrainer()
+    public function getTrainer()
     {
         $user = Auth::user();
 
