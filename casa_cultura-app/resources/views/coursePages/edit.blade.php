@@ -91,8 +91,17 @@
                         </div>
                         <div class="card-footer py-2" id="course-publish-btn">
                             <div class="row flex-between-center g-0">
+                                
+                                @role('admin')
                                 <div class="col-auto"><a class="btn btn-link btn-sm text-secondary fw-medium px-0"
                                         href="{{route('course.all')}}">Voltar</a></div>
+                                @endrole
+
+                                @role('trainer')
+                                <div class="col-auto"><a class="btn btn-link btn-sm text-secondary fw-medium px-0"
+                                        href="{{route('course.get')}}">Voltar</a></div>
+                                @endrole
+
                                 <div class="col-auto"><button style="border-radius: 0"
                                         class="btn btn-primary btn-md px-xxl-5 px-4 fw-medium" name="submit" type="submit">Actualizar 
                                         Curso</button></div>
