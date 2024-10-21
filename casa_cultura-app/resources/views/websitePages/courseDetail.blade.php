@@ -90,8 +90,8 @@
                                                 aria-labelledby="headingOne" data-bs-parent="#accordionExample1">
                                                 <div class="edu-accordion-body">
                                                     <ul>
-                                                        @role('users')
-                                                        @if(Auth::user()->status === 'Activo' && Auth::user()->courses->contains($course->id))
+                                                        @auth
+                                                        @if(auth()->user()->status === 'Activo' && auth()->user()->courses->contains($course->id))
                                                             @foreach ($chapters as $chapter)
                                                                 <li>
                                                                     <div class="text"><i class="icon-draft-line"></i>
@@ -108,7 +108,7 @@
                                                                 </li>
                                                             @endforeach
                                                         @endif
-                                                        @endrole
+                                                        @endauth
 
                                                         @foreach ($chapters as $chapter)
                                                                 <li>
@@ -297,8 +297,8 @@
                                             </li>
                                         </ul>
 
-                                        @role('users')
-                                        @if(Auth::user()->status === 'Activo' && Auth::user()->courses->contains($course->id))
+                                        @auth
+                                        @if(auth()->user()->status === 'Activo' && auth()->user()->courses->contains($course->id))
                                         
                                         @else
                                         <div class="read-more-btn mt--45">
@@ -314,7 +314,7 @@
                                                 href="{{ route('login') }}" @endauth>Pagar Agora</a>
                                         </div>
                                         @endif
-                                        @endrole
+                                        @endauth
                                         <div class="read-more-btn mt--45">
                                             <a class="edu-btn btn-bg-alt w-100 text-center">Price:
                                                 {{ $course->Price }} MZN</a>
