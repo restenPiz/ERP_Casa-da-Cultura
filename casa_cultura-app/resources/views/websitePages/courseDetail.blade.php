@@ -108,8 +108,7 @@
                                                                 </li>
                                                             @endforeach
                                                         @endif
-                                                        @endauth
-
+                                                        @else
                                                         @foreach ($chapters as $chapter)
                                                                 <li>
                                                                     <div class="text"><i class="icon-draft-line"></i>
@@ -118,6 +117,9 @@
                                                                             class="icon-lock-password-line"></i></div>
                                                                 </li>
                                                             @endforeach
+                                                        @endauth
+
+                                                        
                                                         
                                                     </ul>
                                                 </div>
@@ -314,7 +316,8 @@
                                                 href="{{ route('login') }}" @endauth>Pagar Agora</a>
                                         </div>
                                         @endif
-                                        @endauth
+
+                                        @else
                                         <div class="read-more-btn mt--45">
                                             <a class="edu-btn btn-bg-alt w-100 text-center">Price:
                                                 {{ $course->Price }} MZN</a>
@@ -327,6 +330,8 @@
                                                 @else
                                                 href="{{ route('login') }}" @endauth>Pagar Agora</a>
                                         </div>
+                                        @endauth
+                                        
                                         @auth
                                             {{-- ! Inicio do metodo de Pagamento --}}
                                             <div class="modal fade sm" id="staticBack" data-bs-backdrop="static"
