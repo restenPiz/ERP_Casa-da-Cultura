@@ -81,7 +81,7 @@ class studentController extends Controller
 
         Alert::success('Bem Vindo!', 'O aluno foi adicionado com sucesso!');
 
-        return redirect()->route('website');
+        return redirect()->route('dashboard');
     }
     public function update(Request $request, $id)
     {

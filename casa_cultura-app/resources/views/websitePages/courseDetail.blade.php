@@ -90,7 +90,8 @@
                                                 aria-labelledby="headingOne" data-bs-parent="#accordionExample1">
                                                 <div class="edu-accordion-body">
                                                     <ul>
-                                                        @if(auth()->user()->status === 'Activo' && auth()->user()->courses->contains($course->id))
+                                                        @role('users')
+                                                        @if(Auth::user()->status === 'Activo' && Auth::user()->courses->contains($course->id))
                                                             @foreach ($chapters as $chapter)
                                                                 <li>
                                                                     <div class="text"><i class="icon-draft-line"></i>
@@ -107,6 +108,17 @@
                                                                 </li>
                                                             @endforeach
                                                         @endif
+                                                        @endrole
+
+                                                        @foreach ($chapters as $chapter)
+                                                                <li>
+                                                                    <div class="text"><i class="icon-draft-line"></i>
+                                                                        {{ $chapter->Title }}</div>
+                                                                    <div class="icon"><i
+                                                                            class="icon-lock-password-line"></i></div>
+                                                                </li>
+                                                            @endforeach
+                                                        
                                                     </ul>
                                                 </div>
                                             </div>
@@ -285,7 +297,8 @@
                                             </li>
                                         </ul>
 
-                                        @if(auth()->user()->status === 'Activo' && auth()->user()->courses->contains($course->id))
+                                        @role('users')
+                                        @if(Auth::user()->status === 'Activo' && Auth::user()->courses->contains($course->id))
                                         
                                         @else
                                         <div class="read-more-btn mt--45">
@@ -301,7 +314,19 @@
                                                 href="{{ route('login') }}" @endauth>Pagar Agora</a>
                                         </div>
                                         @endif
+                                        @endrole
+                                        <div class="read-more-btn mt--45">
+                                            <a class="edu-btn btn-bg-alt w-100 text-center">Price:
+                                                {{ $course->Price }} MZN</a>
+                                        </div>
 
+                                        <div class="read-more-btn mt--15">
+                                            <a class="edu-btn w-100 text-center"
+                                                @auth
+                                                data-bs-target="#staticBack"href="#staticBack" data-bs-toggle="modal"
+                                                @else
+                                                href="{{ route('login') }}" @endauth>Pagar Agora</a>
+                                        </div>
                                         @auth
                                             {{-- ! Inicio do metodo de Pagamento --}}
                                             <div class="modal fade sm" id="staticBack" data-bs-backdrop="static"

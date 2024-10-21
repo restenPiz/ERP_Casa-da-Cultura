@@ -213,9 +213,7 @@
                             <div class="edu-card card-type-2 bg-white radius-small">
                                 <div class="inner">
                                     <div class="thumbnail">
-                                        <a href="{{route('detailCourse',[
-                                            'id'=>$course->id
-                                        ])}}">
+                                        <a href="course-details.html">
                                             <img class="w-100" src="{{ asset('storage/' . $course->Upload_file) }}"
                                                 alt="Course Meta">
                                         </a>
@@ -232,7 +230,8 @@
                                             {{-- <li><i class="icon-group-line"></i>190 Students</li> --}}
                                             <li><i class="icon-file-list-4-line"></i>Cidade da Beira</li>
                                         </ul>
-                                        @if(auth()->user()->status === 'Activo' && auth()->user()->courses->contains($course->id))
+                                        @role('users')
+                                        @if(Auth::user()->status === 'Activo' && auth()->user()->courses->contains($course->id))
                                         @else
                                         <div class="card-bottom">
                                             <div class="price-list price-style-01">
@@ -241,6 +240,14 @@
                                             </div>
                                         </div>
                                         @endif
+                                        @endrole
+
+                                        <div class="card-bottom">
+                                            <div class="price-list price-style-01">
+                                                <div class="price current-price">{{$course->Price}} MZN</div>
+                                                <div class="price old-price">{{$course->Price + 1000}} MZN</div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

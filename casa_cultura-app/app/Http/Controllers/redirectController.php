@@ -12,6 +12,15 @@ use RealRashid\SweetAlert\Facades\Alert;
 
 class redirectController extends Controller
 {
+
+    public function webMain()
+    {
+        $events = event::all();
+        $courses = course::all();
+        $user = Auth::user();
+        $users = DB::table('users')->where('user_type', 'Trainer')->get();
+        return view('websitePages.index', compact('events', 'courses', 'users', 'user'));
+    }
     public function index()
     {
         if (Auth::user()->hasRole('admin')) {
