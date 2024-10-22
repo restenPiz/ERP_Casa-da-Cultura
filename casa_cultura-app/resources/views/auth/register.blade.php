@@ -131,8 +131,6 @@
                                             <button type="submit" name="submit" class="btn btn-primary px-5 my-3"
                                                 style="text-align: none" href="wizard.html">Inscrever Aluno</button>
                                         </div>
-
-
                                     </div>
                                 </div>
                             </form>
