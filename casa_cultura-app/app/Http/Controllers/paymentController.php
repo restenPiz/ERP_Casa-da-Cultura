@@ -33,7 +33,7 @@ class paymentController extends Controller
         $result = $client->receive($paymentData);
 
         if ($result->success) {
-
+            
             $user = auth()->user();
             $user->status = 'Activo';
             $user->save();
