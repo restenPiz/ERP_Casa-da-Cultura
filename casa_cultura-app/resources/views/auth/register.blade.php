@@ -52,6 +52,8 @@
                         src="../../../assets/img/icons/spot-illustrations/bg-shape.png" alt=""
                         width="250"><img class="bg-auth-circle-shape-2"
                         src="../../../assets/img/icons/spot-illustrations/shape-1.png" alt="" width="150">
+
+                        {{--?Inicio do metodo responsavel pelo formulario do usuario--}}
                         <div class="card theme-wizard mb-5">
                             <div class="card-header bg-body-tertiary pt-3 pb-2">
                                 <ul class="nav justify-content-between nav-wizard">
@@ -139,7 +141,7 @@
 
 
 
-
+                    {{--*Inicio do formulario de --}}
                     {{-- <div class="card overflow-hidden z-1">
                         <div class="card-body p-4 p-sm-5">
                             <div class="row g-0 h-100">
