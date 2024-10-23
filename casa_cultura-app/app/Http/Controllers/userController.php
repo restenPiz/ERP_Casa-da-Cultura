@@ -25,8 +25,8 @@ class userController extends Controller
             'function' => ['required', 'string', 'max:255'],
             // 'upload_file' => ['required', 'file', 'mimes:jpeg,png,pdf', 'max:2048'],
             'user_type' => ['required', 'string', 'max:255'],
-            'status' => ['required', 'string', 'max:255'],
-            'contact' => ['required', 'string', 'min:9']
+            // 'status' => ['required', 'string', 'max:255'],
+            // 'contact' => ['required', 'string', 'min:9']
         ]);
 
         $user = new User();
@@ -75,6 +75,21 @@ class userController extends Controller
     }
     public function update(Request $request, $id)
     {
+        $validatedData = $request->validate([
+            'name' => ['required', 'string', 'max:255'],
+            'Surname' => ['required', 'string', 'max:255'],
+            'email' => ['required', 'string', 'email', 'unique:users'],
+            'password' => ['required', 'string', 'min:8', 'confirmed'],
+            'bi' => ['required', 'string', 'min:13'],
+            'Date_of_birth' => ['required', 'date'],
+            'place' => ['required', 'string', 'max:255'],
+            'function' => ['required', 'string', 'max:255'],
+            // 'upload_file' => ['required', 'file', 'mimes:jpeg,png,pdf', 'max:2048'],
+            'user_type' => ['required', 'string', 'max:255'],
+            // 'status' => ['required', 'string', 'max:255'],
+            // 'contact' => ['required', 'string', 'min:9']
+        ]);
+
         $user = User::findOrFail($id);
 
         switch ($request->input('user_type')) {
