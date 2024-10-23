@@ -15,6 +15,23 @@ class userController extends Controller
 {
     public function storeUser(Request $request)
     {
+        //* Inicio do metodo de validacao
+        $validatedData = $request->validate([
+            'name' => 'required|string|max:255',
+            'Surname' => 'required|string|max:255',
+            'email' => 'required|string|email|unique:users',
+            'password' => 'required|numeric|min:1',
+            'password_confirmation' => 'required|numeric|min:1',
+            'bi' => 'required|date|after_or_equal:today',
+            'Date_of_birth' => 'required|date|after:Entry_date',
+            'Place' => 'required|',
+            'function' => 'required|',
+            'upload_file' => 'required|',
+            'user_type' => 'required|max:255',
+            'status' => 'required|max:255',
+            'contact' => 'required|min:9'
+        ]);
+
         $user = new User();
 
         switch ($request->input('user_type')) {
