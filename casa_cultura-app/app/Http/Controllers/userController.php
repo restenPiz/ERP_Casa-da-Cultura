@@ -21,14 +21,14 @@ class userController extends Controller
             'Surname' => 'required|string|max:255',
             'email' => 'required|string|email|unique:users',
             'password' => 'required|string|min:8',
-            'password_confirmation' => 'required|string|min:8',
+            'password_confirmation' => 'required|string|min:8|same:password',
             'bi' => 'required|string|min:13',
             'Date_of_birth' => 'required|date',
-            'Place' => 'required|string|max:255',
+            'place' => 'required|string|max:255',
             'function' => 'required|string|max:255',
             'upload_file' => 'required|string|max:500',
-            'user_type' => 'required|max:255',
-            'status' => 'required|max:255',
+            'user_type' => 'required|string|max:255',
+            'status' => 'required|string|max:255',
             'contact' => 'required|integer|min:9'
         ]);
 
