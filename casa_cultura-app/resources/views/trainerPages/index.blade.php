@@ -1,7 +1,7 @@
 @extends('layouts.layout')
 @section('content')
     {{-- Inicio do conteudo do meu app --}}
-    <form action="{{route('storeUser')}}" method="post" enctype="multipart/form-data">
+    <form action="{{ route('storeUser') }}" action="needs-validation" novalidate method="post" enctype="multipart/form-data">
         @csrf
         <div class="row">
             <div class="col-12">
@@ -19,7 +19,8 @@
                                     id="profile-image" type="file" /><label class="mb-0 overlay-icon d-flex flex-center"
                                     for="profile-image"><span class="bg-holder overlay overlay-0"></span><span
                                         class="z-1 text-white dark__text-white text-center fs-10"><span
-                                            class="fas fa-camera"></span><span class="d-block">Adicionar Foto</span></span></label>
+                                            class="fas fa-camera"></span><span class="d-block">Adicionar
+                                            Foto</span></span></label>
                             </div>
                         </div>
                     </div>
@@ -34,39 +35,98 @@
                     </div>
                     <div class="card-body bg-body-tertiary">
                         <div class="row g-3">
-                            <div class="col-lg-6"> <label class="form-label" for="first-name">Primeiro Nome</label><input
-                                    name="name" class="form-control" id="first-name" type="text"
-                                    placeholder="Digite o Seu Nome" /></div>    
-                            <div class="col-lg-6"> <label class="form-label" for="last-name">Apelido</label><input
-                                    name="Surname" class="form-control" id="last-name" type="text"
-                                    placeholder="Digite o seu apelido" /></div>
-                            <div class="col-lg-6"> <label class="form-label" for="email1">Email</label><input
-                                    name="email" placeholder="picardoolindo@gmail.com" class="form-control" id="email1"
-                                    type="text" /></div>
-                            <div class="col-lg-6"> <label class="form-label" for="email2">Contacto</label><input
-                                    class="form-control" id="email2" type="text" placeholder="Ex: 867336817" name="contact" />
-                            </div>
-                            <div class="col-lg-6"><label class="form-label" for="email3">Password</label><input
-                            name="password" placeholder="Digite a Sua Senha" class="form-control" id="email3" type="password" />
-                            </div>
-                            <div class="col-lg-6"><label class="form-label" for="email3">Password de Confirmacao</label><input
-                              name="password_confirmation" placeholder="Digite a Sua Senha" class="form-control" id="email3" type="password" />
+                            <div class="col-lg-6">
+                                <label class="form-label" for="first-name">Primeiro Nome</label>
+                                <input name="name" class="form-control @error('name') is-invalid @enderror" id="first-name" type="text"
+                                    placeholder="Digite o Seu Nome" />
+                                @error('name')
+                                    <div class="invalid-feedback">{{ $message }}</div>
+                                @enderror
                             </div>
 
-                            <div class="col-lg-6"> <label class="form-label" for="email2">Numero de BI</label><input
-                                    class="form-control" id="email2" type="text" name="bi"
-                                    placeholder="0290290927329BS" /></div>
-                             <div class="col-lg-6"> <label class="form-label" for="email2">Data de Nascimento</label><input
-                                    class="form-control" id="email2" type="date" 
-                                    name="Date_of_birth" /></div>
-                            <div class="col-lg-6"> <label class="form-label" for="email2">Residencia</label><input
-                                    class="form-control" id="email2" type="text" placeholder="Local de Residencia"
-                                    name="place" /></div>
-                            <div class="col-lg-6"> <label class="form-label" for="email2">Cargo</label><input
-                                    class="form-control" id="email2" type="text" placeholder="Digite o seu cargo"
-                                    name="function" /></div>
-                            <div class="col-lg-6"> <label class="form-label" for="email2"></label><input
-                                    class="form-control" value="Trainer" id="email2" type="hidden" name="user_type" />
+                            <div class="col-lg-6">
+                                <label class="form-label" for="last-name">Apelido</label>
+                                <input name="Surname" class="form-control @error('Surname') is-invalid @enderror" id="last-name" type="text"
+                                    placeholder="Digite o seu apelido" />
+                                @error('Surname')
+                                    <div class="invalid-feedback">{{ $message }}</div>
+                                @enderror
+                            </div>
+
+                            <div class="col-lg-6">
+                                <label class="form-label" for="email1">Email</label>
+                                <input name="email" placeholder="picardoolindo@gmail.com" class="form-control @error('email') is-invalid @enderror"
+                                    id="email1" type="text" />
+                                @error('email')
+                                    <div class="invalid-feedback">{{ $message }}</div>
+                                @enderror
+                            </div>
+
+                            <div class="col-lg-6">
+                                <label class="form-label" for="email2">Contacto</label>
+                                <input class="form-control @error('contact') is-invalid @enderror" id="email2" type="text" placeholder="Ex: 867336817"
+                                    name="contact" />
+                                @error('contact')
+                                    <div class="invalid-feedback">{{ $message }}</div>
+                                @enderror
+                            </div>
+
+                            <div class="col-lg-6">
+                                <label class="form-label" for="email3">Password</label>
+                                <input name="password" placeholder="Digite a Sua Senha" class="form-control @error('password') is-invalid @enderror" id="email3"
+                                    type="password" />
+                                @error('password')
+                                    <div class="invalid-feedback">{{ $message }}</div>
+                                @enderror
+                            </div>
+
+                            <div class="col-lg-6">
+                                <label class="form-label" for="email3">Password de Confirmacao</label>
+                                <input name="password_confirmation" placeholder="Digite a Sua Senha" class="form-control @error('password_confirmation') is-invalid @enderror"
+                                    id="email3" type="password" />
+                                @error('password_confirmation')
+                                    <div class="invalid-feedback">{{ $message }}</div>
+                                @enderror
+                            </div>
+
+                            <div class="col-lg-6">
+                                <label class="form-label" for="email2">Numero de BI</label>
+                                <input class="form-control @error('bi') is-invalid @enderror" id="email2" type="text" name="bi"
+                                    placeholder="0290290927329BS" />
+                                @error('bi')
+                                    <div class="invalid-feedback">{{ $message }}</div>
+                                @enderror
+                            </div>
+
+                            <div class="col-lg-6">
+                                <label class="form-label" for="email2">Data de Nascimento</label>
+                                <input class="form-control @error('Date_of_birth') is-invalid @enderror" id="email2" type="date" name="Date_of_birth" />
+                                @error('Date_of_birth')
+                                    <div class="invalid-feedback">{{ $message }}</div>
+                                @enderror
+                            </div>
+
+                            <div class="col-lg-6">
+                                <label class="form-label" for="email2">Residencia</label>
+                                <input class="form-control @error('place') is-invalid @enderror" id="email2" type="text"
+                                    placeholder="Local de Residencia" name="place" />
+                                @error('place')
+                                    <div class="invalid-feedback">{{ $message }}</div>
+                                @enderror
+                            </div>
+
+                            <div class="col-lg-6">
+                                <label class="form-label" for="email2">Cargo</label>
+                                <input class="form-control @error('function') is-invalid @enderror" id="email2" type="text"
+                                    placeholder="Digite o seu cargo" name="function" />
+                                @error('function')
+                                    <div class="invalid-feedback">{{ $message }}</div>
+                                @enderror
+                            </div>
+
+                            <div class="col-lg-6">
+                                <input class="form-control @error('user_type') is-invalid @enderror" value="Trainer" id="email2" type="hidden"
+                                    name="user_type" />
                             </div>
                             <div class="col-12 d-flex justify-content-end"><button class="btn btn-primary"
                                     type="submit">Adicionar Formador </button></div>
