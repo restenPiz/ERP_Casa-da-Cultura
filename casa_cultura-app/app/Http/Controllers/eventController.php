@@ -24,6 +24,18 @@ class eventController extends Controller
     }
     public function store(Request $request)
     {
+        $validatedData = $request->validate([
+            'Name' => 'required|string|max:255',
+            'id_artist' => 'required|exists:artists,id',
+            'Location' => 'required|string|max:255',
+            'Number_of_speaker' => 'required|integer',
+            'Date' => 'required|date',
+            'Hour' => 'required|date_format:H:i',
+            'Event_picture' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:20480',
+            'Price' => 'nullable|numeric|min:0',
+            'Description' => 'nullable|string|max:1000',
+        ]);
+
         $event = new event();
 
         $event->Name = $request->input('Name');
@@ -48,6 +60,18 @@ class eventController extends Controller
     }
     public function update(Request $request, $id)
     {
+        $validatedData = $request->validate([
+            'Name' => 'required|string|max:255',
+            'id_artist' => 'required|exists:artists,id',
+            'Location' => 'required|string|max:255',
+            'Number_of_speaker' => 'required|integer',
+            'Date' => 'required|date',
+            'Hour' => 'required|date_format:H:i',
+            'Event_picture' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'Price' => 'nullable|numeric|min:0',
+            'Description' => 'nullable|string|max:1000',
+        ]);
+
         $event = event::findOrFail($id);
 
         $event->Name = $request->input('Name');
