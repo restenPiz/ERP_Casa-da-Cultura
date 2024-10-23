@@ -20,16 +20,16 @@ class userController extends Controller
             'name' => 'required|string|max:255',
             'Surname' => 'required|string|max:255',
             'email' => 'required|string|email|unique:users',
-            'password' => 'required|numeric|min:1',
-            'password_confirmation' => 'required|numeric|min:1',
-            'bi' => 'required|date|after_or_equal:today',
-            'Date_of_birth' => 'required|date|after:Entry_date',
-            'Place' => 'required|',
-            'function' => 'required|',
-            'upload_file' => 'required|',
+            'password' => 'required|string|min:8',
+            'password_confirmation' => 'required|string|min:8',
+            'bi' => 'required|string|min:13',
+            'Date_of_birth' => 'required|date',
+            'Place' => 'required|string|max:255',
+            'function' => 'required|string|max:255',
+            'upload_file' => 'required|string|max:500',
             'user_type' => 'required|max:255',
             'status' => 'required|max:255',
-            'contact' => 'required|min:9'
+            'contact' => 'required|integer|min:9'
         ]);
 
         $user = new User();
