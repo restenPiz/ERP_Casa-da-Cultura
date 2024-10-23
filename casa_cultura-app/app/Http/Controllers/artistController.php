@@ -23,6 +23,10 @@ class artistController extends Controller
             'Activity' => 'required|string|max:255',
         ]);
 
+        if ($validatedData == true) {
+            Alert::error('Falha', 'Falha ao adicionar!');
+        }
+
         $artist = new artist();
 
         $artist->Name = Request::input('Name');
