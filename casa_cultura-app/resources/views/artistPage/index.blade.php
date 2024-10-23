@@ -21,9 +21,6 @@
                             data-bs-target="#staticBack" href="#staticBack" data-bs-toggle="modal">
                             <span class="fas fa-plus" data-fa-transform="shrink-3 down-2"></span><span
                                 class="d-none d-sm-inline ms-1">New</span></a>
-                        <button class="btn btn-falcon-default btn-sm" type="button"><span class="fas fa-external-link-alt"
-                                data-fa-transform="shrink-3 down-2"></span><span
-                                class="d-none d-sm-inline-block ms-1">Export</span></button>
                     </div>
                 </div>
             </div>
@@ -48,20 +45,38 @@
                             <form action="/artistStore" method="post">
                                 @csrf
                                 <div class="row">
-                                    <div class="col-lg-6"> <label class="form-label" for="first-name">
-                                            Nome Completo</label><input name="Name" class="form-control" id="first-name"
-                                            type="text" placeholder="Nome Completo" /></div>
-                                    <div class="col-lg-6"> <label class="form-label" for="last-name">Morada</label><input
-                                            name="Address" placeholder="Morada" class="form-control" id="last-name"
-                                            type="text" /></div>
-                                    <div class="col-lg-6"> <label class="form-label" for="email2">Contacto</label><input
-                                            class="form-control" id="email2" type="text" name="Cell_number"
-                                            placeholder="Ex: 258 867336817" />
+                                    <div class="col-lg-6">
+                                        <label class="form-label" for="first-name">Nome Completo</label>
+                                        <input name="Name" class="form-control @error('Name') is-invalid @enderror" id="first-name" type="text" placeholder="Nome Completo" />
+                                        @error('Name')
+                                            <div class="invalid-feedback">{{ $message }}</div>
+                                        @enderror
                                     </div>
-                                    <div class="col-lg-6"> <label class="form-label" for="email2">Actividade</label><input
-                                            class="form-control" id="email2" type="text" name="Activity"
-                                            placeholder="Ex: Desenvolvedor FullStack" />
+
+                                    <div class="col-lg-6">
+                                        <label class="form-label" for="last-name">Morada</label>
+                                        <input name="Address" placeholder="Morada" class="form-control @error('Address') is-invalid @enderror" id="last-name" type="text" />
+                                        @error('Address')
+                                            <div class="invalid-feedback">{{ $message }}</div>
+                                        @enderror
                                     </div>
+
+                                    <div class="col-lg-6">
+                                        <label class="form-label" for="email2">Contacto</label>
+                                        <input class="form-control @error('Cell_number') is-invalid @enderror" id="email2" type="text" name="Cell_number" placeholder="Ex: 258 867336817" />
+                                        @error('Cell_number')
+                                            <div class="invalid-feedback">{{ $message }}</div>
+                                        @enderror
+                                    </div>
+
+                                    <div class="col-lg-6">
+                                        <label class="form-label" for="email2">Actividade</label>
+                                        <input class="form-control @error('Activity') is-invalid @enderror" id="email2" type="text" name="Activity" placeholder="Ex: Desenvolvedor FullStack" />
+                                        @error('Activity')
+                                            <div class="invalid-feedback">{{ $message }}</div>
+                                        @enderror
+                                    </div>
+
                                     {{-- Fim dos inputs type hidden --}}
                                     <div style="margin-top: 1rem" class="col-12 d-flex"><button style="border-radius: 0"
                                             class="btn btn-primary" type="submit">Adicionar Artista
