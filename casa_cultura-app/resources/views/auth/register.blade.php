@@ -54,7 +54,7 @@
                         src="../../../assets/img/icons/spot-illustrations/shape-1.png" alt="" width="150">
 
                         {{--?Inicio do metodo responsavel pelo formulario do usuario--}}
-                        {{-- <div class="card theme-wizard mb-5">
+                        <div class="card theme-wizard mb-5">
                             <div class="card-header bg-body-tertiary pt-3 pb-2">
                                 <ul class="nav justify-content-between nav-wizard">
                                     <li class="nav-item"><a class="nav-link active fw-semi-bold" href="#bootstrap-wizard-tab1"
@@ -135,7 +135,7 @@
                                 </div>
                             </form>
                         </div>
-                    </div> --}}
+                    </div>
                     {{--?Fim do formulario de estudantes--}}
 
 
