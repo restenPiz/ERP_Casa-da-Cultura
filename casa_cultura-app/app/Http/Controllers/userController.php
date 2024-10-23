@@ -7,7 +7,6 @@ use App\Models\User;
 use File;
 use Hash;
 use Illuminate\Http\Request;
-use Illuminate\Validation\Rule;
 use RealRashid\SweetAlert\Facades\Alert;
 use Storage;
 
@@ -15,25 +14,22 @@ class userController extends Controller
 {
     public function storeUser(Request $request)
     {
-        //* Inicio do metodo de validacao
         $validatedData = $request->validate([
-            'name' => 'required|string|max:255',
-            'Surname' => 'required|string|max:255',
-            'email' => 'required|string|email|unique:users',
-            'password' => 'required|string|min:8',
-            'password_confirmation' => 'required|string|min:8|same:password',
-            'bi' => 'required|string|min:13',
-            'Date_of_birth' => 'required|date',
-            'place' => 'required|string|max:255',
-            'function' => 'required|string|max:255',
-            'upload_file' => 'required|string|max:500',
-            'user_type' => 'required|string|max:255',
-            'status' => 'required|string|max:255',
-            'contact' => 'required|integer|min:9'
+            'name' => ['required', 'string', 'max:255'],
+            'Surname' => ['required', 'string', 'max:255'],
+            'email' => ['required', 'string', 'email', 'unique:users'],
+            'password' => ['required', 'string', 'min:8', 'confirmed'],
+            'bi' => ['required', 'string', 'min:13'],
+            'Date_of_birth' => ['required', 'date'],
+            'place' => ['required', 'string', 'max:255'],
+            'function' => ['required', 'string', 'max:255'],
+            // 'upload_file' => ['required', 'file', 'mimes:jpeg,png,pdf', 'max:2048'],
+            'user_type' => ['required', 'string', 'max:255'],
+            'status' => ['required', 'string', 'max:255'],
+            'contact' => ['required', 'string', 'min:9']
         ]);
 
         $user = new User();
-
         switch ($request->input('user_type')) {
             case 'Employee':
                 $role = 'employee';

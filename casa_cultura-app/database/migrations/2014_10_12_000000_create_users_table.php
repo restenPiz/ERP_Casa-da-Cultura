@@ -18,7 +18,7 @@ return new class extends Migration {
             $table->date('Date_of_birth')->nullable();
             $table->string('bi')->nullable();
             $table->string('place')->nullable();
-            $table->integer('contact')->nullable();
+            $table->string('contact', 9)->nullable();
             $table->string('user_type')->nullable();
             $table->string('upload_file')->nullable();
             $table->string('function')->nullable();
