@@ -44,37 +44,89 @@
                         <form action="{{route('event.store')}}" method="post" enctype="multipart/form-data">
                             @csrf
                             {{--*Inicio do formulario--}}
-                            <div class="mb-3"><label class="form-label" for="event-type">Nome do Evento</label>
-                            <input class="form-control form-control-sm" type="text" placeholder="Nome do Evento" name="Name" /></div>
-                            <div class="mb-3"><label class="form-label" for="event-topic">Artista</label><select
-                                class="form-select" id="event-topic" name="id_artist">
-                                <option value="" selected="selected">Selecione o Artista</option>
-                                @foreach ($artists as $artist)
-                                    <option value="{{$artist->id}}">{{$artist->Name}}</option>
-                                @endforeach
-                            </select></div>
-                            <div class="mb-3"><label class="form-label" for="event-type">Localizacao</label>
-                            <input class="form-control form-control-sm" type="text" placeholder="Localizacao" name="Location" /></div>
-                            <div class="mb-3"><label class="form-label" for="event-type">Numero de Palestrantes</label>
-                            <input class="form-control form-control-sm" type="text" placeholder="Numero de Palestrantes" name="Number_of_speaker" /></div>
-                            {{--?Inicio da primeira seccao--}}
-                            <div class="border-bottom border-dashed my-3"></div>
-                            <div class="mb-3"><label class="form-label" for="event-type">Data do Evento</label>
-                            <input class="form-control form-control-sm" type="date" name="Date" /></div>
-                            <div class="mb-3"><label class="form-label" for="event-type">Horario do Evento</label>
-                            <input class="form-control form-control-sm" type="time" name="Hour" /></div>
-                            {{--?Inicio da segunda seccao--}}
-                            <div class="border-bottom border-dashed my-3"></div>
-                            {{--?Inicio da terceira seccao--}}
-                            <div class="mb-3"><label class="form-label" for="event-description">Imagem do Evento</label>
-                            <input class="form-control" name="Event_picture" type="file" />
+                            <div class="mb-3">
+                                <label class="form-label" for="event-type">Nome do Evento</label>
+                                <input class="form-control form-control-sm @error('Name') is-invalid @enderror" type="text" placeholder="Nome do Evento" name="Name" value="{{ old('Name') }}" />
+                                @error('Name')
+                                    <div class="invalid-feedback">{{ $message }}</div>
+                                @enderror
                             </div>
-                            {{--?Inicio da quarta seccao--}}
-                            <div class="border-bottom border-dashed my-3"></div>
-                            <div class="mb-3"><label class="form-label" for="event-type">Preco do Evento</label>
-                            <input class="form-control form-control-sm" type="text" placeholder="Preco dos bilhetes" name="Price" /></div>
-                            <div class="mb-3"><label class="form-label" for="event-description">Descricao do Evento</label><textarea name="Description" class="form-control" id="event-description" rows="6"></textarea>
+
+                            <div class="mb-3">
+                                <label class="form-label" for="event-topic">Artista</label>
+                                <select class="form-select @error('id_artist') is-invalid @enderror" id="event-topic" name="id_artist">
+                                    <option value="" selected="selected">Selecione o Artista</option>
+                                    @foreach ($artists as $artist)
+                                        <option value="{{ $artist->id }}" {{ old('id_artist') == $artist->id ? 'selected' : '' }}>{{ $artist->Name }}</option>
+                                    @endforeach
+                                </select>
+                                @error('id_artist')
+                                    <div class="invalid-feedback">{{ $message }}</div>
+                                @enderror
                             </div>
+
+                            <div class="mb-3">
+                                <label class="form-label" for="event-type">Localizacao</label>
+                                <input class="form-control form-control-sm @error('Location') is-invalid @enderror" type="text" placeholder="Localizacao" name="Location" value="{{ old('Location') }}" />
+                                @error('Location')
+                                    <div class="invalid-feedback">{{ $message }}</div>
+                                @enderror
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label" for="event-type">Numero de Palestrantes</label>
+                                <input class="form-control form-control-sm @error('Number_of_speaker') is-invalid @enderror" type="text" placeholder="Numero de Palestrantes" name="Number_of_speaker" value="{{ old('Number_of_speaker') }}" />
+                                @error('Number_of_speaker')
+                                    <div class="invalid-feedback">{{ $message }}</div>
+                                @enderror
+                            </div>
+
+                            <div class="border-bottom border-dashed my-3"></div>
+
+                            <div class="mb-3">
+                                <label class="form-label" for="event-type">Data do Evento</label>
+                                <input class="form-control form-control-sm @error('Date') is-invalid @enderror" type="date" name="Date" value="{{ old('Date') }}" />
+                                @error('Date')
+                                    <div class="invalid-feedback">{{ $message }}</div>
+                                @enderror
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label" for="event-type">Horario do Evento</label>
+                                <input class="form-control form-control-sm @error('Hour') is-invalid @enderror" type="time" name="Hour" value="{{ old('Hour') }}" />
+                                @error('Hour')
+                                    <div class="invalid-feedback">{{ $message }}</div>
+                                @enderror
+                            </div>
+
+                            <div class="border-bottom border-dashed my-3"></div>
+
+                            <div class="mb-3">
+                                <label class="form-label" for="event-description">Imagem do Evento</label>
+                                <input class="form-control @error('Event_picture') is-invalid @enderror" name="Event_picture" type="file" />
+                                @error('Event_picture')
+                                    <div class="invalid-feedback">{{ $message }}</div>
+                                @enderror
+                            </div>
+
+                            <div class="border-bottom border-dashed my-3"></div>
+
+                            <div class="mb-3">
+                                <label class="form-label" for="event-type">Preço do Evento</label>
+                                <input class="form-control form-control-sm @error('Price') is-invalid @enderror" type="text" placeholder="Preço dos bilhetes" name="Price" value="{{ old('Price') }}" />
+                                @error('Price')
+                                    <div class="invalid-feedback">{{ $message }}</div>
+                                @enderror
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label" for="event-description">Descrição do Evento</label>
+                                <textarea class="form-control @error('Description') is-invalid @enderror" name="Description" id="event-description" rows="6">{{ old('Description') }}</textarea>
+                                @error('Description')
+                                    <div class="invalid-feedback">{{ $message }}</div>
+                                @enderror
+                            </div>
+
                             {{--?Inicio da seccao do butao--}}
                             <div class="mb-3">
                                 <button style="border-radius:0; color:white" class="btn bg-primary btn-falcon-def btn-sm me-2" name="submit" type="submit">Adicionar</button>
