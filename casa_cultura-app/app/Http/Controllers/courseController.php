@@ -61,9 +61,11 @@ class courseController extends Controller
     }
     public function all()
     {
+        //*Inicio da selecao de cursos
         $courses = course::all();
         $courseUsers = Course_user::with('user');
 
+        //*Inicio do retorno de dados na view
         return view('coursePages.all', compact('courses', 'courseUsers'));
     }
     public function index()
@@ -78,17 +80,16 @@ class courseController extends Controller
     }
     public function store(Request $request)
     {
-        // dd($request->all());
         //?Inicio do metodo de validacao
         $validatedData = $request->validate([
             'Course_name' => 'required|string|max:255',
-            'Description' => 'required|string|max:1000',
+            'Description' => 'required|string|max:5000',
             'Price' => 'required|string|max:255',
-            'Goals' => 'required|string|max:1000',
+            'Goals' => 'required|string|max:5000',
             'id_user' => 'required|array',
             'id_user.*' => 'exists:users,id',
-            'Upload_file' => 'nullable|file|mimes:pdf,doc,docx,jpg,png|max:10240',
-            'Upload_video' => 'nullable|file|mimes:pdf,doc,docx,jpg,png|max:10240',
+            'Upload_file' => 'required|file|mimes:pdf,doc,docx,jpg,png|max:10240',
+            'Upload_video' => 'required|file|mimes:pdf,doc,docx,jpg,png|max:10240',
         ]);
 
         if ($request->hasFile('Upload_file')) {

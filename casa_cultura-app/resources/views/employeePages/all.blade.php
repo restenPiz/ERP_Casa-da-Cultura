@@ -17,12 +17,9 @@
                                 <option value="Archive">Archive</option>
                             </select><button class="btn btn-falcon-default btn-sm ms-2" type="button">Apply</button></div>
                     </div>
-                    <div id="table-customers-replace-element"><a href="{{route('trainer.index')}}" class="btn btn-falcon-default btn-sm"
+                    <div id="table-customers-replace-element"><a href="{{route('employee.index')}}" class="btn btn-falcon-default btn-sm"
                             type="button"><span class="fas fa-plus" data-fa-transform="shrink-3 down-2"></span><span
-                                class="d-none d-sm-inline-block ms-1">New</span></a>
-                            <button class="btn btn-falcon-default btn-sm" type="button"><span class="fas fa-external-link-alt"
-                                data-fa-transform="shrink-3 down-2"></span><span
-                                class="d-none d-sm-inline-block ms-1">Export</span></button></div>
+                                class="d-none d-sm-inline-block ms-1">New</span></a></div>
                 </div>
             </div>
         </div>
