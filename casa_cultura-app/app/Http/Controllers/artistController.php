@@ -16,6 +16,13 @@ class artistController extends Controller
     }
     public function store()
     {
+        $validatedData = Request::validate([
+            'Name' => 'required|string|max:255',
+            'Address' => 'required|string|max:255',
+            'Cell_number' => 'required|string|min:9',
+            'Activity' => 'required|string|max:255',
+        ]);
+
         $artist = new artist();
 
         $artist->Name = Request::input('Name');
@@ -31,6 +38,13 @@ class artistController extends Controller
     }
     public function update($id)
     {
+        $validatedData = Request::validate([
+            'Name' => 'required|string|max:255',
+            'Address' => 'required|string|max:255',
+            'Cell_number' => 'required|string|min:9',
+            'Activity' => 'required|string|max:255',
+        ]);
+
         $artist = artist::findOrFail($id);
 
         $artist->Name = Request::input('Name');
