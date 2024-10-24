@@ -96,7 +96,6 @@ class studentController extends Controller
 
         $user->save();
 
-        //*Metodo de adicao de roles no usuario
         $user->addRole('users');
 
         event(new Registered($user));
