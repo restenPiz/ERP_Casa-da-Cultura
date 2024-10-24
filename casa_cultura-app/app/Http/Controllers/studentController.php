@@ -29,7 +29,7 @@ class studentController extends Controller
             'password' => 'required|string|min:8|confirmed',
             'upload_file' => 'nullable|file|mimes:jpg,jpeg,png,gif,docx,pdf,txt|max:20480',
             'contact' => 'required|numeric|digits_between:9,12',
-            'Date_of_birth' => 'required|date',
+            'Date_of_birth' => 'required|date|before_or_equal:today',
             'bi' => 'required|string|min:15|max:20|unique:users,bi',
             'id_course' => 'required|exists:courses,id',
         ]);
@@ -53,10 +53,8 @@ class studentController extends Controller
 
         $user->save();
 
-        //*Metodo de adicao de roles no usuario
         $user->addRole('users');
 
-        //*Metodo de adicao de relacionamento na tabela intermediaria
         $user->courses()->attach($request->input('id_course'));
 
         Alert::success('Adicionado', 'O aluno foi adicionado com sucesso!');
@@ -70,9 +68,9 @@ class studentController extends Controller
             'Surname' => 'required|string|max:255',
             'email' => 'required|email|unique:users,email',
             'password' => 'required|string|min:8|confirmed',
-            'upload_file' => 'nullable|file|mimes:jpg,jpeg,png,gif,docx,pdf,txt|max:2048',
+            'upload_file' => 'nullable|file|mimes:jpg,jpeg,png,gif,docx,pdf,txt|max:20480',
             'contact' => 'required|numeric|digits_between:9,12',
-            'Date_of_birth' => 'required|date',
+            'Date_of_birth' => 'required|date|before_or_equal:today',
             'bi' => 'required|string|min:15|max:20|unique:users,bi',
             'id_course' => 'required|exists:courses,id',
         ]);
@@ -113,9 +111,9 @@ class studentController extends Controller
             'Surname' => 'required|string|max:255',
             'email' => 'required|email|unique:users,email',
             'password' => 'required|string|min:8|confirmed',
-            'upload_file' => 'nullable|file|mimes:jpg,jpeg,png,gif,docx,pdf,txt|max:2048',
+            'upload_file' => 'nullable|file|mimes:jpg,jpeg,png,gif,docx,pdf,txt|max:20480',
             'contact' => 'required|numeric|digits_between:9,12',
-            'Date_of_birth' => 'required|date',
+            'Date_of_birth' => 'required|date|before_or_equal:today',
             'bi' => 'required|string|min:15|max:20|unique:users,bi',
             'id_course' => 'required|exists:courses,id',
         ]);
