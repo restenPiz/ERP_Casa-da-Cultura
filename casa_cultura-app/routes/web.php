@@ -88,4 +88,11 @@ Route::get('/getCourse', [courseController::class, 'getTrainer'])->name('course.
 
 Route::get('/webMain', [redirectController::class, 'webMain'])->name('web.main');
 
+//*Inicio da rota de tela de login de Estudante
+Route::get('/loginUser', [redirectController::class, 'index'])->name('loginUser');
+
+//*Inicios das rotas da parte de estudante
+Route::group(['prefix' => 'users', 'middleware' => ['role:users']], function () {
+});
+
 require __DIR__ . '/auth.php';
