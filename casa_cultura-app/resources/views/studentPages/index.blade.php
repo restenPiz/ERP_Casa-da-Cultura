@@ -35,74 +35,93 @@
 
                             {{-- !Inicio do formulario --}}
 
-                            <div class="tab-pane active px-sm-3 px-md-2" role="tabpanel"
-                                aria-labelledby="bootstrap-wizard-tab1" id="bootstrap-wizard-tab1">
-                                <div class="mb-3"><label class="form-label"
-                                        for="bootstrap-wizard-wizard-name">Nome</label><input class="form-control"
-                                        type="text" name="name" placeholder="Picardo"
-                                        id="bootstrap-wizard-wizard-name" /></div>
-                                <div class="mb-3"><label class="form-label"
-                                        for="bootstrap-wizard-wizard-name">Apelido</label><input class="form-control"
-                                        type="text" name="Surname" placeholder="Olindo"
-                                        id="bootstrap-wizard-wizard-name" /></div>
-                                <div class="mb-3"><label class="form-label"
-                                        for="bootstrap-wizard-wizard-email">Email*</label><input class="form-control"
-                                        type="email" name="email" placeholder="picardo@gmail.com"
-                                        pattern="^([a-zA-Z0-9_\.\-])+@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$"
-                                        required="required" id="bootstrap-wizard-wizard-email"
-                                        data-wizard-validate-email="true" />
+                            <div class="tab-pane active px-sm-3 px-md-2" role="tabpanel" aria-labelledby="bootstrap-wizard-tab1" id="bootstrap-wizard-tab1">
+                                <div class="mb-3">
+                                    <label class="form-label" for="bootstrap-wizard-wizard-name">Nome</label>
+                                    <input class="form-control @error('name') is-invalid @enderror" type="text" name="name" placeholder="Picardo" value="{{ old('name') }}" id="bootstrap-wizard-wizard-name" />
+                                    @error('name')
+                                        <div class="invalid-feedback">{{ $message }}</div>
+                                    @enderror
                                 </div>
-                                <div class="mb-3"><label class="form-label"
-                                        for="bootstrap-wizard-wizard-name">Senha</label><input class="form-control"
-                                        type="password" name="password" id="bootstrap-wizard-wizard-name" /></div>
-                                <div class="mb-3"><label class="form-label" for="bootstrap-wizard-wizard-name">Senha de
-                                        Confirmacao</label><input class="form-control" type="password"
-                                        name="password_confirmation" id="bootstrap-wizard-wizard-name" /></div>
-
+                                <div class="mb-3">
+                                    <label class="form-label" for="bootstrap-wizard-wizard-name">Apelido</label>
+                                    <input class="form-control @error('Surname') is-invalid @enderror" type="text" name="Surname" placeholder="Olindo" value="{{ old('Surname') }}" id="bootstrap-wizard-wizard-name" />
+                                    @error('Surname')
+                                        <div class="invalid-feedback">{{ $message }}</div>
+                                    @enderror
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label" for="bootstrap-wizard-wizard-email">Email*</label>
+                                    <input class="form-control @error('email') is-invalid @enderror" type="email" name="email" placeholder="picardo@gmail.com" value="{{ old('email') }}" required="required" id="bootstrap-wizard-wizard-email" />
+                                    @error('email')
+                                        <div class="invalid-feedback">{{ $message }}</div>
+                                    @enderror
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label" for="bootstrap-wizard-wizard-name">Senha</label>
+                                    <input class="form-control @error('password') is-invalid @enderror" type="password" name="password" id="bootstrap-wizard-wizard-name" />
+                                    @error('password')
+                                        <div class="invalid-feedback">{{ $message }}</div>
+                                    @enderror
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label" for="bootstrap-wizard-wizard-name">Senha de Confirmacao</label>
+                                    <input class="form-control @error('password_confirmation') is-invalid @enderror" type="password" name="password_confirmation" id="bootstrap-wizard-wizard-name" />
+                                    @error('password_confirmation')
+                                        <div class="invalid-feedback">{{ $message }}</div>
+                                    @enderror
+                                </div>
                             </div>
 
-                            {{-- ? Inicio da segunda seccao --}}
-
-                            <div class="tab-pane px-sm-3 px-md-2" role="tabpanel" aria-labelledby="bootstrap-wizard-tab2"
-                                id="bootstrap-wizard-tab2">
+                            {{-- Segunda Seção --}}
+                            <div class="tab-pane px-sm-3 px-md-2" role="tabpanel" aria-labelledby="bootstrap-wizard-tab2" id="bootstrap-wizard-tab2">
                                 <div class="mb-3">
-                                    <input class="form-control" type="file" name="upload_file"
-                                        accept=".jpg,.jpeg,.png,.gif,.docx,.pdf,.txt" />
+                                    <input class="form-control @error('upload_file') is-invalid @enderror" type="file" name="upload_file" accept=".jpg,.jpeg,.png,.gif,.docx,.pdf,.txt" />
+                                    @error('upload_file')
+                                        <div class="invalid-feedback">{{ $message }}</div>
+                                    @enderror
                                 </div>
-                                <div class="mb-3"><label class="form-label"
-                                        for="bootstrap-wizard-wizard-phone">Contacto</label><input class="form-control"
-                                        type="text" name="contact" placeholder="855686307"
-                                        id="bootstrap-wizard-wizard-phone" /></div>
-                                <div class="mb-3"><label class="form-label"
-                                        for="bootstrap-wizard-wizard-datepicker">Date
-                                        of
-                                        Birth</label><input class="form-control datetimepicker" type="date"
-                                        placeholder="dd/mm/yy" name="Date_of_birth"
-                                        data-options='{"dateFormat":"dd/mm/yy","disableMobile":true}'
-                                        id="bootstrap-wizard-wizard-datepicker" /></div>
-                                <div class="mb-3"><label class="form-label" for="bootstrap-wizard-wizard-phone">Numero
-                                        de BI</label><input class="form-control" type="text" name="bi"
-                                        placeholder="EX: 083902130290380213BM" id="bootstrap-wizard-wizard-phone" /></div>
+                                <div class="mb-3">
+                                    <label class="form-label" for="bootstrap-wizard-wizard-phone">Contacto</label>
+                                    <input class="form-control @error('contact') is-invalid @enderror" type="text" name="contact" placeholder="855686307" value="{{ old('contact') }}" id="bootstrap-wizard-wizard-phone" />
+                                    @error('contact')
+                                        <div class="invalid-feedback">{{ $message }}</div>
+                                    @enderror
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label" for="bootstrap-wizard-wizard-datepicker">Date of Birth</label>
+                                    <input class="form-control @error('Date_of_birth') is-invalid @enderror" type="date" name="Date_of_birth" value="{{ old('Date_of_birth') }}" id="bootstrap-wizard-wizard-datepicker" />
+                                    @error('Date_of_birth')
+                                        <div class="invalid-feedback">{{ $message }}</div>
+                                    @enderror
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label" for="bootstrap-wizard-wizard-phone">Numero de BI</label>
+                                    <input class="form-control @error('bi') is-invalid @enderror" type="text" name="bi" placeholder="EX: 083902130290380213BM" value="{{ old('bi') }}" id="bootstrap-wizard-wizard-phone" />
+                                    @error('bi')
+                                        <div class="invalid-feedback">{{ $message }}</div>
+                                    @enderror
+                                </div>
                             </div>
 
-                            {{-- ? Inicio da outra seccao --}}
-
-                            <div class="tab-pane text-center px-sm-3 px-md-2" role="tabpanel"
-                                aria-labelledby="bootstrap-wizard-tab4" id="bootstrap-wizard-tab4">
+                            {{-- Outra Seção --}}
+                            <div class="tab-pane text-center px-sm-3 px-md-2" role="tabpanel" aria-labelledby="bootstrap-wizard-tab4" id="bootstrap-wizard-tab4">
                                 <div class="mb-3">
-                                    <label class="form-label" for="bootstrap-wizard-gender">Curso a se
-                                        inscrever</label><select class="form-select" name="id_course"
-                                        id="bootstrap-wizard-gender">
+                                    <label class="form-label" for="bootstrap-wizard-gender">Curso a se inscrever</label>
+                                    <select class="form-select @error('id_course') is-invalid @enderror" name="id_course" id="bootstrap-wizard-gender">
                                         <option value="">Seleccione o Curso...</option>
                                         @foreach ($courses as $course)
-                                            <option value="{{ $course->id }}">{{ $course->Course_name }}</option>
+                                            <option value="{{ $course->id }}" {{ old('id_course') == $course->id ? 'selected' : '' }}>{{ $course->Course_name }}</option>
                                         @endforeach
                                     </select>
+                                    @error('id_course')
+                                        <div class="invalid-feedback">{{ $message }}</div>
+                                    @enderror
                                 </div>
                                 <input type="hidden" name="user_type" value="Users">
                                 <input type="hidden" name="status" value="Activo">
                                 <button type="submit" name="submit" class="btn btn-primary px-5 my-3"
-                                    style="text-align: none" href="wizard.html">Inscrever Aluno</button>
+                                    style="text-align: none">Inscrever Aluno</button>
                             </div>
 
                             {{-- ! Fim das seccoes --}}
