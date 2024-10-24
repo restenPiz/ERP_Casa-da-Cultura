@@ -62,9 +62,9 @@
                                             <div class="col-auto">
                                                 <h3>Conta de Login</h3>
                                             </div>
-                                            <div class="col-auto fs-10 text-600"><span class="mb-0 undefined">ou</span>
+                                            {{-- <div class="col-auto fs-10 text-600"><span class="mb-0 undefined">ou</span>
                                                 <span><a href="{{ route('register') }}">Crie uma conta</a></span>
-                                            </div>
+                                            </div> --}}
                                         </div>
                                         <form method="POST" action="{{ route('login') }}">
                                             @csrf
@@ -85,9 +85,9 @@
                                                             checked="checked" /><label class="form-check-label mb-0"
                                                             for="card-checkbox">Lembre-me</label></div>
                                                 </div>
-                                                <div class="col-auto"><a class="fs-10"
+                                               {{-- <div class="col-auto"><a class="fs-10"
                                                         href="{{ route('password.request') }}">Esqueceu o Password?</a>
-                                                </div>
+                                                </div> --}}
                                             </div>
                                             <div class="mb-3"><button class="btn btn-primary d-block w-100 mt-3"
                                                     style="border-radius: 0" type="submit" name="submit">Log
