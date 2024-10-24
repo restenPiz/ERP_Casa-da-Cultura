@@ -22,6 +22,18 @@ class studentController extends Controller
     }
     public function store(Request $request)
     {
+        $validatedData = $request->validate([
+            'name' => 'required|string|max:255',
+            'Surname' => 'required|string|max:255',
+            'email' => 'required|email|unique:users,email',
+            'password' => 'required|string|min:8|confirmed',
+            'upload_file' => 'nullable|file|mimes:jpg,jpeg,png,gif,docx,pdf,txt|max:2048',
+            'contact' => 'required|numeric|digits_between:9,12',
+            'Date_of_birth' => 'required|date',
+            'bi' => 'required|string|min:15|max:20|unique:users,bi',
+            'id_course' => 'required|exists:courses,id',
+        ]);
+
         $user = new User();
 
         $user->name = $request->input('name');
@@ -53,6 +65,18 @@ class studentController extends Controller
     }
     public function manual(Request $request)
     {
+        $validatedData = $request->validate([
+            'name' => 'required|string|max:255',
+            'Surname' => 'required|string|max:255',
+            'email' => 'required|email|unique:users,email',
+            'password' => 'required|string|min:8|confirmed',
+            'upload_file' => 'nullable|file|mimes:jpg,jpeg,png,gif,docx,pdf,txt|max:2048',
+            'contact' => 'required|numeric|digits_between:9,12',
+            'Date_of_birth' => 'required|date',
+            'bi' => 'required|string|min:15|max:20|unique:users,bi',
+            'id_course' => 'required|exists:courses,id',
+        ]);
+
         $user = new User();
 
         $user->name = $request->input('name');
