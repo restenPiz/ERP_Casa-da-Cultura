@@ -27,7 +27,7 @@ class studentController extends Controller
             'Surname' => 'required|string|max:255',
             'email' => 'required|email|unique:users,email',
             'password' => 'required|string|min:8|confirmed',
-            'upload_file' => 'nullable|file|mimes:jpg,jpeg,png,gif,docx,pdf,txt|max:2048',
+            'upload_file' => 'nullable|file|mimes:jpg,jpeg,png,gif,docx,pdf,txt|max:20480',
             'contact' => 'required|numeric|digits_between:9,12',
             'Date_of_birth' => 'required|date',
             'bi' => 'required|string|min:15|max:20|unique:users,bi',
