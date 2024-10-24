@@ -12,7 +12,10 @@ use RealRashid\SweetAlert\Facades\Alert;
 
 class redirectController extends Controller
 {
-
+    public function loginUser()
+    {
+        return view('auth.loginStudent');
+    }
     public function webMain()
     {
         $events = event::all();
