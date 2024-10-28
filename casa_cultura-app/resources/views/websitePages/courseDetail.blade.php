@@ -309,11 +309,11 @@
                                         </div>
 
                                         <div class="read-more-btn mt--15">
-                                            <a class="edu-btn w-100 text-center"
+                                            {{-- <a class="edu-btn w-100 text-center"
                                                 @auth
                                                 data-bs-target="#staticBack"href="#staticBack" data-bs-toggle="modal"
                                                 @else
-                                                href="{{ route('login') }}" @endauth>Pagar Agora</a>
+                                                href="{{ route('login') }}" @endauth>Pagar Agora</a> --}}
                                         </div>
                                         @endif
 
@@ -324,11 +324,11 @@
                                         </div>
 
                                         <div class="read-more-btn mt--15">
-                                            <a class="edu-btn w-100 text-center"
+                                            {{-- <a class="edu-btn w-100 text-center"
                                                 @auth
                                                 data-bs-target="#staticBack"href="#staticBack" data-bs-toggle="modal"
                                                 @else
-                                                href="{{ route('login') }}" @endauth>Pagar Agora</a>
+                                                href="{{ route('login') }}" @endauth>Pagar Agora</a> --}}
                                         </div>
                                         @endauth
                                         
