@@ -85,7 +85,6 @@ Route::post('/studentStoreManual', [studentController::class, 'manual'])->name('
 //?Inicio das rotas do formador
 Route::get('/getCourse', [courseController::class, 'getTrainer'])->name('course.get');
 
-
 Route::get('/webMain', [redirectController::class, 'webMain'])->name('web.main');
 
 //*Inicio da rota de tela de login de Estudante
