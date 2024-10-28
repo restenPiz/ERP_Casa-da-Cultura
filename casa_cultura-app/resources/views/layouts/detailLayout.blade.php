@@ -116,8 +116,6 @@
                 </form>
             </div>
         </div>
-        <!-- End Search Popup  -->
-
 
         @yield('content')
 
