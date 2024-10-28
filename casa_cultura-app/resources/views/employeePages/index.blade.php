@@ -72,12 +72,12 @@
 
                             {{--!Inicio do input de senha--}}
                             <input name="password" class="form-control" id="email3"
-                                type="hidden" value="formador123"/>
+                                type="hidden" value="funcionario123"/>
                             @error('password')
                                 <div class="invalid-feedback">{{ $message }}</div>
                             @enderror
                             <input name="password_confirmation" class="form-control"
-                                id="email3" type="hidden" value="formador123" />
+                                id="email3" type="hidden" value="funcionario123" />
                             @error('password_confirmation')
                                 <div class="invalid-feedback">{{ $message }}</div>
                             @enderror
