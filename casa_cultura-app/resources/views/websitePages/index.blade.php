@@ -152,9 +152,7 @@
                             </div>
                         </div>
                     </div>
-                    <!-- End Single Counter  -->
-
-                    <!-- Start Single Counter  -->
+                    
                     <div class="col-lg-4 col-md-6 col-sm-6 col-12 line-separator">
                         <div class="edu-counterup-2 text-center">
                             <div class="inner">
@@ -170,9 +168,6 @@
                             </div>
                         </div>
                     </div>
-                    <!-- End Single Counter  -->
-
-                    <!-- Start Single Counter  -->
                     <div class="col-lg-4 col-md-6 col-sm-6 col-12 line-separator">
                         <div class="edu-counterup-2 text-center">
                             <div class="inner">
@@ -227,7 +222,6 @@
                                         ])}}">{{ $course->Course_name }}</a>
                                         </h6>
                                         <ul class="edu-meta meta-01">
-                                            {{-- <li><i class="icon-group-line"></i>190 Students</li> --}}
                                             <li><i class="icon-file-list-4-line"></i>Cidade da Beira</li>
                                         </ul>
 
