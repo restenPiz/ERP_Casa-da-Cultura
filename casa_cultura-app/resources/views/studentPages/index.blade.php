@@ -57,20 +57,18 @@
                                         <div class="invalid-feedback">{{ $message }}</div>
                                     @enderror
                                 </div>
-                                <div class="mb-3">
-                                    <label class="form-label" for="bootstrap-wizard-wizard-name">Senha</label>
-                                    <input class="form-control @error('password') is-invalid @enderror" type="password" name="password" id="bootstrap-wizard-wizard-name" />
-                                    @error('password')
-                                        <div class="invalid-feedback">{{ $message }}</div>
-                                    @enderror
-                                </div>
-                                <div class="mb-3">
-                                    <label class="form-label" for="bootstrap-wizard-wizard-name">Senha de Confirmacao</label>
-                                    <input class="form-control @error('password_confirmation') is-invalid @enderror" type="password" name="password_confirmation" id="bootstrap-wizard-wizard-name" />
-                                    @error('password_confirmation')
-                                        <div class="invalid-feedback">{{ $message }}</div>
-                                    @enderror
-                                </div>
+                                {{--!Inicio do input de senha--}}
+                                <input name="password" class="form-control" id="email3"
+                                    type="hidden" value="aluno123"/>
+                                @error('password')
+                                    <div class="invalid-feedback">{{ $message }}</div>
+                                @enderror
+                                <input name="password_confirmation" class="form-control"
+                                    id="email3" type="hidden" value="aluno123" />
+                                @error('password_confirmation')
+                                    <div class="invalid-feedback">{{ $message }}</div>
+                                @enderror
+                                {{--!Fim do input de senha--}}
                             </div>
 
                             {{-- Segunda Seção --}}
