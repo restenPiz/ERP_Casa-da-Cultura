@@ -154,8 +154,4 @@ class studentController extends Controller
 
         return back();
     }
-    public function register()
-    {
-        return 0;
-    }
 }
