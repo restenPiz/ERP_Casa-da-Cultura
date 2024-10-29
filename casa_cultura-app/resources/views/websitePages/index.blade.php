@@ -213,7 +213,7 @@
                                                 alt="Course Meta">
                                         </a>
                                         <div class="top-position status-group left-top">
-                                            <span class="eduvibe-status status-02"><i class="icon-time-line"></i> Curso Online</span>
+                                            <span class="eduvibe-status status-02"><i class="icon-time-line"></i> Curso Presencial</span>
                                         </div>
                                     </div>
                                     <div class="content">
