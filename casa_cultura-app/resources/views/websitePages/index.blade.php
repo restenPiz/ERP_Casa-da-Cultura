@@ -128,68 +128,11 @@
                 </div>
             </div>
         </div>
-    </div>
-
-
-    <!-- Start Counterup Area  -->
-    <div class="edu-counterup-and-course-area">
-        <div class="container">
-            <div class="counterup-style-2 bg-color-primary radius-small ptb--80 ">
-                <div class="row g-5">
-                    <!-- Start Single Counter  -->
-                    <div class="col-lg-4 col-md-6 col-sm-6 col-12 line-separator">
-                        <div class="edu-counterup-2 text-center">
-                            <div class="inner">
-                                <div class="icon">
-                                    <i class="icon-Bag"></i>
-                                </div>
-                                <div class="content">
-                                    <h3 class="counter"><span class="odometer" data-count="243">00</span>
-                                        <span class="after-icon">+</span>
-                                    </h3>
-                                    <span class="subtitle">Estudantes Inscritos</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="col-lg-4 col-md-6 col-sm-6 col-12 line-separator">
-                        <div class="edu-counterup-2 text-center">
-                            <div class="inner">
-                                <div class="icon">
-                                    <i class="icon-Open-book"></i>
-                                </div>
-                                <div class="content">
-                                    <h3 class="counter"><span class="odometer" data-count="8">00</span>
-                                        <span class="after-icon">+</span>
-                                    </h3>
-                                    <span class="subtitle">Cursos Oferecidos</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6 col-12 line-separator">
-                        <div class="edu-counterup-2 text-center">
-                            <div class="inner">
-                                <div class="icon">
-                                    <i class="icon-presentation"></i>
-                                </div>
-                                <div class="content">
-                                    <h3 class="counter"><span class="odometer" data-count="10">00</span>
-                                        <span class="after-icon">+</span>
-                                    </h3>
-                                    <span class="subtitle">Formadores</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End Single Counter  -->
-                </div>
-            </div>
-        </div>
-        <div
+    </div><br><br><br>
+    
+        <div 
             class="edu-course-area eduvibe-home-three-course counterup-overlay-top bg-image edu-section-gapTop edu-section-gapBottom">
-            <div class="container eduvibe-animated-shape">
+            <div class="container eduvibe-animated-shape" style="margin-top:-20rem">
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="section-title text-center" data-sal-delay="150" data-sal="slide-up"
@@ -252,15 +195,6 @@
                         </div>
                     @endforeach
 
-                </div>
-
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="load-more-btn mt--60 text-center">
-                            <a class="edu-btn" href="course-style-3.html">Ver Todos Cursos<i
-                                    class="icon-arrow-right-line-right"></i></a>
-                        </div>
-                    </div>
                 </div>
                 <div class="shape-dot-wrapper shape-wrapper d-xl-block d-none">
                     <div class="shape-image shape-image-1">
