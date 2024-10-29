@@ -110,35 +110,18 @@
                                                 <form action="{{route('user.update',['id'=>$trainer->id])}}" method="post" enctype="multipart/form-data">
                                                     @csrf
                                                     <div class="row">
-                                                        <div class="col-12 d-flex justify-content-center mb-4">
-                                                            <div
-                                                                class="avatar avatar-5xl avatar-profile shadow-sm img-thumbnail rounded-circle">
-                                                                <div
-                                                                    class="h-100 w-100 rounded-circle overflow-hidden position-relative">
-                                                                    <!-- Imagem Atual -->
-                                                                    <img src="{{ asset('storage/' . $trainer->upload_file) }}"
-                                                                        width="200" alt="Foto do Formador" />
-                                                                    <!-- Input de Arquivo (Oculto) -->
-                                                                    <input name="upload_file" class="d-none"
-                                                                        id="profile-image" type="file"
-                                                                        accept="image/*" />
-                                                                    <!-- Label que Atua como Botão para Selecionar a Imagem -->
-                                                                    <label class="mb-0 overlay-icon d-flex flex-center"
-                                                                        for="profile-image">
-                                                                        <span class="bg-holder overlay overlay-0"></span>
-                                                                        <span
-                                                                            class="z-1 text-white dark__text-white text-center fs-10">
-                                                                            <span class="fas fa-camera"></span>
-                                                                            <span class="d-block">Adicionar Foto</span>
-                                                                        </span>
-                                                                    </label>
-                                                                </div>
-                                                            </div>
-                                                        </div>
+                                                        
                                                         <div class="col-lg-6"> <label class="form-label"
                                                                 for="first-name">Primeiro Nome</label><input
                                                                 name="name" class="form-control" id="first-name"
-                                                                type="text" value="{{$trainer->name}}" /></div>
+                                                                type="text" value="{{$trainer->name}}" />
+                                                        </div>
+                                                        <div class="col-lg-6">
+                                                            <label class="form-label"
+                                                                for="first-name">Adicionar Foto</label>
+                                                            <input name="upload_file" class="form-control"
+                                                                        id="profile-image" type="file" />
+                                                        </div>
                                                         <div class="col-lg-6"> <label class="form-label"
                                                                 for="last-name">Apelido</label><input name="Surname"
                                                                 class="form-control" id="last-name" type="text"

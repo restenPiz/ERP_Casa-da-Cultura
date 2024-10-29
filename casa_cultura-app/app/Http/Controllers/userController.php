@@ -75,6 +75,7 @@ class userController extends Controller
     }
     public function update(Request $request, $id)
     {
+        // dd($request->all());
         $validatedData = $request->validate([
             'name' => ['required', 'string', 'max:255'],
             'Surname' => ['required', 'string', 'max:255'],
@@ -91,23 +92,22 @@ class userController extends Controller
         ]);
 
         $user = User::findOrFail($id);
-
         switch ($request->input('user_type')) {
             case 'Employee':
                 $role = 'employee';
-                $successMessage = 'O usuário funcionário foi actualizado com sucesso!';
+                $successMessage = 'O usuário funcionário foi adicionado com sucesso!';
                 break;
             case 'Trainer':
                 $role = 'trainer';
-                $successMessage = 'O usuário formador foi actualizado com sucesso!';
+                $successMessage = 'O usuário formador foi adicionado com sucesso!';
                 break;
             case 'Users':
                 $role = 'users';
-                $successMessage = 'O aluno foi actualizado com sucesso!';
+                $successMessage = 'O aluno foi adicionado com sucesso!';
                 break;
             default:
                 $role = null;
-                $successMessage = 'Usuário actualizado com sucesso!';
+                $successMessage = 'Usuário adicionado com sucesso!';
                 break;
         }
 
@@ -128,8 +128,6 @@ class userController extends Controller
         }
 
         $user->save();
-
-        $user->addRole('users');
 
         Alert::success('Actualizado!', $successMessage);
 
