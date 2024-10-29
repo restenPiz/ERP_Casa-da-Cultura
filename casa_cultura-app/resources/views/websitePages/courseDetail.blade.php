@@ -51,16 +51,6 @@
                                     data-bs-target="#overview" type="button" role="tab" aria-controls="overview"
                                     aria-selected="true">Inicio</button>
                             </li>
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="curriculum-tab" data-bs-toggle="tab"
-                                    data-bs-target="#curriculum" type="button" role="tab" aria-controls="curriculum"
-                                    aria-selected="false">Aulas</button>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="instructor-tab" data-bs-toggle="tab"
-                                    data-bs-target="#instructor" type="button" role="tab" aria-controls="instructor"
-                                    aria-selected="false">Formador</button>
-                            </li>
                         </ul>
 
                         <div class="tab-content" id="myTabContent">
@@ -75,85 +65,7 @@
                                     </ul>
                                 </div>
                             </div>
-                            <div class="tab-pane fade" id="curriculum" role="tabpanel" aria-labelledby="curriculum-tab">
-                                <div class="course-tab-content">
-                                    <div class="edu-accordion-02" id="accordionExample1">
-                                        <div class="edu-accordion-item">
-                                            <div class="edu-accordion-header" id="headingOne">
-                                                <button class="edu-accordion-button" type="button"
-                                                    data-bs-toggle="collapse" data-bs-target="#collapseOne"
-                                                    aria-expanded="true" aria-controls="collapseOne">
-                                                    Capitulos
-                                                </button>
-                                            </div>
-                                            <div id="collapseOne" class="accordion-collapse collapse show"
-                                                aria-labelledby="headingOne" data-bs-parent="#accordionExample1">
-                                                <div class="edu-accordion-body">
-                                                    <ul>
-                                                        @auth
-                                                        @if(auth()->user()->status === 'Activo' && auth()->user()->courses->contains($course->id))
-                                                            @foreach ($chapters as $chapter)
-                                                                <li>
-                                                                    <div class="text"><i class="icon-draft-line"></i>
-                                                                        <a href="{{ asset('storage/' . $course->Upload_video) }}">{{ $chapter->Title }}</a></div>
-                                                                </li>
-                                                            @endforeach
-                                                        @else
-                                                            @foreach ($chapters as $chapter)
-                                                                <li>
-                                                                    <div class="text"><i class="icon-draft-line"></i>
-                                                                        {{ $chapter->Title }}</div>
-                                                                    <div class="icon"><i
-                                                                            class="icon-lock-password-line"></i></div>
-                                                                </li>
-                                                            @endforeach
-                                                        @endif
-                                                        @else
-                                                        @foreach ($chapters as $chapter)
-                                                                <li>
-                                                                    <div class="text"><i class="icon-draft-line"></i>
-                                                                        {{ $chapter->Title }}</div>
-                                                                    <div class="icon"><i
-                                                                            class="icon-lock-password-line"></i></div>
-                                                                </li>
-                                                            @endforeach
-                                                        @endauth
-
-                                                        
-                                                        
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="tab-pane fade" id="instructor" role="tabpanel" aria-labelledby="instructor-tab">
-                                <div class="course-tab-content">
-                                    <div class="course-author-wrapper">
-                                        @foreach ($users->users as $user)
-                                            <div class="thumbnail">
-                                                <img style="width: 20rem"
-                                                    src="{{ asset('storage/' . $user->upload_file) }}"
-                                                    alt="Author Images">
-                                            </div>
-
-                                            <div class="author-content">
-                                                <h6 class="title">
-                                                    <a href="instructor-profile.html">{{ $user->name }}
-                                                        {{ $user->Surname }}</a>
-                                                </h6>
-                                                <span class="subtitle">{{ $user->function }}</span>
-                                                <ul class="social-share border-style">
-                                                    <li><a href="#"><i class="icon-Fb"></i></a></li>
-                                                </ul>
-                                            </div>
-                                        @endforeach
-                                    </div>
-                                </div>
-                            </div>
+                            
                             <div class="tab-pane fade" id="review" role="tabpanel" aria-labelledby="review-tab">
                                 <div class="course-tab-content">
                                     <div class="row row--30">
@@ -286,8 +198,8 @@
                                 <div class="eduvibe-widget-details mt--35">
                                     <div class="widget-content">
                                         <ul>
-                                            <li><span><i class="icon-translate"></i> Linguagem</span><span>Portugues</span>
-                                            </li>
+                                            <li><span><i class="icon-draft-line"></i>
+                                                    Modalidade</span><span>Curso Pratico</span></li>
 
                                             <li><span><i class="icon-award-line"></i> Certificado</span><span>Sim</span>
                                             </li>
