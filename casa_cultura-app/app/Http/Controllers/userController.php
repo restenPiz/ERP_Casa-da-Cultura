@@ -27,7 +27,7 @@ class userController extends Controller
             // 'upload_file' => ['required', 'file', 'mimes:jpeg,png,pdf', 'max:2048'],
             'user_type' => ['required', 'string', 'max:255'],
             // 'status' => ['required', 'string', 'max:255'],
-            // 'contact' => ['required', 'string', 'min:9']
+            'contact' => ['required', 'string', 'min:9']
         ]);
 
         $user = new User();

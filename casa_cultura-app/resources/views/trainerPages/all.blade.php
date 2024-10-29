@@ -105,7 +105,7 @@
                                                 </h4>
                                                 <p class="fs-11 mb-0">Adicionado por <a class="link-600 fw-semi-bold"
                                                         href="#!">{{ Auth::user()->name }}</a></p>
-                                            </div>
+                                            </div><br>
                                             <div class="p-4" style="margin-top: -3rem;">
                                                 <form action="{{route('user.update',['id'=>$trainer->id])}}" method="post" enctype="multipart/form-data">
                                                     @csrf
