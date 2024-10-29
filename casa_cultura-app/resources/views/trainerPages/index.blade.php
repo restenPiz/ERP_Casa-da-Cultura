@@ -71,16 +71,22 @@
                                 @enderror
                             </div>
                             {{--!Inicio do input de senha--}}
-                            <input name="password" class="form-control" id="email3"
-                                type="hidden" value="formador123"/>
-                            @error('password')
-                                <div class="invalid-feedback">{{ $message }}</div>
-                            @enderror
-                            <input name="password_confirmation" class="form-control"
-                                id="email3" type="hidden" value="formador123" />
-                            @error('password_confirmation')
-                                <div class="invalid-feedback">{{ $message }}</div>
-                            @enderror
+                            <div class="col-lg-6">
+                                <label class="form-label" for="email2">Senha</label>
+                                <input name="password" class="form-control" id="email3"
+                                    type="password"/>
+                                @error('password')
+                                    <div class="invalid-feedback">{{ $message }}</div>
+                                @enderror
+                            </div>
+                            <div class="col-lg-6">
+                                <label class="form-label" for="email2">Senha de Confirmacao</label>
+                                <input name="password_confirmation" class="form-control"
+                                    id="email3" type="password" />
+                                @error('password_confirmation')
+                                    <div class="invalid-feedback">{{ $message }}</div>
+                                @enderror
+                            </div>
                             {{--!Fim do input de senha--}}
                             <div class="col-lg-6">
                                 <label class="form-label" for="email2">Numero de BI</label>
