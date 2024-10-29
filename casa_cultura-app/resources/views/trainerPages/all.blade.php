@@ -161,7 +161,7 @@
                                                                 class="form-control" id="email2" type="text"
                                                                 value="{{$trainer->place}}" name="place" /></div>
                                                         <div class="col-lg-6"> <label class="form-label"
-                                                                for="email2">Cargo</label><input class="form-control"
+                                                                for="email2">Curso a Ministrar</label><input class="form-control"
                                                                 id="email2" type="text"
                                                                 value="{{$trainer->function}}" name="function" /></div>
 

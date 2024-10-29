@@ -64,7 +64,7 @@
 
                             <div class="col-lg-6">
                                 <label class="form-label" for="email2">Contacto</label>
-                                <input class="form-control @error('contact') is-invalid @enderror" id="email2" type="text" placeholder="Ex: 867336817"
+                                <input class="form-control @error('contact') is-invalid @enderror" type="text" placeholder="Ex: 867336817"
                                     name="contact" />
                                 @error('contact')
                                     <div class="invalid-feedback">{{ $message }}</div>
@@ -73,15 +73,15 @@
                             {{--!Inicio do input de senha--}}
                             <div class="col-lg-6">
                                 <label class="form-label" for="email2">Senha</label>
-                                <input name="password" class="form-control" id="email3"
+                                <input name="password" class="form-control @error('password') is-invalid @enderror"
                                     type="password"/>
                                 @error('password')
                                     <div class="invalid-feedback">{{ $message }}</div>
                                 @enderror
                             </div>
                             <div class="col-lg-6">
-                                <label class="form-label" for="email2">Senha de Confirmacao</label>
-                                <input name="password_confirmation" class="form-control"
+                                <label class="form-label" for="email2">Confirmar Senha</label>
+                                <input name="password_confirmation" class="form-control @error('password_confirmation') is-invalid @enderror"
                                     id="email3" type="password" />
                                 @error('password_confirmation')
                                     <div class="invalid-feedback">{{ $message }}</div>
@@ -115,9 +115,9 @@
                             </div>
 
                             <div class="col-lg-6">
-                                <label class="form-label" for="email2">Cargo</label>
+                                <label class="form-label" for="email2">Curso a Ministrar</label>
                                 <input class="form-control @error('function') is-invalid @enderror" id="email2" type="text"
-                                    placeholder="Digite o seu cargo" name="function" />
+                                    placeholder="Digite o curso a ministrar" name="function" />
                                 @error('function')
                                     <div class="invalid-feedback">{{ $message }}</div>
                                 @enderror

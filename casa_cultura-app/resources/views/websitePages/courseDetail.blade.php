@@ -286,12 +286,6 @@
                                 <div class="eduvibe-widget-details mt--35">
                                     <div class="widget-content">
                                         <ul>
-                                            <li><span><i class="icon-user-2"></i> Estudantes
-                                                    Inscritos</span><span>{{ $countStudent }}</span></li>
-
-                                            <li><span><i class="icon-draft-line"></i>
-                                                    Capitulos</span><span>{{ $countChapter }}</span></li>
-
                                             <li><span><i class="icon-translate"></i> Linguagem</span><span>Portugues</span>
                                             </li>
 
