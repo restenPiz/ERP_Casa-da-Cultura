@@ -69,14 +69,16 @@
                                         <form method="POST" action="{{ route('login') }}">
                                             @csrf
                                             <div class="mb-3"><label class="form-label" for="card-email">Endereço
-                                                    Email</label><input class="form-control" name="email"
+                                                    Email</label><input class="form-control @error('email') is-invalid @enderror" name="email"
                                                     id="card-email" type="email" /></div>
-                                            <x-input-error :messages="$errors->get('email')" class="mt-2" />
+                                            <x-input-error style="color:red" :messages="$errors->get('email')" class="mt-2" />
+                                              
                                             <div class="mb-3">
-                                                <div class="d-flex justify-content-between"><label class="form-label"
+                                                <div class="d-flex justify-content-between"><label class="form-label @error('password') is-invalid @enderror"
                                                         for="card-password">Password</label></div><input name="password"
                                                     class="form-control" id="card-password" type="password" />
-                                                <x-input-error :messages="$errors->get('password')" class="mt-2" />
+
+                                                <x-input-error style="color:red" :messages="$errors->get('password')" class="mt-2" />
                                             </div>
                                             <div class="row flex-between-center">
                                                 <div class="col-auto">
@@ -85,9 +87,6 @@
                                                             checked="checked" /><label class="form-check-label mb-0"
                                                             for="card-checkbox">Lembre-me</label></div>
                                                 </div>
-                                               {{-- <div class="col-auto"><a class="fs-10"
-                                                        href="{{ route('password.request') }}">Esqueceu o Password?</a>
-                                                </div> --}}
                                             </div>
                                             <div class="mb-3"><button class="btn btn-primary d-block w-100 mt-3"
                                                     style="border-radius: 0" type="submit" name="submit">Log
