@@ -74,9 +74,9 @@
                                             <x-input-error style="color:red" :messages="$errors->get('email')" class="mt-2" />
                                               
                                             <div class="mb-3">
-                                                <div class="d-flex justify-content-between"><label class="form-label @error('password') is-invalid @enderror"
+                                                <div class="d-flex justify-content-between"><label class="form-label"
                                                         for="card-password">Password</label></div><input name="password"
-                                                    class="form-control" id="card-password" type="password" />
+                                                    class="form-control @error('password') is-invalid @enderror" id="card-password" type="password" />
 
                                                 <x-input-error style="color:red" :messages="$errors->get('password')" class="mt-2" />
                                             </div>
