@@ -108,17 +108,18 @@
                                                 <form action="{{route('user.update',['id'=>$trainer->id])}}" method="post" enctype="multipart/form-data">
                                                     @csrf
                                                     <div class="row">
-                                                        
-                                                        <div class="col-lg-6"> <label class="form-label"
-                                                                for="first-name">Primeiro Nome</label><input
-                                                                name="name" class="form-control" id="first-name"
-                                                                type="text" value="{{$trainer->name}}" /></div>
-                                                        <div class="col-lg-6">
+                                                        <div class="col-lg-12">
                                                             <label class="form-label"
                                                                 for="first-name">Adicionar Foto</label>
                                                             <input name="upload_file" class="form-control"
                                                                         id="profile-image" type="file" />
                                                         </div>
+                                                        
+                                                        <div class="col-lg-6"> <label class="form-label"
+                                                                for="first-name">Primeiro Nome</label><input
+                                                                name="name" class="form-control" id="first-name"
+                                                                type="text" value="{{$trainer->name}}" /></div>
+                                                        
                                                         <div class="col-lg-6"> <label class="form-label"
                                                                 for="last-name">Apelido</label><input name="Surname"
                                                                 class="form-control" id="last-name" type="text"
