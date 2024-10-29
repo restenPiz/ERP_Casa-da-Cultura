@@ -107,6 +107,7 @@ class studentController extends Controller
     }
     public function update(Request $request, $id)
     {
+        //*Inicio do metodo de validacao
         $validatedData = $request->validate([
             'name' => 'required|string|max:255',
             'Surname' => 'required|string|max:255',
