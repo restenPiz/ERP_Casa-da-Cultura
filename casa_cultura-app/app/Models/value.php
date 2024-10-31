@@ -17,4 +17,9 @@ class value extends Model
         'Second',
         'Third'
     ];
+
+    public function users()
+    {
+        return $this->belongsTo(user::class, 'id_user', 'id');
+    }
 }

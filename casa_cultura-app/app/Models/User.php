@@ -46,4 +46,8 @@ class User extends Authenticatable implements LaratrustUser
         return $this->belongsToMany(\App\Models\course::class, 'course_users', 'id_user', 'id_course')
             ->withTimestamps();
     }
+    public function values()
+    {
+        return $this->hasMany(value::class, 'id_user', 'id');
+    }
 }
