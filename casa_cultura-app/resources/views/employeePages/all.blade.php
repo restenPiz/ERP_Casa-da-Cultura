@@ -108,18 +108,17 @@
                                                 <form action="{{route('user.update',['id'=>$trainer->id])}}" method="post" enctype="multipart/form-data">
                                                     @csrf
                                                     <div class="row">
-                                                        <div class="col-lg-12">
+                                                        <div class="col-lg-6"> <label class="form-label"
+                                                                for="first-name">Primeiro Nome</label><input
+                                                                name="name" class="form-control" id="first-name"
+                                                                type="text" value="{{$trainer->name}}" />
+                                                        </div>
+                                                        <div class="col-lg-6">
                                                             <label class="form-label"
                                                                 for="first-name">Adicionar Foto</label>
                                                             <input name="upload_file" class="form-control"
                                                                         id="profile-image" type="file" />
                                                         </div>
-                                                        
-                                                        <div class="col-lg-6"> <label class="form-label"
-                                                                for="first-name">Primeiro Nome</label><input
-                                                                name="name" class="form-control" id="first-name"
-                                                                type="text" value="{{$trainer->name}}" /></div>
-                                                        
                                                         <div class="col-lg-6"> <label class="form-label"
                                                                 for="last-name">Apelido</label><input name="Surname"
                                                                 class="form-control" id="last-name" type="text"
@@ -135,13 +134,12 @@
                                                         </div>
                                                         <div class="col-lg-6"><label class="form-label"
                                                                 for="email3">Password</label><input name="password"
-                                                                placeholder="Digite a Sua Senha" class="form-control"
+                                                                placeholder="{{$trainer->password}}" class="form-control"
                                                                 id="email3" type="password" />
                                                         </div>
                                                         <div class="col-lg-6"><label class="form-label"
                                                                 for="email3">Password de Confirmacao</label><input
-                                                                name="password_confirmation"
-                                                                placeholder="Digite a Sua Senha" class="form-control"
+                                                                name="password_confirmation" placeholder="{{$trainer->password}}" class="form-control"
                                                                 id="email3" type="password" />
                                                         </div>
 
@@ -159,7 +157,7 @@
                                                                 class="form-control" id="email2" type="text"
                                                                 value="{{$trainer->place}}" name="place" /></div>
                                                         <div class="col-lg-6"> <label class="form-label"
-                                                                for="email2">Cargo</label><input class="form-control"
+                                                                for="email2">Curso a Ministrar</label><input class="form-control"
                                                                 id="email2" type="text"
                                                                 value="{{$trainer->function}}" name="function" /></div>
 
