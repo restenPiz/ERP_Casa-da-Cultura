@@ -67,10 +67,6 @@
                                         <li><a class="dropdown-item" href="{{route('logout')}}">Sair</a></li>
                                     </ul>
                                 </div>
-                            @else
-                                <div class="quote-icon quote-user d-none d-md-block ml--15 ml_sm--5">
-                                    <a class="edu-btn btn-medium left-icon header-button" href="/loginUser"><i class="ri-user-line"></i>Login / Registro</a>
-                                </div>
                             @endauth
                         </div>
 
