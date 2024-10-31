@@ -41,15 +41,15 @@
                 <div class="col-lg-6 d-none d-xl-block">
                     <nav class="mainmenu-nav d-none d-lg-block">
                         <ul class="mainmenu">
-                            <li><a href="/webMain">Inicio</a>
+                            <li><a href="#start">Inicio</a>
                             </li>
-                            <li><a href="#">Sobre Nos</a>
+                            <li><a href="#about">Sobre Nos</a>
                             </li>
-                            <li><a href="#">Cursos</a>
+                            <li><a href="#course">Cursos</a>
                             </li>
-                            <li><a href="#">Pagina</a>
+                            <li><a href="#another">Pagina</a>
                             </li>
-                            <li><a href="#">Eventos</a>
+                            <li><a href="#events">Eventos</a>
                             </li>
                         </ul>
                     </nav>

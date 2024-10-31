@@ -1,6 +1,6 @@
 @extends('layouts.webLayout')
 @section('content')
-    <div class="slider-area banner-style-3 bg-image">
+    <div class="slider-area banner-style-3 bg-image" id="start">
         <div class="d-flex align-items-center height-940">
             <div class="container eduvibe-animated-shape">
                 <div class="row g-5 align-items-center">
@@ -58,7 +58,7 @@
     </div>
     <!-- End Sldier Area  -->
     <br><br><br>
-    <div class="home-three-about edu-about-area about-style-4 bg-color-white edu-section-gapBottom">
+    <div class="home-three-about edu-about-area about-style-4 bg-color-white edu-section-gapBottom" id="about">
         <div class="container eduvibe-animated-shape">
             <div class="row g-lg-5 g-md-5 g-sm-5">
                 <div class="col-lg-12 col-xl-6">
@@ -130,7 +130,7 @@
         </div>
     </div><br><br><br>
     
-        <div 
+        <div id="course"
             class="edu-course-area eduvibe-home-three-course counterup-overlay-top bg-image edu-section-gapTop edu-section-gapBottom">
             <div class="container eduvibe-animated-shape" style="margin-top:-20rem">
                 <div class="row">
@@ -219,7 +219,7 @@
     <!-- End Counterup Area  -->
 
     <!-- Start Video Area  -->
-    <div class="edu-workshop-area eduvibe-home-three-video workshop-style-1 edu-section-gap bg-image bg-color-primary">
+    <div id="another" class="edu-workshop-area eduvibe-home-three-video workshop-style-1 edu-section-gap bg-image bg-color-primary">
         <div class="container eduvibe-animated-shape">
             <div class="row gy-lg-0 gy-5 row--60 align-items-center">
                 <div class="col-lg-6 order-2 order-lg-1">
@@ -330,7 +330,7 @@
         </div>
     </div>
 
-    <div class="eduvibe-home-three-event edu-event-area bg-color-white edu-section-gap">
+    <div id="events" class="eduvibe-home-three-event edu-event-area bg-color-white edu-section-gap">
         <div class="container eduvibe-animated-shape">
             <div class="row">
                 <div class="col-lg-12">
