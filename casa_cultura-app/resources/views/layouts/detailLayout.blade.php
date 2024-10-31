@@ -38,7 +38,7 @@
                 <div class="col-lg-6 d-none d-xl-block">
                     <nav class="mainmenu-nav d-none d-lg-block">
                         <ul class="mainmenu">
-                            <li><a href="/dashboard">Inicio</a>
+                            <li><a href="/webMain">Inicio</a>
                             </li>
                             <li><a href="#">Sobre Nos</a>
                             </li>
