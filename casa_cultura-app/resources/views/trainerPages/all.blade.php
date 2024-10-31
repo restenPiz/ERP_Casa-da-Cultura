@@ -19,8 +19,8 @@
                     </div>
                     <div id="table-customers-replace-element"><a href="{{route('trainer.index')}}" class="btn btn-falcon-default btn-sm"
                         type="button"><span class="fas fa-plus" data-fa-transform="shrink-3 down-2"></span><span
-                            class="d-none d-sm-inline-block ms-1">New</span></a>
-                            
+                            class="d-none d-sm-inline-block ms-1">Novo</span></a>
+                            <button class="btn btn-falcon-default btn-sm" type="button"><span class="fas fa-external-link-alt" data-fa-transform="shrink-3 down-2"></span><span class="d-none d-sm-inline-block ms-1">Exportar</span></button>
                     </div>
                 </div>
             </div>
