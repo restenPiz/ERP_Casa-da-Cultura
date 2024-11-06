@@ -126,6 +126,9 @@
                             <div class="col-lg-6">
                                 <input class="form-control @error('user_type') is-invalid @enderror" value="Trainer" id="email2" type="hidden"
                                     name="user_type" />
+                                
+                                <input class="form-control" value="0" id="email2" type="hidden"
+                                    name="status" />
                             </div>
                             <div class="col-12 d-flex justify-content-end"><button class="btn btn-primary"
                                     type="submit">Adicionar Formador </button></div>
