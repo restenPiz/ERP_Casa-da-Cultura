@@ -13,7 +13,7 @@ use App\Http\Controllers\studentController;
 use App\Http\Controllers\trainerController;
 use App\Http\Controllers\userController;
 use Illuminate\Support\Facades\Route;
-use Maatwebsite\Excel\Excel;
+use Maatwebsite\Excel\Facades\Excel;
 
 //?Inicio das rotas principais
 Route::get('/', [redirectController::class, 'main']);
