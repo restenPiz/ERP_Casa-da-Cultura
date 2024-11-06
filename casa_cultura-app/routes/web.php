@@ -1,5 +1,8 @@
 <?php
 
+use App\Exports\ArtistExport;
+use App\Exports\CourseExport;
+use App\Exports\EmployeeExport;
 use App\Exports\TrainersExport;
 use App\Http\Controllers\artistController;
 use App\Http\Controllers\chapterController;
@@ -96,5 +99,17 @@ Route::get('/loginUser', [redirectController::class, 'loginUser'])->name('loginU
 Route::get('/trainers/export', function () {
     return Excel::download(new TrainersExport, 'trainers.xlsx');
 })->name('trainers.export');
+
+Route::get('/employee/export', function () {
+    return Excel::download(new EmployeeExport, 'employees.xlsx');
+})->name('employee.export');
+
+Route::get('/course/export', function () {
+    return Excel::download(new CourseExport, 'course.xlsx');
+})->name('course.export');
+
+Route::get('/artist/export', function () {
+    return Excel::download(new ArtistExport, 'artist.xlsx');
+})->name('artist.export');
 
 require __DIR__ . '/auth.php';

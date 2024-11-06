@@ -19,7 +19,12 @@
                     </div>
                     <div id="table-customers-replace-element"><a href="{{route('employee.index')}}" class="btn btn-falcon-default btn-sm"
                             type="button"><span class="fas fa-plus" data-fa-transform="shrink-3 down-2"></span><span
-                                class="d-none d-sm-inline-block ms-1">New</span></a></div>
+                                class="d-none d-sm-inline-block ms-1">New</span></a>
+                    <a href="{{ route('employee.export') }}" class="btn btn-falcon-default btn-sm" type="button">
+                                <span class="fas fa-external-link-alt" data-fa-transform="shrink-3 down-2"></span>
+                                <span class="d-none d-sm-inline-block ms-1">Exportar</span></a>        
+                    </div>
+                                
                 </div>
             </div>
         </div>
@@ -105,7 +110,8 @@
                                                         href="#!">{{ Auth::user()->name }}</a></p>
                                             </div><br>
                                             <div class="p-4" style="margin-top: -3rem;">
-                                                <form action="{{route('user.update',['id'=>$trainer->id])}}" method="post" enctype="multipart/form-data">
+                                                <form action="{{route('user.update',['id'=>$trainer->id])}}" method="post" 
+                                                    enctype="multipart/form-data">
                                                     @csrf
                                                     <div class="row">
                                                         <div class="col-lg-6"> <label class="form-label"
