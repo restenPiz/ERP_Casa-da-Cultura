@@ -77,9 +77,11 @@
             <div class="card mb-3">
                 <div class="card-header position-relative">
                     <h5 class="mb-0 mt-1">Todos Cursos</h5>
-                    <div class="bg-holder d-none d-md-block bg-card"
-                        style="background-image:url(../../../assets/img/illustrations/corner-6.png);"></div>
-                    <!--/.bg-holder-->
+                    <div style="text-align: right">
+                         <a href="{{ route('course.export') }}" class="btn btn-falcon-default btn-sm" type="button">
+                                <span class="fas fa-external-link-alt" data-fa-transform="shrink-3 down-2"></span>
+                                <span class="d-none d-sm-inline-block ms-1">Exportar</span></a>  
+                    </div>
                 </div>
             </div>
             <div class="row mb-3 g-3">

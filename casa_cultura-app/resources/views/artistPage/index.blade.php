@@ -21,6 +21,9 @@
                             data-bs-target="#staticBack" href="#staticBack" data-bs-toggle="modal">
                             <span class="fas fa-plus" data-fa-transform="shrink-3 down-2"></span><span
                                 class="d-none d-sm-inline ms-1">New</span></a>
+                                <a href="{{ route('artist.export') }}" class="btn btn-falcon-default btn-sm" type="button">
+                                <span class="fas fa-external-link-alt" data-fa-transform="shrink-3 down-2"></span>
+                                <span class="d-none d-sm-inline-block ms-1">Exportar</span></a> 
                     </div>
                 </div>
             </div>
@@ -80,7 +83,10 @@
                                     {{-- Fim dos inputs type hidden --}}
                                     <div style="margin-top: 1rem" class="col-12 d-flex"><button style="border-radius: 0"
                                             class="btn btn-primary" type="submit">Adicionar Artista
-                                        </button></div>
+                                        </button>
+                                        
+                                    </div>
+
                                 </div>
                         </div>
                         </form>
