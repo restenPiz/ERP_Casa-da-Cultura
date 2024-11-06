@@ -1,5 +1,6 @@
 <?php
 
+use App\Exports\TrainersExport;
 use App\Http\Controllers\artistController;
 use App\Http\Controllers\chapterController;
 use App\Http\Controllers\courseController;
@@ -12,6 +13,7 @@ use App\Http\Controllers\studentController;
 use App\Http\Controllers\trainerController;
 use App\Http\Controllers\userController;
 use Illuminate\Support\Facades\Route;
+use Maatwebsite\Excel\Excel;
 
 //?Inicio das rotas principais
 Route::get('/', [redirectController::class, 'main']);
@@ -90,8 +92,9 @@ Route::get('/webMain', [redirectController::class, 'webMain'])->name('web.main')
 //*Inicio da rota de tela de login de Estudante
 Route::get('/loginUser', [redirectController::class, 'loginUser'])->name('loginUser');
 
-//*Inicios das rotas da parte de estudante
-Route::group(['prefix' => 'users', 'middleware' => ['role:users']], function () {
-});
+//*Inicio da rota de dowloand de excel
+Route::get('/trainers/export', function () {
+    return Excel::download(new TrainersExport, 'trainers.xlsx');
+})->name('trainers.export');
 
 require __DIR__ . '/auth.php';
