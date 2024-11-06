@@ -10,7 +10,7 @@
         "laravel/framework": "^10.10",
         "laravel/sanctum": "^3.3",
         "laravel/tinker": "^2.8",
-        "maatwebsite/excel": "*",
+        "maatwebsite/excel": "^3.1",
         "paymentsds/mpesa": "^1.0",
         "realrashid/sweet-alert": "^7.2",
         "santigarcor/laratrust": "^8.3"
