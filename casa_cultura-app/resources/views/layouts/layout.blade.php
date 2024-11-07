@@ -197,7 +197,7 @@
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link {{ request()->routeIs('student.details') ? 'active' : '' }}"
-                                            href="{{ route('trainer.all') }}">
+                                            href="{{ route('student.details') }}">
                                             <div class="d-flex align-items-center">
                                                 <span class="nav-link-text ps-1">Pesquisa de Dados</span>
                                             </div>
