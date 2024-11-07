@@ -14,6 +14,10 @@ use Storage;
 
 class studentController extends Controller
 {
+    public function details()
+    {
+        return view('studentPages.details');
+    }
     public function index()
     {
         $users = DB::table('users')->where('user_type', 'Users')->get();

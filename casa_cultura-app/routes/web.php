@@ -70,6 +70,8 @@ Route::middleware('auth')->group(function () {
     Route::post('/studentStore', [studentController::class, 'store'])->name('student.store');
     Route::post('/studentUpdate/{id}', [studentController::class, 'update'])->name('student.update');
     Route::post('/studentRegister', [studentController::class, 'register'])->name('student.register');
+    //?Inicio da rota de detalhe do estudante
+    Route::get('/studentDetails', [studentController::class, 'details'])->name('student.details');
 
     //*Inicio das rotas de capitulo
     Route::post('/chapterStore', [chapterController::class, 'store'])->name('chapter.store');

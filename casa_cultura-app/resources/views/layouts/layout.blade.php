@@ -172,27 +172,23 @@
                                             class="nav-link-text ps-1">Gerir Eventos</span></div>
                                 </a>
                                 {{-- Inicio do Setimo Link --}}
-                                <a class="nav-link {{ request()->routeIs('student.index') ? 'active' : '' }}" href="{{ route('student.index') }}" role="button">
-                                    <div class="d-flex align-items-center"><span class="nav-link-icon"><span
-                                                class="fas fa-user"></span></span><span
-                                            class="nav-link-text ps-1">Inscricao de Alunos</span></div>
-                                </a>
-                                <a class="nav-link dropdown-indicator {{ request()->routeIs('student.index') ? 'active' : '' }}"
+                               
+                                <a class="nav-link dropdown-indicator {{ request()->routeIs('student.index','student.details') ? 'active' : '' }}"
                                     href="#students" role="button" data-bs-toggle="collapse"
-                                    aria-expanded="{{ request()->routeIs('student.index', 'trainer.index') ? 'true' : 'false' }}"
+                                    aria-expanded="{{ request()->routeIs('student.index', 'student.details') ? 'true' : 'false' }}"
                                     aria-controls="customization">
                                     <div class="d-flex align-items-center">
                                         <span class="nav-link-icon">
                                             <span class="fas fa-layer-group"></span>
                                         </span>
-                                        <span class="nav-link-text ps-1">Gerir Formadores</span>
+                                        <span class="nav-link-text ps-1">Inscricao de Alunos</span>
                                     </div>
                                 </a>
 
-                                <ul class="nav collapse {{ request()->routeIs('trainer.all', 'trainer.index') ? 'show' : '' }}"
+                                <ul class="nav collapse {{ request()->routeIs('student.index', 'student.details') ? 'show' : '' }}"
                                     id="students">
                                     <li class="nav-item">
-                                        <a class="nav-link {{ request()->routeIs('trainer.index') ? 'active' : '' }}"
+                                        <a class="nav-link {{ request()->routeIs('student.index') ? 'active' : '' }}"
                                             href="{{ route('student.index') }}">
                                             <div class="d-flex align-items-center">
                                                 <span class="nav-link-text ps-1">Inscrever Alunos</span>
@@ -200,7 +196,7 @@
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link {{ request()->routeIs('trainer.all') ? 'active' : '' }}"
+                                        <a class="nav-link {{ request()->routeIs('student.details') ? 'active' : '' }}"
                                             href="{{ route('trainer.all') }}">
                                             <div class="d-flex align-items-center">
                                                 <span class="nav-link-text ps-1">Pesquisa de Dados</span>
