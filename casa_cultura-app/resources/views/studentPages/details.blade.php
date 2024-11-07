@@ -56,7 +56,9 @@
             </div>
 
             {{-- ! Inicio do conteudo restante --}}
+            @if(session('pesquisa'))
 
+            @endif
             {{-- ! Fim do conteudo restante --}}
 
         </div>

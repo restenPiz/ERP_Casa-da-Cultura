@@ -20,6 +20,29 @@ class studentController extends Controller
         $trainers = DB::table('users')->where('user_type', 'Users')->get();
         return view('studentPages.details', compact('courses', 'trainers'));
     }
+    public function search(Request $request)
+    {
+        $studentId = $request->input('id_user');
+        $courseId = $request->input('course_id');
+
+        // Consulta para buscar os alunos e cursos com base nos filtros selecionados
+        $query = DB::table('students')
+            ->join('courses', 'students.course_id', '=', 'courses.id')
+            ->select('students.*', 'courses.Name as course_name');
+
+        if ($studentId) {
+            $query->where('students.id', $studentId);
+        }
+
+        if ($courseId) {
+            $query->where('courses.id', $courseId);
+        }
+
+        $results = $query->get();
+
+        // Retorna para a view com os resultados
+        return view('students.index', compact('results'));
+    }
     public function index()
     {
         $users = DB::table('users')->where('user_type', 'Users')->get();

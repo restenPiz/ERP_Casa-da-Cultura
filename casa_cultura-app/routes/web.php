@@ -72,6 +72,7 @@ Route::middleware('auth')->group(function () {
     Route::post('/studentRegister', [studentController::class, 'register'])->name('student.register');
     //?Inicio da rota de detalhe do estudante
     Route::get('/studentDetails', [studentController::class, 'details'])->name('student.details');
+    Route::post('/studentSearch', [studentController::class, 'search'])->name('student.search');
 
     //*Inicio das rotas de capitulo
     Route::post('/chapterStore', [chapterController::class, 'store'])->name('chapter.store');
