@@ -45,8 +45,8 @@
                             </div>
                             <div class="col-sm-4 mb-3">
                                 <label class="form-label" for="course-category"><span
-                                        class="text-danger">*</span></label><br>
-                                <button class="btn btn-falcon-default btn-sm" type="button">
+                                        class="text-danger"></span></label>
+                                <button style="margin-top:2.1rem;" class="btn btn-falcon-default btn-sm" type="button">
                                     <span class="fas fa-external-link-alt" data-fa-transform="shrink-3 down-2"></span>
                                     <span class="d-none d-sm-inline-block ms-1">Filtrar</span></button>
                             </div>
