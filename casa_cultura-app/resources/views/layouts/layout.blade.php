@@ -177,6 +177,37 @@
                                                 class="fas fa-user"></span></span><span
                                             class="nav-link-text ps-1">Inscricao de Alunos</span></div>
                                 </a>
+                                <a class="nav-link dropdown-indicator {{ request()->routeIs('student.index') ? 'active' : '' }}"
+                                    href="#students" role="button" data-bs-toggle="collapse"
+                                    aria-expanded="{{ request()->routeIs('student.index', 'trainer.index') ? 'true' : 'false' }}"
+                                    aria-controls="customization">
+                                    <div class="d-flex align-items-center">
+                                        <span class="nav-link-icon">
+                                            <span class="fas fa-layer-group"></span>
+                                        </span>
+                                        <span class="nav-link-text ps-1">Gerir Formadores</span>
+                                    </div>
+                                </a>
+
+                                <ul class="nav collapse {{ request()->routeIs('trainer.all', 'trainer.index') ? 'show' : '' }}"
+                                    id="students">
+                                    <li class="nav-item">
+                                        <a class="nav-link {{ request()->routeIs('trainer.index') ? 'active' : '' }}"
+                                            href="{{ route('student.index') }}">
+                                            <div class="d-flex align-items-center">
+                                                <span class="nav-link-text ps-1">Inscrever Alunos</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link {{ request()->routeIs('trainer.all') ? 'active' : '' }}"
+                                            href="{{ route('trainer.all') }}">
+                                            <div class="d-flex align-items-center">
+                                                <span class="nav-link-text ps-1">Pesquisa de Dados</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
                                 @endrole
                                 
                                 @role('trainer')

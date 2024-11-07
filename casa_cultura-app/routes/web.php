@@ -95,7 +95,7 @@ Route::get('/webMain', [redirectController::class, 'webMain'])->name('web.main')
 //*Inicio da rota de tela de login de Estudante
 Route::get('/loginUser', [redirectController::class, 'loginUser'])->name('loginUser');
 
-//*Inicio da rota de dowloand de ficheiro em excel
+//?Inicio da rota de dowloand de ficheiro em excel
 Route::get('/trainers/export', function () {
     return Excel::download(new TrainersExport, 'trainers.xlsx');
 })->name('trainers.export');
