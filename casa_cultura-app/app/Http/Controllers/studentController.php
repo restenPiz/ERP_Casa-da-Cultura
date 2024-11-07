@@ -22,26 +22,26 @@ class studentController extends Controller
     }
     public function search(Request $request)
     {
-        $studentId = $request->input('id_user');
-        $courseId = $request->input('course_id');
+        $request->validate([
+            'id_user' => 'required|exists:users,id',
+            'id_course' => 'required|exists:courses,id',
+        ]);
 
-        // Consulta para buscar os alunos e cursos com base nos filtros selecionados
-        $query = DB::table('students')
-            ->join('courses', 'students.course_id', '=', 'courses.id')
-            ->select('students.*', 'courses.Name as course_name');
+        // Obter o aluno selecionado
+        $student = User::where('id', $request->input('id_user'))->where('user_type', '!=', 'Trainer')->first();
 
-        if ($studentId) {
-            $query->where('students.id', $studentId);
-        }
+        // Obter o curso selecionado junto com os trainers e usuários inscritos (não Trainers)
+        $course = Course::with([
+            'users' => function ($query) {
+                $query->where('user_type', '!=', 'Trainer');
+            }
+        ])->findOrFail($request->input('id_course'));
 
-        if ($courseId) {
-            $query->where('courses.id', $courseId);
-        }
+        // Contar os alunos (não Trainers) vinculados ao curso
+        $countStudents = $course->users()->where('user_type', 'Users')->count();
 
-        $results = $query->get();
-
-        // Retorna para a view com os resultados
-        return view('students.index', compact('results'));
+        // Retornar os dados para a view de resultados de pesquisa
+        return view('courses.search-results', compact('student', 'countStudents'))->with('course');
     }
     public function index()
     {
