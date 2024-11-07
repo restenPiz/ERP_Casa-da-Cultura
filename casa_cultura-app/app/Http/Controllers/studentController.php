@@ -16,7 +16,9 @@ class studentController extends Controller
 {
     public function details()
     {
-        return view('studentPages.details');
+        $courses = course::all();
+        $trainers = DB::table('users')->where('user_type', 'Users')->get();
+        return view('studentPages.details', compact('courses', 'trainers'));
     }
     public function index()
     {
