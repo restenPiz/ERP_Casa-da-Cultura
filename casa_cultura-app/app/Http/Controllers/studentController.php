@@ -24,15 +24,13 @@ class studentController extends Controller
     {
         //?Inicio dos metodos de condicao de pesquisa
         $student = DB::table('users')->where('name', $request->input('name'))->get();
-        //*Inicio dos outros retornos 
-        $course = course::all();
-        $courses = course::all();
-        $trainers = DB::table('users')->where('user_type', 'Users')->get();
+        $courses = Course::all();
+        $course = Course::all();
 
-        //*Colocando o curso dentro de uma session
+        session()->put('student', $student);
         session()->put('course', $course);
 
-        return view('studentPages.details', compact('student', 'courses', 'trainers'));
+        return view('studentPages.details', compact('courses'));
     }
     public function index()
     {

@@ -44,7 +44,8 @@
             </div>
 
             {{-- ! Inicio do conteudo restante --}}
-            @if (session('course'))
+            @if (session('student'))
+            @php $student = session('student'); @endphp
                 <div class="card-body p-0">
                     <div class="table-responsive scrollbar">
                         <div class="container">
@@ -60,15 +61,15 @@
                                 <tbody>
                                     <tr>
                                         <td><strong>Nome do Aluno</strong></td>
-                                        <td>{{ $student->name }} {{ $student->Surname }}</td>
+                                        <td>{{ $student->name }}  {{ $student->Surname }} </td>
                                     </tr>
                                     <tr>
                                         <td><strong>Email</strong></td>
-                                        <td>{{ $student->email }}</td>
+                                        <td>{{ $student->email }} </td>
                                     </tr>
                                     <tr>
                                         <td><strong>Telefone</strong></td>
-                                        <td>{{ $student->contact }}</td>
+                                        <td>{{ $student->contact }} </td>
                                     </tr>
                                 </tbody>
                             </table>
