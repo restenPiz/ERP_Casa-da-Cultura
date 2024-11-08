@@ -24,6 +24,7 @@ class studentController extends Controller
     {
         //?Inicio dos metodos de condiicao de pesquisa
         $student = User::where('name', $request->input('name'))->get();
+        //*Inicio dos outros retornos 
         $course = course::all();
         $courses = course::all();
         $trainers = DB::table('users')->where('user_type', 'Users')->get();
