@@ -22,13 +22,8 @@ class studentController extends Controller
     }
     public function search(Request $request)
     {
-        $request->validate([
-            'id_user' => 'required|exists:users,id',
-            'id_course' => 'required|exists:courses,id',
-        ]);
-
         // Obter o aluno selecionado
-        $student = User::where('id', $request->input('id_user'))->where('user_type', '!=', 'Trainer')->first();
+        $student = User::where('id', $request->input('id_user'))->where('user_type', '!=', 'Trainer')->get();
 
         // Obter o curso selecionado junto com os trainers e usuários inscritos (não Trainers)
         $course = Course::with([
@@ -41,7 +36,7 @@ class studentController extends Controller
         $countStudents = $course->users()->where('user_type', 'Users')->count();
 
         // Retornar os dados para a view de resultados de pesquisa
-        return view('courses.search-results', compact('student', 'countStudents'))->with('course');
+        return view('studentPages.details', compact('courses', 'trainers', 'student', 'countStudents'))->with('course');
     }
     public function index()
     {
