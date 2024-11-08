@@ -22,8 +22,11 @@ class studentController extends Controller
     }
     public function search(Request $request)
     {
+        // dd($request->input('name'));
+
+        // dd($request->input('id_course'));
         //?Inicio dos metodos de condiicao de pesquisa
-        $student = User::where('name', $request->input('name'))->get();
+        $student = DB::table('users')->where('name', $request->input('name'))->get();
         //*Inicio dos outros retornos 
         $course = course::all();
         $courses = course::all();

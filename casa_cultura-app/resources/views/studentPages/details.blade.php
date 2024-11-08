@@ -12,22 +12,19 @@
                             <div class="col-sm-5 mb-3">
                                 <label class="form-label" for="course-category">Nome do Aluno<span
                                         class="text-danger">*</span></label>
-                                <select class="form-select @error('id_user') is-invalid @enderror" id="course-category"
+                                <select class="form-select" id="course-category"
                                     name="name">
                                     <option>Selecione o Nome do Aluno</option>
                                     @foreach ($trainers as $trainer)
-                                        <option value="{{ $trainer->id }}">{{ $trainer->name }} {{ $trainer->Surname }}
+                                        <option value="{{ $trainer->name }}">{{ $trainer->name }} {{ $trainer->Surname }}
                                         </option>
                                     @endforeach
                                 </select>
-                                @error('id_user')
-                                    <div class="text-danger">{{ $message }}</div>
-                                @enderror
                             </div>
                             <div class="col-sm-5 mb-3">
                                 <label class="form-label" for="course-category">Curso<span
                                         class="text-danger">*</span></label>
-                                <select class="form-select @error('id_user') is-invalid @enderror" id="course-category"
+                                <select class="form-select" id="course-category"
                                     name="id_course">
                                     <option>Selecione o seu Curso</option>
                                     @foreach ($courses as $course)
@@ -35,9 +32,6 @@
                                         </option>
                                     @endforeach
                                 </select>
-                                @error('id_user')
-                                    <div class="text-danger">{{ $message }}</div>
-                                @enderror
                             </div>
                             <div class="col-sm-2 mb-3">
                                 <label class="form-label" for="course-category"><span class="text-danger"></span></label>
