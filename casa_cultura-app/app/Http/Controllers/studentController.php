@@ -28,7 +28,11 @@ class studentController extends Controller
         $course = course::all();
         $courses = course::all();
         $trainers = DB::table('users')->where('user_type', 'Users')->get();
-        return view('studentPages.details', compact('student', 'courses', 'trainers'))->with('course');
+
+        //*Colocando o curso dentro de uma session
+        session()->put('course', $course);
+
+        return view('studentPages.details', compact('student', 'courses', 'trainers'));
     }
     public function index()
     {
