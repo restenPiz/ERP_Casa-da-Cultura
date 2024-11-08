@@ -58,8 +58,6 @@
                         <div class="container">
                             <h3>Resultados da Pesquisa</h3>
 
-                            {{-- Verificação para exibir dados se a pesquisa tiver resultados --}}
-                            @if ($student && $course)
                                 {{-- Tabela de informações do aluno --}}
                                 <table class="table table-bordered mb-4">
                                     <thead>
@@ -82,66 +80,13 @@
                                         </tr>
                                     </tbody>
                                 </table>
-
-                                {{-- Tabela de informações do curso --}}
-                                <table class="table table-bordered mb-4">
-                                    <thead>
-                                        <tr>
-                                            <th colspan="2">Informações do Curso</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td><strong>Nome do Curso</strong></td>
-                                            <td>{{ $course->Name }}</td>
-                                        </tr>
-                                        <tr>
-                                            <td><strong>Descrição</strong></td>
-                                            <td>{{ $course->description }}</td>
-                                        </tr>
-                                        <tr>
-                                            <td><strong>Total de Estudantes Inscritos</strong></td>
-                                            <td>{{ $countStudents }}</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-
-                                {{-- Tabela de capítulos do curso --}}
-                                <table class="table table-bordered mb-4">
-                                    <thead>
-                                        <tr>
-                                            <th colspan="2">Capítulos do Curso</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        @if ($chapters->isEmpty())
-                                            <tr>
-                                                <td colspan="2">Este curso não possui capítulos cadastrados.</td>
-                                            </tr>
-                                        @else
-                                            <tr>
-                                                <th>Nome do Capítulo</th>
-                                                <th>Descrição</th>
-                                            </tr>
-                                            @foreach ($chapters as $chapter)
-                                                <tr>
-                                                    <td>{{ $chapter->name }}</td>
-                                                    <td>{{ $chapter->description }}</td>
-                                                </tr>
-                                            @endforeach
-                                        @endif
-                                    </tbody>
-                                </table>
-                            @else
-                                <p class="text-danger">Nenhum resultado encontrado para os critérios de pesquisa
-                                    selecionados.</p>
-                            @endif
                         </div>
                     </div>
                 </div>
         </div>
     </div>
-
+    @else
+        <p class="text-danger">Nenhum resultado encontrado para os critérios de pesquisa selecionados.</p>
     @endif
     {{-- ! Fim do conteudo restante --}}
 
