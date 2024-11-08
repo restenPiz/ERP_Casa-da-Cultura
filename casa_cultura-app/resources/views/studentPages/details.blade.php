@@ -12,8 +12,7 @@
                             <div class="col-sm-5 mb-3">
                                 <label class="form-label" for="course-category">Nome do Aluno<span
                                         class="text-danger">*</span></label>
-                                <select class="form-select" id="course-category"
-                                    name="name">
+                                <select class="form-select" id="course-category" name="name">
                                     <option>Selecione o Nome do Aluno</option>
                                     @foreach ($trainers as $trainer)
                                         <option value="{{ $trainer->name }}">{{ $trainer->name }} {{ $trainer->Surname }}
@@ -24,8 +23,7 @@
                             <div class="col-sm-5 mb-3">
                                 <label class="form-label" for="course-category">Curso<span
                                         class="text-danger">*</span></label>
-                                <select class="form-select" id="course-category"
-                                    name="id_course">
+                                <select class="form-select" id="course-category" name="id_course">
                                     <option>Selecione o seu Curso</option>
                                     @foreach ($courses as $course)
                                         <option value="{{ $course->id }}">{{ $course->Course_name }}
@@ -35,8 +33,8 @@
                             </div>
                             <div class="col-sm-2 mb-3">
                                 <label class="form-label" for="course-category"><span class="text-danger"></span></label>
-                                <button style="margin-top:2.1rem;" name="submit"
-                                 class="btn btn-falcon-default btn-sm" type="submit">
+                                <button style="margin-top:2.1rem;" name="submit" class="btn btn-falcon-default btn-sm"
+                                    type="submit">
                                     <span class="fas fa-external-link-alt" data-fa-transform="shrink-3 down-2"></span>
                                     <span class="d-none d-sm-inline-block ms-1">Filtrar</span></button>
                             </div>
@@ -77,15 +75,9 @@
                         </div>
                     </div>
                 </div>
-            {{-- @else
-                <p class="text-danger">Nenhum resultado encontrado para essa pesquisa.</p> --}}
             @endif
+            {{-- ! Fim do conteudo restante --}}
         </div>
-    </div>
-    
-    {{-- ! Fim do conteudo restante --}}
-
-    </div>
     </div>
 
     {{-- ! Fim do conteudo da minha pagina de detalhes --}}
