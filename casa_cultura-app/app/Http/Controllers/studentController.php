@@ -22,20 +22,16 @@ class studentController extends Controller
     }
     public function search(Request $request)
     {
-        // Obter o aluno selecionado
         $student = User::where('id', $request->input('id_user'))->where('user_type', '!=', 'Trainer')->get();
 
-        // Obter o curso selecionado junto com os trainers e usuários inscritos (não Trainers)
         $course = Course::with([
             'users' => function ($query) {
                 $query->where('user_type', '!=', 'Trainer');
             }
         ])->findOrFail($request->input('id_course'));
 
-        // Contar os alunos (não Trainers) vinculados ao curso
         $countStudents = $course->users()->where('user_type', 'Users')->count();
 
-        // Retornar os dados para a view de resultados de pesquisa
         return view('studentPages.details', compact('courses', 'trainers', 'student', 'countStudents'))->with('course');
     }
     public function index()
