@@ -83,8 +83,8 @@
                         </div>
                     </div>
                 </div>
-            @else
-                <p class="text-danger">Nenhum resultado encontrado para essa pesquisa.</p>
+            {{-- @else
+                <p class="text-danger">Nenhum resultado encontrado para essa pesquisa.</p> --}}
             @endif
         </div>
     </div>
