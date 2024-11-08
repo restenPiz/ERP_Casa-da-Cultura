@@ -22,20 +22,12 @@ class studentController extends Controller
     }
     public function search(Request $request)
     {
-        // $student = User::where('id', $request->input('id_user'))->where('user_type', '!=', 'Trainer')->get();
-
-        // $course = Course::with([
-        //     'users' => function ($query) {
-        //         $query->where('user_type', '!=', 'Trainer');
-        //     }
-        // ])->findOrFail($request->input('id_course'));
-        // compact('courses', 'trainers', 'student')
         //?Inicio dos metodos de condiicao de pesquisa
-
+        $student = User::where('name', $request->input('Name'))->get();
         $course = course::all();
         $courses = course::all();
         $trainers = DB::table('users')->where('user_type', 'Users')->get();
-        return view('studentPages.details', compact('courses', 'trainers'))->with('course');
+        return view('studentPages.details', compact('student', 'courses', 'trainers'))->with('course');
     }
     public function index()
     {

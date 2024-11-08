@@ -13,7 +13,7 @@
                                 <label class="form-label" for="course-category">Nome do Aluno<span
                                         class="text-danger">*</span></label>
                                 <select class="form-select @error('id_user') is-invalid @enderror" id="course-category"
-                                    name="id_user[]">
+                                    name="name">
                                     <option>Selecione o Nome do Aluno</option>
                                     @foreach ($trainers as $trainer)
                                         <option value="{{ $trainer->id }}">{{ $trainer->name }} {{ $trainer->Surname }}
@@ -28,7 +28,7 @@
                                 <label class="form-label" for="course-category">Curso<span
                                         class="text-danger">*</span></label>
                                 <select class="form-select @error('id_user') is-invalid @enderror" id="course-category"
-                                    name="id_user[]">
+                                    name="id_course">
                                     <option>Selecione o seu Curso</option>
                                     @foreach ($courses as $course)
                                         <option value="{{ $course->id }}">{{ $course->Course_name }}
