@@ -23,7 +23,7 @@ class studentController extends Controller
     public function search(Request $request)
     {
         //?Inicio dos metodos de condiicao de pesquisa
-        $student = User::where('name', $request->input('Name'))->get();
+        $student = User::where('name', $request->input('name'))->get();
         $course = course::all();
         $courses = course::all();
         $trainers = DB::table('users')->where('user_type', 'Users')->get();

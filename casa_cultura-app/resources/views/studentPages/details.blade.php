@@ -58,35 +58,35 @@
                         <div class="container">
                             <h3>Resultados da Pesquisa</h3>
 
-                                {{-- Tabela de informações do aluno --}}
-                                <table class="table table-bordered mb-4">
-                                    <thead>
-                                        <tr>
-                                            <th colspan="2">Informações do Aluno</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td><strong>Nome do Aluno</strong></td>
-                                            <td>{{ $student->name }} {{ $student->Surname }}</td>
-                                        </tr>
-                                        <tr>
-                                            <td><strong>Email</strong></td>
-                                            <td>{{ $student->email }}</td>
-                                        </tr>
-                                        <tr>
-                                            <td><strong>Telefone</strong></td>
-                                            <td>{{ $student->contact }}</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                            {{-- Tabela de informações do aluno --}}
+                            <table class="table table-bordered mb-4">
+                                <thead>
+                                    <tr>
+                                        <th colspan="2">Informações do Aluno</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>Nome do Aluno</strong></td>
+                                        <td>{{ $student->name }} {{ $student->Surname }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Email</strong></td>
+                                        <td>{{ $student->email }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Telefone</strong></td>
+                                        <td>{{ $student->contact }}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                 </div>
         </div>
     </div>
     @else
-        <p class="text-danger">Nenhum resultado encontrado para os critérios de pesquisa selecionados.</p>
+        <p class="text-danger">Nenhum resultado encontrado para essa pesquisa.</p>
     @endif
     {{-- ! Fim do conteudo restante --}}
 
