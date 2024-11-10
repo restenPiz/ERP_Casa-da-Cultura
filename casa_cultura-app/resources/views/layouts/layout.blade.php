@@ -199,7 +199,7 @@
                                         <a class="nav-link {{ request()->routeIs('student.details') ? 'active' : '' }}"
                                             href="{{ route('student.details') }}">
                                             <div class="d-flex align-items-center">
-                                                <span class="nav-link-text ps-1">Pesquisa de Dados</span>
+                                                <span class="nav-link-text ps-1">Filtro de Dados do Aluno</span>
                                             </div>
                                         </a>
                                     </li>

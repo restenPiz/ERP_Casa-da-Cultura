@@ -23,14 +23,15 @@ class studentController extends Controller
     public function search(Request $request)
     {
         //?Inicio dos metodos de condicao de pesquisa
-        $student = DB::table('users')->where('name', $request->input('name'))->get();
+        $student = User::where('name', $request->input('name'))->get();
         $courses = Course::all();
         $course = Course::all();
+        $trainers = DB::table('users')->where('user_type', 'Users')->get();
 
         session()->put('student', $student);
         session()->put('course', $course);
 
-        return view('studentPages.details', compact('courses'));
+        return view('studentPages.details', compact('courses', 'trainers'));
     }
     public function index()
     {

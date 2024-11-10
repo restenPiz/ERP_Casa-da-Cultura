@@ -45,7 +45,10 @@
 
             {{-- ! Inicio do conteudo restante --}}
             @if (session('student'))
-            @php $student = session('student'); @endphp
+            @php
+                $student = session('student');
+                session()->forget('student'); 
+            @endphp
                 <div class="card-body p-0">
                     <div class="table-responsive scrollbar">
                         <div class="container">
