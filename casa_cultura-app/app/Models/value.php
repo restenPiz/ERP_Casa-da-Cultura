@@ -22,4 +22,5 @@ class value extends Model
     {
         return $this->belongsTo(user::class, 'id_user', 'id');
     }
+    
 }

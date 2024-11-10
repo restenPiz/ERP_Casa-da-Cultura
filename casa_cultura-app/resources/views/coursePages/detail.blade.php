@@ -30,7 +30,8 @@
                     </div>
                     <hr class="text-secondary text-opacity-50" />
                     <ul class="list-unstyled d-flex flex-wrap gap-3 fs-10 fw-semi-bold text-300 mt-3 mb-0">
-                        <li><span class="fas fa-graduation-cap text-white me-1"> </span>{{$countStudent}} Numero de Estudantes Inscritos
+                        <li><span class="fas fa-graduation-cap text-white me-1"> </span>{{ $countStudent }} Numero de
+                            Estudantes Inscritos
                         </li>
                         <li><span class="fas fa-headphones text-white me-1"> </span>Portugues</li>
                     </ul>
@@ -206,8 +207,8 @@
                                         </h4>
                                     </div>
                                     <div class="p-4" style="margin-top:-3rem">
-                                        <form action="{{ route('chapter.update', ['id' => $chapter->id]) }}" method="post"
-                                            enctype="multipart/form-data">
+                                        <form action="{{ route('chapter.update', ['id' => $chapter->id]) }}"
+                                            method="post" enctype="multipart/form-data">
                                             @csrf
                                             <div class="row">
                                                 {{-- ? Inicio da coluna contendo a Imagem --}}
@@ -277,26 +278,82 @@
 
                 @foreach ($users->users as $user)
                     <div class="card-body p-0">
-                        <div class="d-flex align-items-center px-x1 py-2 border-bottom border-200">
-                            <div class="hoverbox me-3 my-1">
-                                <div class="bg-attachment bg-attachment-square">
-                                    <div class="bg-holder" style="background-image:url({{ asset('storage/' . $user->upload_file) }});">
-                                    </div><!--/.bg-holder-->
+                        <div class="d-flex align-items-center justify-content-between px-x1 py-2 border-bottom border-200">
+                            <div class="d-flex align-items-center">
+                                <div class="hoverbox me-3 my-1">
+                                    <div class="bg-attachment bg-attachment-square">
+                                        <div class="bg-holder"
+                                            style="background-image:url({{ asset('storage/' . $user->upload_file) }});">
+                                        </div><!--/.bg-holder-->
+                                    </div>
+                                    <div class="hoverbox-content flex-center pe-none bg-holder overlay overlay-1 rounded">
+                                        <div class="position-relative fs-7 text-white" data-bs-theme="light"></div>
+                                    </div>
                                 </div>
-                                <div class="hoverbox-content flex-center pe-none bg-holder overlay overlay-1 rounded">
-                                    <div class="position-relative fs-7 text-white" data-bs-theme="light"></div>
+                                <div class="flex-1">
+                                    <h5 class="fs-9">
+                                        <a class="text-decoration-none" href="../../../assets/video/beach.mp4"
+                                            data-gallery="attachment-title">
+                                            {{ $user->name }} {{ $user->Surname }}
+                                        </a>
+                                    </h5>
+                                    <h5 class="fs-9 mb-0">{{ $user->email }}</h5>
+                                    <p class="fs-10 mb-0">Data de Nascimento: {{ $user->Date_of_birth }}</p>
                                 </div>
-                            </div>
-                            <div class="flex-1">
-                                <h5 class="fs-9"><a class="text-decoration-none" href="../../../assets/video/beach.mp4"
-                                        data-gallery="attachment-title">{{ $user->name }} {{ $user->Surname }}</a></h5>
-                                <h5 class="fs-9 mb-0">{{ $user->email }}</h5>
-                                <p class="fs-10 mb-0">Data de Nascimento: {{ $user->Date_of_birth }}</p>
                             </div>
 
+                            <!-- Botão para adicionar notas -->
+                            <div>
+                                <a href="" style="border-radius:0" 
+                                href="#staticBackdro" data-bs-toggle="modal" data-bs-target="#staticBackdro"
+                                class="btn btn-sm btn-primary">
+                                    Adicionar Nota de Avaliacao
+                                </a>
+                            </div>
                         </div>
                     </div>
+
+                    {{-- ! Inicio do modal de adicao de notas --}}
+                    <div class="modal fade" id="staticBackdro" data-bs-keyboard="false" data-bs-backdrop="static"
+                        tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg mt-6" role="document">
+                            <div class="modal-content border-0">
+                                <div class="position-absolute top-0 end-0 mt-3 me-3 z-1"><button
+                                        class="btn-close btn btn-sm btn-circle d-flex flex-center transition-base"
+                                        data-bs-dismiss="modal" aria-label="Close"></button></div>
+                                <div class="modal-body p-0">
+                                    <div class="rounded-top-3 bg-body-tertiary py-3 ps-4 pe-6">
+                                        <h4 class="mb-1" id="staticBackdropLabel">Adicionar Capitulo
+                                        </h4>
+                                    </div>
+                                    <div class="p-4" style="margin-top:-3rem">
+                                        <form action="{{ route('chapter.store') }}" method="post"
+                                            enctype="multipart/form-data">
+                                            @csrf
+                                            <div class="row">
+                                                {{-- ? Fim da coluna contendo a Imagem --}}
+                                                <div class="col-lg-6"> <label class="form-label" for="first-name">
+                                                        Titulo do Capitulo</label><input name="Title"
+                                                        class="form-control" id="first-name" type="text" /></div>
+                                                <div class="col-lg-6"> <label class="form-label"
+                                                        for="last-name">Subtitulo</label><input name="Description"
+                                                        class="form-control" id="last-name" type="text" /></div>
+                                                <input type="hidden" name="id_course" value="{{ $course->id }}">
+                                                {{-- Fim dos inputs type hidden --}}
+                                                <div style="margin-top: 1rem" class="col-12 d-flex"><button
+                                                        style="border-radius: 0" class="btn btn-primary"
+                                                        type="submit">Adicionar Nota
+                                                    </button></div>
+                                            </div>
+                                    </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {{-- ! Fim do modal de adicao de notas --}}
                 @endforeach
+
 
             </div>
             {{-- ? Fim da tabela contendo os estudantes do curso --}}

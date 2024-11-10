@@ -9,9 +9,9 @@ return new class extends Migration {
     {
         Schema::create('values', function (Blueprint $table) {
             $table->id();
-            $table->string('First');
-            $table->string('Second');
-            $table->string('Third');
+            $table->string('First')->nullable();
+            $table->string('Second')->nullable();
+            $table->string('Third')->nullable();
 
             //*Inicio das chaves estrangeiras
             $table->unsignedBigInteger('id_user');
