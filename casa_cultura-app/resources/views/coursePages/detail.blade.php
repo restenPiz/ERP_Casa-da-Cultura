@@ -304,8 +304,8 @@
 
                             <!-- Botão para adicionar notas -->
                             <div>
-                                <a href="" style="border-radius:0" 
-                                href="#staticBackdro" data-bs-toggle="modal" data-bs-target="#staticBackdro"
+                                <a style="border-radius:0" 
+                                href="#staticBackdro" data-bs-toggle="modal" data-bs-target="#staticBackdro{{ $user->id }}"
                                 class="btn btn-sm btn-primary">
                                     Adicionar Nota de Avaliacao
                                 </a>
@@ -314,7 +314,7 @@
                     </div>
 
                     {{-- ! Inicio do modal de adicao de notas --}}
-                    <div class="modal fade" id="staticBackdro" data-bs-keyboard="false" data-bs-backdrop="static"
+                    <div class="modal fade" id="staticBackdro{{ $user->id }}" data-bs-keyboard="false" data-bs-backdrop="static"
                         tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                         <div class="modal-dialog modal-lg mt-6" role="document">
                             <div class="modal-content border-0">
@@ -323,7 +323,7 @@
                                         data-bs-dismiss="modal" aria-label="Close"></button></div>
                                 <div class="modal-body p-0">
                                     <div class="rounded-top-3 bg-body-tertiary py-3 ps-4 pe-6">
-                                        <h4 class="mb-1" id="staticBackdropLabel">Adicionar Capitulo
+                                        <h4 class="mb-1" id="staticBackdropLabel">Adicionar Nota de Avaliacoes
                                         </h4>
                                     </div>
                                     <div class="p-4" style="margin-top:-3rem">
@@ -332,20 +332,24 @@
                                             @csrf
                                             <div class="row">
                                                 {{-- ? Fim da coluna contendo a Imagem --}}
-                                                <div class="col-lg-6"> <label class="form-label" for="first-name">
-                                                        Titulo do Capitulo</label><input name="Title"
-                                                        class="form-control" id="first-name" type="text" /></div>
-                                                <div class="col-lg-6"> <label class="form-label"
-                                                        for="last-name">Subtitulo</label><input name="Description"
-                                                        class="form-control" id="last-name" type="text" /></div>
-                                                <input type="hidden" name="id_course" value="{{ $course->id }}">
+                                                <div class="col-lg-4"> <label class="form-label" for="first-name">
+                                                        Primeira Avaliacao</label>
+                                                        <input class="form-control" type="number" name="First"></div>
+                                                <div class="col-lg-4"> <label class="form-label" for="first-name">
+                                                        Segunda Avaliacao</label>
+                                                        <input class="form-control" type="number" name="Second"></div>
+
+                                                <div class="col-lg-4"> <label class="form-label" for="first-name">
+                                                        Terceira Avaliacao</label>
+                                                        <input class="form-control" type="number" name="Third"></div>
+                                                <input type="hidden" name="id_user" value="{{ $user->id }}">
                                                 {{-- Fim dos inputs type hidden --}}
                                                 <div style="margin-top: 1rem" class="col-12 d-flex"><button
                                                         style="border-radius: 0" class="btn btn-primary"
                                                         type="submit">Adicionar Nota
                                                     </button></div>
                                             </div>
-                                    </div>
+                                        </div>
                                     </form>
                                 </div>
                             </div>
