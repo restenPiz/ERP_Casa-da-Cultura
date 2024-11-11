@@ -52,7 +52,7 @@ class redirectController extends Controller
             return view('trainerDashboard');
 
         } elseif (Auth::user()->hasRole('employee')) {
-            if (Auth::user()->status === 0) {
+            if (Auth::user()->status == 0) {
                 $countCourse = DB::table('courses')->count('id');
                 $countStudent = DB::table('users')->where('user_type', 'Users')->count('id');
                 $countTrainer = DB::table('users')->where('user_type', 'Trainer')->count('id');
