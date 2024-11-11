@@ -70,7 +70,7 @@
                                 </div>
                                 <div class="flex-1">
                                     <h5 class="fs-9">
-                                        <a class="text-decoration-none" href="#staticBackdr" data-bs-toggle="modal"
+                                        <a class="text-decoration-none" href="#staticBackdr{{ $user->id }}" data-bs-toggle="modal"
                                             data-bs-target="#staticBackdr{{$user->id}}" data-gallery="attachment-title">
                                             {{ $user->name }} {{ $user->Surname }}
                                         </a>
@@ -249,15 +249,29 @@
                     </div>
                     {{-- ! Inicio do script que faz maravilhas --}}
                     <script>
-                        function openEditModal(id) {
-                            // Fecha o modal de leitura, caso esteja aberto
-                            const readModal = new bootstrap.Modal(document.getElementById(`staticBackdr${id}`));
-                            readModal.hide();
+                        // function openEditModal(id) {
+                        //     // Fecha o modal de leitura, caso esteja aberto
+                        //     const readModal = new bootstrap.Modal(document.getElementById(`staticBackdr${id}`));
+                        //     readModal.hide();
 
-                            // Abre o modal de edição
-                            const editModal = new bootstrap.Modal(document.getElementById(`editNoteModal${id}`));
-                            editModal.show();
+                        //     // Abre o modal de edição
+                        //     const editModal = new bootstrap.Modal(document.getElementById(`editNoteModal${id}`));
+                        //     editModal.show();
+                        // }
+                        function openEditModal(id) {
+                        // Fecha o modal de leitura de notas
+                        var readNoteModal = document.getElementById('staticBackdr'+id); // Assumindo que esse é o ID do modal de leitura
+                        if (readNoteModal) {
+                            var readNoteModalInstance = bootstrap.Modal.getInstance(readNoteModal);
+                            if (readNoteModalInstance) {
+                                readNoteModalInstance.hide();
+                            }
                         }
+
+                        // Abre o modal de edição de notas
+                        var editNoteModal = new bootstrap.Modal(document.getElementById('editNoteModal' + id));
+                        editNoteModal.show();
+                    }
                     </script>
                     {{-- ! Fim do script que faz maravilha --}}
 
