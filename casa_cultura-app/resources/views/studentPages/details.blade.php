@@ -24,7 +24,7 @@
                                 <label class="form-label" for="year-select">Ano<span class="text-danger">*</span></label>
                                 <select class="form-select" id="year-select" name="year">
                                     <option>Selecione o Ano</option>
-                                    @for ($year = 1900; $year <= date('Y'); $year++)
+                                    @for ($year = 2020; $year <= date('Y'); $year++)
                                         <option value="{{ $year }}">{{ $year }}</option>
                                     @endfor
                                 </select>
@@ -39,45 +39,38 @@
                         </div>
                     </form>
                 </div>
-            </div>
+            </div><br>
 
             {{-- ! Inicio do conteudo restante --}}
-            @if (session('student'))
-            @php
-                $student = session('student');
-                session()->forget('student'); 
-            @endphp
-                <div class="card-body p-0">
-                    <div class="table-responsive scrollbar">
-                        <div class="container">
-                            <h3>Resultados da Pesquisa</h3>
 
-                            {{-- Tabela de informações do aluno --}}
-                            <table class="table table-bordered mb-4">
-                                <thead>
-                                    <tr>
-                                        <th colspan="2">Informações do Aluno</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td><strong>Nome do Aluno</strong></td>
-                                        <td>{{ $student->name }}  {{ $student->Surname }} </td>
-                                    </tr>
-                                    <tr>
-                                        <td><strong>Email</strong></td>
-                                        <td>{{ $student->email }} </td>
-                                    </tr>
-                                    <tr>
-                                        <td><strong>Telefone</strong></td>
-                                        <td>{{ $student->contact }} </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-            @endif
+                @if(!empty($students) && count($students) > 0)
+                    <h4>Estudantes Filtrados</h4>
+                    <table class="table table-sm table-striped fs-10 mb-0 overflow-hidden">
+                        <thead>
+                            <tr>
+                                <th>Nome</th>
+                                <th>Email</th>
+                                <th>Data de Nascimento</th>
+                                <th>Curso</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach ($students as $student)
+                                <tr>
+                                    <td>{{ $student->name }} {{ $student->Surname }}</td>
+                                    <td>{{ $student->email }}</td>
+                                    <td>{{ $student->Date_of_birth }}</td>
+                                    <td>
+                                        @foreach ($student->courses as $course)
+                                            {{ $course->Course_name }}
+                                        @endforeach
+                                    </td>
+                                </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
+                @endif
+            
             {{-- ! Fim do conteudo restante --}}
         </div>
     </div>

@@ -17,21 +17,27 @@ class studentController extends Controller
     public function details()
     {
         $courses = course::all();
+        $students = [];
         $trainers = DB::table('users')->where('user_type', 'Users')->get();
-        return view('studentPages.details', compact('courses', 'trainers'));
+        return view('studentPages.details', compact('courses', 'trainers', 'students'));
     }
     public function search(Request $request)
     {
-        //?Inicio dos metodos de condicao de pesquisa
-        $student = User::where('name', $request->input('name'))->get();
-        $courses = Course::all();
-        $course = Course::all();
+        $validatedData = $request->validate([
+            'id_course' => 'required|exists:courses,id',
+            'year' => 'required|numeric',
+        ]);
+
+        $courses = course::all();
         $trainers = DB::table('users')->where('user_type', 'Users')->get();
 
-        session()->put('student', $student);
-        session()->put('course', $course);
+        $students = User::whereHas('courses', function ($query) use ($validatedData) {
+            $query->where('id_course', $validatedData['id_course']);
+        })
+            ->whereYear('created_at', $validatedData['year'])
+            ->get();
 
-        return view('studentPages.details', compact('courses', 'trainers'));
+        return view('studentPages.details', compact('courses', 'trainers', 'students'));
     }
     public function index()
     {
