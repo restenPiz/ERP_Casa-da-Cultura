@@ -10,17 +10,6 @@
                         @csrf
                         <div class="row">
                             <div class="col-sm-5 mb-3">
-                                <label class="form-label" for="course-category">Nome do Aluno<span
-                                        class="text-danger">*</span></label>
-                                <select class="form-select" id="course-category" name="name">
-                                    <option>Selecione o Nome do Aluno</option>
-                                    @foreach ($trainers as $trainer)
-                                        <option value="{{ $trainer->name }}">{{ $trainer->name }} {{ $trainer->Surname }}
-                                        </option>
-                                    @endforeach
-                                </select>
-                            </div>
-                            <div class="col-sm-5 mb-3">
                                 <label class="form-label" for="course-category">Curso<span
                                         class="text-danger">*</span></label>
                                 <select class="form-select" id="course-category" name="id_course">
@@ -29,6 +18,15 @@
                                         <option value="{{ $course->id }}">{{ $course->Course_name }}
                                         </option>
                                     @endforeach
+                                </select>
+                            </div>
+                            <div class="col-sm-5 mb-3">
+                                <label class="form-label" for="year-select">Ano<span class="text-danger">*</span></label>
+                                <select class="form-select" id="year-select" name="year">
+                                    <option>Selecione o Ano</option>
+                                    @for ($year = 1900; $year <= date('Y'); $year++)
+                                        <option value="{{ $year }}">{{ $year }}</option>
+                                    @endfor
                                 </select>
                             </div>
                             <div class="col-sm-2 mb-3">
