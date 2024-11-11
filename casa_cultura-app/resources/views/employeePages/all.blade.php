@@ -41,7 +41,7 @@
                             </th>
                             <th class="text-900 sort pe-1 align-middle white-space-nowrap" data-sort="name">Name</th>
                             <th class="text-900 sort pe-1 align-middle white-space-nowrap" data-sort="email">Email</th>
-                            <th class="text-900 sort pe-1 align-middle white-space-nowrap" data-sort="phone">Phone</th>
+                            <th class="text-900 sort pe-1 align-middle white-space-nowrap" data-sort="phone">Status</th>
                             <th class="text-900 sort pe-1 align-middle white-space-nowrap ps-5" data-sort="address"
                                 style="min-width: 200px;">Billing Address</th>
                             <th class="text-900 sort pe-1 align-middle white-space-nowrap" data-sort="joined">Actividade
@@ -71,8 +71,17 @@
                                 </td>
                                 <td class="email align-middle py-2"><a
                                         href="mailto:emma@example.com">{{ $trainer->email }}</a></td>
-                                <td class="phone align-middle white-space-nowrap py-2"><a
-                                        href="tel:2122288403">{{ $trainer->contact }}</a></td>
+                                <td class="address align-middle white-space-nowrap ps-5 py-2">
+                                    {{--! Inicio da condicao de verificacao de status de usuario--}}
+                                    @if ($trainer->status == 0)
+                                        <small class="badge rounded badge-subtle-success false">Activo</small>
+                                    @endif
+
+                                    @if ($trainer->status == 1)
+                                        <small class="badge rounded badge-subtle-danger false">Inactivo</small>
+                                    @endif
+                                    {{--! Fim da Verificacao de Status do usuario--}}
+                                </td>
                                 <td class="address align-middle white-space-nowrap ps-5 py-2">{{ $trainer->place }}</td>
                                 <td class="joined align-middle py-2">{{ $trainer->function }}</td>
                                 <td class="align-middle white-space-nowrap py-2 text-end">
