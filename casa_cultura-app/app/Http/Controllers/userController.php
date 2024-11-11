@@ -19,7 +19,7 @@ class userController extends Controller
             'Surname' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
-            'password_confirmation' => ['required', 'string', 'min:8', 'confirmed'],
+            // 'password_confirmation' => ['required', 'string', 'min:8', 'confirmed'],
             'bi' => ['required', 'string', 'min:13'],
             'Date_of_birth' => 'required|date|before_or_equal:today',
             'place' => ['required', 'string', 'max:255'],
@@ -61,18 +61,27 @@ class userController extends Controller
         $user->upload_file = $request->input('upload_file');
         $user->function = $request->input('function');
         $user->place = $request->input('place');
+        $user->status = $request->input('status');
 
         if ($request->hasFile('upload_file')) {
             $user['upload_file'] = $request->file('upload_file')->store('uploads/files', 'public');
         }
 
-        $user->save();
+        if ($user->status === 0) {
+            $user->save();
+            $user->addRole($role);
+            Alert::success('Adicionado!', $successMessage);
+            return back();
+        } else if ($user->status == 1) {
+            $user->save();
+            Alert::success('Adicionado!', $successMessage);
+            return back();
+        } else {
+            $user->save();
+            Alert::success('Adicionado!', $successMessage);
 
-        $user->addRole($role);
-
-        Alert::success('Adicionado!', $successMessage);
-
-        return back();
+            return back();
+        }
     }
     public function update(Request $request, $id)
     {
