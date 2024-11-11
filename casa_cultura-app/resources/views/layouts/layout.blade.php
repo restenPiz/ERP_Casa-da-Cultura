@@ -71,8 +71,8 @@
                                 class="navbar-toggle-icon"><span class="toggle-line"></span></span></button>
                     </div><a class="navbar-brand" href="../index.html">
                         <div class="d-flex align-items-center py-3">{{-- <img class="me-2" src="../assets/img/icons/spot-illustrations/falcon.png" alt="" width="40" /> --}}
-                            <span style="font-size: 20px"
-                                class="font-sans-serif text-primary">Centro Cultural</span></div>
+                            <span style="font-size: 20px" class="font-sans-serif text-primary">Centro Cultural</span>
+                        </div>
                     </a>
                 </div>
                 <div class="collapse navbar-collapse" id="navbarVerticalCollapse">
@@ -85,208 +85,229 @@
                                         <hr class="mb-0 navbar-vertical-divider" />
                                     </div>
                                 </div>
-                                
+
                                 @role('admin')
-                                <a class="nav-link {{ request()->routeIs('dashboard') ? 'active' : '' }}"
-                                    href="/dashboard" role="button">
-                                    <div class="d-flex align-items-center"><span class="nav-link-icon"><span
-                                                class="fas fa-chart-pie"></span></span><span
-                                            class="nav-link-text ps-1">Tela Inicial</span></div>
-                                </a>
-                                {{-- Inicio do segundo link --}}
-                                <a class="nav-link dropdown-indicator {{ request()->routeIs('trainer.all', 'trainer.index') ? 'active' : '' }}"
-                                    href="#customizatio" role="button" data-bs-toggle="collapse"
-                                    aria-expanded="{{ request()->routeIs('trainer.all', 'trainer.index') ? 'true' : 'false' }}"
-                                    aria-controls="customization">
-                                    <div class="d-flex align-items-center">
-                                        <span class="nav-link-icon">
-                                            <span class="fas fa-layer-group"></span>
-                                        </span>
-                                        <span class="nav-link-text ps-1">Gerir Formadores</span>
-                                    </div>
-                                </a>
+                                    <a class="nav-link {{ request()->routeIs('dashboard') ? 'active' : '' }}"
+                                        href="/dashboard" role="button">
+                                        <div class="d-flex align-items-center"><span class="nav-link-icon"><span
+                                                    class="fas fa-chart-pie"></span></span><span
+                                                class="nav-link-text ps-1">Tela Inicial</span></div>
+                                    </a>
+                                    {{-- Inicio do segundo link --}}
+                                    <a class="nav-link dropdown-indicator {{ request()->routeIs('trainer.all', 'trainer.index') ? 'active' : '' }}"
+                                        href="#customizatio" role="button" data-bs-toggle="collapse"
+                                        aria-expanded="{{ request()->routeIs('trainer.all', 'trainer.index') ? 'true' : 'false' }}"
+                                        aria-controls="customization">
+                                        <div class="d-flex align-items-center">
+                                            <span class="nav-link-icon">
+                                                <span class="fas fa-layer-group"></span>
+                                            </span>
+                                            <span class="nav-link-text ps-1">Gerir Formadores</span>
+                                        </div>
+                                    </a>
 
-                                <ul class="nav collapse {{ request()->routeIs('trainer.all', 'trainer.index') ? 'show' : '' }}"
-                                    id="customizatio">
-                                    <li class="nav-item">
-                                        <a class="nav-link {{ request()->routeIs('trainer.index') ? 'active' : '' }}"
-                                            href="{{ route('trainer.index') }}">
-                                            <div class="d-flex align-items-center">
-                                                <span class="nav-link-text ps-1">Adicionar Formador</span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link {{ request()->routeIs('trainer.all') ? 'active' : '' }}"
-                                            href="{{ route('trainer.all') }}">
-                                            <div class="d-flex align-items-center">
-                                                <span class="nav-link-text ps-1">Detalhes dos Formadores</span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                </ul>
-                                {{-- inicio do quarto link --}}
-                                <a class="nav-link dropdown-indicator {{ request()->routeIs('employee.all', 'employee.index') ? 'active' : '' }}" href="#customizati" role="button"
-                                    data-bs-toggle="collapse" aria-expanded="{{ request()->routeIs('employee.all', 'employee.index') ? 'true' : 'false' }}" aria-controls="customization">
-                                    <div class="d-flex align-items-center"><span class="nav-link-icon"><span
-                                                class="fab fa-trello"></span></span><span
-                                            class="nav-link-text ps-1">Gerir Funcionarios</span></div>
-                                </a>
-                                <ul class="nav collapse {{ request()->routeIs('employee.all', 'employee.index') ? 'show' : '' }}" id="customizati">
-                                    <li class="nav-item"><a class="nav-link {{ request()->routeIs('employee.index') ? 'active' : '' }}" href="{{ route('employee.index') }}">
-                                            <div class="d-flex align-items-center"><span
-                                                    class="nav-link-text ps-1">Adicionar Funcionario</span></div>
-                                        </a><!-- more inner pages--></li>
-                                    <li class="nav-item"><a class="nav-link {{ request()->routeIs('employee.all') ? 'active' : '' }}" href="{{ route('employee.all') }}">
-                                            <div class="d-flex align-items-center"><span
-                                                    class="nav-link-text ps-1">Detalhes dos Funcionarios</span></div>
-                                        </a><!-- more inner pages--></li>
-                                </ul>
-                                {{-- Inicio do terceiro link --}}
-                                <a class="nav-link dropdown-indicator {{ request()->routeIs('course.index', 'course.all','course.detail') ? 'active' : '' }}" href="#customization" role="button"
-                                    data-bs-toggle="collapse" aria-expanded="false" aria-controls="customization">
-                                    <div class="d-flex align-items-center"><span class="nav-link-icon"><span
-                                                class="fas fa-graduation-cap"></span></span><span
-                                            class="nav-link-text ps-1">Gerir Cursos</span></div>
-                                </a>
-                                <ul class="nav collapse {{ request()->routeIs('course.all', 'course.index','course.detail') ? 'show' : '' }}" id="customization">
-                                    <li class="nav-item"><a class="nav-link {{ request()->routeIs('course.index') ? 'active' : '' }}" href="{{ route('course.index') }}">
-                                            <div class="d-flex align-items-center"><span
-                                                    class="nav-link-text ps-1">Adicionar Cursos</span></div>
-                                        </a><!-- more inner pages--></li>
-                                    <li class="nav-item"><a class="nav-link {{ request()->routeIs('course.all','course.detail') ? 'active' : '' }}" href="{{ route('course.all') }}">
-                                            <div class="d-flex align-items-center"><span
-                                                    class="nav-link-text ps-1">Detalhes de Curso</span></div>
-                                        </a><!-- more inner pages--></li>
-                                </ul>
-                                {{-- Inicio do quinto link --}}
-                                <a class="nav-link {{ request()->routeIs('artist.index') ? 'active' : '' }}" href="{{ route('artist.index') }}" role="button">
-                                    <div class="d-flex align-items-center"><span class="nav-link-icon"><span
-                                                class="fas fa-thumbtack"></span></span><span
-                                            class="nav-link-text ps-1">Gerir Artistas</span></div>
-                                </a>
-                                {{-- Inicio do Sexto link --}}
-                                <a class="nav-link {{ request()->routeIs('event.index','event.detail') ? 'active' : '' }}" href="{{ route('event.index') }}" role="button">
-                                    <div class="d-flex align-items-center"><span class="nav-link-icon"><span
-                                                class="fas fa-calendar-day"></span></span><span
-                                            class="nav-link-text ps-1">Gerir Eventos</span></div>
-                                </a>
-                                {{-- Inicio do Setimo Link --}}
-                               
-                                <a class="nav-link dropdown-indicator {{ request()->routeIs('student.index','student.details') ? 'active' : '' }}"
-                                    href="#students" role="button" data-bs-toggle="collapse"
-                                    aria-expanded="{{ request()->routeIs('student.index', 'student.details') ? 'true' : 'false' }}"
-                                    aria-controls="customization">
-                                    <div class="d-flex align-items-center">
-                                        <span class="nav-link-icon">
-                                            <span class="fas fa-layer-group"></span>
-                                        </span>
-                                        <span class="nav-link-text ps-1">Inscricao de Alunos</span>
-                                    </div>
-                                </a>
+                                    <ul class="nav collapse {{ request()->routeIs('trainer.all', 'trainer.index') ? 'show' : '' }}"
+                                        id="customizatio">
+                                        <li class="nav-item">
+                                            <a class="nav-link {{ request()->routeIs('trainer.index') ? 'active' : '' }}"
+                                                href="{{ route('trainer.index') }}">
+                                                <div class="d-flex align-items-center">
+                                                    <span class="nav-link-text ps-1">Adicionar Formador</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link {{ request()->routeIs('trainer.all') ? 'active' : '' }}"
+                                                href="{{ route('trainer.all') }}">
+                                                <div class="d-flex align-items-center">
+                                                    <span class="nav-link-text ps-1">Detalhes dos Formadores</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    {{-- inicio do quarto link --}}
+                                    <a class="nav-link dropdown-indicator {{ request()->routeIs('employee.all', 'employee.index') ? 'active' : '' }}"
+                                        href="#customizati" role="button" data-bs-toggle="collapse"
+                                        aria-expanded="{{ request()->routeIs('employee.all', 'employee.index') ? 'true' : 'false' }}"
+                                        aria-controls="customization">
+                                        <div class="d-flex align-items-center"><span class="nav-link-icon"><span
+                                                    class="fab fa-trello"></span></span><span
+                                                class="nav-link-text ps-1">Gerir Funcionarios</span></div>
+                                    </a>
+                                    <ul class="nav collapse {{ request()->routeIs('employee.all', 'employee.index') ? 'show' : '' }}"
+                                        id="customizati">
+                                        <li class="nav-item"><a
+                                                class="nav-link {{ request()->routeIs('employee.index') ? 'active' : '' }}"
+                                                href="{{ route('employee.index') }}">
+                                                <div class="d-flex align-items-center"><span
+                                                        class="nav-link-text ps-1">Adicionar Funcionario</span></div>
+                                            </a><!-- more inner pages--></li>
+                                        <li class="nav-item"><a
+                                                class="nav-link {{ request()->routeIs('employee.all') ? 'active' : '' }}"
+                                                href="{{ route('employee.all') }}">
+                                                <div class="d-flex align-items-center"><span
+                                                        class="nav-link-text ps-1">Detalhes dos Funcionarios</span></div>
+                                            </a><!-- more inner pages--></li>
+                                    </ul>
+                                    {{-- Inicio do terceiro link --}}
+                                    <a class="nav-link dropdown-indicator {{ request()->routeIs('course.index', 'course.all', 'course.detail') ? 'active' : '' }}"
+                                        href="#customization" role="button" data-bs-toggle="collapse"
+                                        aria-expanded="false" aria-controls="customization">
+                                        <div class="d-flex align-items-center"><span class="nav-link-icon"><span
+                                                    class="fas fa-graduation-cap"></span></span><span
+                                                class="nav-link-text ps-1">Gerir Cursos</span></div>
+                                    </a>
+                                    <ul class="nav collapse {{ request()->routeIs('course.all', 'course.index', 'course.detail') ? 'show' : '' }}"
+                                        id="customization">
+                                        <li class="nav-item"><a
+                                                class="nav-link {{ request()->routeIs('course.index') ? 'active' : '' }}"
+                                                href="{{ route('course.index') }}">
+                                                <div class="d-flex align-items-center"><span
+                                                        class="nav-link-text ps-1">Adicionar Cursos</span></div>
+                                            </a><!-- more inner pages--></li>
+                                        <li class="nav-item"><a
+                                                class="nav-link {{ request()->routeIs('course.all', 'course.detail') ? 'active' : '' }}"
+                                                href="{{ route('course.all') }}">
+                                                <div class="d-flex align-items-center"><span
+                                                        class="nav-link-text ps-1">Detalhes de Curso</span></div>
+                                            </a><!-- more inner pages--></li>
+                                    </ul>
+                                    {{-- Inicio do quinto link --}}
+                                    <a class="nav-link {{ request()->routeIs('artist.index') ? 'active' : '' }}"
+                                        href="{{ route('artist.index') }}" role="button">
+                                        <div class="d-flex align-items-center"><span class="nav-link-icon"><span
+                                                    class="fas fa-thumbtack"></span></span><span
+                                                class="nav-link-text ps-1">Gerir Artistas</span></div>
+                                    </a>
+                                    {{-- Inicio do Sexto link --}}
+                                    <a class="nav-link {{ request()->routeIs('event.index', 'event.detail') ? 'active' : '' }}"
+                                        href="{{ route('event.index') }}" role="button">
+                                        <div class="d-flex align-items-center"><span class="nav-link-icon"><span
+                                                    class="fas fa-calendar-day"></span></span><span
+                                                class="nav-link-text ps-1">Gerir Eventos</span></div>
+                                    </a>
+                                    {{-- Inicio do Setimo Link --}}
 
-                                <ul class="nav collapse {{ request()->routeIs('student.index', 'student.details') ? 'show' : '' }}"
-                                    id="students">
-                                    <li class="nav-item">
-                                        <a class="nav-link {{ request()->routeIs('student.index') ? 'active' : '' }}"
-                                            href="{{ route('student.index') }}">
-                                            <div class="d-flex align-items-center">
-                                                <span class="nav-link-text ps-1">Inscrever Alunos</span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link {{ request()->routeIs('student.details') ? 'active' : '' }}"
-                                            href="{{ route('student.details') }}">
-                                            <div class="d-flex align-items-center">
-                                                <span class="nav-link-text ps-1">Filtro de Dados do Aluno</span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                </ul>
+                                    <a class="nav-link dropdown-indicator {{ request()->routeIs('student.index', 'student.details') ? 'active' : '' }}"
+                                        href="#students" role="button" data-bs-toggle="collapse"
+                                        aria-expanded="{{ request()->routeIs('student.index', 'student.details') ? 'true' : 'false' }}"
+                                        aria-controls="customization">
+                                        <div class="d-flex align-items-center">
+                                            <span class="nav-link-icon">
+                                                <span class="fas fa-layer-group"></span>
+                                            </span>
+                                            <span class="nav-link-text ps-1">Inscricao de Alunos</span>
+                                        </div>
+                                    </a>
+
+                                    <ul class="nav collapse {{ request()->routeIs('student.index', 'student.details') ? 'show' : '' }}"
+                                        id="students">
+                                        <li class="nav-item">
+                                            <a class="nav-link {{ request()->routeIs('student.index') ? 'active' : '' }}"
+                                                href="{{ route('student.index') }}">
+                                                <div class="d-flex align-items-center">
+                                                    <span class="nav-link-text ps-1">Inscrever Alunos</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link {{ request()->routeIs('student.details') ? 'active' : '' }}"
+                                                href="{{ route('student.details') }}">
+                                                <div class="d-flex align-items-center">
+                                                    <span class="nav-link-text ps-1">Filtro de Dados do Aluno</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
                                 @endrole
-                                
+
                                 @role('trainer')
-                                <a class="nav-link {{ request()->routeIs('dashboard') ? 'active' : '' }}"
-                                    href="/dashboard" role="button">
-                                    <div class="d-flex align-items-center"><span class="nav-link-icon"><span
-                                                class="fas fa-chart-pie"></span></span><span
-                                            class="nav-link-text ps-1">Tela Inicial</span></div>
-                                </a>
-                                {{-- Inicio do terceiro link --}}
-                                <a class="nav-link dropdown-indicator {{ request()->routeIs('course.index', 'course.all','course.detail') ? 'active' : '' }}" href="#customization" role="button"
-                                    data-bs-toggle="collapse" aria-expanded="false" aria-controls="customization">
-                                    <div class="d-flex align-items-center"><span class="nav-link-icon"><span
-                                                class="fas fa-graduation-cap"></span></span><span
-                                            class="nav-link-text ps-1">Gerir Cursos</span></div>
-                                </a>
-                                <ul class="nav collapse {{ request()->routeIs('course.get', 'course.index','course.detail') ? 'show' : '' }}" id="customization">
-                                    
-                                    <li class="nav-item"><a class="nav-link {{ request()->routeIs('course.get','course.detail') ? 'active' : '' }}" href="{{ route('course.get') }}">
-                                            <div class="d-flex align-items-center"><span
-                                                    class="nav-link-text ps-1">Detalhes de Curso</span></div>
-                                        </a><!-- more inner pages--></li>
-                                </ul>
+                                    <a class="nav-link {{ request()->routeIs('dashboard') ? 'active' : '' }}"
+                                        href="/dashboard" role="button">
+                                        <div class="d-flex align-items-center"><span class="nav-link-icon"><span
+                                                    class="fas fa-chart-pie"></span></span><span
+                                                class="nav-link-text ps-1">Tela Inicial</span></div>
+                                    </a>
+                                    {{-- Inicio do terceiro link --}}
+                                    <a class="nav-link dropdown-indicator {{ request()->routeIs('course.index', 'course.all', 'course.detail') ? 'active' : '' }}"
+                                        href="#customization" role="button" data-bs-toggle="collapse"
+                                        aria-expanded="false" aria-controls="customization">
+                                        <div class="d-flex align-items-center"><span class="nav-link-icon"><span
+                                                    class="fas fa-graduation-cap"></span></span><span
+                                                class="nav-link-text ps-1">Gerir Cursos</span></div>
+                                    </a>
+                                    <ul class="nav collapse {{ request()->routeIs('course.get', 'course.index', 'course.detail') ? 'show' : '' }}"
+                                        id="customization">
+
+                                        <li class="nav-item"><a
+                                                class="nav-link {{ request()->routeIs('course.get', 'course.detail') ? 'active' : '' }}"
+                                                href="{{ route('course.get') }}">
+                                                <div class="d-flex align-items-center"><span
+                                                        class="nav-link-text ps-1">Detalhes de Curso</span></div>
+                                            </a><!-- more inner pages--></li>
+                                    </ul>
                                 @endrole
 
                                 @role('employee')
+                                    <a class="nav-link {{ request()->routeIs('dashboard') ? 'active' : '' }}"
+                                        href="/dashboard" role="button">
+                                        <div class="d-flex align-items-center"><span class="nav-link-icon"><span
+                                                    class="fas fa-chart-pie"></span></span><span
+                                                class="nav-link-text ps-1">Tela Inicial</span></div>
+                                    </a>
 
-                                <a class="nav-link {{ request()->routeIs('dashboard') ? 'active' : '' }}"
-                                    href="/dashboard" role="button">
-                                    <div class="d-flex align-items-center"><span class="nav-link-icon"><span
-                                                class="fas fa-chart-pie"></span></span><span
-                                            class="nav-link-text ps-1">Tela Inicial</span></div>
-                                </a>
-                                
-                                <a class="nav-link dropdown-indicator {{ request()->routeIs('trainer.all', 'trainer.index') ? 'active' : '' }}"
-                                    href="#customizatio" role="button" data-bs-toggle="collapse"
-                                    aria-expanded="{{ request()->routeIs('trainer.all', 'trainer.index') ? 'true' : 'false' }}"
-                                    aria-controls="customization">
-                                    <div class="d-flex align-items-center">
-                                        <span class="nav-link-icon">
-                                            <span class="fas fa-layer-group"></span>
-                                        </span>
-                                        <span class="nav-link-text ps-1">Gerir Formadores</span>
-                                    </div>
-                                </a>
+                                    <a class="nav-link dropdown-indicator {{ request()->routeIs('trainer.all', 'trainer.index') ? 'active' : '' }}"
+                                        href="#customizatio" role="button" data-bs-toggle="collapse"
+                                        aria-expanded="{{ request()->routeIs('trainer.all', 'trainer.index') ? 'true' : 'false' }}"
+                                        aria-controls="customization">
+                                        <div class="d-flex align-items-center">
+                                            <span class="nav-link-icon">
+                                                <span class="fas fa-layer-group"></span>
+                                            </span>
+                                            <span class="nav-link-text ps-1">Gerir Formadores</span>
+                                        </div>
+                                    </a>
 
-                                <ul class="nav collapse {{ request()->routeIs('trainer.all', 'trainer.index') ? 'show' : '' }}"
-                                    id="customizatio">
-                                    <li class="nav-item">
-                                        <a class="nav-link {{ request()->routeIs('trainer.index') ? 'active' : '' }}"
-                                            href="{{ route('trainer.index') }}">
-                                            <div class="d-flex align-items-center">
-                                                <span class="nav-link-text ps-1">Adicionar Formador</span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link {{ request()->routeIs('trainer.all') ? 'active' : '' }}"
-                                            href="{{ route('trainer.all') }}">
-                                            <div class="d-flex align-items-center">
-                                                <span class="nav-link-text ps-1">Detalhes dos Formadores</span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                </ul>
+                                    <ul class="nav collapse {{ request()->routeIs('trainer.all', 'trainer.index') ? 'show' : '' }}"
+                                        id="customizatio">
+                                        <li class="nav-item">
+                                            <a class="nav-link {{ request()->routeIs('trainer.index') ? 'active' : '' }}"
+                                                href="{{ route('trainer.index') }}">
+                                                <div class="d-flex align-items-center">
+                                                    <span class="nav-link-text ps-1">Adicionar Formador</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link {{ request()->routeIs('trainer.all') ? 'active' : '' }}"
+                                                href="{{ route('trainer.all') }}">
+                                                <div class="d-flex align-items-center">
+                                                    <span class="nav-link-text ps-1">Detalhes dos Formadores</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
 
-                                <a class="nav-link {{ request()->routeIs('artist.index') ? 'active' : '' }}" href="{{ route('artist.index') }}" role="button">
-                                    <div class="d-flex align-items-center"><span class="nav-link-icon"><span
-                                                class="fas fa-thumbtack"></span></span><span
-                                            class="nav-link-text ps-1">Gerir Artistas</span></div>
-                                </a>
-                                {{-- Inicio do Sexto link --}}
-                                <a class="nav-link {{ request()->routeIs('event.index','event.detail') ? 'active' : '' }}" href="{{ route('event.index') }}" role="button">
-                                    <div class="d-flex align-items-center"><span class="nav-link-icon"><span
-                                                class="fas fa-calendar-day"></span></span><span
-                                            class="nav-link-text ps-1">Gerir Eventos</span></div>
-                                </a>
-                                {{-- Inicio do Setimo Link --}}
-                                <a class="nav-link {{ request()->routeIs('student.index') ? 'active' : '' }}" href="{{ route('student.index') }}" role="button">
-                                    <div class="d-flex align-items-center"><span class="nav-link-icon"><span
-                                                class="fas fa-user"></span></span><span
-                                            class="nav-link-text ps-1">Inscricao de Alunos</span></div>
-                                </a>
+                                    <a class="nav-link {{ request()->routeIs('artist.index') ? 'active' : '' }}"
+                                        href="{{ route('artist.index') }}" role="button">
+                                        <div class="d-flex align-items-center"><span class="nav-link-icon"><span
+                                                    class="fas fa-thumbtack"></span></span><span
+                                                class="nav-link-text ps-1">Gerir Artistas</span></div>
+                                    </a>
+                                    {{-- Inicio do Sexto link --}}
+                                    <a class="nav-link {{ request()->routeIs('event.index', 'event.detail') ? 'active' : '' }}"
+                                        href="{{ route('event.index') }}" role="button">
+                                        <div class="d-flex align-items-center"><span class="nav-link-icon"><span
+                                                    class="fas fa-calendar-day"></span></span><span
+                                                class="nav-link-text ps-1">Gerir Eventos</span></div>
+                                    </a>
+                                    {{-- Inicio do Setimo Link --}}
+                                    <a class="nav-link {{ request()->routeIs('student.index') ? 'active' : '' }}"
+                                        href="{{ route('student.index') }}" role="button">
+                                        <div class="d-flex align-items-center"><span class="nav-link-icon"><span
+                                                    class="fas fa-user"></span></span><span
+                                                class="nav-link-text ps-1">Inscricao de Alunos</span></div>
+                                    </a>
                                 @endrole
 
                             </li>
@@ -431,8 +452,9 @@
                                 <div class="bg-white dark__bg-1000 rounded-2 py-2">
                                     <a class="dropdown-item fw-bold text-warning"><span
                                             class="fas fa-crown me-1"></span><span>@auth
-                                                {{ Auth::user()->name }} 
-                                            @endauth</span></a>
+                                                {{ Auth::user()->name }}
+                                            @endauth
+                                        </span></a>
                                     <div class="dropdown-divider"></div>
                                     {{-- <a class="dropdown-item" href="../pages/user/profile.html">Profile &amp;
                                         account</a>
@@ -503,25 +525,21 @@
                 {{-- Inicio do link do sweetalert --}}
                 @include('sweetalert::alert')
                 {{-- Fim dos links do javascript --}}
-                <!-- CSS do Bootstrap -->
 
-    <!-- JavaScript do Bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-    
-    {{--! Inicio do script que faz maravilhas--}}
-    <script>
-        function openEditModal(id) {
-            // Fecha o modal de leitura, caso esteja aberto
-            const readModal = new bootstrap.Modal(document.getElementById(`staticBackdr`));
-            readModal.hide();
+                {{-- ! Inicio do script que faz maravilhas --}}
+                <script>
+                    function openEditModal(id) {
+                        // Fecha o modal de leitura, caso esteja aberto
+                        const readModal = new bootstrap.Modal(document.getElementById(`staticBackdr${id}`));
+                        readModal.hide();
 
-            // Abre o modal de edição
-            const editModal = new bootstrap.Modal(document.getElementById(`editNoteModal${id}`));
-            editModal.show();
-        }
-    </script>
-    {{--! Fim do script que faz maravilha--}}
+                        // Abre o modal de edição
+                        const editModal = new bootstrap.Modal(document.getElementById(`editNoteModal${id}`));
+                        editModal.show();
+                    }
+                </script>
+                {{-- ! Fim do script que faz maravilha --}}
 
 
 </body>

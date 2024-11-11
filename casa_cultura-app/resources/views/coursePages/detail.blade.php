@@ -293,7 +293,7 @@
                                 <div class="flex-1">
                                     <h5 class="fs-9">
                                         <a class="text-decoration-none" href="#staticBackdr" data-bs-toggle="modal"
-                                            data-bs-target="#staticBackdr" data-gallery="attachment-title">
+                                            data-bs-target="#staticBackdr{{$user->id}}" data-gallery="attachment-title">
                                             {{ $user->name }} {{ $user->Surname }}
                                         </a>
                                     </h5>
@@ -361,8 +361,8 @@
                     {{-- ! Fim do modal de adicao de notas --}}
 
                     {{-- ! Inicio do modal show de notas --}}
-                    <div class="modal fade" id="staticBackdr" data-bs-keyboard="false" data-bs-backdrop="static"
-                        tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal fade" id="staticBackdr{{$user->id}}" data-bs-keyboard="false" data-bs-backdrop="static"
+                        tabindex="-1" aria-labelledby="staticBackdropLabel{{$user->id}}" aria-hidden="true">
                         <div class="modal-dialog modal-lg mt-6" role="document">
                             <div class="modal-content border-0">
                                 <div class="position-absolute top-0 end-0 mt-3 me-3 z-1">
@@ -469,6 +469,19 @@
                             </div>
                         </div>
                     </div>
+                    {{-- ! Inicio do script que faz maravilhas --}}
+                    <script>
+                        function openEditModal(id) {
+                            // Fecha o modal de leitura, caso esteja aberto
+                            const readModal = new bootstrap.Modal(document.getElementById(`staticBackdr${id}`));
+                            readModal.hide();
+
+                            // Abre o modal de edição
+                            const editModal = new bootstrap.Modal(document.getElementById(`editNoteModal${id}`));
+                            editModal.show();
+                        }
+                    </script>
+                    {{-- ! Fim do script que faz maravilha --}}
 
                     {{-- ! Fim do modal de adicao de notas --}}
                 @endforeach

@@ -123,6 +123,14 @@
                                     <div class="invalid-feedback">{{ $message }}</div>
                                 @enderror
                             </div>
+
+                            <div class="col-lg-6">
+                                <label class="form-control">Status</label>
+                                <select class="form-control" name="Status">
+                                    <option value="0">Activo</option>
+                                    <option value="1">Activo</option>
+                                </select>
+                            </div>
                             
                             <div class="col-lg-6"> <label class="form-label" for="email2"></label><input
                                     class="form-control" value="Employee" id="email2" type="hidden" name="user_type" />
