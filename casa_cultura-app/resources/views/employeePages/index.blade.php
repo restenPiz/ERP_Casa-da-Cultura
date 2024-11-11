@@ -126,7 +126,7 @@
 
                             <div class="col-lg-6">
                                 <label>Status</label>
-                                <select class="form-control" name="Status">
+                                <select class="form-control" name="status">
                                     <option>==--Selecione--==</option>
                                     <option value="0">Autenticado</option>
                                     <option value="1">Nao Autenticado</option>
