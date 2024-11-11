@@ -148,5 +148,19 @@
     @include('sweetalert::alert')
     {{-- Fim dos links do javascript --}}
 
+    {{--! Inicio do script que faz maravilhas--}}
+    <script>
+        function openEditModal(id) {
+            // Fecha o modal de leitura, caso esteja aberto
+            const readModal = new bootstrap.Modal(document.getElementById(`staticBackdr`));
+            readModal.hide();
+
+            // Abre o modal de edição
+            const editModal = new bootstrap.Modal(document.getElementById(`editNoteModal${id}`));
+            editModal.show();
+        }
+    </script>
+    {{--! Fim do script que faz maravilha--}}
+
 </body>
 </html>
