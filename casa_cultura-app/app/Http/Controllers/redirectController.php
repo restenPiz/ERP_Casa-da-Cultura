@@ -63,8 +63,7 @@ class redirectController extends Controller
 
                 Alert::error('Error', 'Voce nao tem permissao para acessar ao painel do administrador.');
 
-                // return redirect()->route('login');
-                return back();
+                return redirect()->route('login');
             }
         } else {
 

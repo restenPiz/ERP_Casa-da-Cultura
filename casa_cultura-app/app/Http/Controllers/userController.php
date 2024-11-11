@@ -79,8 +79,8 @@ class userController extends Controller
             return back();
         } else {
             $user->save();
+            $user->addRole($role);
             Alert::success('Adicionado!', $successMessage);
-
             return back();
         }
     }
