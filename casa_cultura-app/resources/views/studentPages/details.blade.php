@@ -3,7 +3,7 @@
     {{-- ! Inicio do conteudo da minha pagina de detalhes --}}
     <div class="row g-3">
         <div class="col-xxl-12 col-xl-9">
-            <h4 class="mb-0 mt-1">Pesquisa de dados do aluno</h4><br>
+            <h4 class="mb-0 mt-1">Filtro de dados do aluno</h4><br>
             <div class="card mb-3">
                 <div class="card-header position-relative">
                     <form action="{{ route('student.search') }}" method="post">
