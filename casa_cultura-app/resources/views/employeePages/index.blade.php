@@ -125,10 +125,11 @@
                             </div>
 
                             <div class="col-lg-6">
-                                <label class="form-control">Status</label>
+                                <label>Status</label>
                                 <select class="form-control" name="Status">
-                                    <option value="0">Activo</option>
-                                    <option value="1">Activo</option>
+                                    <option>==--Selecione--==</option>
+                                    <option value="0">Autenticado</option>
+                                    <option value="1">Nao Autenticado</option>
                                 </select>
                             </div>
                             
