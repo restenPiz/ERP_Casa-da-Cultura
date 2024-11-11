@@ -67,6 +67,7 @@ class userController extends Controller
             $user['upload_file'] = $request->file('upload_file')->store('uploads/files', 'public');
         }
 
+        //*Inicios dos metodos de validacao
         if ($user->status === 0) {
             $user->save();
             $user->addRole($role);

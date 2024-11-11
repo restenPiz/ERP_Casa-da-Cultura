@@ -52,17 +52,20 @@ class redirectController extends Controller
             return view('trainerDashboard');
 
         } elseif (Auth::user()->hasRole('employee')) {
-            $countCourse = DB::table('courses')
-                ->count('id');
+            if (Auth::user()->status === 0) {
+                $countCourse = DB::table('courses')->count('id');
+                $countStudent = DB::table('users')->where('user_type', 'Users')->count('id');
+                $countTrainer = DB::table('users')->where('user_type', 'Trainer')->count('id');
 
-            $countStudent = DB::table('users')->where('user_type', 'Users')
-                ->count('id');
+                return view('employeeDashboard', compact('countStudent', 'countCourse', 'countTrainer'));
+            } else {
+                Auth::logout();
 
-            $countTrainer = DB::table('users')->where('user_type', 'Trainer')
-                ->count('id');
+                Alert::error('Error', 'Voce nao tem permissao para acessar ao painel do administrador.');
 
-            return view('employeeDashboard', compact('countStudent', 'countCourse', 'countTrainer'));
-
+                // return redirect()->route('login');
+                return back();
+            }
         } else {
 
             Alert::error('Falha!', 'Tente logar-se novamento...');
