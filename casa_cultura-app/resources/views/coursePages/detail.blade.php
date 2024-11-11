@@ -292,8 +292,8 @@
                                 </div>
                                 <div class="flex-1">
                                     <h5 class="fs-9">
-                                        <a class="text-decoration-none" href="../../../assets/video/beach.mp4"
-                                            data-gallery="attachment-title">
+                                        <a class="text-decoration-none" href="#staticBackdr" data-bs-toggle="modal"
+                                            data-bs-target="#staticBackdr" data-gallery="attachment-title">
                                             {{ $user->name }} {{ $user->Surname }}
                                         </a>
                                     </h5>
@@ -304,9 +304,8 @@
 
                             <!-- Botão para adicionar notas -->
                             <div>
-                                <a style="border-radius:0" 
-                                href="#staticBackdro" data-bs-toggle="modal" data-bs-target="#staticBackdro{{ $user->id }}"
-                                class="btn btn-sm btn-primary">
+                                <a style="border-radius:0" href="#staticBackdro" data-bs-toggle="modal"
+                                    data-bs-target="#staticBackdro{{ $user->id }}" class="btn btn-sm btn-primary">
                                     Adicionar Nota de Avaliacao
                                 </a>
                             </div>
@@ -314,8 +313,9 @@
                     </div>
 
                     {{-- ! Inicio do modal de adicao de notas --}}
-                    <div class="modal fade" id="staticBackdro{{ $user->id }}" data-bs-keyboard="false" data-bs-backdrop="static"
-                        tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal fade" id="staticBackdro{{ $user->id }}" data-bs-keyboard="false"
+                        data-bs-backdrop="static" tabindex="-1" aria-labelledby="staticBackdropLabel"
+                        aria-hidden="true">
                         <div class="modal-dialog modal-lg mt-6" role="document">
                             <div class="modal-content border-0">
                                 <div class="position-absolute top-0 end-0 mt-3 me-3 z-1"><button
@@ -327,21 +327,24 @@
                                         </h4>
                                     </div>
                                     <div class="p-4" style="margin-top:-3rem">
-                                        <form action="{{ route('chapter.store') }}" method="post"
+                                        <form action="{{ route('storeValue') }}" method="post"
                                             enctype="multipart/form-data">
                                             @csrf
                                             <div class="row">
                                                 {{-- ? Fim da coluna contendo a Imagem --}}
                                                 <div class="col-lg-4"> <label class="form-label" for="first-name">
                                                         Primeira Avaliacao</label>
-                                                        <input class="form-control" type="number" name="First"></div>
+                                                    <input class="form-control" type="number" name="First">
+                                                </div>
                                                 <div class="col-lg-4"> <label class="form-label" for="first-name">
                                                         Segunda Avaliacao</label>
-                                                        <input class="form-control" type="number" name="Second"></div>
+                                                    <input class="form-control" type="number" name="Second">
+                                                </div>
 
                                                 <div class="col-lg-4"> <label class="form-label" for="first-name">
                                                         Terceira Avaliacao</label>
-                                                        <input class="form-control" type="number" name="Third"></div>
+                                                    <input class="form-control" type="number" name="Third">
+                                                </div>
                                                 <input type="hidden" name="id_user" value="{{ $user->id }}">
                                                 {{-- Fim dos inputs type hidden --}}
                                                 <div style="margin-top: 1rem" class="col-12 d-flex"><button
@@ -349,12 +352,122 @@
                                                         type="submit">Adicionar Nota
                                                     </button></div>
                                             </div>
-                                        </div>
+                                    </div>
                                     </form>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    {{-- ! Fim do modal de adicao de notas --}}
+
+                    {{-- ! Inicio do modal show de notas --}}
+                    <div class="modal fade" id="staticBackdr" data-bs-keyboard="false" data-bs-backdrop="static"
+                        tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg mt-6" role="document">
+                            <div class="modal-content border-0">
+                                <div class="position-absolute top-0 end-0 mt-3 me-3 z-1">
+                                    <button class="btn-close btn btn-sm btn-circle d-flex flex-center transition-base"
+                                        data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body p-0">
+                                    <div class="rounded-top-3 bg-body-tertiary py-3 ps-4 pe-6">
+                                        <h4 class="mb-1" id="staticBackdropLabel">Detalhes do Estudante</h4>
+                                    </div>
+                                    <div class="p-4" style="margin-top:-3rem">
+                                        {{-- * Inicio da tabela de notas do estudante --}}
+                                        <div class="table-responsive">
+                                            <table class="table table-bordered">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Primeira Avaliacao</th>
+                                                        <th>Segunda Avaliacao</th>
+                                                        <th>Terceira Avaliacao</th>
+                                                        <th>Ações</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    @foreach ($user->values as $value)
+                                                        {{-- Supondo que o relacionamento 'values' esteja configurado no modelo User --}}
+                                                        <tr>
+                                                            <td>{{ $value->First }}</td>
+                                                            <td>{{ $value->Second }}</td>
+                                                            <td>{{ $value->Third }}</td>
+                                                            <td>
+                                                                <button type="button" class="btn btn-primary btn-sm"
+                                                                    data-bs-toggle="modal"
+                                                                    data-bs-target="#editNoteModal{{ $value->id }}">Editar</button>
+                                                                <form action=""
+                                                                    method="POST" style="display:inline;">
+                                                                    @csrf
+                                                                    @method('DELETE')
+                                                                    <button type="submit"
+                                                                        class="btn btn-danger btn-sm">Excluir</button>
+                                                                </form>
+                                                            </td>
+                                                        </tr>
+
+                                                        {{-- Modal para edição de notas --}}
+                                                        <div class="modal fade" id="editNoteModal{{ $value->id }}"
+                                                            tabindex="-1"
+                                                            aria-labelledby="editNoteLabel{{ $value->id }}"
+                                                            aria-hidden="true">
+                                                            <div class="modal-dialog">
+                                                                <div class="modal-content">
+                                                                    <div class="modal-header">
+                                                                        <h5 class="modal-title"
+                                                                            id="editNoteLabel{{ $value->id }}">Editar
+                                                                            Nota</h5>
+                                                                        <button type="button" class="btn-close"
+                                                                            data-bs-dismiss="modal"
+                                                                            aria-label="Close"></button>
+                                                                    </div>
+                                                                    <div class="modal-body">
+                                                                        <form
+                                                                            action=""
+                                                                            method="POST">
+                                                                            @csrf
+                                                                            @method('PUT')
+                                                                            <div class="mb-3">
+                                                                                <label for="First"
+                                                                                    class="form-label">Primeira
+                                                                                    Nota</label>
+                                                                                <input type="text" class="form-control"
+                                                                                    id="First" name="First"
+                                                                                    value="{{ $value->First }}">
+                                                                            </div>
+                                                                            <div class="mb-3">
+                                                                                <label for="Second"
+                                                                                    class="form-label">Segunda Nota</label>
+                                                                                <input type="text" class="form-control"
+                                                                                    id="Second" name="Second"
+                                                                                    value="{{ $value->Second }}">
+                                                                            </div>
+                                                                            <div class="mb-3">
+                                                                                <label for="Third"
+                                                                                    class="form-label">Terceira
+                                                                                    Nota</label>
+                                                                                <input type="text" class="form-control"
+                                                                                    id="Third" name="Third"
+                                                                                    value="{{ $value->Third }}">
+                                                                            </div>
+                                                                            <button type="submit"
+                                                                                class="btn btn-primary">Salvar
+                                                                                Alterações</button>
+                                                                        </form>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    @endforeach
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                     {{-- ! Fim do modal de adicao de notas --}}
                 @endforeach
 

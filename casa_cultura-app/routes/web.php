@@ -84,7 +84,7 @@ Route::middleware('auth')->group(function () {
     Route::post('/paymentStore', [paymentController::class, 'startPayment'])->name('payment.store');
 
     //!Inicio das rotas de notas
-    Route::get('/storeValue', [redirectController::class, 'value'])->name('storeValue');
+    Route::post('/storeValue', [valueController::class, 'store'])->name('storeValue');
 });
 
 //?Inicio das rotas da parte da website
@@ -100,7 +100,7 @@ Route::get('/getCourse', [courseController::class, 'getTrainer'])->name('course.
 Route::get('/webMain', [redirectController::class, 'webMain'])->name('web.main');
 
 //*Inicio da rota de tela de login de Estudante
-Route::get('/loginUser', [valueController::class, 'loginUser'])->name('loginUser');
+Route::get('/loginUser', [redirectController::class, 'loginUser'])->name('loginUser');
 
 //?Inicio da rota de dowloand de ficheiro em excel
 Route::get('/trainers/export', function () {
