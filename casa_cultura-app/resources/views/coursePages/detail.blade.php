@@ -393,14 +393,13 @@
                                                             <td>{{ $value->Second }}</td>
                                                             <td>{{ $value->Third }}</td>
                                                             <td>
-                                                                <button type="button" class="btn btn-primary btn-sm"
-                                                                    data-bs-toggle="modal"
-                                                                    data-bs-target="#editNoteModal{{ $value->id }}">Editar</button>
-                                                                <form action=""
+                                                                <button style="border-radius: 0;" type="button" class="btn btn-primary btn-sm"
+                                                                    onclick="openEditModal({{ $value->id }})">Editar</button>
+                                                                <form action="{{route('deleteValue',['id'=>$value->id])}}"
                                                                     method="POST" style="display:inline;">
                                                                     @csrf
                                                                     @method('DELETE')
-                                                                    <button type="submit"
+                                                                    <button style="border-radius: 0" type="submit"
                                                                         class="btn btn-danger btn-sm">Excluir</button>
                                                                 </form>
                                                             </td>
@@ -423,10 +422,11 @@
                                                                     </div>
                                                                     <div class="modal-body">
                                                                         <form
-                                                                            action=""
+                                                                            action="{{route(
+                                                                                'updateValue',['id'=>$value->id]
+                                                                            )}}"
                                                                             method="POST">
                                                                             @csrf
-                                                                            @method('PUT')
                                                                             <div class="mb-3">
                                                                                 <label for="First"
                                                                                     class="form-label">Primeira
@@ -450,6 +450,7 @@
                                                                                     id="Third" name="Third"
                                                                                     value="{{ $value->Third }}">
                                                                             </div>
+                                                                            <input type="hidden" name="id_user" value="{{ $user->id }}">
                                                                             <button type="submit"
                                                                                 class="btn btn-primary">Salvar
                                                                                 Alterações</button>
@@ -458,6 +459,7 @@
                                                                 </div>
                                                             </div>
                                                         </div>
+
                                                     @endforeach
                                                 </tbody>
                                             </table>

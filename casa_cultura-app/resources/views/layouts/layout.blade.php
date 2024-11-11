@@ -503,6 +503,27 @@
                 {{-- Inicio do link do sweetalert --}}
                 @include('sweetalert::alert')
                 {{-- Fim dos links do javascript --}}
+                <!-- CSS do Bootstrap -->
+
+    <!-- JavaScript do Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    
+    {{--! Inicio do script que faz maravilhas--}}
+    <script>
+        function openEditModal(id) {
+            // Fecha o modal de leitura, caso esteja aberto
+            const readModal = new bootstrap.Modal(document.getElementById(`staticBackdr`));
+            readModal.hide();
+
+            // Abre o modal de edição
+            const editModal = new bootstrap.Modal(document.getElementById(`editNoteModal${id}`));
+            editModal.show();
+        }
+    </script>
+    {{--! Fim do script que faz maravilha--}}
+
+
 </body>
 
 </html>

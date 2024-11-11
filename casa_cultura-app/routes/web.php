@@ -85,6 +85,8 @@ Route::middleware('auth')->group(function () {
 
     //!Inicio das rotas de notas
     Route::post('/storeValue', [valueController::class, 'store'])->name('storeValue');
+    Route::post('/updateValue/{id}', [valueController::class, 'update'])->name('updateValue');
+    Route::delete('/deleteValue/{id}', [valueController::class, 'delete'])->name('deleteValue');
 });
 
 //?Inicio das rotas da parte da website
