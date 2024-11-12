@@ -26,7 +26,7 @@ class userController extends Controller
             'function' => ['required', 'string', 'max:255'],
             // 'upload_file' => ['required', 'file', 'mimes:jpeg,png,pdf', 'max:2048'],
             'user_type' => ['required', 'string', 'max:255'],
-            // 'status' => ['required', 'string', 'max:255'],
+            'status' => ['required'],
             'contact' => ['required', 'string', 'min:9']
         ]);
 

@@ -23,12 +23,12 @@
                         <div class="banner-image">
                             <div class="banner-main-image">
                                 <img class="img-01" data-sal-delay="150" data-sal="fade" data-sal-duration="800"
-                                    src="asset/images/banner/banner-03/image-01.png" alt="Banner Images" />
+                                    src="imagem/a4.jpg" alt="Banner Images" />
                             </div>
-                            <img class="img-02" data-sal-delay="150" data-sal="fade" data-sal-duration="800"
-                                src="asset/images/banner/banner-03/image-02.png" alt="Banner Images" />
+                            {{-- <img class="img-02" data-sal-delay="150" data-sal="fade" data-sal-duration="800"
+                                src="imagem/p.png" alt="Banner Images" />
                             <img class="img-03" data-sal-delay="150" data-sal="fade" data-sal-duration="800"
-                                src="asset/images/banner/banner-03/image-03.png" alt="Banner Images" />
+                                src="asset/images/banner/banner-03/image-03.png" alt="Banner Images" /> --}}
                         </div>
                     </div>
                 </div>
@@ -63,10 +63,10 @@
             <div class="row g-lg-5 g-md-5 g-sm-5">
                 <div class="col-lg-12 col-xl-6">
                     <div class="gallery-wrapper">
-                        <img class="image-1" src="asset/images/about/about-05/about-group-01.jpg" alt="About Images">
-                        <img class="image-2" src="asset/images/about/about-05/about-group-02.jpg" alt="About Images">
+                        <img class="image-1" src="imagem/a1.jpg" alt="About Images">
+                        {{-- <img class="image-2" src="asset/images/about/about-05/about-group-02.jpg" alt="About Images">
                         <img class="image-3" data-parallax='{"x": 0, "y": -120}'
-                            src="asset/images/about/about-05/about-group-03.jpg" alt="About Images">
+                            src="imagem/p.png" alt="About Images"> --}}
                     </div>
                 </div>
                 <div class="col-lg-12 col-xl-6">
@@ -240,7 +240,7 @@
                 </div>
                 <div class="col-lg-6 order-1 order-lg-2">
                     <div class="thumbnail video-popup-wrapper">
-                        <img class="radius-small w-100" src="asset/images/videopopup/video-popup-bg-02.jpg"
+                        <img class="radius-small w-100" src="imagem/a3.jpg"
                             alt="About Image">
                         <a href="https://www.youtube.com/watch?v=pNje3bWz7V8"
                             class="video-play-btn with-animation position-to-top video-popup-activation color-secondary size-60">
@@ -420,14 +420,12 @@
                             <h5 class="widget-title">Navegue Mais</h5>
                             <div class="inner">
                                 <ul class="footer-link link-hover">
-                                    <li><a href="about-us-1.html"><i class="icon-Double-arrow"></i>About Us</a></li>
-                                    <li><a href="event-list.html"><i class="icon-Double-arrow"></i>Upcoming Events</a>
+                                    <li><a href="#start"><i class="icon-Double-arrow"></i>Inicio</a></li>
+                                    <li><a href="#about"><i class="icon-Double-arrow"></i>Sobre Nos</a>
                                     </li>
-                                    <li><a href="blog-standard.html"><i class="icon-Double-arrow"></i>Blog & News</a></li>
-                                    <li><a href="faq.html"><i class="icon-Double-arrow"></i>FAQ Question</a></li>
-                                    <li><a href="testimonial.html"><i class="icon-Double-arrow"></i>Testimonial</a></li>
-                                    <li><a href="privacy-policy.html"><i class="icon-Double-arrow"></i>Privacy Policy</a>
-                                    </li>
+                                    <li><a href="#course"><i class="icon-Double-arrow"></i>Cursos</a></li>
+                                    <li><a href="#another"><i class="icon-Double-arrow"></i>Pagina</a></li>
+                                    <li><a href="#events"><i class="icon-Double-arrow"></i>Eventos</a></li>
                                 </ul>
                             </div>
                         </div>

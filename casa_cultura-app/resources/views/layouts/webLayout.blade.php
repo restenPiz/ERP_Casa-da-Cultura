@@ -96,16 +96,16 @@
                     </div>
                 </div>
                     <ul class="mainmenu">
-                        <li><a href="/dashboard">Inicio</a>
-                        </li>
-                        <li><a href="#">Sobre Nos</a>
-                        </li>
-                        <li><a href="#">Cursos</a>
-                        </li>
-                        <li><a href="#">Pagina</a>
-                        </li>
-                        <li><a href="#">Eventos</a>
-                        </li>
+                        <li><a href="#start">Inicio</a>
+                            </li>
+                            <li><a href="#about">Sobre Nos</a>
+                            </li>
+                            <li><a href="#course">Cursos</a>
+                            </li>
+                            <li><a href="#another">Pagina</a>
+                            </li>
+                            <li><a href="#events">Eventos</a>
+                            </li>
                     </ul>
             </div>
         </div>

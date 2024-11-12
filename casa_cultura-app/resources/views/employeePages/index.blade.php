@@ -126,18 +126,21 @@
 
                             <div class="col-lg-6">
                                 <label>Status</label>
-                                <select class="form-control" name="status">
+                                <select class="form-control @error('status') is-invalid @enderror" name="status">
                                     <option>==--Selecione--==</option>
                                     <option value="0">Autenticado</option>
                                     <option value="1">Nao Autenticado</option>
                                 </select>
+                                @error('status')
+                                    <div class="invalid-feedback">{{ $message }}</div>
+                                @enderror
                             </div>
                             
                             <div class="col-lg-6"> <label class="form-label" for="email2"></label><input
                                     class="form-control" value="Employee" id="email2" type="hidden" name="user_type" />
                             </div>
                             <div class="col-12 d-flex justify-content-end"><button class="btn btn-primary"
-                                    type="submit">Adicionar Formador </button></div>
+                                    type="submit">Adicionar Funcionario</button></div>
                         </div>
                     </div>
                 </div>
