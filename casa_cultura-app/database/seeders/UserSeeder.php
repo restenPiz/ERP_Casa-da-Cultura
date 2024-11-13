@@ -13,6 +13,7 @@ class UserSeeder extends Seeder
 {
     public function run(): void
     {
+        //*Inicio da seeder responsavel pelo registro de dados do utilizador
         $user = User::create([
             'name' => 'Administrador',
             'email' => 'picardo@gmail.com',
