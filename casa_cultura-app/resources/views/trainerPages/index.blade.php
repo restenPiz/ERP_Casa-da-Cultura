@@ -63,7 +63,7 @@
                             </div>
 
                             <div class="col-lg-6">
-                                <label class="form-label" for="email2">Contacto</label>
+                                <label class="form-label">Contacto</label>
                                 <input class="form-control @error('contact') is-invalid @enderror" type="text" placeholder="Ex: 867336817"
                                     name="contact" />
                                 @error('contact')
