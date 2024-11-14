@@ -85,11 +85,9 @@ class courseController extends Controller
             'Course_name' => 'required|string|max:255',
             'Description' => 'required|string|max:5000',
             'Price' => 'required|string|max:255',
-            'Goals' => 'required|string|max:5000',
             'id_user' => 'required|array',
             'id_user.*' => 'exists:users,id',
             'Upload_file' => 'required|file|mimes:pdf,doc,docx,jpg,png|max:10240',
-            'Upload_video' => 'required|file|mimes:pdf,doc,docx,jpg,png|max:10240',
         ]);
 
         if ($request->hasFile('Upload_file')) {
@@ -127,9 +125,7 @@ class courseController extends Controller
             'Course_name' => 'required|string|max:255',
             'Description' => 'required|string|max:1000',
             'Price' => 'required|string|max:255',
-            'Goals' => 'required|string|max:1000',
             'Upload_file' => 'nullable|file|mimes:pdf,doc,docx,jpg,png|max:10240',
-            'Upload_video' => 'nullable|file|mimes:pdf,doc,docx,jpg,png|max:10240',
         ]);
 
         if ($request->hasFile('Upload_file')) {

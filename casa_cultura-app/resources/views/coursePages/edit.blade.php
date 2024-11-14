@@ -32,22 +32,6 @@
                     </div>
                 </div>
                 <div class="card mb-3 mb-lg-0">
-                    <div class="card-header bg-body-tertiary">
-                        <h5 class="mb-0">Objectivo do Curso</h5>
-                    </div>
-                    <div class="card-body"> <label class="mb-3 form-label lh-1" for="course-goal">Objectivo do Curso <span
-                                class="text-danger">*</span></label>
-                        <div class="position-relative mb-4 focus-actions-trigger">
-                            <textarea name="Goals" class="form-control" data-tinymce="data-tinymce" name="course-description" id="course-description"
-                                required="required">{{$course->Goals}}</textarea>
-                            <div class="position-absolute end-0 top-50 translate-middle focus-actions"><button
-                                    class="btn btn-link btn-sm p-0 text-700 me-2"><span
-                                        class="fas fa-arrow-right"></span></button></div>
-                        </div>
-
-                    </div>
-                </div><br>
-                <div class="card mb-3 mb-lg-0">
                     <div class="card-header">
                         <h5 class="mb-0">Coloque o Preço do Curso</h5>
                     </div>
@@ -72,16 +56,6 @@
 
                         <div class="card-body bg-body-tertiary">
                             <input class="form-control" type="file" name="Upload_file" accept=".jpg,.jpeg,.png,.gif,.docx,.pdf,.txt" />
-                        </div>
-                    </div>
-                    <div class="card mb-3">
-                        <div class="card-header">
-                            <h5 class="mb-0">Faça o Upload do Video<span data-bs-toggle="tooltip" data-bs-placement="top"
-                                    title="Add cover photo"><span
-                                        class="fas fa-info-circle text-primary fs-9 ms-2"></span></span></h5>
-                        </div>
-                        <div class="card-body bg-body-tertiary">
-                            <input class="form-control" type="file" name="Upload_video" accept=".jpg,.jpeg,.png,.gif,.docx,.pdf,.txt"/>
                         </div>
                     </div>
                     <input type="hidden" name="id" value="{{$course->id}}">
