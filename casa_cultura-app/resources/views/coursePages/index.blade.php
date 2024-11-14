@@ -46,21 +46,6 @@
                     </div>
                 </div>
                 <div class="card mb-3 mb-lg-0">
-                    <div class="card-header bg-body-tertiary">
-                        <h5 class="mb-0">Objectivo do Curso</h5>
-                    </div>
-                    <div class="card-body">
-                        <label class="mb-3 form-label lh-1" for="course-goal">Objectivo do Curso <span
-                                class="text-danger">*</span></label>
-                        <div class="position-relative mb-4 focus-actions-trigger">
-                            <textarea name="Goals" class="form-control @error('Goals') is-invalid @enderror" id="course-goal" required="required"></textarea>
-                            @error('Goals')
-                                <div class="text-danger">{{ $message }}</div>
-                            @enderror
-                        </div>
-                    </div>
-                </div><br>
-                <div class="card mb-3 mb-lg-0">
                     <div class="card-header">
                         <h5 class="mb-0">Coloque o Preço do Curso</h5>
                     </div>
@@ -91,19 +76,6 @@
                             <input class="form-control @error('Upload_file') is-invalid @enderror" type="file" name="Upload_file"
                                 accept=".jpg,.jpeg,.png,.gif,.docx,.pdf,.txt" />
                             @error('Upload_file')
-                                <div class="text-danger">{{ $message }}</div>
-                            @enderror
-                        </div>
-                    </div>
-                    <div class="card mb-3">
-                        <div class="card-header">
-                            <h5 class="mb-0">Faça o Upload do Video<span data-bs-toggle="tooltip" data-bs-placement="top"
-                                    title="Add cover photo"><span
-                                        class="fas fa-info-circle text-primary fs-9 ms-2"></span></span></h5>
-                        </div>
-                        <div class="card-body bg-body-tertiary">
-                            <input class="form-control @error('Upload_video') is-invalid @enderror" type="file" name="Upload_video" accept=".mp4,.mov,.avi,.wmv.jpg,.jpeg,.png,.gif,.docx,.pdf,.txt" />
-                            @error('Upload_video')
                                 <div class="text-danger">{{ $message }}</div>
                             @enderror
                         </div>
