@@ -92,7 +92,7 @@ class userController extends Controller
             'Surname' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
-            'password_confirmation' => ['required', 'string', 'min:8', 'confirmed'],
+            // 'password_confirmation' => ['required', 'string', 'min:8', 'confirmed'],
             'bi' => ['required', 'string', 'min:13'],
             'Date_of_birth' => 'required|date|before_or_equal:today',
             'place' => ['required', 'string', 'max:255'],

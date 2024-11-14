@@ -17,12 +17,13 @@
                                 <option value="Archive">Archive</option>
                             </select><button class="btn btn-falcon-default btn-sm ms-2" type="button">Apply</button></div>
                     </div>
-                    <div id="table-customers-replace-element"><a href="{{route('trainer.index')}}" class="btn btn-falcon-default btn-sm"
-                        type="button"><span class="fas fa-plus" data-fa-transform="shrink-3 down-2"></span><span
-                            class="d-none d-sm-inline-block ms-1">Novo</span></a>
-                            <a href="{{ route('trainers.export') }}" class="btn btn-falcon-default btn-sm" type="button">
-                                <span class="fas fa-external-link-alt" data-fa-transform="shrink-3 down-2"></span>
-                                <span class="d-none d-sm-inline-block ms-1">Exportar</span></a>
+                    <div id="table-customers-replace-element"><a href="{{ route('trainer.index') }}"
+                            class="btn btn-falcon-default btn-sm" type="button"><span class="fas fa-plus"
+                                data-fa-transform="shrink-3 down-2"></span><span
+                                class="d-none d-sm-inline-block ms-1">Novo</span></a>
+                        <a href="{{ route('trainers.export') }}" class="btn btn-falcon-default btn-sm" type="button">
+                            <span class="fas fa-external-link-alt" data-fa-transform="shrink-3 down-2"></span>
+                            <span class="d-none d-sm-inline-block ms-1">Exportar</span></a>
                     </div>
                 </div>
             </div>
@@ -63,7 +64,7 @@
                                                     src="{{ asset('storage/' . $trainer->upload_file) }}" alt="" />
                                             </div>
                                             <div class="flex-1">
-                                                <h5 class="mb-0 fs-10">{{ $trainer->name }} {{$trainer->Surname}}</h5>
+                                                <h5 class="mb-0 fs-10">{{ $trainer->name }} {{ $trainer->Surname }}</h5>
                                             </div>
                                         </div>
                                     </a>
@@ -83,7 +84,8 @@
                                         <div class="dropdown-menu dropdown-menu-end border py-0"
                                             aria-labelledby="customer-dropdown-1">
                                             <div class="py-2"><a class="dropdown-item" href="#staticBackdrop"
-                                                    data-bs-toggle="modal" data-bs-target="#staticBackdrop{{$trainer->id}}">Edit</a><a
+                                                    data-bs-toggle="modal"
+                                                    data-bs-target="#staticBackdrop{{ $trainer->id }}">Edit</a><a
                                                     class="dropdown-item text-danger"
                                                     href="{{ route('trainer.delete', ['id' => $trainer->id]) }}">Delete</a>
                                             </div>
@@ -93,7 +95,7 @@
                             </tr>
 
                             {{-- inicio do modal da parte de editar --}}
-                            <div class="modal fade" id="staticBackdrop{{$trainer->id}}" data-bs-keyboard="false"
+                            <div class="modal fade" id="staticBackdrop{{ $trainer->id }}" data-bs-keyboard="false"
                                 data-bs-backdrop="static" tabindex="-1" aria-labelledby="staticBackdropLabel"
                                 aria-hidden="true">
                                 <div class="modal-dialog modal-lg mt-6" role="document">
@@ -109,33 +111,34 @@
                                                         href="#!">{{ Auth::user()->name }}</a></p>
                                             </div><br>
                                             <div class="p-4" style="margin-top: -3rem;">
-                                                <form action="{{route('user.update',['id'=>$trainer->id])}}" method="post" enctype="multipart/form-data">
+                                                <form action="{{ route('user.update', ['id' => $trainer->id]) }}"
+                                                    method="post" enctype="multipart/form-data">
                                                     @csrf
                                                     <div class="row">
-                                                        
+
                                                         <div class="col-lg-6"> <label class="form-label"
                                                                 for="first-name">Primeiro Nome</label><input
                                                                 name="name" class="form-control" id="first-name"
-                                                                type="text" value="{{$trainer->name}}" />
+                                                                type="text" value="{{ $trainer->name }}" />
                                                         </div>
                                                         <div class="col-lg-6">
-                                                            <label class="form-label"
-                                                                for="first-name">Adicionar Foto</label>
+                                                            <label class="form-label" for="first-name">Adicionar
+                                                                Foto</label>
                                                             <input name="upload_file" class="form-control"
-                                                                        id="profile-image" type="file" />
+                                                                id="profile-image" type="file" />
                                                         </div>
                                                         <div class="col-lg-6"> <label class="form-label"
                                                                 for="last-name">Apelido</label><input name="Surname"
                                                                 class="form-control" id="last-name" type="text"
-                                                                value="{{$trainer->Surname}}" /></div>
+                                                                value="{{ $trainer->Surname }}" /></div>
                                                         <div class="col-lg-6"> <label class="form-label"
                                                                 for="email1">Email</label><input name="email"
-                                                                value="{{$trainer->email}}" class="form-control"
+                                                                value="{{ $trainer->email }}" class="form-control"
                                                                 id="email1" type="text" /></div>
                                                         <div class="col-lg-6"> <label class="form-label"
                                                                 for="email2">Contacto</label><input class="form-control"
-                                                                id="email2" type="text" value="{{$trainer->contact}}"
-                                                                name="contact" />
+                                                                id="email2" type="text"
+                                                                value="{{ $trainer->contact }}" name="contact" />
                                                         </div>
                                                         <div class="col-lg-6"><label class="form-label"
                                                                 for="email3">Password</label><input name="password"
@@ -152,22 +155,24 @@
                                                         <div class="col-lg-6"> <label class="form-label"
                                                                 for="email2">Numero de BI</label><input
                                                                 class="form-control" id="email2" type="text"
-                                                                name="bi" value="{{$trainer->bi}}" /></div>
+                                                                name="bi" value="{{ $trainer->bi }}" /></div>
                                                         <div class="col-lg-6"> <label class="form-label"
                                                                 for="email2">Data
                                                                 de Nascimento</label><input class="form-control"
-                                                                id="email2" type="date" value="{{$trainer->Date_of_birth}}" name="Date_of_birth" />
+                                                                id="email2" type="date"
+                                                                value="{{ $trainer->Date_of_birth }}"
+                                                                name="Date_of_birth" />
                                                         </div>
                                                         <div class="col-lg-6"> <label class="form-label"
                                                                 for="email2">Residencia</label><input
                                                                 class="form-control" id="email2" type="text"
-                                                                value="{{$trainer->place}}" name="place" /></div>
+                                                                value="{{ $trainer->place }}" name="place" /></div>
                                                         <div class="col-lg-6"> <label class="form-label"
-                                                                for="email2">Curso a Ministrar</label><input class="form-control"
-                                                                id="email2" type="text"
-                                                                value="{{$trainer->function}}" name="function" /></div>
+                                                                for="email2">Curso a Ministrar</label><input
+                                                                class="form-control" id="email2" type="text"
+                                                                value="{{ $trainer->function }}" name="function" /></div>
 
-                                                        {{--Inicio dos inputs type hidden--}}
+                                                        {{-- Inicio dos inputs type hidden --}}
                                                         <div class="col-lg-6"> <label class="form-label"
                                                                 for="email2"></label><input class="form-control"
                                                                 value="Trainer" id="email2" type="hidden"
@@ -175,17 +180,19 @@
                                                         </div>
                                                         <div class="col-lg-6"> <label class="form-label"
                                                                 for="email2"></label><input class="form-control"
-                                                                value="{{$trainer->id}}" id="email2" type="hidden"
-                                                                name="id" />
+                                                                value="{{ $trainer->id }}" id="email2"
+                                                                type="hidden" name="id" />
                                                         </div>
-                                                        {{--Fim dos inputs type hidden--}}
+                                                        {{-- Fim dos inputs type hidden --}}
 
                                                         <div class="col-12 d-flex justify-content-end"><button
-                                                                class="btn btn-primary" type="submit">Actualizar Formador
+                                                                class="btn btn-primary" type="submit"
+                                                                name="submit">Actualizar Formador
                                                             </button></div>
                                                     </div>
+                                                </form>
                                             </div>
-                                            </form>
+
                                         </div>
                                     </div>
                                 </div>
