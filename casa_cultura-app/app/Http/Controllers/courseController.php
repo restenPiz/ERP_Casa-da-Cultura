@@ -103,9 +103,7 @@ class courseController extends Controller
             'Course_name' => $validatedData['Course_name'],
             'Description' => $validatedData['Description'],
             'Price' => $validatedData['Price'],
-            'Goals' => $validatedData['Goals'],
             'Upload_file' => $validatedData['Upload_file'],
-            'Upload_video' => $validatedData['Upload_video'],
         ]);
 
         //*Conectando o user com o curso
@@ -144,9 +142,7 @@ class courseController extends Controller
             'Course_name' => $validatedData['Course_name'],
             'Description' => $validatedData['Description'],
             'Price' => $validatedData['Price'],
-            'Goals' => $validatedData['Goals'],
             'Upload_file' => $validatedData['Upload_file'],
-            'Upload_video' => $validatedData['Upload_video'],
         ]);
 
         if (isset($validatedData['id_user'])) {
