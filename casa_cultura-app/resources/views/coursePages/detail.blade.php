@@ -249,15 +249,6 @@
                     </div>
                     {{-- ! Inicio do script que faz maravilhas --}}
                     <script>
-                        // function openEditModal(id) {
-                        //     // Fecha o modal de leitura, caso esteja aberto
-                        //     const readModal = new bootstrap.Modal(document.getElementById(`staticBackdr${id}`));
-                        //     readModal.hide();
-
-                        //     // Abre o modal de edição
-                        //     const editModal = new bootstrap.Modal(document.getElementById(`editNoteModal${id}`));
-                        //     editModal.show();
-                        // }
                         function openEditModal(id) {
                         // Fecha o modal de leitura de notas
                         var readNoteModal = document.getElementById('staticBackdr'+id); // Assumindo que esse é o ID do modal de leitura
