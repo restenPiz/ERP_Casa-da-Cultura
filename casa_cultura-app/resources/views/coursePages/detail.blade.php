@@ -134,7 +134,9 @@
                                     </form>
                                 </div>
 
-                                <h1>Resultado Final</h1>
+                                <div class="container">
+                                    <h5>Resultado Final:</h5>
+                                </div>
                             </div>
                         </div>
                     </div>
