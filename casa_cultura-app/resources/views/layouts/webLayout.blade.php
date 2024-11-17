@@ -33,7 +33,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-4 col-xl-3 col-md-6 col-6">
                     <div class="logo">
-                        <a href="index.html">
+                        <a>
                             <img class="logo-light" src="asset/images/logo/logo1.png" alt="Site Logo">
                         </a>
                     </div>
@@ -56,19 +56,7 @@
                 </div>
                 <div class="col-lg-8 col-xl-3 col-md-6 col-6">
                     <div class="header-right d-flex justify-content-end">
-                        <div class="header-menu-bar">
-                            @auth
-                                <div class="quote-icon quote-user ml--15 ml_sm--5 dropdown">
-                                    <a class="white-box-icon dropdown-toggle" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                        <i class="ri-user-line"></i>
-                                    </a>
-
-                                    <ul class="dropdown-menu" aria-labelledby="userDropdown">
-                                        <li><a class="dropdown-item" href="{{route('logout')}}">Sair</a></li>
-                                    </ul>
-                                </div>
-                            @endauth
-                        </div>
+                       
 
                         <div class="mobile-menu-bar ml--15 ml_sm--5 d-block d-xl-none">
                             <div class="hamberger">
