@@ -250,8 +250,9 @@
 
                                         <div>
                                             <div class="container">
-                                                <h5>Resultado Final: </h5>
-                                                <h5>Situacao: </h5>
+                                                <h5>Resultado Final: @foreach ($user->values as $user)
+                                                    {{($user->First + $user->Second + $user->Third)/3 }}
+                                                @endforeach</h5>
                                             </div>
                                         </div>
                                     </div>
