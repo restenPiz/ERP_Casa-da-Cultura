@@ -234,7 +234,7 @@
                                         aria-expanded="false" aria-controls="customization">
                                         <div class="d-flex align-items-center"><span class="nav-link-icon"><span
                                                     class="fas fa-graduation-cap"></span></span><span
-                                                class="nav-link-text ps-1">Gerir Cursos</span></div>
+                                                class="nav-link-text ps-1">Notas de Estudantes</span></div>
                                     </a>
                                     <ul class="nav collapse {{ request()->routeIs('course.get', 'course.index', 'course.detail') ? 'show' : '' }}"
                                         id="customization">
@@ -243,7 +243,7 @@
                                                 class="nav-link {{ request()->routeIs('course.get', 'course.detail') ? 'active' : '' }}"
                                                 href="{{ route('course.get') }}">
                                                 <div class="d-flex align-items-center"><span
-                                                        class="nav-link-text ps-1">Detalhes de Curso</span></div>
+                                                        class="nav-link-text ps-1">Adicionar notas</span></div>
                                             </a><!-- more inner pages--></li>
                                     </ul>
                                 @endrole

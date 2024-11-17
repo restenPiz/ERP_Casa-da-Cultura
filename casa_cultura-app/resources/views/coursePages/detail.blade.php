@@ -134,9 +134,7 @@
                                     </form>
                                 </div>
 
-                                <div class="container">
-                                    <h5>Resultado Final:</h5>
-                                </div>
+                                
                             </div>
                         </div>
                     </div>
@@ -186,6 +184,7 @@
                                                                 </form>
                                                             </td>
                                                         </tr>
+                                                        
 
                                                         {{-- Modal para edição de notas --}}
                                                         <div class="modal fade" id="editNoteModal{{ $value->id }}"
@@ -242,9 +241,18 @@
                                                             </div>
                                                         </div>
 
+                                                        
+
                                                     @endforeach
                                                 </tbody>
                                             </table>
+                                        </div>
+
+                                        <div>
+                                            <div class="container">
+                                                <h5>Resultado Final: </h5>
+                                                <h5>Situacao: </h5>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
