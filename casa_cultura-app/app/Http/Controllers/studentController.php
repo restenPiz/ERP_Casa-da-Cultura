@@ -31,9 +31,10 @@ class studentController extends Controller
         $courses = course::all();
         $trainers = DB::table('users')->where('user_type', 'Users')->get();
 
-        $students = User::whereHas('courses', function ($query) use ($validatedData) {
-            $query->where('id_course', $validatedData['id_course']);
-        })
+        $students = User::where('user_type', 'Users') // Adicionando a condição de user_type
+            ->whereHas('courses', function ($query) use ($validatedData) {
+                $query->where('id_course', $validatedData['id_course']);
+            })
             ->whereYear('created_at', $validatedData['year'])
             ->get();
 

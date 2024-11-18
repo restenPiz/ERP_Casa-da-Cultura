@@ -73,13 +73,7 @@
 
                             {{-- Segunda Seção --}}
                             <div class="tab-pane px-sm-3 px-md-2" role="tabpanel" aria-labelledby="bootstrap-wizard-tab2" id="bootstrap-wizard-tab2">
-                                <div class="mb-3">
-                                    <input class="form-control @error('upload_file') is-invalid @enderror" type="file" name="upload_file" accept=".jpg,.jpeg,.png,.gif,.docx,.pdf,.txt" />
-                                    @error('upload_file')
-                                        <div class="invalid-feedback">{{ $message }}</div>
-                                    @enderror
-                                </div>
-                                <div class="mb-3">
+                               <div class="mb-3">
                                     <label class="form-label" for="bootstrap-wizard-wizard-phone">Contacto</label>
                                     <input class="form-control @error('contact') is-invalid @enderror" type="text" name="contact" placeholder="855686307" value="{{ old('contact') }}" id="bootstrap-wizard-wizard-phone" />
                                     @error('contact')
