@@ -4,7 +4,7 @@
     <div class="card overflow-hidden mb-3" data-bs-theme="light">
         <div class="card-body bg-black">
             <div class="bg-holder rounded-3"
-                style="background-image:url(../../../assets/img/icons/spot-illustrations/course-details-bg.png);"></div>
+                style="background-image:url();"></div>
             <!--/.bg-holder-->
             <div class="row">
                 <div class="col-xl-8 position-relative">
