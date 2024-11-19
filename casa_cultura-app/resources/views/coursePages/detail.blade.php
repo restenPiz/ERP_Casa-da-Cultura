@@ -14,10 +14,7 @@
                                 <div class="bg-holder rounded-1 overlay"
                                     style="background-image: url('{{ asset('storage/' . $course->Upload_file) }}');">
                                 </div><!--/.bg-holder-->
-                                <a class="text-decoration-none position-relative d-block py-7 text-center"
-                                    href="../../../assets/video/beach.mp4" data-gallery="attachment-bg"><img
-                                        class="rounded-1" src="../../../assets/img/icons/play.svg" width="60"
-                                        alt="" /></a>
+                                <a class="text-decoration-none position-relative d-block py-7 text-center" data-gallery="attachment-bg"></a>
                             </div>
                         </div>
                         <div class="col-lg-7">
