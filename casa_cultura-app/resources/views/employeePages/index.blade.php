@@ -9,7 +9,7 @@
                     <div class="card-header position-relative min-vh-25 mb-8">
                         <div class="cover-image">
                             <div class="bg-holder rounded-3 rounded-bottom-0"
-                                style="background-image:url(../../assets/img/generic/4.jpg);"></div><!--/.bg-holder-->
+                               style="background-image:url(../../imagem/n4.jpg);" style="background-image:url(../../assets/img/generic/4.jpg);"></div><!--/.bg-holder-->
                             {{-- <input class="d-none" id="upload-cover-image" type="file" /><label class="cover-image-file-input" for="upload-cover-image"><span class="fas fa-camera me-2"></span><span>Change cover photo</span></label> --}}
                         </div>
                         <div class="avatar avatar-5xl avatar-profile shadow-sm img-thumbnail rounded-circle">
