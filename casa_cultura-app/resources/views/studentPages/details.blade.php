@@ -24,7 +24,7 @@
                                 <label class="form-label" for="year-select">Ano<span class="text-danger">*</span></label>
                                 <select class="form-select" id="year-select" name="year">
                                     <option>Selecione o Ano</option>
-                                    @for ($year = 2020; $year <= date('Y'); $year++)
+                                    @for ($year = 2024; $year <= date('Y'); $year++)
                                         <option value="{{ $year }}">{{ $year }}</option>
                                     @endfor
                                 </select>
