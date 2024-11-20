@@ -35,61 +35,76 @@
 
                             {{-- !Inicio do formulario --}}
 
-                            <div class="tab-pane active px-sm-3 px-md-2" role="tabpanel" aria-labelledby="bootstrap-wizard-tab1" id="bootstrap-wizard-tab1">
+                            <div class="tab-pane active px-sm-3 px-md-2" role="tabpanel"
+                                aria-labelledby="bootstrap-wizard-tab1" id="bootstrap-wizard-tab1">
                                 <div class="mb-3">
                                     <label class="form-label" for="bootstrap-wizard-wizard-name">Nome</label>
-                                    <input class="form-control @error('name') is-invalid @enderror" type="text" name="name" placeholder="Picardo" value="{{ old('name') }}" id="bootstrap-wizard-wizard-name" />
+                                    <input class="form-control @error('name') is-invalid @enderror" type="text"
+                                        name="name" placeholder="Picardo" value="{{ old('name') }}"
+                                        id="bootstrap-wizard-wizard-name" />
                                     @error('name')
                                         <div class="invalid-feedback">{{ $message }}</div>
                                     @enderror
                                 </div>
                                 <div class="mb-3">
                                     <label class="form-label" for="bootstrap-wizard-wizard-name">Apelido</label>
-                                    <input class="form-control @error('Surname') is-invalid @enderror" type="text" name="Surname" placeholder="Olindo" value="{{ old('Surname') }}" id="bootstrap-wizard-wizard-name" />
+                                    <input class="form-control @error('Surname') is-invalid @enderror" type="text"
+                                        name="Surname" placeholder="Olindo" value="{{ old('Surname') }}"
+                                        id="bootstrap-wizard-wizard-name" />
                                     @error('Surname')
                                         <div class="invalid-feedback">{{ $message }}</div>
                                     @enderror
                                 </div>
                                 <div class="mb-3">
                                     <label class="form-label" for="bootstrap-wizard-wizard-email">Email*</label>
-                                    <input class="form-control @error('email') is-invalid @enderror" type="email" name="email" placeholder="picardo@gmail.com" value="{{ old('email') }}" required="required" id="bootstrap-wizard-wizard-email" />
+                                    <input class="form-control @error('email') is-invalid @enderror" type="email"
+                                        name="email" placeholder="picardo@gmail.com" value="{{ old('email') }}"
+                                        required="required" id="bootstrap-wizard-wizard-email" />
                                     @error('email')
                                         <div class="invalid-feedback">{{ $message }}</div>
                                     @enderror
                                 </div>
-                                {{--!Inicio do input de senha--}}
-                                <input name="password" class="form-control" id="email3"
-                                    type="hidden" value="aluno123"/>
+                                {{-- !Inicio do input de senha --}}
+                                <input name="password" class="form-control" id="email3" type="hidden"
+                                    value="aluno123" />
                                 @error('password')
                                     <div class="invalid-feedback">{{ $message }}</div>
                                 @enderror
-                                <input name="password_confirmation" class="form-control"
-                                    id="email3" type="hidden" value="aluno123" />
+                                <input name="password_confirmation" class="form-control" id="email3" type="hidden"
+                                    value="aluno123" />
                                 @error('password_confirmation')
                                     <div class="invalid-feedback">{{ $message }}</div>
                                 @enderror
-                                {{--!Fim do input de senha--}}
+                                {{-- !Fim do input de senha --}}
                             </div>
 
                             {{-- Segunda Seção --}}
-                            <div class="tab-pane px-sm-3 px-md-2" role="tabpanel" aria-labelledby="bootstrap-wizard-tab2" id="bootstrap-wizard-tab2">
-                               <div class="mb-3">
+                            <div class="tab-pane px-sm-3 px-md-2" role="tabpanel" aria-labelledby="bootstrap-wizard-tab2"
+                                id="bootstrap-wizard-tab2">
+                                <div class="mb-3">
                                     <label class="form-label" for="bootstrap-wizard-wizard-phone">Contacto</label>
-                                    <input class="form-control @error('contact') is-invalid @enderror" type="text" name="contact" placeholder="855686307" value="{{ old('contact') }}" id="bootstrap-wizard-wizard-phone" />
+                                    <input class="form-control @error('contact') is-invalid @enderror" type="text"
+                                        name="contact" placeholder="855686307" value="{{ old('contact') }}"
+                                        id="bootstrap-wizard-wizard-phone" />
                                     @error('contact')
                                         <div class="invalid-feedback">{{ $message }}</div>
                                     @enderror
                                 </div>
                                 <div class="mb-3">
-                                    <label class="form-label" for="bootstrap-wizard-wizard-datepicker">Date of Birth</label>
-                                    <input class="form-control @error('Date_of_birth') is-invalid @enderror" type="date" name="Date_of_birth" value="{{ old('Date_of_birth') }}" id="bootstrap-wizard-wizard-datepicker" />
+                                    <label class="form-label" for="bootstrap-wizard-wizard-datepicker">Date of
+                                        Birth</label>
+                                    <input class="form-control @error('Date_of_birth') is-invalid @enderror"
+                                        type="date" name="Date_of_birth" value="{{ old('Date_of_birth') }}"
+                                        id="bootstrap-wizard-wizard-datepicker" />
                                     @error('Date_of_birth')
                                         <div class="invalid-feedback">{{ $message }}</div>
                                     @enderror
                                 </div>
                                 <div class="mb-3">
                                     <label class="form-label" for="bootstrap-wizard-wizard-phone">Numero de BI</label>
-                                    <input class="form-control @error('bi') is-invalid @enderror" type="text" name="bi" placeholder="EX: 083902130290380213BM" value="{{ old('bi') }}" id="bootstrap-wizard-wizard-phone" />
+                                    <input class="form-control @error('bi') is-invalid @enderror" type="text"
+                                        name="bi" placeholder="EX: 083902130290380213BM"
+                                        value="{{ old('bi') }}" id="bootstrap-wizard-wizard-phone" />
                                     @error('bi')
                                         <div class="invalid-feedback">{{ $message }}</div>
                                     @enderror
@@ -97,13 +112,17 @@
                             </div>
 
                             {{-- Outra Seção --}}
-                            <div class="tab-pane text-center px-sm-3 px-md-2" role="tabpanel" aria-labelledby="bootstrap-wizard-tab4" id="bootstrap-wizard-tab4">
+                            <div class="tab-pane text-center px-sm-3 px-md-2" role="tabpanel"
+                                aria-labelledby="bootstrap-wizard-tab4" id="bootstrap-wizard-tab4">
                                 <div class="mb-3">
                                     <label class="form-label" for="bootstrap-wizard-gender">Curso a se inscrever</label>
-                                    <select class="form-select @error('id_course') is-invalid @enderror" name="id_course" id="bootstrap-wizard-gender">
+                                    <select class="form-select @error('id_course') is-invalid @enderror" name="id_course"
+                                        id="bootstrap-wizard-gender">
                                         <option value="">Seleccione o Curso...</option>
                                         @foreach ($courses as $course)
-                                            <option value="{{ $course->id }}" {{ old('id_course') == $course->id ? 'selected' : '' }}>{{ $course->Course_name }}</option>
+                                            <option value="{{ $course->id }}"
+                                                {{ old('id_course') == $course->id ? 'selected' : '' }}>
+                                                {{ $course->Course_name }}</option>
                                         @endforeach
                                     </select>
                                     @error('id_course')
@@ -168,15 +187,17 @@
                                             <td class="phone align-middle white-space-nowrap py-2">{{ $trainer->contact }}
                                             </td>
                                             <td class="address align-middle white-space-nowrap ps-5 py-2">
-                                                {{--! Inicio da condicao de verificacao de status de usuario--}}
+                                                {{-- ! Inicio da condicao de verificacao de status de usuario --}}
                                                 @if ($trainer->status == 'Activo')
-                                                    <small class="badge rounded badge-subtle-success false">{{$trainer->status}}</small>
+                                                    <small
+                                                        class="badge rounded badge-subtle-success false">{{ $trainer->status }}</small>
                                                 @endif
 
                                                 @if ($trainer->status == 'Pendente')
-                                                    <small class="badge rounded badge-subtle-danger false">{{$trainer->status}}</small>
+                                                    <small
+                                                        class="badge rounded badge-subtle-danger false">{{ $trainer->status }}</small>
                                                 @endif
-                                                {{--! Fim da Verificacao de Status do usuario--}}
+                                                {{-- ! Fim da Verificacao de Status do usuario --}}
                                             </td>
                                             <td class="align-middle white-space-nowrap py-2 text-end">
                                                 <div class="dropdown font-sans-serif position-static"><button
@@ -197,6 +218,101 @@
                                                 </div>
                                             </td>
                                         </tr>
+
+                                        {{-- Inicio do modal de Editat --}}
+                                        <div class="modal fade" id="staticBackdrop{{ $trainer->id }}"
+                                            data-bs-keyboard="false" data-bs-backdrop="static" tabindex="-1"
+                                            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                            <div class="modal-dialog modal-lg mt-6" role="document">
+                                                <div class="modal-content border-0">
+                                                    <div class="position-absolute top-0 end-0 mt-3 me-3 z-1"><button
+                                                            class="btn-close btn btn-sm btn-circle d-flex flex-center transition-base"
+                                                            data-bs-dismiss="modal" aria-label="Close"></button></div>
+                                                    <div class="modal-body p-0">
+                                                        <div class="rounded-top-3 bg-body-tertiary py-3 ps-4 pe-6">
+                                                            <h4 class="mb-1" id="staticBackdropLabel">Editar os dados do
+                                                                formador
+                                                            </h4>
+                                                            <p class="fs-11 mb-0">Adicionado por <a
+                                                                    class="link-600 fw-semi-bold"
+                                                                    href="#!">{{ Auth::user()->name }}</a></p>
+                                                        </div><br>
+                                                        <div class="p-4" style="margin-top: -3rem;">
+                                                            <form
+                                                                action="{{ route('user.update', ['id' => $trainer->id]) }}"
+                                                                method="post" enctype="multipart/form-data">
+                                                                @csrf
+                                                                <div class="row">
+
+                                                                    <div class="col-lg-6"> <label class="form-label"
+                                                                            for="first-name">Primeiro Nome</label><input
+                                                                            name="name" class="form-control"
+                                                                            id="first-name" type="text"
+                                                                            value="{{ $trainer->name }}" />
+                                                                    </div>
+                                                                    <div class="col-lg-6"> <label class="form-label"
+                                                                            for="last-name">Apelido</label><input
+                                                                            name="Surname" class="form-control"
+                                                                            id="last-name" type="text"
+                                                                            value="{{ $trainer->Surname }}" /></div>
+                                                                    <div class="col-lg-6"> <label class="form-label"
+                                                                            for="email1">Email</label><input
+                                                                            name="email" value="{{ $trainer->email }}"
+                                                                            class="form-control" id="email1"
+                                                                            type="text" /></div>
+                                                                    <div class="col-lg-6"> <label class="form-label"
+                                                                            for="email2">Contacto</label><input
+                                                                            class="form-control" id="email2"
+                                                                            type="text"
+                                                                            value="{{ $trainer->contact }}"
+                                                                            name="contact" />
+                                                                    </div>
+                                                                    <div class="col-lg-6"> <label class="form-label"
+                                                                            for="email2">Numero de BI</label><input
+                                                                            class="form-control" id="email2"
+                                                                            type="text" name="bi"
+                                                                            value="{{ $trainer->bi }}" /></div>
+                                                                    <div class="col-lg-6"> <label class="form-label"
+                                                                            for="email2">Data
+                                                                            de Nascimento</label><input
+                                                                            class="form-control" id="email2"
+                                                                            type="date"
+                                                                            value="{{ $trainer->Date_of_birth }}"
+                                                                            name="Date_of_birth" />
+                                                                    </div>
+                                                                    
+                                                                    {{--*Important input here---}}
+
+                                                                    {{--*End of these input--}}
+
+                                                                    {{-- Inicio dos inputs type hidden --}}
+                                                                    <div class="col-lg-6"> <label class="form-label"
+                                                                            for="email2"></label><input
+                                                                            class="form-control" value="Trainer"
+                                                                            id="email2" type="hidden"
+                                                                            name="user_type" />
+                                                                    </div>
+                                                                    <div class="col-lg-6"> <label class="form-label"
+                                                                            for="email2"></label><input
+                                                                            class="form-control"
+                                                                            value="{{ $trainer->id }}" id="email2"
+                                                                            type="hidden" name="id" />
+                                                                    </div>
+                                                                    {{-- Fim dos inputs type hidden --}}
+
+                                                                    <div class="col-12 d-flex justify-content-end"><button
+                                                                            class="btn btn-primary" type="submit"
+                                                                            name="submit">Actualizar Formador
+                                                                        </button></div>
+                                                                </div>
+                                                            </form>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        {{-- Fim do modal de editar --}}
                                     @endforeach
                                 </tbody>
                             </table>
