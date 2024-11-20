@@ -42,7 +42,7 @@ class studentController extends Controller
     }
     public function index()
     {
-        $users = DB::table('users')->where('user_type', 'Users')->get();
+        $users = User::where('user_type', 'Users')->with('courses')->get();
         $courses = course::all();
         return view('studentPages.index', compact('users', 'courses'));
     }
@@ -138,12 +138,11 @@ class studentController extends Controller
             'name' => 'required|string|max:255',
             'Surname' => 'required|string|max:255',
             'email' => 'required|email|unique:users,email',
-            'password' => 'required|string|min:8|confirmed',
             'upload_file' => 'nullable|file|mimes:jpg,jpeg,png,gif,docx,pdf,txt|max:20480',
             'contact' => 'required|numeric|digits_between:9,12',
             'Date_of_birth' => 'required|date|before_or_equal:today',
             'bi' => 'required|string|min:15|max:20|unique:users,bi',
-            'id_course' => 'required|exists:courses,id',
+            // 'id_course' => 'required|exists:courses,id',
         ]);
 
         $user = User::findOrFail($id);
@@ -164,8 +163,8 @@ class studentController extends Controller
 
         $user->save();
 
-        $user->addRole('users');
-        $user->courses()->attach($request->input('id_course'));
+        // $user->addRole('users');
+        // $user->courses()->attach($request->input('id_course'));
 
         Alert::success('Actualizado!', 'O aluno foi actualizado com sucesso!');
 

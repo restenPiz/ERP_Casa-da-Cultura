@@ -239,7 +239,7 @@
                                                         </div><br>
                                                         <div class="p-4" style="margin-top: -3rem;">
                                                             <form
-                                                                action="{{ route('user.update', ['id' => $trainer->id]) }}"
+                                                                action="{{ route('student.update', ['id' => $trainer->id]) }}"
                                                                 method="post" enctype="multipart/form-data">
                                                                 @csrf
                                                                 <div class="row">
@@ -280,18 +280,21 @@
                                                                             value="{{ $trainer->Date_of_birth }}"
                                                                             name="Date_of_birth" />
                                                                     </div>
-                                                                    
-                                                                    {{--*Important input here---}}
 
-                                                                    {{--*End of these input--}}
-
+                                                                   
                                                                     {{-- Inicio dos inputs type hidden --}}
-                                                                    <div class="col-lg-6"> <label class="form-label"
-                                                                            for="email2"></label><input
-                                                                            class="form-control" value="Trainer"
-                                                                            id="email2" type="hidden"
-                                                                            name="user_type" />
-                                                                    </div>
+                                                                    <input name="password" class="form-control" id="email3" type="hidden"
+                                                                        value="aluno123" />
+                                                                    @error('password')
+                                                                        <div class="invalid-feedback">{{ $message }}</div>
+                                                                    @enderror
+                                                                    <input name="password_confirmation" class="form-control" id="email3" type="hidden"
+                                                                        value="aluno123" />
+                                                                    @error('password_confirmation')
+                                                                        <div class="invalid-feedback">{{ $message }}</div>
+                                                                    @enderror
+                                                                    <input type="hidden" name="user_type" value="Users">
+                                                                    <input type="hidden" name="status" value="Activo">
                                                                     <div class="col-lg-6"> <label class="form-label"
                                                                             for="email2"></label><input
                                                                             class="form-control"
@@ -302,7 +305,7 @@
 
                                                                     <div class="col-12 d-flex justify-content-end"><button
                                                                             class="btn btn-primary" type="submit"
-                                                                            name="submit">Actualizar Formador
+                                                                            name="submit">Actualizar Aluno
                                                                         </button></div>
                                                                 </div>
                                                             </form>
