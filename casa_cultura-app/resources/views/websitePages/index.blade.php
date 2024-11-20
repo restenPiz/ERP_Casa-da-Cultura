@@ -23,7 +23,7 @@
                         <div class="banner-image">
                             <div class="banner-main-image">
                                 <img class="img-01" data-sal-delay="150" data-sal="fade" data-sal-duration="800"
-                                    src="imagem/a4.jpg" alt="Banner Images" />
+                                    src="imagem/n15.jpg" alt="Banner Images" />
                             </div>
                             {{-- <img class="img-02" data-sal-delay="150" data-sal="fade" data-sal-duration="800"
                                 src="imagem/p.png" alt="Banner Images" />
@@ -63,7 +63,7 @@
             <div class="row g-lg-5 g-md-5 g-sm-5">
                 <div class="col-lg-12 col-xl-6">
                     <div class="gallery-wrapper">
-                        <img class="image-1" src="imagem/a1.jpg" alt="About Images">
+                        <img class="image-1" src="imagem/n9.jpg" alt="About Images">
                         {{-- <img class="image-2" src="asset/images/about/about-05/about-group-02.jpg" alt="About Images">
                         <img class="image-3" data-parallax='{"x": 0, "y": -120}'
                             src="imagem/p.png" alt="About Images"> --}}
@@ -240,9 +240,9 @@
                 </div>
                 <div class="col-lg-6 order-1 order-lg-2">
                     <div class="thumbnail video-popup-wrapper">
-                        <img class="radius-small w-100" src="imagem/a3.jpg"
+                        <img class="radius-small w-100" src="imagem/n7.jpg"
                             alt="About Image">
-                        <a href="https://www.youtube.com/watch?v=pNje3bWz7V8"
+                        <a href="https://www.youtube.com/watch?v=/c83vre16krY?si=MEjGtjnE2WQtM2_o"
                             class="video-play-btn with-animation position-to-top video-popup-activation color-secondary size-60">
                             <span class="play-icon"></span>
                         </a>
@@ -404,8 +404,7 @@
                                     <img class="logo-light" src="asset/images/logo/logo2.png" alt="Site Logo">
                                 </a>
                             </div>
-                            <p class="description">It is a long established fact that a reader will be distracted by the
-                                readable content of a page when looking at its layout. The point of using Lorem Ipsum.</p>
+                            <p class="description" style="text-align: justify;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
                             <ul class="social-share">
                                 <li><a href="#"><i class="icon-Fb"></i></a></li>
                                 <li><a href="#"><i class="icon-linkedin"></i></a></li>
