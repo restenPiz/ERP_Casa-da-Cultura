@@ -175,7 +175,7 @@ class studentController extends Controller
     {
         $user = User::findOrFail($id);
 
-        $user->courses()->delete();
+        // $user->courses()->delete();
         $user->delete();
 
         Alert::success('Eliminado!', 'O aluno foi eliminado com sucesso!');

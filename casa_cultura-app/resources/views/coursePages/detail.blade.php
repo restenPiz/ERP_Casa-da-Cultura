@@ -58,7 +58,7 @@
                                 <div class="hoverbox me-3 my-1">
                                     <div class="bg-attachment bg-attachment-square">
                                         <div class="bg-holder"
-                                            style="background-image:url({{ asset('storage/' . $user->upload_file) }});">
+                                            style="background-image:url(../assets/dif.jpg);">
                                         </div><!--/.bg-holder-->
                                     </div>
                                     <div class="hoverbox-content flex-center pe-none bg-holder overlay overlay-1 rounded">
