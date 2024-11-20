@@ -71,7 +71,7 @@
                                 class="navbar-toggle-icon"><span class="toggle-line"></span></span></button>
                     </div><a class="navbar-brand" href="../index.html">
                         <div class="d-flex align-items-center py-3">{{-- <img class="me-2" src="../assets/img/icons/spot-illustrations/falcon.png" alt="" width="40" /> --}}
-                            <span style="font-size: 20px" class="font-sans-serif text-primary">Centro Cultural</span>
+                            <span style="font-size: 20px" class="font-sans-serif text-primary">Casa da Cultura</span>
                         </div>
                     </a>
                 </div>

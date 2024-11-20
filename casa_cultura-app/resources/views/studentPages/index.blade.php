@@ -191,7 +191,7 @@
                                                                 href="#staticBackdrop" data-bs-toggle="modal"
                                                                 data-bs-target="#staticBackdrop{{ $trainer->id }}">Edit</a><a
                                                                 class="dropdown-item text-danger"
-                                                                href="{{ route('trainer.delete', ['id' => $trainer->id]) }}">Delete</a>
+                                                                href="{{ route('student.delete', ['id' => $trainer->id]) }}">Delete</a>
                                                         </div>
                                                     </div>
                                                 </div>

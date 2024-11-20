@@ -15,7 +15,7 @@ return new class extends Migration {
 
             //*inicio da chave estrangeira
             $table->unsignedBigInteger('id_course');
-            $table->foreign('id_course')->references('id')->on('courses');
+            $table->foreign('id_course')->references('id')->on('courses')->onDelete('cascade');
 
             $table->timestamps();
         });

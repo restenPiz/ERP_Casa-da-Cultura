@@ -21,7 +21,7 @@ return new class extends Migration {
 
             //*Inicio das chaves estrangeiras
             $table->unsignedBigInteger('id_artist');
-            $table->foreign('id_artist')->references('id')->on('artists');
+            $table->foreign('id_artist')->references('id')->on('artists')->onDelete('cascade');
             $table->timestamps();
         });
     }

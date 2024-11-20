@@ -11,8 +11,8 @@ return new class extends Migration {
         Schema::create('course_users', function (Blueprint $table) {
             $table->id();
             //*Inicio das chaves estrangeiras
-            $table->foreignId('id_course')->constrained('courses')->onDelete('cascade');
-            $table->foreignId('id_user')->constrained('users')->onDelete('cascade');
+            $table->foreignId('id_course')->constrained('courses')->onDelete('cascade')->onDelete('cascade');
+            $table->foreignId('id_user')->constrained('users')->onDelete('cascade')->onDelete('cascade');
             $table->timestamps();
 
             $table->unique(['id_course', 'id_user']);

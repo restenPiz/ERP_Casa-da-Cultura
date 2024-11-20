@@ -9,7 +9,7 @@
                     <div class="icon-circle icon-circle-primary"><span class="fs-7 fas fa-user-graduate text-primary"></span>
                     </div>
                     <h4 class="mb-1 font-sans-serif"><span class="text-700 mx-2"
-                            data-countup='{"endValue":"{{$countStudent}}"}'>0</span><span class="fw-normal text-600">Novos
+                            data-countup='{"endValue":"{{$countStudent}}"}'>0</span><span class="fw-normal text-600">
                             Estudantes</span></h4>
                     {{-- <p class="fs-10 fw-semi-bold mb-0">4203 <span class="text-600 fw-normal">Ultimo Mes</span></p> --}}
                 </div>
@@ -18,7 +18,7 @@
                     <div class="icon-circle icon-circle-info"><span class="fs-7 fas fa-chalkboard-teacher text-info"></span>
                     </div>
                     <h4 class="mb-1 font-sans-serif"><span class="text-700 mx-2"
-                            data-countup='{"endValue":"{{$countTrainer}}"}'>0</span><span class="fw-normal text-600">Novos
+                            data-countup='{"endValue":"{{$countTrainer}}"}'>0</span><span class="fw-normal text-600">
                             Formadores</span></h4>
                     {{-- <p class="fs-10 fw-semi-bold mb-0">301 <span class="text-600 fw-normal">Ultimo Mes</span></p> --}}
                 </div>
@@ -27,132 +27,69 @@
                     <div class="icon-circle icon-circle-success"><span class="fs-7 fas fa-book-open text-success"></span>
                     </div>
                     <h4 class="mb-1 font-sans-serif"><span class="text-700 mx-2"
-                            data-countup='{"endValue":"{{$countCourse}}"}'>0</span><span class="fw-normal text-600">Novos Cursos</span>
+                            data-countup='{"endValue":"{{$countCourse}}"}'>0</span><span class="fw-normal text-600"> Cursos</span>
                     </h4>
                     {{-- <p class="fs-10 fw-semi-bold mb-0">2779 <span class="text-600 fw-normal">Ultimo Mes</span></p> --}}
                 </div>
             </div>
         </div>
     </div>
-    <div class="row g-3 mb-3">
-        <div class="col-xxl-4">
-            <div class="card h-100">
-                <div class="card-header bg-body-tertiary d-flex flex-between-center py-2">
-                    <h6 class="mb-0">Cursos mais visitados</h6>
-                    <div class="dropdown font-sans-serif btn-reveal-trigger"><button
-                            class="btn btn-link text-600 btn-sm dropdown-toggle dropdown-caret-none btn-reveal"
-                            type="button" id="dropdown-trending-keywords" data-bs-toggle="dropdown"
-                            data-boundary="viewport" aria-haspopup="true" aria-expanded="false"><span
-                                class="fas fa-ellipsis-h fs-11"></span></button>
-                        <div class="dropdown-menu dropdown-menu-end border py-2"
-                            aria-labelledby="dropdown-trending-keywords"><a class="dropdown-item" href="#!">View</a><a
-                                class="dropdown-item" href="#!">Export</a>
-                            <div class="dropdown-divider"></div><a class="dropdown-item text-danger"
-                                href="#!">Remove</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-body p-2 d-flex flex-center">
-                </div>
-                <div class="card-footer bg-body-tertiary py-2">
-                    <div class="row justify-content-between">
-                        <div class="col-auto"><select class="form-select form-select-sm">
-                                <option value="week" selected="selected">Ultimos 7 dias</option>
-                                <option value="month">Ultimo mes</option>
-                                <option value="year">Ultimo ano</option>
-                            </select></div>
-                        <div class="col-auto"><a class="btn btn-sm btn-falcon-default" href="#!">View All</a></div>
-                    </div>
+    <div class="row g-3">
+        <div class="col-xxl-12 col-xl-9">
+            <div class="card mb-3">
+                <div class="card-header position-relative">
+                    <h5 class="mb-0 mt-1">Cursos da Casa de Cultura</h5>
+                    <div class="bg-holder d-none {{--d-md-block--}} bg-card"
+                        style="background-image:url(../../../assets/img/illustrations/corner-6.png);"></div>
                 </div>
             </div>
-        </div>
-        <div class="col-xxl-8">
-            <div class="row g-3 h-100">
-                <div class="col-md-6">
-                    <div class="card font-sans-serif h-100">
-                        <div class="card-header pb-0">
-                            <h6 class="mb-0"> Percentagem de Cursos Registrados</h6>
-                        </div>
-                        <div class="card-body pt-0">
-                            <div class="row align-items-end h-100 mb-n1">
-                                <div class="col-6 col-sm-5 pe-md-0 pe-lg-3">
+            <div class="row mb-3 g-3">
+                @foreach ($courses as $course)
+                    <article class="col-md-6 col-xxl-4">
+                        <div class="card h-100 overflow-hidden">
+                            <div class="card-body p-0 d-flex flex-column justify-content-between">
+                                <div>
+                                    <div class="hoverbox text-center"><a class="text-decoration-none"
+                                            href="../../../assets/video/beach.mp4" data-gallery="attachment-bg"><img
+                                                class="w-100 h-100 object-fit-cover"
+                                                src="{{ asset('storage/' . $course->Upload_file) }}" alt="" /></a>
+                                        <div class="hoverbox-content flex-center pe-none bg-holder overlay overlay-2"><img
+                                                class="z-1" src="{{ asset('storage/' . $course->Upload_video) }}"
+                                                width="60" alt="" /></div>
+                                    </div>
+                                    <div class="p-3">
+                                        <h5 class="fs-9 mb-2"><a class="text-1100" href="{{route('course.detail',['id'=>$course->id])}}">
+                                                {{ $course->Course_name }}</a></h5>
+                                        {{-- <h5 class="fs-9">Formador: <a href="../trainer-profile.html"></a></h5> --}}
+                                    </div>
+                                </div>
+                                <div class="row g-0 mb-3 align-items-end">
+                                    <div class="col ps-3">
+                                        <h4 class="fs-8 text-warning d-flex align-items-center"> <span>{{ $course->Price }}
+                                                MT</span>
+                                            {{-- <del class="ms-2 fs-10 text-700">$139.90</del> --}}
+                                        </h4>
+                                        {{-- <p class="mb-0 fs-10 text-800">92,632 Learners Enrolled</p> --}}
+                                    </div>
+                                    <div class="col-auto pe-3">
+                                        <!-- Botão de Editar -->
+                                        <a class="btn btn-sm btn-falcon-default me-2 hover-primary" href="{{route('course.edit',['id'=>$course->id])}}"
+                                            data-bs-toggle="tooltip" data-bs-placement="top" title="Editar">
+                                            <span class="fas fa-edit" data-fa-transform="down-2"></span>
+                                        </a>
+
+                                        <!-- Botão de Eliminar -->
+                                        <a class="btn btn-sm btn-falcon-default hover-danger" href="{{route('course.delete',['id'=>$course->id])}}"
+                                            data-bs-toggle="tooltip" data-bs-placement="top" title="Eliminar">
+                                            <span class="fas fa-trash-alt" data-fa-transform="down-2"></span>
+                                        </a>
+                                    </div>
 
                                 </div>
-                                <div class="col-6 col-sm-7">
-                                    <div class="lms-half-doughnut ms-auto mt-n4">
-                                        <div class="position-relative"><canvas class="pe-none"
-                                                data-half-doughnut='{"data":{"labels":["Target","Reached"],"datasets":[{"data":[1200000,823000],"backgroundColor":["primary","gray-300"]}]}}'></canvas>
-                                            <p class="mt-n4 mb-0 position-absolute start-50 translate-middle-x fs-8 fw-medium"
-                                                data-countup='{"endValue":"69","suffix":"%"}'>0</p>
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="card font-sans-serif h-100">
-                        <div class="card-header pb-0">
-                            <h6 class="mb-0">Percentagem de Estudantes Registrados</h6>
-                        </div>
-                        <div class="card-body pt-0">
-                            <div class="row align-items-end h-100 mb-n1">
-                                <div class="col-6 col-sm-5 pe-md-0 pe-lg-3">
-
-                                </div>
-                                <div class="col-6 col-sm-7">
-                                    <div class="lms-half-doughnut ms-auto mt-n4">
-                                        <div class="position-relative"><canvas class="pe-none"
-                                                data-half-doughnut='{"data":{"labels":["Target","Reached"],"datasets":[{"data":[7500000,4800000],"backgroundColor":["info","gray-300"]}]}}'></canvas>
-                                            <p class="mt-n4 mb-0 position-absolute start-50 translate-middle-x fs-8 fw-medium"
-                                                data-countup='{"endValue":"64","suffix":"%"}'>0</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12">
-                    <div class="card h-100">
-                        <div class="card-header py-2">
-                            <div class="row flex-between-center g-0">
-                                <div class="col-auto">
-                                    <h6 class="mb-0">Grafico de Amostra</h6>
-                                </div>
-                                <div class="col-12 col-md-auto order-3 order-md-2">
-                                    <div class="d-flex flex-wrap gap-md-2"><button
-                                            class="btn btn-link text-decoration-none text-600 fs-11 px-0 me-2"
-                                            id="onSaleCourse"><span class="fas fa-circle text-primary me-1"
-                                                data-fa-transform="shrink-3"></span>Cursos Presenciais</button><button
-                                            class="btn btn-link text-decoration-none text-600 fs-11 px-0"
-                                            id="regularPaidCourse"><span class="fas fa-circle text-warning me-1"
-                                                data-fa-transform="shrink-3"></span>Estudantes Inscritos</button></div>
-                                </div>
-                                <div class="col-auto order-2 order-md-3">
-                                    <div class="dropdown font-sans-serif btn-reveal-trigger"><button
-                                            class="btn btn-link text-600 btn-sm dropdown-toggle dropdown-caret-none btn-reveal"
-                                            type="button" id="dropdown-avg-enrollment-lms" data-bs-toggle="dropdown"
-                                            data-boundary="viewport" aria-haspopup="true" aria-expanded="false"><span
-                                                class="fas fa-ellipsis-h fs-11"></span></button>
-                                        <div class="dropdown-menu dropdown-menu-end border py-2"
-                                            aria-labelledby="dropdown-avg-enrollment-lms"><a class="dropdown-item"
-                                                href="#!">View</a><a class="dropdown-item" href="#!">Export</a>
-                                            <div class="dropdown-divider"></div><a class="dropdown-item text-danger"
-                                                href="#!">Remove</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-body pb-0">
-                            <!-- Find the JS file for the following chart at: src/js/charts/echarts/average-enrollment-rate.js--><!-- If you are not using gulp based workflow, you can find the transpiled code at: public/assets/js/theme.js-->
-                            <div class="echart-avg-enrollment-rate" data-echart-responsive="true"
-                                data-options='{"optionOne":"onSaleCourse","optionTwo":"regularPaidCourse"}'></div>
-                        </div>
-                    </div>
-                </div>
+                    </article>
+                @endforeach
             </div>
         </div>
     </div>

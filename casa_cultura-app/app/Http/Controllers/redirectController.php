@@ -29,6 +29,8 @@ class redirectController extends Controller
         if (Auth::user()->hasRole('admin')) {
 
             $course = course::all();
+            $courses = course::all();
+            $courseUsers = \App\Models\Course_user::with('user');
             $countCourse = DB::table('courses')
                 ->count('id');
 
@@ -38,7 +40,7 @@ class redirectController extends Controller
             $countTrainer = DB::table('users')->where('user_type', 'Trainer')
                 ->count('id');
 
-            return view('dashboard', compact('course', 'countStudent', 'countCourse', 'countTrainer'));
+            return view('dashboard', compact('course', 'countStudent', 'countCourse', 'countTrainer', 'courses', 'courseUsers'));
 
         } elseif (Auth::user()->hasRole('users')) {
 
