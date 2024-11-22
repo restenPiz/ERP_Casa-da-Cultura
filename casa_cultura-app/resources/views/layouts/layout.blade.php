@@ -46,8 +46,8 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
-<body>
-    <main class="main" id="top">
+<body >
+    <main class="main" id="top" >
         <div class="container" data-layout="container">
             <script>
                 var isFluid = JSON.parse(localStorage.getItem('isFluid'));
@@ -375,7 +375,7 @@
                     </li>
                 </ul>
             </nav>
-            <div class="content">
+            <div class="content" >
                 <nav class="navbar navbar-light navbar-glass navbar-top navbar-expand" style="display: none;">
                     <button class="btn navbar-toggler-humburger-icon navbar-toggler me-1 me-sm-3" type="button"
                         data-bs-toggle="collapse" data-bs-target="#navbarVerticalCollapse"

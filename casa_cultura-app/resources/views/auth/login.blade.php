@@ -45,7 +45,7 @@
     </script>
 </head>
 
-<body style="background-image:url(../../imagem/n10.jpg);">
+<body style="background-image: url('../../imagem/n10.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center; height: 100vh; margin: 0;">
     <main class="main" id="top">
     <div class="container-fluid">
         <div class="row min-vh-100 flex-center g-0">

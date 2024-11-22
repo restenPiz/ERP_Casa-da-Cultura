@@ -6,7 +6,7 @@
         <div class="col-lg-8 pe-lg-2">
 
             {{-- !Inicio da tabela de todos eventos --}}
-            <div class="card mb-3 mb-lg-0">
+            <div class="card mb-3 mb-lg-0" style="background-image: url('../../imagem/n10.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center; height: 100vh; margin: 0;">
                 <div class="card-header bg-body-tertiary d-flex justify-content-between">
                     <h5 class="mb-0">Todos Eventos</h5>
                 </div>

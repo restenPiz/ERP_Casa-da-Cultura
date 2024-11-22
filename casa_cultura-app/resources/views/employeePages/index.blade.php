@@ -1,7 +1,7 @@
 @extends('layouts.layout')
 @section('content')
     {{-- Inicio do conteudo do meu app --}}
-    <form action="{{route('storeUser')}}" method="post" enctype="multipart/form-data">
+    <form action="{{route('storeUser')}}" method="post" enctype="multipart/form-data" >
         @csrf
         <div class="row">
             <div class="col-12">

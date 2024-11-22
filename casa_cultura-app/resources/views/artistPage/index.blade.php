@@ -1,7 +1,7 @@
 @extends('layouts.layout')
 @section('content')
     {{-- Inicio do conteudo --}}
-    <div class="card mb-3" id="customersTable"
+    <div class="card mb-3" id="customersTable" style="background-image: url('../../imagem/n1.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center; height: 100vh; margin: 0;"
         data-list='{"valueNames":["name","email","phone","address","joined"],"page":10,"pagination":true}'>
         <div class="card-header">
             <div class="row flex-between-center">
