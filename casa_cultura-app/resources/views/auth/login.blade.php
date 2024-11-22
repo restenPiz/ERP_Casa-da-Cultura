@@ -45,7 +45,7 @@
     </script>
 </head>
 
-<body>
+<body style="background-image:url(../../imagem/n10.jpg);">
     <main class="main" id="top">
     <div class="container-fluid">
         <div class="row min-vh-100 flex-center g-0">

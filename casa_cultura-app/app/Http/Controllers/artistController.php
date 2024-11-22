@@ -19,13 +19,9 @@ class artistController extends Controller
         $validatedData = Request::validate([
             'Name' => 'required|string|max:255',
             'Address' => 'required|string|max:255',
-            'Cell_number' => 'required|string|min:9',
+            'Cell_number' => 'required|string|max:9',
             'Activity' => 'required|string|max:255',
         ]);
-
-        if ($validatedData == true) {
-            Alert::error('Falha', 'Falha ao adicionar!');
-        }
 
         $artist = new artist();
 

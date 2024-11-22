@@ -506,6 +506,13 @@
                 @include('sweetalert::alert')
                 {{-- Fim dos links do javascript --}}
 
+                @if ($errors->any())
+                            <script>
+                                document.addEventListener('DOMContentLoaded', function() {
+                                    document.getElementById('staticBack').click();
+                                });
+                            </script>
+                            @endif
 </body>
 
 </html>

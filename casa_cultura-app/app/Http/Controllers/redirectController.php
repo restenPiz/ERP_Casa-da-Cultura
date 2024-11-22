@@ -30,6 +30,7 @@ class redirectController extends Controller
 
             $course = course::all();
             $courses = course::all();
+            $events = event::all();
             $courseUsers = \App\Models\Course_user::with('user');
             $countCourse = DB::table('courses')
                 ->count('id');
@@ -37,10 +38,10 @@ class redirectController extends Controller
             $countStudent = DB::table('users')->where('user_type', 'Users')
                 ->count('id');
 
-            $countTrainer = DB::table('users')->where('user_type', 'Trainer')
+            $countTrainer = DB::table('events')
                 ->count('id');
 
-            return view('dashboard', compact('course', 'countStudent', 'countCourse', 'countTrainer', 'courses', 'courseUsers'));
+            return view('dashboard', compact('course', 'countStudent', 'events', 'countCourse', 'countTrainer', 'courses', 'courseUsers'));
 
         } elseif (Auth::user()->hasRole('users')) {
 

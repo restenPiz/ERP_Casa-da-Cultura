@@ -66,7 +66,7 @@
 
                                     <div class="col-lg-6">
                                         <label class="form-label" for="email2">Contacto</label>
-                                        <input class="form-control @error('Cell_number') is-invalid @enderror" id="email2" type="text" name="Cell_number" placeholder="Ex: 258 867336817" />
+                                        <input class="form-control @error('Cell_number') is-invalid @enderror" id="email2" type="text" name="Cell_number" placeholder="Ex: 867336817" />
                                         @error('Cell_number')
                                             <div class="invalid-feedback">{{ $message }}</div>
                                         @enderror
@@ -193,6 +193,7 @@
                                     </div>
                                 </div>
                             </div>
+                            
                             {{-- Fim do modal de editar --}}
                         @endforeach
                     </tbody>
@@ -207,5 +208,6 @@
         </div>
     </div>
     </div>
+    
     {{-- Fim do conteudo --}}
 @endsection
