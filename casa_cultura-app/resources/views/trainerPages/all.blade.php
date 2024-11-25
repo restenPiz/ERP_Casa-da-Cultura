@@ -52,12 +52,12 @@
                     <tbody class="list" id="table-customers-body">
                         @foreach ($trainers as $trainer)
                             <tr class="btn-reveal-trigger">
-                                <td class="align-middle py-2" style="width: 28px;">
+                                <td class="align-middle py-2" style="width: 28px; background-color:white">
                                     <div class="form-check fs-9 mb-0 d-flex align-items-center"><input
                                             class="form-check-input" type="checkbox" id="customer-1"
                                             data-bulk-select-row="data-bulk-select-row" /></div>
                                 </td>
-                                <td class="name align-middle {{-- white-space-nowrap --}} py-2"><a href="customer-details.html">
+                                <td style="background-color:white;height:5rem" class="name  {{-- white-space-nowrap --}} py-2"><a href="customer-details.html">
                                         <div class="d-flex d-flex align-items-center">
                                             <div class="avatar avatar-xl me-2">
                                                 <img class="rounded-circle"
@@ -69,13 +69,13 @@
                                         </div>
                                     </a>
                                 </td>
-                                <td class="email align-middle py-2"><a
+                                <td style="width: 28px; background-color:white" class="email align-middle py-2"><a
                                         href="mailto:emma@example.com">{{ $trainer->email }}</a></td>
-                                <td class="phone align-middle white-space-nowrap py-2"><a
+                                <td style="background-color:white" class="phone align-middle white-space-nowrap py-2"><a
                                         href="tel:2122288403">{{ $trainer->contact }}</a></td>
-                                <td class="address align-middle white-space-nowrap ps-5 py-2">{{ $trainer->place }}</td>
-                                <td class="joined align-middle py-2">{{ $trainer->function }}</td>
-                                <td class="align-middle white-space-nowrap py-2 text-end">
+                                <td style="width: 28px; background-color:white" class="address align-middle white-space-nowrap ps-5 py-2">{{ $trainer->place }}</td>
+                                <td style="width: 28px; background-color:white" class="joined align-middle py-2">{{ $trainer->function }}</td>
+                                <td style="width: 28px; background-color:white" class="align-middle white-space-nowrap py-2 text-end">
                                     <div class="dropdown font-sans-serif position-static"><button
                                             class="btn btn-link text-600 btn-sm dropdown-toggle btn-reveal" type="button"
                                             id="customer-dropdown-1" data-bs-toggle="dropdown" data-boundary="window"

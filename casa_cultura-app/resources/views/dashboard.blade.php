@@ -1,7 +1,7 @@
 @extends('layouts.layout')
 @section('content')
 
-    <div class="card mb-3">
+    <div class="card mb-3" >
         <div class="card-body px-xxl-0 pt-4">
             <div class="row g-0">
                 <div
@@ -52,13 +52,13 @@
                                     <div class="hoverbox text-center"><a class="text-decoration-none"
                                             href="../../../assets/video/beach.mp4" data-gallery="attachment-bg"><img
                                                 class="w-100 h-100 object-fit-cover"
-                                                src="{{ asset('storage/' . $event->Event_picture) }}" alt="" /></a>
+                                                src="{{ asset('storage/' . $course->Event_picture) }}" alt="" /></a>
                                         <div class="hoverbox-content flex-center pe-none bg-holder overlay overlay-2"><img
                                                 class="z-1" src=""
                                                 width="60" alt="" /></div>
                                     </div>
                                     <div class="p-3">
-                                        <h5 class="fs-9 mb-2"><a class="text-1100" href="{{route('detailEvents',['id'=>$course->id])}}">
+                                        <h5 class="fs-9 mb-2"><a class="text-1100" href="{{route('event.detail',['id'=>$course->id])}}">
                                                 {{ $course->Name }}</a></h5>
                                         {{-- <h5 class="fs-9">Formador: <a href="../trainer-profile.html"></a></h5> --}}
                                     </div>

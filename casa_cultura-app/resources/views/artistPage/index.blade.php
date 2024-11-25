@@ -113,18 +113,18 @@
                     <tbody class="list" id="table-customers-body">
                         @foreach ($artists as $artist)
                             <tr class="btn-reveal-trigger">
-                                <th>
+                                <th style="width: 28px; background-color:white">
                                     <div class="form-check fs-9 mb-0 d-flex align-items-center"><input
                                             class="form-check-input" id="checkbox-bulk-customers-select" type="checkbox"
                                             data-bulk-select='{"body":"table-customers-body","actions":"table-customers-actions","replacedElement":"table-customers-replace-element"}' />
                                     </div>
                                 </th>
-                                <td class="email align-middle py-2">{{ $artist->Name }}</td>
-                                <td class="phone align-middle white-space-nowrap py-2">{{ $artist->Address }}</td>
-                                <td class="address align-middle white-space-nowrap ps-5 py-2">{{ $artist->Cell_number }}
+                                <td style="width: 28px; background-color:white" class="email align-middle py-2">{{ $artist->Name }}</td>
+                                <td style="width: 28px; background-color:white" class="phone align-middle white-space-nowrap py-2">{{ $artist->Address }}</td>
+                                <td style="width: 28px; background-color:white" class="address align-middle white-space-nowrap ps-5 py-2">{{ $artist->Cell_number }}
                                 </td>
-                                <td class="joined align-middle py-2">{{ $artist->Activity }}</td>
-                                <td class="align-middle white-space-nowrap py-2 text-end">
+                                <td style="width: 28px; background-color:white" class="joined align-middle py-2">{{ $artist->Activity }}</td>
+                                <td style="width: 28px; background-color:white" class="align-middle white-space-nowrap py-2 text-end">
                                     <div class="dropdown font-sans-serif position-static"><button
                                             class="btn btn-link text-600 btn-sm dropdown-toggle btn-reveal" type="button"
                                             id="customer-dropdown-1" data-bs-toggle="dropdown" data-boundary="window"

@@ -30,7 +30,7 @@
         </div>
         <div class="card-body p-0">
             <div class="table-responsive scrollbar">
-                <table class="table table-sm table-striped fs-10 mb-0 overflow-hidden">
+                <table class="table table-sm table-striped fs-10 mb-0 overflow-hidden" style="background-color: white; color:black">
                     <thead class="bg-200">
                         <tr>
                             <th>
@@ -49,10 +49,10 @@
                             <th class="align-middle no-sort"></th>
                         </tr>
                     </thead>
-                    <tbody class="list" id="table-customers-body">
+                    <tbody class="list" id="table-customers-body" style="background-color: white; color:black">
                         @foreach ($trainers as $trainer)
-                            <tr class="btn-reveal-trigger">
-                                <td class="align-middle py-2" style="width: 28px;">
+                            <tr class="btn-reveal-trigger" style="background-color: white; color:black">
+                                <td class="align-middle py-2" style="width: 28px;" style="background-color: white; color:black">
                                     <div class="form-check fs-9 mb-0 d-flex align-items-center"><input
                                             class="form-check-input" type="checkbox" id="customer-1"
                                             data-bulk-select-row="data-bulk-select-row" /></div>

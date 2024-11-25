@@ -10,8 +10,8 @@
                 <div class="card-header bg-body-tertiary d-flex justify-content-between">
                     <h5 class="mb-0">Todos Eventos</h5>
                 </div>
-                <div class="card-body fs-10">
-                    <div class="row">
+                <div class="card-body fs-10" >
+                    <div class="row" style="background-color:white">
                         @foreach ($events as $event)
                             <div class="col-md-6 h-100">
                                 <div class="d-flex btn-reveal-trigger">
