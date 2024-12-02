@@ -58,8 +58,9 @@ class redirectController extends Controller
             $countCourse = DB::table('courses')->count('id');
             $countStudent = DB::table('users')->where('user_type', 'Users')->count('id');
             $countTrainer = DB::table('users')->where('user_type', 'Trainer')->count('id');
+            $events = event::all();
 
-            return view('employeeDashboard', compact('countStudent', 'countCourse', 'countTrainer'));
+            return view('employeeDashboard', compact('events', 'countStudent', 'countCourse', 'countTrainer'));
         } elseif (Auth::user()->status == 1) {
             Auth::logout();
 
