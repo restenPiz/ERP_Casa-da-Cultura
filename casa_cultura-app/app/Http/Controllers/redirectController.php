@@ -51,8 +51,8 @@ class redirectController extends Controller
             return view('websitePages.index', compact('events', 'courses', 'users'));
 
         } elseif (Auth::user()->hasRole('trainer')) {
-
-            return view('trainerDashboard');
+            $events = event::all();
+            return view('trainerDashboard', compact('events'));
 
         } elseif (Auth::user()->status == 0) {
             $countCourse = DB::table('courses')->count('id');

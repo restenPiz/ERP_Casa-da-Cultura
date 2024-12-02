@@ -67,7 +67,7 @@
                     <h6 class="fw-semi-bold ls mb-3 text-uppercase">Detalhes de Conta</h6>
                     <div class="row">
                         <div class="col-5 col-sm-4">
-                            <p class="fw-semi-bold mb-1">Name Completo</p>
+                            <p class="fw-semi-bold mb-1">Nome Completo</p>
                         </div>
                         <div class="col">{{Auth::user()->name}} {{Auth::user()->Surname}}</div>
                     </div>
@@ -97,6 +97,7 @@
             </div>
         </div>
     </div>
+    
 
     {{-- * Fim do conteudo da dash --}}
 @endsection
