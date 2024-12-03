@@ -21,50 +21,6 @@
             </div>
         </div>
     </div>
-    <div class="card mb-3">
-        <div class="card-header">
-            <div class="row align-items-center">
-                <div class="col">
-                    <h5 class="mb-0">Detalhes</h5>
-                </div>
-            </div>
-        </div>
-        <div class="card-body bg-body-tertiary border-top">
-            <div class="row">
-                <div class="col-lg col-xxl-5">
-                    <h6 class="fw-semi-bold ls mb-3 text-uppercase">Detalhes de Conta</h6>
-                    <div class="row">
-                        <div class="col-5 col-sm-4">
-                            <p class="fw-semi-bold mb-1">Name Completo</p>
-                        </div>
-                        <div class="col">{{Auth::user()->name}} {{Auth::user()->Surname}}</div>
-                    </div>
-                    <div class="row">
-                        <div class="col-5 col-sm-4">
-                            <p class="fw-semi-bold mb-1">Email</p>
-                        </div>
-                        <div class="col"><a href="mailto:tony@gmail.com">{{Auth::user()->email}}</a></div>
-                    </div>
-                    <div class="row">
-                        <div class="col-5 col-sm-4">
-                            <p class="fw-semi-bold mb-1">Nivel de Acesso</p>
-                        </div>
-                        <div class="col">
-                            <p class="fst-italic text-400 mb-1">{{Auth::user()->user_type}}</p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-5 col-sm-4">
-                            <p class="fw-semi-bold mb-0">Numero</p>
-                        </div>
-                        <div class="col">
-                            <p class="fst-italic text-400 mb-0">+258 {{Auth::user()->contact}}</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 <div class="row g-3">
         <div class="col-xxl-12 col-xl-9">
             <div class="card mb-3">

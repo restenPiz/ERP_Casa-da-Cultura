@@ -69,7 +69,7 @@
                         <button class="btn navbar-toggler-humburger-icon navbar-vertical-toggle"
                             data-bs-toggle="tooltip" data-bs-placement="left" title="Toggle Navigation"><span
                                 class="navbar-toggle-icon"><span class="toggle-line"></span></span></button>
-                    </div><a class="navbar-brand" href="../index.html">
+                    </div><a class="navbar-brand" href="/dashboard">
                         <div class="d-flex align-items-center py-3">{{-- <img class="me-2" src="../assets/img/icons/spot-illustrations/falcon.png" alt="" width="40" /> --}}
                             <span style="font-size: 20px" class="font-sans-serif text-primary">Casa da Cultura</span>
                         </div>

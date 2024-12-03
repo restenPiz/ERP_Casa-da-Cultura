@@ -9,7 +9,7 @@
                     <div class="icon-circle icon-circle-primary"><span class="fs-7 fas fa-user-graduate text-primary"></span>
                     </div>
                     <h4 class="mb-1 font-sans-serif"><span class="text-700 mx-2"
-                            data-countup='{"endValue":"{{$countStudent}}"}'>0</span><span class="fw-normal text-600">Novos
+                            data-countup='{"endValue":"{{$countStudent}}"}'>0</span><span class="fw-normal text-600">
                             Estudantes</span></h4>
                     {{-- <p class="fs-10 fw-semi-bold mb-0">4203 <span class="text-600 fw-normal">Ultimo Mes</span></p> --}}
                 </div>
@@ -18,7 +18,7 @@
                     <div class="icon-circle icon-circle-info"><span class="fs-7 fas fa-chalkboard-teacher text-info"></span>
                     </div>
                     <h4 class="mb-1 font-sans-serif"><span class="text-700 mx-2"
-                            data-countup='{"endValue":"{{$countTrainer}}"}'>0</span><span class="fw-normal text-600">Novos
+                            data-countup='{"endValue":"{{$countTrainer}}"}'>0</span><span class="fw-normal text-600">
                             Formadores</span></h4>
                     {{-- <p class="fs-10 fw-semi-bold mb-0">301 <span class="text-600 fw-normal">Ultimo Mes</span></p> --}}
                 </div>
@@ -27,7 +27,7 @@
                     <div class="icon-circle icon-circle-success"><span class="fs-7 fas fa-book-open text-success"></span>
                     </div>
                     <h4 class="mb-1 font-sans-serif"><span class="text-700 mx-2"
-                            data-countup='{"endValue":"{{$countCourse}}"}'>0</span><span class="fw-normal text-600">Novos Cursos</span>
+                            data-countup='{"endValue":"{{$countCourse}}"}'>0</span><span class="fw-normal text-600"> Cursos</span>
                     </h4>
                 </div>
             </div>
@@ -37,7 +37,7 @@
         <div class="card-header">
             <div class="row">
                 <div class="col">
-                    <h5 class="mb-2">{{Auth::user()->name}} {{Auth::user()->Surname}} (<a href="mailto:{{Auth::user()->email}}">{{Auth::user()->email}}</a>)</h5>
+                    <h5 class="mb-2">{{Auth::user()->name}} {{Auth::user()->Surname}} </h5>
                 </div>
                 <div class="col-auto d-none d-sm-block">
                     <h6 class="text-uppercase text-600">Funcionario<span class="fas fa-user ms-2"></span></h6>

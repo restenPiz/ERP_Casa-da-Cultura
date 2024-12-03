@@ -90,7 +90,7 @@ class userController extends Controller
         $request->validate([
             'name' => ['required', 'string', 'max:255'],
             'Surname' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'unique:users'],
+            'email' => ['required', 'string', 'email',],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
             // 'password_confirmation' => ['required', 'string', 'min:8', 'confirmed'],
             'bi' => ['required', 'string', 'min:13'],

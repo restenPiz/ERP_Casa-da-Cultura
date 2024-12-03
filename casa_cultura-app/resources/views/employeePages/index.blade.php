@@ -54,7 +54,7 @@
 
                             <div class="col-lg-6">
                                 <label class="form-label" for="email1">Email</label>
-                                <input name="email" placeholder="picardoolindo@gmail.com" class="form-control @error('email') is-invalid @enderror"
+                                <input name="email" placeholder="email@gmail.com" class="form-control @error('email') is-invalid @enderror"
                                     id="email1" type="text" />
                                 @error('email')
                                     <div class="invalid-feedback">{{ $message }}</div>

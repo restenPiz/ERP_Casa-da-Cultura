@@ -137,7 +137,7 @@ class studentController extends Controller
         $validatedData = $request->validate([
             'name' => 'required|string|max:255',
             'Surname' => 'required|string|max:255',
-            'email' => 'required|email|unique:users,email',
+            'email' => 'required|email',
             'upload_file' => 'nullable|file|mimes:jpg,jpeg,png,gif,docx,pdf,txt|max:20480',
             'contact' => 'required|numeric|digits_between:9,12',
             'Date_of_birth' => 'required|date|before_or_equal:today',
