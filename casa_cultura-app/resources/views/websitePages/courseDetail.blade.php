@@ -167,11 +167,7 @@
                                                         <i class="icon-Star"></i>
                                                     </div>
                                                 </div>
-                                                <span class="subtitle">“ Outstanding Course ”</span>
-                                                <p>As Thomas pointed out, Chegg’s survey appears more like a scorecard that
-                                                    details obstacles and challenges that the current university
-                                                    undergraduate student population is going through in their universities
-                                                    and countries.</p>
+                                                <span class="subtitle"></p>
                                             </div>
                                         </div>
                                     </div>
@@ -187,12 +183,6 @@
                             <div class="eduvibe-widget">
                                 <div class="video-area">
                                     <div class="thumbnail video-popup-wrapper">
-                                        <img class="radius-small w-100"
-                                            src="{{ asset('storage/' . $course->Upload_video) }}" alt="Course Images">
-                                        <a href="https://www.youtube.com/watch?v=pNje3bWz7V8"
-                                            class="video-play-btn position-to-top video-popup-activation">
-                                            <span class="play-icon course-details-video-popup"></span>
-                                        </a>
                                     </div>
                                 </div>
                                 <div class="eduvibe-widget-details mt--35">
@@ -305,8 +295,7 @@
                                     <img class="logo-light" src="../asset/images/logo/logo2.png" alt="Site Logo">
                                 </a>
                             </div>
-                            <p class="description">It is a long established fact that a reader will be distracted by the
-                                readable content of a page when looking at its layout. The point of using Lorem Ipsum.</p>
+                            <p class="description"></p>
                             <ul class="social-share">
                                 <li><a href="#"><i class="icon-Fb"></i></a></li>
                                 <li><a href="#"><i class="icon-linkedin"></i></a></li>
@@ -340,12 +329,14 @@
                                     <ul class="information-list">
                                         <li><i class="icon-map-pin-line"></i>Cidade da Beira
                                         </li>
-                                        <li><i class="icon-phone-fill"></i><a href="tel:+1(237)382-2839">+ 258
-                                                867336817</a></li>
-                                        <li><i class="icon-phone-fill"></i><a href="tel:+1(237)382-2840">+ 258
-                                                833138308</a></li>
+                                        <li><i class="icon-phone-fill"></i><a href="tel:+ 258
+                                                862687763">+ 258
+                                                862687763</a></li>
+                                        <li><i class="icon-phone-fill"></i><a href="tel:+ 258
+                                                862687763">+ 258
+                                                846301298</a></li>
                                         <li><i class="icon-mail-line-2"></i><a target="_blank"
-                                                href="mailto:yourmailaddress@example.com">email@example.com</a>
+                                                href="casacultura@gmail.com">casacultura@gmail.com</a>
                                         </li>
                                     </ul>
                                 </div>

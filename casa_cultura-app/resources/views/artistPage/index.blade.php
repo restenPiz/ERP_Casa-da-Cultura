@@ -9,14 +9,7 @@
                     <h5 class="fs-9 mb-0 text-nowrap py-2 py-xl-0">Artistas</h5>
                 </div>
                 <div class="col-8 col-sm-auto text-end ps-2">
-                    <div class="d-none" id="table-customers-actions">
-                        <div class="d-flex"><select class="form-select form-select-sm" aria-label="Bulk actions">
-                                <option selected="">Bulk actions</option>
-                                <option value="Refund">Refund</option>
-                                <option value="Delete">Delete</option>
-                                <option value="Archive">Archive</option>
-                            </select><button class="btn btn-falcon-default btn-sm ms-2" type="button">Apply</button></div>
-                    </div>
+                    
                     <div id="table-customers-replace-element"><a class="btn btn-falcon-default btn-sm"
                             data-bs-target="#staticBack" href="#staticBack" data-bs-toggle="modal">
                             <span class="fas fa-plus" data-fa-transform="shrink-3 down-2"></span><span
@@ -49,7 +42,7 @@
                                 @csrf
                                 <div class="row">
                                     <div class="col-lg-6">
-                                        <label class="form-label" for="first-name">Nome Completo</label>
+                                        <label class="form-label" for="first-name">Nome</label>
                                         <input name="Name" class="form-control @error('Name') is-invalid @enderror" id="first-name" type="text" placeholder="Nome Completo" />
                                         @error('Name')
                                             <div class="invalid-feedback">{{ $message }}</div>
@@ -66,15 +59,15 @@
 
                                     <div class="col-lg-6">
                                         <label class="form-label" for="email2">Contacto</label>
-                                        <input class="form-control @error('Cell_number') is-invalid @enderror" id="email2" type="text" name="Cell_number" placeholder="Ex: 867336817" />
+                                        <input class="form-control @error('Cell_number') is-invalid @enderror" id="email2" type="text" name="Cell_number" placeholder="Cell" />
                                         @error('Cell_number')
                                             <div class="invalid-feedback">{{ $message }}</div>
                                         @enderror
                                     </div>
 
                                     <div class="col-lg-6">
-                                        <label class="form-label" for="email2">Actividade</label>
-                                        <input class="form-control @error('Activity') is-invalid @enderror" id="email2" type="text" name="Activity" placeholder="Ex: Desenvolvedor FullStack" />
+                                        <label class="form-label" for="email2">Arte</label>
+                                        <input class="form-control @error('Activity') is-invalid @enderror" id="email2" type="text" name="Activity" placeholder="Arte" />
                                         @error('Activity')
                                             <div class="invalid-feedback">{{ $message }}</div>
                                         @enderror
@@ -102,10 +95,10 @@
                     <thead class="bg-200">
                         <tr>
                             <th class="text-900 sort pe-1 align-middle white-space-nowrap ps-5" data-sort="address"></th>
-                            <th class="text-900 sort pe-1 align-middle white-space-nowrap" data-sort="name">Name</th>
+                            <th class="text-900 sort pe-1 align-middle white-space-nowrap" data-sort="name">Nome</th>
                             <th class="text-900 sort pe-1 align-middle white-space-nowrap" data-sort="email">Endereco</th>
-                            <th class="text-900 sort pe-1 align-middle white-space-nowrap" data-sort="phone">Phone</th>
-                            <th class="text-900 sort pe-1 align-middle white-space-nowrap" data-sort="joined">Actividade
+                            <th class="text-900 sort pe-1 align-middle white-space-nowrap" data-sort="phone">Contacto</th>
+                            <th class="text-900 sort pe-1 align-middle white-space-nowrap" data-sort="joined">Arte
                             </th>
                             <th class="align-middle no-sort"></th>
                         </tr>

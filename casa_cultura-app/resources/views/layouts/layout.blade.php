@@ -8,18 +8,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Casa da Cultura</title>
-    <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/favicons/apple-touch-icon.png">
-    {{-- <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" href="{{ asset('images/favicon.png') }}">
+    <link rel="shortcut icon" type="image/x-icon" href="asset/images/favicon.png">
+    {{-- <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicons/favicon-32x32favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/favicons/favicon-16x16.png"> --}}
     {{-- <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicons/favicon.ico"> --}}
-    <link rel="shortcut icon" type="image/x-icon" href="asset/images/favicon.png">
+    
     <meta name="msapplication-TileImage" content="../assets/img/favicons/mstile-150x150.png">
     <meta name="theme-color" content="#ffffff">
     <script src="../assets/js/config.js"></script>
     <script src="../vendors/simplebar/simplebar.min.js"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com/">
     <link
-        href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700%7cPoppins:300,400,500,600,700,800,900&amp;display=swap"
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700%7cPoppins:300,400,500,600,700,800,900;display=swap"
         rel="stylesheet">
     <link href="../vendors/simplebar/simplebar.min.css" rel="stylesheet">
     <link href="../assets/css/theme-rtl.min.css" rel="stylesheet" id="style-rtl">
@@ -102,7 +103,7 @@
                                             <span class="nav-link-icon">
                                                 <span class="fas fa-layer-group"></span>
                                             </span>
-                                            <span class="nav-link-text ps-1">Gerir Formadores</span>
+                                            <span class="nav-link-text ps-1">Formadores</span>
                                         </div>
                                     </a>
 
@@ -132,7 +133,7 @@
                                         aria-controls="customization">
                                         <div class="d-flex align-items-center"><span class="nav-link-icon"><span
                                                     class="fab fa-trello"></span></span><span
-                                                class="nav-link-text ps-1">Gerir Funcionarios</span></div>
+                                                class="nav-link-text ps-1">Funcionarios</span></div>
                                     </a>
                                     <ul class="nav collapse {{ request()->routeIs('employee.all', 'employee.index') ? 'show' : '' }}"
                                         id="customizati">
@@ -155,7 +156,7 @@
                                         aria-expanded="false" aria-controls="customization">
                                         <div class="d-flex align-items-center"><span class="nav-link-icon"><span
                                                     class="fas fa-graduation-cap"></span></span><span
-                                                class="nav-link-text ps-1">Gerir Cursos</span></div>
+                                                class="nav-link-text ps-1">Cursos</span></div>
                                     </a>
                                     <ul class="nav collapse {{ request()->routeIs('course.all', 'course.index', 'course.detail') ? 'show' : '' }}"
                                         id="customization">
@@ -177,14 +178,14 @@
                                         href="{{ route('artist.index') }}" role="button">
                                         <div class="d-flex align-items-center"><span class="nav-link-icon"><span
                                                     class="fas fa-thumbtack"></span></span><span
-                                                class="nav-link-text ps-1">Gerir Artistas</span></div>
+                                                class="nav-link-text ps-1">Artistas</span></div>
                                     </a>
                                     {{-- Inicio do Sexto link --}}
                                     <a class="nav-link {{ request()->routeIs('event.index', 'event.detail') ? 'active' : '' }}"
                                         href="{{ route('event.index') }}" role="button">
                                         <div class="d-flex align-items-center"><span class="nav-link-icon"><span
                                                     class="fas fa-calendar-day"></span></span><span
-                                                class="nav-link-text ps-1">Gerir Eventos</span></div>
+                                                class="nav-link-text ps-1">Eventos</span></div>
                                     </a>
                                     {{-- Inicio do Setimo Link --}}
 
@@ -196,7 +197,7 @@
                                             <span class="nav-link-icon">
                                                 <span class="fas fa-layer-group"></span>
                                             </span>
-                                            <span class="nav-link-text ps-1">Inscricao de Alunos</span>
+                                            <span class="nav-link-text ps-1">Alunos</span>
                                         </div>
                                     </a>
 
@@ -214,7 +215,7 @@
                                             <a class="nav-link {{ request()->routeIs('student.details') ? 'active' : '' }}"
                                                 href="{{ route('student.details') }}">
                                                 <div class="d-flex align-items-center">
-                                                    <span class="nav-link-text ps-1">Filtro de Dados do Aluno</span>
+                                                    <span class="nav-link-text ps-1">Pesquisar Curso do Aluno</span>
                                                 </div>
                                             </a>
                                         </li>
@@ -283,7 +284,7 @@
                                             <a class="nav-link {{ request()->routeIs('student.details') ? 'active' : '' }}"
                                                 href="{{ route('student.details') }}">
                                                 <div class="d-flex align-items-center">
-                                                    <span class="nav-link-text ps-1">Filtro de Dados do Aluno</span>
+                                                    <span class="nav-link-text ps-1">Pesquisar Curso do Aluno</span>
                                                 </div>
                                             </a>
                                         </li>
@@ -304,7 +305,7 @@
                 <a class="navbar-brand me-1 me-sm-3" href="../index.html">
                     <div class="d-flex align-items-center"><img class="me-2"
                             src="../assets/img/icons/spot-illustrations/falcon.png" alt=""
-                            width="40" /><span class="font-sans-serif text-primary">falcon</span></div>
+                            width="40" /><span class="font-sans-serif text-primary"></span></div>
                 </a>
                 <div class="collapse navbar-collapse scrollbar" id="navbarStandard">
                     <ul class="navbar-nav" data-top-nav-dropdowns="data-top-nav-dropdowns">
@@ -385,7 +386,7 @@
                     <a class="navbar-brand me-1 me-sm-3" href="../index.html">
                         <div class="d-flex align-items-center"><img class="me-2"
                                 src="../assets/img/icons/spot-illustrations/falcon.png" alt=""
-                                width="40" /><span class="font-sans-serif text-primary">falcon</span></div>
+                                width="40" /><span class="font-sans-serif text-primary"></span></div>
                     </a>
                     <ul class="navbar-nav align-items-center d-none d-lg-block">
 

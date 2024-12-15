@@ -19,18 +19,18 @@
                         </div>
                         <div class="col-lg-7">
                             @foreach ($course->users as $user)
-                                <h6 class="fw-semi-bold text-400">O formador do curso e <a class="text-info"
-                                        href="../trainer-profile.html">{{ $user->name }} {{ $user->Surname }}</a></h6>
+                                <h6 class="fw-semi-bold text-400">O formador do curso: <a class="text-info"
+                                       >{{ $user->name }} {{ $user->Surname }}</a></h6>
                             @endforeach
                             <h2 class="fw-bold text-white">{{ $course->Course_name }} </h2>
                         </div>
                     </div>
                     <hr class="text-secondary text-opacity-50" />
                     <ul class="list-unstyled d-flex flex-wrap gap-3 fs-10 fw-semi-bold text-300 mt-3 mb-0">
-                        <li><span class="fas fa-graduation-cap text-white me-1"> </span>{{ $countStudent }} Numero de
-                            Estudantes Inscritos
+                        <li><span class="fas fa-graduation-cap text-white me-1"> </span>{{ $countStudent }}
+                        Estudantes Inscritos
                         </li>
-                        <li><span class="fas fa-headphones text-white me-1"> </span>Portugues</li>
+                        
                     </ul>
                 </div>
             </div>

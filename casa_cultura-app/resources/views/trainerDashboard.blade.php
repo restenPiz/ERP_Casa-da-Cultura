@@ -5,7 +5,7 @@
         <div class="card-header">
             <div class="row">
                 <div class="col">
-                    <h5 class="mb-2">{{Auth::user()->name}} {{Auth::user()->Surname}} (<a href="mailto:{{Auth::user()->email}}">{{Auth::user()->email}}</a>)</h5>
+                    <h5 class="mb-2">{{Auth::user()->name}} {{Auth::user()->Surname}} </h5>
                 </div>
                 <div class="col-auto d-none d-sm-block">
                     <h6 class="text-uppercase text-600">Formador<span class="fas fa-user ms-2"></span></h6>
@@ -36,8 +36,7 @@
                         <div class="card h-100 overflow-hidden">
                             <div class="card-body p-0 d-flex flex-column justify-content-between">
                                 <div>
-                                    <div class="hoverbox text-center"><a class="text-decoration-none"
-                                            href="../../../assets/video/beach.mp4" data-gallery="attachment-bg"><img
+                                    <div class="hoverbox text-center">s<img
                                                 class="w-100 h-100 object-fit-cover"
                                                 src="{{ asset('storage/' . $course->Event_picture) }}" alt="" /></a>
                                         <div class="hoverbox-content flex-center pe-none bg-holder overlay overlay-2"><img
@@ -45,7 +44,7 @@
                                                 width="60" alt="" /></div>
                                     </div>
                                     <div class="p-3">
-                                        <h5 class="fs-9 mb-2"><a class="text-1100" href="{{route('event.detail',['id'=>$course->id])}}">
+                                        <h5 class="fs-9 mb-2"><a class="text-1100">
                                                 {{ $course->Name }}</a></h5>
                                         {{-- <h5 class="fs-9">Formador: <a href="../trainer-profile.html"></a></h5> --}}
                                     </div>

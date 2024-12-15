@@ -64,7 +64,7 @@
 
                             <div class="col-lg-6">
                                 <label class="form-label">Contacto</label>
-                                <input class="form-control @error('contact') is-invalid @enderror" type="text" placeholder="Ex: 867336817"
+                                <input class="form-control @error('contact') is-invalid @enderror" type="text" placeholder="Cell"
                                     name="contact" />
                                 @error('contact')
                                     <div class="invalid-feedback">{{ $message }}</div>

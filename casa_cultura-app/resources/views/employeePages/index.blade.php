@@ -63,7 +63,7 @@
 
                             <div class="col-lg-6">
                                 <label class="form-label">Contacto</label>
-                                <input class="form-control @error('contact') is-invalid @enderror" type="text" placeholder="Ex: 867336817"
+                                <input class="form-control @error('contact') is-invalid @enderror" type="text" placeholder="Cell"
                                     name="contact" />
                                 @error('contact')
                                     <div class="invalid-feedback">{{ $message }}</div>
@@ -125,7 +125,7 @@
                             </div>
 
                             <div class="col-lg-6">
-                                <label>Status</label>
+                                <label>Estado</label>
                                 <select class="form-control @error('status') is-invalid @enderror" name="status">
                                     <option value="">==--Selecione--==</option>
                                     <option value="0">Autenticado</option>

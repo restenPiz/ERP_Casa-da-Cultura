@@ -9,14 +9,7 @@
                     <h5 class="fs-9 mb-0 text-nowrap py-2 py-xl-0">Formadores</h5>
                 </div>
                 <div class="col-8 col-sm-auto text-end ps-2">
-                    <div class="d-none" id="table-customers-actions">
-                        <div class="d-flex"><select class="form-select form-select-sm" aria-label="Bulk actions">
-                                <option selected="">Bulk actions</option>
-                                <option value="Refund">Refund</option>
-                                <option value="Delete">Delete</option>
-                                <option value="Archive">Archive</option>
-                            </select><button class="btn btn-falcon-default btn-sm ms-2" type="button">Apply</button></div>
-                    </div>
+                   
                     <div id="table-customers-replace-element"><a href="{{ route('trainer.index') }}"
                             class="btn btn-falcon-default btn-sm" type="button"><span class="fas fa-plus"
                                 data-fa-transform="shrink-3 down-2"></span><span
@@ -39,12 +32,12 @@
                                         data-bulk-select='{"body":"table-customers-body","actions":"table-customers-actions","replacedElement":"table-customers-replace-element"}' />
                                 </div>
                             </th>
-                            <th class="text-900 sort pe-1 align-middle white-space-nowrap" data-sort="name">Name</th>
+                            <th class="text-900 sort pe-1 align-middle white-space-nowrap" data-sort="name">Nome</th>
                             <th class="text-900 sort pe-1 align-middle white-space-nowrap" data-sort="email">Email</th>
-                            <th class="text-900 sort pe-1 align-middle white-space-nowrap" data-sort="phone">Phone</th>
+                            <th class="text-900 sort pe-1 align-middle white-space-nowrap" data-sort="phone">Cell</th>
                             <th class="text-900 sort pe-1 align-middle white-space-nowrap ps-5" data-sort="address"
-                                style="min-width: 200px;">Billing Address</th>
-                            <th class="text-900 sort pe-1 align-middle white-space-nowrap" data-sort="joined">Actividade
+                                style="min-width: 200px;">Endereco</th>
+                            <th class="text-900 sort pe-1 align-middle white-space-nowrap" data-sort="joined">Área de Formação
                             </th>
                             <th class="align-middle no-sort"></th>
                         </tr>
@@ -85,9 +78,9 @@
                                             aria-labelledby="customer-dropdown-1">
                                             <div class="py-2"><a class="dropdown-item" href="#staticBackdrop"
                                                     data-bs-toggle="modal"
-                                                    data-bs-target="#staticBackdrop{{ $trainer->id }}">Edit</a><a
+                                                    data-bs-target="#staticBackdrop{{ $trainer->id }}">Editar</a><a
                                                     class="dropdown-item text-danger"
-                                                    href="{{ route('trainer.delete', ['id' => $trainer->id]) }}">Delete</a>
+                                                    href="{{ route('trainer.delete', ['id' => $trainer->id]) }}">Deletar</a>
                                             </div>
                                         </div>
                                     </div>
