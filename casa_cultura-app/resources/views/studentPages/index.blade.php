@@ -40,7 +40,7 @@
                                 <div class="mb-3">
                                     <label class="form-label" for="bootstrap-wizard-wizard-name">Nome</label>
                                     <input class="form-control @error('name') is-invalid @enderror" type="text"
-                                        name="name" placeholder="Picardo" value="{{ old('name') }}"
+                                        name="name" placeholder="Nome" value="{{ old('name') }}"
                                         id="bootstrap-wizard-wizard-name" />
                                     @error('name')
                                         <div class="invalid-feedback">{{ $message }}</div>
@@ -49,7 +49,7 @@
                                 <div class="mb-3">
                                     <label class="form-label" for="bootstrap-wizard-wizard-name">Apelido</label>
                                     <input class="form-control @error('Surname') is-invalid @enderror" type="text"
-                                        name="Surname" placeholder="Olindo" value="{{ old('Surname') }}"
+                                        name="Surname" placeholder="Apelido" value="{{ old('Surname') }}"
                                         id="bootstrap-wizard-wizard-name" />
                                     @error('Surname')
                                         <div class="invalid-feedback">{{ $message }}</div>
@@ -58,7 +58,7 @@
                                 <div class="mb-3">
                                     <label class="form-label" for="bootstrap-wizard-wizard-email">Email*</label>
                                     <input class="form-control @error('email') is-invalid @enderror" type="email"
-                                        name="email" placeholder="picardo@gmail.com" value="{{ old('email') }}"
+                                        name="email" placeholder="Email@gmail.com" value="{{ old('email') }}"
                                         required="required" id="bootstrap-wizard-wizard-email" />
                                     @error('email')
                                         <div class="invalid-feedback">{{ $message }}</div>
@@ -91,8 +91,7 @@
                                     @enderror
                                 </div>
                                 <div class="mb-3">
-                                    <label class="form-label" for="bootstrap-wizard-wizard-datepicker">Date of
-                                        Birth</label>
+                                    <label class="form-label" for="bootstrap-wizard-wizard-datepicker">Data de Nascimento</label>
                                     <input class="form-control @error('Date_of_birth') is-invalid @enderror"
                                         type="date" name="Date_of_birth" value="{{ old('Date_of_birth') }}"
                                         id="bootstrap-wizard-wizard-datepicker" />

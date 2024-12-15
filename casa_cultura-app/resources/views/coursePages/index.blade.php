@@ -87,7 +87,7 @@
                         <div class="card-footer py-2" id="course-publish-btn">
                             <div class="row flex-between-center g-0">
                                 <div class="col-auto"><a class="btn btn-link btn-sm text-secondary fw-medium px-0"
-                                        href="#!">Tela Inicial</a></div>
+                                        href="#!"></a></div>
                                 <div class="col-auto"><button style="border-radius: 0"
                                         class="btn btn-primary btn-md px-xxl-5 px-4 fw-medium" name="submit"
                                         type="submit">Adicionar Curso</button></div>

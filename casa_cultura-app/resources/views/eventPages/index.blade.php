@@ -38,7 +38,7 @@
             <div class="sticky-sidebar">
                 <div class="card mb-lg-0">
                     <div class="card-header">
-                        <h5 class="mb-0">Formulario de Insercao</h5>
+                        <h5 class="mb-0"></h5>
                     </div>
                     <div class="card-body bg-body-tertiary">
                         <form action="{{route('event.store')}}" method="post" enctype="multipart/form-data">
@@ -66,7 +66,7 @@
                             </div>
 
                             <div class="mb-3">
-                                <label class="form-label" for="event-type">Localizacao</label>
+                                <label class="form-label" for="event-type">Local</label>
                                 <input class="form-control form-control-sm @error('Location') is-invalid @enderror" type="text" placeholder="Localizacao" name="Location" value="{{ old('Location') }}" />
                                 @error('Location')
                                     <div class="invalid-feedback">{{ $message }}</div>

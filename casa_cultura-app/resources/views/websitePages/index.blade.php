@@ -10,12 +10,8 @@
                                 <span class="pre-title" data-sal-delay="150" data-sal="slide-up" data-sal-duration="800">Aprenda melhor na casa da cultura</span>
                                 <h1 class="title" data-sal-delay="250" data-sal="slide-up" data-sal-duration="800">
                                   Educação é sobre excelência acadêmica</h1>
-                                <p class="description" data-sal-delay="350" data-sal="slide-up" data-sal-duration="800">Sed
-                                    eu volutpat arcu, a tincidunt nulla quam, feugiat sit amet ipsum a, dapibus porta velit.
-                                </p>
-                                <a class="edu-btn" href="#" data-sal-delay="450" data-sal="slide-up"
-                                    data-sal-duration="800">Saber Mais <i
-                                        class="icon-arrow-right-line-right"></i></a>
+                                  <p class="description" data-sal-delay="350" data-sal="slide-up" data-sal-duration="800" style="text-align: justify;">A educação é uma jornada que vai além do simples aprendizado. Ela transforma mentes, fortalece corações e abre portas para um futuro cheio de possibilidades. Através do pensamento crítico, da criatividade e da colaboração, ela nos capacita a construir pontes entre os nossos sonhos e as nossas realidades, tornando o impossível possível.
+                                  </p>
                             </div>
                         </div>
                     </div>
@@ -63,7 +59,7 @@
             <div class="row g-lg-5 g-md-5 g-sm-5">
                 <div class="col-lg-12 col-xl-6">
                     <div class="gallery-wrapper">
-                        <img class="image-1" src="imagem/n9.jpg" alt="About Images">
+                        <img class="image-1" src="imagem/n9.jpg" alt="About Images" >
                         {{-- <img class="image-2" src="asset/images/about/about-05/about-group-02.jpg" alt="About Images">
                         <img class="image-3" data-parallax='{"x": 0, "y": -120}'
                             src="imagem/p.png" alt="About Images"> --}}
@@ -74,44 +70,26 @@
                         <div class="section-title text-start" data-sal-delay="150" data-sal="slide-up"
                             data-sal-duration="800">
                             <span class="pre-title">Quem Somos Nos</span>
-                            <h3 class="title">Nos Oferecemos As Melhores Opcoes Para Voce</h3>
-                        </div>
-                        <div class="feature-style-6 mt--40">
-                            <div class="edu-feature-list color-variation-1" data-sal-delay="150" data-sal="slide-up"
-                                data-sal-duration="800">
-                                <div class="icon">
-                                    <img src="asset/images/icons/student.png" alt="Icons Images">
-                                </div>
-                                <div class="content">
-                                    <h6 class="title">Formadores Profissionais</h6>
-                                    <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                        eiusmoded tempor incididunt dolore magna aliqua.</p>
-                                </div>
-                            </div>
-
-                            <div class="edu-feature-list color-variation-2" data-sal-delay="150" data-sal="slide-up"
-                                data-sal-duration="800">
-                                <div class="icon">
-                                    <img src="asset/images/icons/book.png" alt="Icons Images">
-                                </div>
-                                <div class="content">
-                                    <h6 class="title">Cursos Mais Relevantes do Mercado</h6>
-                                    <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                        eiusmoded tempor incididunt dolore magna aliqua.</p>
-                                </div>
-                            </div>
-
-                            <div class="edu-feature-list color-variation-3" data-sal-delay="150" data-sal="slide-up"
-                                data-sal-duration="800">
-                                <div class="icon">
-                                    <img src="asset/images/icons/reward.png" alt="Icons Images">
-                                </div>
-                                <div class="content">
-                                    <h6 class="title">Grande Comunidade de Estudantes</h6>
-                                    <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                        eiusmoded tempor incididunt dolore magna aliqua.</p>
-                                </div>
-                            </div>
+                            <div style="text-align: justify;">
+        <p>
+            A Casa de Cultura da Beira é um espaço vibrante e acolhedor, dedicado à preservação, promoção e celebração da rica herança cultural da cidade da Beira e de Moçambique como um todo. Fundada com o propósito de ser um ponto de encontro para artistas, estudantes, pesquisadores e a comunidade em geral, a Casa de Cultura é um lugar onde tradição e modernidade coexistem harmoniosamente.
+        </p>
+        <span class="pre-title">Nossa Visão</span>
+        <p>
+        Ser reconhecido como um centro cultural de excelência, um símbolo de identidade e orgulho local, contribuindo para o fortalecimento da cultura e do turismo na Beira.
+        </p>
+        <span class="pre-title">O Que Oferecemos</span>
+        <p>
+        <b>Exposições :</b> Mostramos obras de artistas locais e regionais, destacando a diversidade cultural da nossa cidade.
+        </p>
+        <p>
+        <b>Eventos e Espetáculos:</b> Realizamos concertos, peças de teatro, danças tradicionais e outras atividades que enriquecem a cena cultural local.
+        </p>
+        <p>
+        <b>Workshops e Cursos:</b> Oferecemos programas educativos que abrangem desde artesanato tradicional até tecnologias modernas aplicadas às artes.
+        </p><br><br><br>
+        
+        
                         </div>
                         {{-- <div class="read-more-btn mt--30" data-sal-delay="150" data-sal="slide-up"
                             data-sal-duration="800">
@@ -229,11 +207,9 @@
                             <span class="pre-title">Aprenda da Melhor Forma</span>
                             <h3 class="title">Junte-se a Nos Para Fazer Parte Do Nosso Ambiente</h3>
                         </div>
-                        <p class="description" data-sal-delay="250" data-sal="slide-up" data-sal-duration="800">Lorem
-                            ipsum dolor sit amet, consectetur adipiscing elit. Sit amet, consect adipi scing elit, sed do
-                            eiusmod tempor incididunt ut sed do eiusmod tempor incididunt ut labore et dolore aliqua.</p>
+                        <p class="description" data-sal-delay="250" data-sal="slide-up" data-sal-duration="800"></p>
                         {{-- <div class="read-more-btn" data-sal-delay="350" data-sal="slide-up" data-sal-duration="800">
-                            <a class="edu-btn btn-white" href="event-list.html">More Upcomming Workshop<i
+                            <a class="edu-btn btn-white" href="event-list.html"><i
                                     class="icon-arrow-right-line-right"></i></a>
                         </div> --}}
                     </div>
@@ -305,9 +281,7 @@
                             <h3 class="title">Formadores Credenciados</h3>
                         </div>
                         <p class="description mt--25 mb--25" data-sal-delay="150" data-sal="slide-up"
-                            data-sal-duration="800">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet,
-                            venenatis
-                            dictum et nec.</p>
+                            data-sal-duration="800"></p>
                         </div>
                     </div>
                 </div>
@@ -404,7 +378,7 @@
                                     <img class="logo-light" src="asset/images/logo/logo2.png" alt="Site Logo">
                                 </a>
                             </div>
-                            <p class="description" style="text-align: justify;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
+                            <p class="description" style="text-align: justify;"></p>
                             <ul class="social-share">
                                 <li><a href="#"><i class="icon-Fb"></i></a></li>
                                 <li><a href="#"><i class="icon-linkedin"></i></a></li>
@@ -438,10 +412,10 @@
                                     <ul class="information-list">
                                         <li><i class="icon-map-pin-line"></i>Cidade da Beira
                                         </li>
-                                        <li><i class="icon-phone-fill"></i><a href="tel:+1(237)382-2839">+ 258 867336817</a></li>
-                                        <li><i class="icon-phone-fill"></i><a href="tel:+1(237)382-2840">+ 258 833138308</a></li>
+                                        <li><i class="icon-phone-fill"></i><a href="tel:+1(237)382-2839">+ 258 846301298</a></li>
+                                        <li><i class="icon-phone-fill"></i><a href="tel:+1(237)382-2840">+ 258 862687763</a></li>
                                         <li><i class="icon-mail-line-2"></i><a target="_blank"
-                                                href="mailto:yourmailaddress@example.com">email@example.com</a>
+                                                href="mailto:yourmailaddress@example.com">casacultura@gmail.com</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -466,7 +440,7 @@
                     <div class="col-lg-12">
                         <div class="inner text-center">
                             <p>Copyright 2024 <a href="#">Casa Da Cultura - Beira</a> Desenvolvido Por <a
-                                    href="https://themeforest.net/user/devsvibe">Picardo Olindo</a>. Todos Direitos Reservados</p>
+                                    href="https://themeforest.net/user/devsvibe">Picardo Olindo Az</a>. Todos Direitos Reservados</p>
                         </div>
                     </div>
                 </div>

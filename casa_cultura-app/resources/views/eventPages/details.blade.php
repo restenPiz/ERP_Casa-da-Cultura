@@ -12,7 +12,7 @@
                             </span></div>
                         <div class="flex-1 fs-10">
                             <h5 class="fs-9">{{ $event->Name }}</h5>
-                            <p class="mb-0">pela <a href="#!">Casa da Cultura</a></p><span
+                            <p class="mb-0"><a href="#!">Casa da Cultura</a></p><span
                                 class="fs-9 text-warning fw-semi-bold">{{ $event->Price }} MZN</span>
                         </div>
                     </div>

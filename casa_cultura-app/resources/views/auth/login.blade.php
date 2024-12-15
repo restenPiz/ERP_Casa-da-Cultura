@@ -66,7 +66,7 @@
                                             <x-input-error style="color:red" :messages="$errors->get('email')" class="mt-2" />
                                         </div>
                                         <div class="mb-3">
-                                            <label class="form-label" for="card-password">Password</label>
+                                            <label class="form-label" for="card-password">Senha</label>
                                             <input name="password" class="form-control @error('password') is-invalid @enderror" id="card-password" type="password" />
                                             <x-input-error style="color:red" :messages="$errors->get('password')" class="mt-2" />
                                         </div>
@@ -79,7 +79,7 @@
                                             </div>
                                         </div>
                                         <div class="mb-3">
-                                            <button class="btn btn-primary d-block w-100 mt-3" style="border-radius: 0" type="submit" name="submit">Log in</button>
+                                            <button class="btn btn-primary d-block w-100 mt-3" style="border-radius: 0" type="submit" name="submit">Entrar</button>
                                         </div>
                                     </form>
                                 </div>

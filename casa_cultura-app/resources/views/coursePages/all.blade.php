@@ -91,7 +91,7 @@
                             <div class="card-body p-0 d-flex flex-column justify-content-between">
                                 <div>
                                     <div class="hoverbox text-center"><a class="text-decoration-none"
-                                            href="../../../assets/video/beach.mp4" data-gallery="attachment-bg"><img
+                                            href="" data-gallery="attachment-bg"><img
                                                 class="w-100 h-100 object-fit-cover"
                                                 src="{{ asset('storage/' . $course->Upload_file) }}" alt="" /></a>
                                         <div class="hoverbox-content flex-center pe-none bg-holder overlay overlay-2"><img
