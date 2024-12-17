@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="asset/images/favicon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="../asset/images/favicon.png">
 
     <!-- CSS
 	============================================ -->
